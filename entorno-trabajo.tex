@@ -1,0 +1,178 @@
+En este capítulo se describe el comportamiento y los elementos que conforman la estructura principal y organización de las pantallas del sistema. 
+
+
+\section{Áreas principales de la pantalla}
+
+La estructura de la pantalla es el ambiente visual que el usuario observa al ingresar al sistema. En la pantalla \ref{fig:entornoDeTrabajoManual} se muestran los elementos 
+principales que conforman el entorno de trabajo y se describen a continuación:
+%
+\begin{enumerate}
+	\item \textbf{Encabezado de la Página:} En esta sección aparece el logo de la escuela libre de derecho (EDL).
+	\item \textbf{Menú Lateral:} En esta sección aparecen las acciones principales del sistema.
+	\item \textbf{Sesión:}  En esta sección se pueden desplegar los datos del usuario y la opción para cerrar la sesión.
+	\item \textbf{Cuerpo de la página:} Esta sección es el área de trabajo, donde aparecen los formularios de cada operación disponible y las tablas de gestión.
+	\item \textbf{Menú Interno:} En esta sección aparecen las acciones secundarias del sistema, dependen de la acción primaria seleccionada.
+\end{enumerate} 
+\newpage
+\IUfig[1.1]{images/entorno-trabajo/PantallaPartes.png}{fig:entornoDeTrabajoManual}{Estructura Principal de la Pantalla}
+
+
+%
+%%%===================================================================
+\section{Iconografía utilizada en las pantallas}
+
+El sistema utiliza diversos íconos para denotar las operaciones que el usuario puede realizar en el sistema. Los íconos utilizados a lo largo del proceso de admisión en el sistema son: 
+
+\newcommand{\btnBorrar}{\imgInline{Iconos/borrar.png}}
+	
+\begin{Citemize}
+	\item \IUbtAsistencia: Permite establecer a un aspirante como exitoso.
+	\item \IUbtArchivo: Permite generar la línea de captura de un aspirante.
+	\item \IUbtUpload: Permite cargar un archivo.
+	\item \IUbtPDF: Permite visualizar la línea de captura de un aspirante.
+	
+\end{Citemize}
+
+%===================================================================
+\chapter{Menús}
+\section{Menús}
+En esta sección se describe el menú de sistema correspondiente al perfil del \textbf{Contador General}. 
+%
+\section{Menú del Contador General}
+%%
+%%
+%%
+En la figura \refIU{fig:menuPrincipalCG}{Menú del Contador General} se muestra el menú que está disponible después de iniciar sesión, este menú contiene las opciones para dirigirse a la gestión del proceso de pagos. 
+%%
+\IUfig[0.25]{images/entorno-trabajo/M_P_CG.png}{fig:menuPrincipalCG}{Menú del Contador General}
+\IUfig[0.25]{images/entorno-trabajo/M_P_CG-PA.png}{fig:menuPagosA}{Menú Pagos Admisión}
+Las opciones disponibles en el menú se detallan a continuación:
+
+
+\begin{Citemize}
+	\item \textbf{Configuración de Pagos}.
+	\item \textbf{Prórrogas}.
+	\item \textbf{Condonaciones}.
+	\item \textbf{Administración de Pagos}: Esta opción del menú permite seleccionar algunas de las acciones que se realizan en el proceso de administración de pagos, las opciones disponibles en la figura \refIU{fig:menuPagosA}{Menú Pagos Admisión} son las siguientes:
+	\begin{itemize}
+		\item \textbf{Pagos Admisión}.
+		\item \textbf{Pagos Ciclo Escolar}.
+		\item \textbf{Pagos Servicios}.
+		\item \textbf{Pagos Titulación}.
+		\item \textbf{Pagos Particulares}.
+	\end{itemize}	
+	
+\end{Citemize}
+%%%
+%%%%===================================================================
+%%%
+%%\section{Menú de la Coordinación de Control Escolar}
+%%%
+%En la figura \refIU{fig:menuPrincipalCE}{Menú de la Coordinación de Control Escolar} muestra el menú que está disponible después de iniciar sesión, este menú continene las opciones para dirigirse a la gestión del proceso de admisión y de las entrevistas.
+%\IUfig[0.25]{images/entorno-trabajo/M_P_SA.png}{fig:menuPrincipalCE}{Menú de la Coordinación de Control Escolar}
+%\IUfig[0.25]{images/entorno-trabajo/M_P_CCE-A.png}{fig:menuAdmisionC}{Menú Admisión}
+%\IUfig[0.25]{images/entorno-trabajo/M_P_CCE-AS.png}{fig:menuAdmisionAS}{Submenú Selección de Aspirantes}
+%\IUfig[0.25]{images/entorno-trabajo/M_P_CCE-E.png}{fig:menuEntrevistasC}{Menú Entrevistas}
+%%
+%Las opciones disponibles en el menú se detallan a continuación:
+%\begin{Citemize}
+%	\item \textbf{Admisión}: Esta opción del menú permite seleccionar algunas de las acciones que se realizan en el proceso de admisión, las opciones disponibles en la figura \refIU{fig:menuAdmisionC}{Menú Admisión} son las siguientes:
+%	\begin{itemize}
+%		\item \textbf{Convocatoria de Ingreso}: permite realizar acciones sobre la convocatoria de ingreso, como: visualizar, editar, eliminar, publicar y configurar los criterios, requisitos y actividades.
+%		\item \textbf{Gestionar Registro de Aspirantes}: permite visualizar la lista de los aspirantes asociados a la convocatoria de ingreso que se encuentra vigente, así como editar la información de cada uno.
+%		\item \textbf{Examen Psicométrico}: permite visualizar la fecha de aplicación del exámen psicométrico y CENEVAL, así como configurar citas, reservar salones, asignar psicologo y generar citas.
+%		\item \textbf{Evaluación de Conocimientos}: permite visualizar la información de las evaluaciones y realizar acciones como: resrvar salones, notificar, enviar citas, registrar resultados y visualizar los resultados de las evaluaciones.
+%		\item \textbf{Selección de Aspirantes}: permite seleccionar algunas de las acciones que se realizan en el proceso de selección de aspirantes, las opciones disponibles en la figura \refIU{fig:menuAdmisionAS}{Submenú Selección de Aspirantes} son las siguientes:
+%		\begin{itemize}
+%			\item \textbf{Aspirantes Aceptados}: permite visualizar los aspirantes aceptados.
+%		\item \textbf{Aspirantes en Lista de Espera}: permite visualizar los aspirantes en lista de espera.
+%		\end{itemize}
+%	\end{itemize}	
+%	\item \textbf{Entrevistas}: Esta opción del menú permite seleccionar la acción que se realiza en el proceso de entrevistas, la opción disponible en la figura \refIU{fig:menuEntrevistasS}{Menú Entrevistas} es la siguiente: 
+%	\begin{itemize}
+%		\item \textbf{Gestionar Entrevistas}: permite gestionar las entrevistas asi como registrar la aplicación de alguna.
+%	\end{itemize}
+%\end{Citemize}
+%%%%===================================================================
+%
+%\section{Menú del Coordinador de Psicólogos}
+%
+%
+%En la figura \refIU{fig:menuPrincipalCP}{Menú del Coordinador de Psicólogos} muestra el menú que está disponible después de iniciar sesión, este menú continene las opciones para dirigirse a la gestión de los exámenes psicométricos, psicólogos y conceptos.
+%
+%\IUfig[0.25]{images/entorno-trabajo/M_P_CP.png}{fig:menuPrincipalCP}{Menú del Coordinador de Psicólogos}
+%
+%Las opciones disponibles en el menú se detallan a continuación:
+%\begin{Citemize}
+%	\item \textbf{Exámenes Psicométricos}: Esta opción del menú \refIU{fig:menuPrincipalCP}{Menú del Coordinador de Psicólogos} permite seleccionar algunas de las acciones que se realizan en el proceso de gestion de exámenes psicométricos, tales como: asociar conceptos, visualizar cálculos, asignación de psicólogos, visualizar citas, reasignar aspirantes y aprobar resultados.	
+%	\item \textbf{Gestionar Psicólogos}: Esta opción del menú \refIU{fig:menuPrincipalCP}{Menú del Coordinador de Psicólogos} permite seleccionar algunas de las acciones que se realizan en la gestion de psicólogos, tales como: gestionar vigencias, registrar psicólogos o editar la información previamente almacenada de alguno.
+%	\item \textbf{Gestionar Conceptos}: Esta opción del menú \refIU{fig:menuPrincipalCP}{Menú del Coordinador de Psicólogos} permite seleccionar algunas de las acciones que se realizan en la gestion de conceptos, tales como: resgistrar conceptos o editar la información previamente almacenada de alguno.
+%\end{Citemize}
+%
+%
+%%===================================================================
+%
+%\section{Menú del Psicólogo}
+%
+%
+%En la figura \refIU{fig:menuPrincipalP}{Menú del Psicólogo} muestra el menú que está disponible después de iniciar sesión, este menú continene la opción para dirigirse a la gestión del exámen psicométrico.
+%
+%\IUfig[0.25]{images/entorno-trabajo/M_P_P.png}{fig:menuPrincipalP}{Menú del Psicólogo}
+%\IUfig[0.25]{images/entorno-trabajo/M_P_P-EP.png}{fig:menuExamenP}{Menú Exámen Psicométrico}
+%Las opciones disponibles en el menú se detallan a continuación:
+%\begin{Citemize}
+%	\item \textbf{Exámen Psicométrico}: Esta opción del menú permite seleccionar la acción que se realiza en el proceso de gestión del exámen psicométrico, la opcion disponible en la figura \refIU{fig:menuExamenP}{Menú Exámen Psicométrico} es la siguiente:
+%	\begin{itemize}
+%		\item \textbf{Gestionar Resultados}: Permite realizar acciones como: registrar entrevistas, registrar exámen electrónico y registrar evaluación final.		
+%	\end{itemize}	
+%\end{Citemize}
+
+
+%===================================================================
+\section{Elementos de las Pantallas}
+En esta sección se describen los elementos de las pantallas que sirven para ingresar o mostrar información. Algunos elementos permiten al usuario registrar información en el sistema y se conocen como \emph{elementos de entrada comunes}, existen otros elementos que sirven para ingresar archivos entre otras cosas.
+
+\subsection{Elementos de Entrada Comunes}
+En las figuras \refIU{fig:entradasComunes1}{Entradas Comunes}, \refIU{fig:entradasComunes2}{Casilla de verificación} , \refIU{fig:calendario}{Calendario} , \refIU{fig:hora}{Hora} y \refIU{fig:deslizar}{Deslizar} se muestran los elementos de entrada que se utilizan en la mayoría de los formularios del sistema. A continuación se detalla cada uno de ellos.
+\IUfig[.8]{images/entorno-trabajo/EntradasCom.png}{fig:entradasComunes1}{Entradas Comunes}
+\IUfig[.8]{images/entorno-trabajo/EntradasCom2.png}{fig:entradasComunes2}{Casilla de verificación}
+
+\begin{enumerate}
+ \item Caja de texto: Permite ingresar información a través de un campo.
+ \item Lista desplegable: Establece una lista de opciones predefinidas de las cuales solamente se puede seleccionar una.
+ \item Radiobotón: Permite al usuario elegir una opción entre varias disponibles.
+ \item Botón: Es utilizado para finalizar o cancelar operaciones.
+ \item Casilla de verificación: Permite al usuario marcar una opción o dejarla desmarcada, así como elegir más de una opción entre varias disponibles.
+ \item Calendario: Permite seleccionar una fecha por medio de un calendario que se mostrará cuando oprima un campo para fecha.
+  \IUfig[.3]{images/entorno-trabajo/cale.png}{fig:calendario}{Calendario}
+ \item Hora: Permite seleccionar una hora por medio de un reloj que se mostrará cuando oprima un campo para hora.
+  \IUfig[.3]{images/entorno-trabajo/Hora.png}{fig:hora}{Hora}
+ \item Spinner: Permite seleccionar dentro de una lista de opciones de valores validos el valor deseado 
+\IUfig[.4]{images/entorno-trabajo/Deslizar.png}{fig:spinner}{Spinner}
+\end{enumerate}
+
+
+\subsection{Datos Obligatorios}
+Aquellos datos que son obligatorios para realizar algún registro o modificación se señalan con un asterisco rojo como se muestra la figura \refIU{fig:obligatorio}{Datos Obligatorios}.
+\IUfig[.7]{images/entorno-trabajo/obligatorio.png}{fig:obligatorio}{Datos Obligatorios}
+
+\hypertarget{seccion:tablaResultados}{}
+\label{seccion:tablaResultados}
+\subsection{Tablas de Resultados}
+El sistema utiliza tablas para mostrar los elementos registrados, estas tablas contienen algunas funciones para organizar los elementos, así como los botones para realizar operaciones con los elementos mostrados. Cada acción que puede realizar está descrita a continuación.
+\begin{enumerate}	
+	\item Indica el número de registros que se muestran por página. Puede incrementar o decrementar este número a su preferencia.
+	\item Ordena de manera ascendente o descendente la información de la columna (dependiendo de la información que contenga). Para ordenar en base a un 
+			  campo se debe presionar sobre el triángulo de la columna en la que aparece. Si el triángulo es de color gris, el ordenamiento está desactivado; si es de color
+			  rojo, está activado.
+	\item Permite realizar una búsqueda rápida entre los registros mostrados por medio de una palabra o frase clave.
+	\item Indica el número de registros mostrados en la página y el total de registros existentes.
+	\item Muestra las acciones que pueden realizarse sobre cada registro.
+	\item Permite navegar entre las páginas de los registros encontrados, se puede seleccionar la página anterior o la página siguiente.
+\end{enumerate}
+%\newpage
+\IUfig[.9]{images/entorno-trabajo/tabla.png}{fig:tablaResultados}{Tabla de Resultados}
+
+\hypertarget{seccion:autocomplete}{}
+\label{seccion:autocomplete}
+

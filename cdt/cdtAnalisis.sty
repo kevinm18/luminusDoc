@@ -1,0 +1,969 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  cdtAnalisis.sty                                                      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cdtAnalisis}[2011/01/17, v1.0 CDT-ESCOM-IPN Paquete para escribir Análisis de Requerimeintos]
+
+\usepackage{cdt/cdtBook}
+\usepackage{chapterfolder}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[pdftex,bookmarks,colorlinks]{hyperref}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{keystroke}
+
+
+%=====================================================================
+% DEFINICION DE COLORES
+%=====================================================================
+
+
+
+\definecolor{cdtMainColor}{rgb}{0.1, 0.1, 1.0}	
+\definecolor{cdtBlackColor}{rgb}{0.1, 0.1, 0.5}	
+\definecolor{cdtAquaColor}{rgb}{0.7,0.7,1.0}	
+\definecolor{cdtRefColor}{rgb}{0.8, 0.1, 0.1}	
+\definecolor{cdtIdColor}{rgb}{0.4, 0.4, 1.0}	
+\definecolor{cdtComentarioColor}{rgb}{0.4, 0.4, 0.4}	
+
+\definecolor{cdtTODOColor}{rgb}{1.0, 0.0, 0.0}	
+\definecolor{cdtTOCHKColor}{rgb}{0.8, 0.5, 0.0}	
+\definecolor{cdtDONEColor}{rgb}{0.0, 0.5, 0.0}	
+
+
+%=====================================================================
+% CONFIGURACION
+%=====================================================================
+\hypersetup{linkcolor=cdtRefColor}
+
+%=====================================================================
+% GENERALES
+%=====================================================================
+
+%-------------------------------------------------------------------------------------------
+% Escribir un comentario
+% use: \comentario{Escriba un comentario sobre el documento}
+\newcommand{\comentario}[1]{\textcolor{cdtComentarioColor}{#1}}
+
+%-------------------------------------------------------------------------------------------
+% Definición de iconos
+\newcommand\UCactor{\includegraphics[height=11pt]{images/uc/actor}}
+\newcommand\UCsist{\includegraphics[height=11pt]{images/uc/usecase}}
+
+
+%
+%%=====================================================================
+%% Comando: \cdtRef{id}{Nombre}
+%% Propósito: Producir un texto que referencía aigun elemento del documento, por ejemplo: Casos de Uso, Reglas de Negocio, Entidad, Actor, Interfaz, Mensaje, etc. Este comando genera como salida el ``nombre'' que referencía al elemento identificado por ``id''
+%% Ejemplo: ...la \cdtLabel{coordinacion}{Coordinación} esta en ...
+%%          se puede ver en la \cdtRef
+%
+%%=====================================================================
+%\newcommand{\cdtRef}[2]{%
+	%\hyperlink{#1}{{#2}}%
+%=====================================================================
+% COMANDOS PARA EL ANALISIS DEL PROBLEMA
+%=====================================================================
+
+%---------------------------------------------------------------------
+% Documentación de problemas:
+% Usar:
+% \begin{problemas}[color]
+% 	 \problema{id}{Nombre}{Descripción}{Prioridad}
+%	 \problema{id}{Nombre}{Descripción}{Prioridad}
+%	 ...
+% \end{problemas}
+\newenvironment{problemas}[1][Problemas detectados]
+{%
+	\noindent\begin{longtable}{| p{.05\textwidth} | p{.2\textwidth} | p{.6\textwidth} | p{.05\textwidth} |}%
+		\arrayrulecolor{colorPrincipal}%
+		\hline%
+		\rowcolor{colorPrincipal}%
+		\multicolumn{3}{|c|}{\bf\color{colorPrincipal}#1}\\%
+		\arrayrulecolor{white}%
+		\rowcolor{colorPrincipal}%
+		\problema{\color{white}\bf Id}{\color{white}\bf Nombre}{\color{white}\bf Descripción}\endhead%
+		\arrayrulecolor{colorPrincipal}%
+}{%
+	\end{longtable} %
+	\arrayrulecolor{black}%
+}
+
+%-----------------------------------------------------------------------
+% Definir un problema (se usa con el environment problemas)
+% Usar: \problema{id}{Nombre}{Descripción}
+% Ejemplo:
+% \problema{PR1}{Error Humano}{La captura en hojas de Excel provoca que errores de dedo afecten los resultados.}
+\newcommand{\problema}[3]{ {\bf\hypertarget{#1}{#1}} & {#2} & {#3} \\ \hline}
+
+
+%=====================================================================
+% REQUERIMIENTOS
+%=====================================================================
+
+%-------------------------------------------------------------------------------------------
+% Definir requerimientos.
+% use: 
+% \begin{requerimientos}[color]
+%	\RFitem{id}{Nombre del Req}{Descripción}{Problemas relacionados}
+%	\RFitem{id}{Nombre del Req}{Descripción}{Problemas relacionados}
+%	\RFitem{id}{Nombre del Req}{Descripción}{Problemas relacionados}
+% \end{requerimientos}
+\newenvironment{requerimientos}[1][cdtMainColor]
+{%
+	\arrayrulecolor{#1}%
+	\par\begin{longtable}{| p{.05\textwidth} | p{.2\textwidth} | p{.67\textwidth} |}%
+		\arrayrulecolor{#1}%
+		\hline%
+		\rowcolor{#1}%
+		\multicolumn{3}{|c|}{\bf\color{#1}Requerimientos funcionales}\\%
+		\arrayrulecolor{white}%
+		\rowcolor{#1}%
+		\FRitem{\color{white}\bf Id}{\color{white}\bf Nombre}{\color{white}\bf Descripción}{\color{white}\bf Prob.}\endhead%
+		\arrayrulecolor{#1}%
+}{%
+	\end{longtable} %
+	\arrayrulecolor{black} %
+}
+
+%-------------------------------------------------------------------------------------------
+% Definir un requerimiento.
+% use: 
+%	\RFitem{id}{Nombre del Req}{Descripción}{Problemas relacionados}
+\newcommand{\RFitem}[4]{\par{#1} & {#2} & {#3} \\ \hline}%& {#4} \\ \hline}
+
+
+%-------------------------------------------------------------------------------------------
+% Definir atributos de software: usabilidad, funcionalidad, etc.
+% use: 
+% \begin{atributoDeSoftware}[color]{Nombre}{Objetivo que explica el comportamiento esperado del sistema en relación a este atributo.}
+%	\ASitem[Definición:] Descripción acordada sobre la forma de interpretar al atributo de forma concreta.
+%	\ASitem[Métrica:] Descripción objetiva, reproducible y cuantificable de la medición de la propiedad.
+%	\ASitem[Unidad de medida:] Descripción de la unidad de medida utilizada para presentar el resultado de la medición.
+%	\ASitem[Medición:] Descripción del procedimiento y ambiente en necesarios para obtener evidencia objetiva sobre la propiedad que se pueda presentar en la Unidad de medida descrita. Esta descripción debe garantizar su reproducción: la repetición del procedimiento, bajo las mismas condiciones descritas,  de los mismos artefactos de software,  deben producir los mismos resultados.
+%	\ASitem[Meta:] Descripción del rango de valores de la Unidad de medida que determina si la propiedad de software se cumple o no.
+% \end{requerimientos}
+\newenvironment{atributoDeSoftware}[3][cdtMainColor]%
+{%
+	\begin{description}\addtolength{\itemsep}{-0.5\baselineskip}%
+		\item[Propiedad:]  {\bf\color{#1}#2}
+		\item[Objetivo:] {#3}%
+}%
+{%
+	\end{description}%
+}
+
+\newcommand{\ASitem}[1][]{\item[{#1}]}
+
+
+%=====================================================================
+% REGLAS DE NEGOCIO
+% Es una sentencia que define o restringe algún aspecto del negocio. Puede ser un 
+% a definición de ESTRUCTURA: un TÉRMINO o HECHO, una DERIVACIÓN o una REGLA DE OPERACIÓN.
+%
+% POLÍTICAS
+% . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+% Una política es una sentencia general de dirección para una empresa/organización.
+% (a general statement of direction for an enterprise.)
+% Representación: Descripción textual.
+%
+% CONTEXTO
+% . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+% Define  un ambiente en el que se usan TERMINOS DEL NEGOCIO con un 
+% significado acordado
+% (an environment where shared BUSINESS TERMs are used with an agreed-to 
+% meaning.)
+% Representación: Descripción textual.
+%
+% TERMINO (Glosario)
+% . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+% Una frase o término que tiene un significado específico para el negocio en un 
+% CONTEXTO determinado. Este puede definir una LITERAL, un TIPO o un SENSOR.
+% (￼￼￼a word or phrase that has a specific meaning for a business in some designated 
+% CONTEXT.)
+% Representación: Termino, significado (solo para los del negocio).
+%
+% TERMINO -> LITERAL
+% Refleja un valor o instáncia específico de un TIPO.
+% (reflects a specific value or instance of a TYPE.)
+% Representación: Término, significado, tipo (solo para los del negocio).
+%
+% RELACION_DE_ORDEN
+% Define una forma de determinar el orden de dos LITERALES que tienen un "orden"
+% determinado dentro del contexto.
+% Ejemplos: <, >, =, !=, etc. 
+%
+% TERMINO -> TIPO
+% Una abstracción nombrada de un conjunto de instancias o valores.
+% (a named abstraction of a set of instances or values.)
+% Representación: Término, significado, nombre del conjunto, instancias de 
+% ejemplo (solo para los del negocio).
+%
+% TERMINO -> TIPO -> SENSOR
+% Es un TIPO especial cuyos valores son determinados por algún mecanismo o 
+% dispositivo cuyo trabajo interno es desconocido, de poco interés o de alcance 
+% identificable. Su valor no puede ser alterado directamente. Un SENSOR detecta 
+% y reporta constantemente los valores cambiantes del mundo externo. Por ejemplo, 
+% cambios de temperatura, el paso del tiempo, etc.
+% (a special kind of TYPE whose value is asserted by some mechanism or device 
+% whose inner workings are unknown (or uninteresting to the identified scope). 
+% Its value cannot be altered directly. A SENSOR detects and reports constantly 
+% changing values from the outside world, such as the passage of time, a 
+% temperature reading, or some other value.)
+% Representación: Término(nombre del sensor), descripción(lo que reporta y 
+% la frecuencia), 
+%
+% HECHO (Modelo del Dominio del Problema)
+% . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+% Una asociación de dos o mas TÉRMINOS. Expresa un potencial de asociación 
+% ("puede ser" o "podría ser") en lugar de expresar una asociación "debe de".
+% HECHO -> BASE: Una situación observada en un momento dado.
+% HECHO -> DERIVADO: Lo que se puede inferir de esa observación, es una 
+% observación, cálculo, etc.
+% Los HECHOS pueden definir que un TÉRMINO es: un ATRIBUTO de otro, una
+% GENERALIZACIÓN (super tipo o subtipo) de otro o que existe una 
+% PARTICIPACIÓN (relación, agregación o composición) entre TÉRMINOS.
+% (an associating of two or more TERMS. It expresses a potential for association 
+% (‘can be’ or ‘may be’) rather than expressing a ‘must be’ association.)
+% Representación: Diagrama de Clases que contenga: Nombre de los Términos, 
+% Atributos (Marcando los atributos derivados como Métodos getter's), nombres de las 
+% relaciones en ambas direcciones, tipo de agregación y cardinalidad.
+%
+% REGLA DE OPERACIÓN
+% . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+% Es una propiedad de otra REGLA DE NEGOCIO.
+% Es una sentencia que concierne algún aspecto dinámico del negocio. Especifica 
+% restricciones en los resultados que producen las acciones.
+% (a statement that concerns some dynamic aspect of the business. It specifies 
+% constraints on the results that actions can produce.)
+%
+% Una regla de operación establece una correspondencia entre una REGLA DE 
+% NEGOCIO (objeto base) con otros OBJEOS.
+% REGLA DE OPERACIÓN ::= 
+%	MODIF( OBJETO_BASE). >=(correspondencia)=> otros OBJETO_CORRESP
+% OBJETO_BASE ::= REGLA_DE_NEGOCIO.
+% OBJETO_CORRESP ::= conjunto de REGLAS_DE_NEGOCIO o ACCIONES.
+%
+% Clases: CONDICIÓN, RESTRICCIÓN DE INTEGRIDAD, AUTORIZACIÓN.
+% Tipos: HABILITADOR, CRONOMETRO, EJECUTIVO.
+% Pensado para: INFLUIR (guiá) O CONTROLAR (restringe) la acción.
+% 
+% Representación: id, Nombre, Clase, Tipo, Propósito, Descripción (sentencia), 
+% Sentencia(Expresión formal), [ejemplo correcto], [ejemplo incorrecto].
+%
+% ACCION
+% something that executes and may change the state of one or more instances of 
+% one or more TYPEs. An ACTION has a protocol and one or more methods that 
+% implement it.
+% An ACTION cannot be constrained; only TYPEs (things which have persistent 
+% instances) can be constrained. The enabling and execution of an ACTION can 
+% be controlled through rules . The ACTION is permitted to proceed once/if 
+% conditions are satisfied.
+% Redacción: Verbo + especificación.
+%
+% CONDICION
+% an assertion that if something is true, another business rule will apply. A 
+% CONDITION can be thought of as a ‘test’ ~ if true, it may be the basis for
+% enforcing or testing other ACTION ASSERTIONs.
+% Redacción: "Si" MODIF(OBJETO_BASE) "entonces" REGLA_DE_OPERACIÓN
+%
+% CONDICION de tipo HABILITADOR
+% if true, permits or leads to the existence of the correspondent object
+% Redacción: "si" MODIF(OBJETO_BASE) "entonces" permite/habilita la 
+% 	existencia de una instancia o la ejecución de una ACCIÓN o de lo 
+% 	especificado por el OBJETO_RELACIONADO.
+%
+% CONDICION de tipo CRONOMETRO
+% Habilita o crea una instancia del OBJETO_CORRESPONDIENTE cuando se 
+% sobrepas cierto LIMITE (TERMINO -> LITERAL) establecído
+% if true, enables (or disables), or creates (or deletes) if a specified threshold has 
+% been satisfied. A TIMER can be thought of as a ‘countdown timer’ ~ its effect 
+% occurs after the ‘ticking’ stops ~ or as an ‘alarm clock.’ In the latter case, its 
+% effect occurs when the alarm clock ‘rings.’
+% Redacción: "si" MODIF(OBJETO_BASE) RELACION_DE_ORDEN LIMITE 
+%	"entonces" habilita o permite la creación de una instancia del 
+% 	OBJETO_CORRESPONDIENTE.
+%
+% CONDICION DE ACCIÓN
+% Ejecuta acción, aplica regla o crea instancia cuando se cumple la CONDICIÓN.
+% Redacción:
+% "si" MODIF(OBJETO_BASE) "entonces" ejecuta la ACCION.
+% "si" MODIF(OBJETO_BASE) "entonces" aplica la REGLA.
+% "si" MODIF(OBJETO_BASE) "entonces" instancia la ESTRUCTURA.
+%
+% RESTRICCION DE INTEGRIDAD
+% an assertion that must always be true. It is considered to have immediate 
+% enforcement power because it prohibits any actions which would result in a 
+% false truth value.
+% Redacción: MODIF(OBJETO_BASE) "debe de" OBJETO_COREESPONDIENTE
+% 
+% RESTRICCION DE INTEGRIDAD de tipo HABILITADOR
+% permits or leads to the existence of the correspondent object
+% Redacción:
+% MODIF(OBJETO_BASE) "debe de" permitir la creación de instancias
+% de ESTRUCTURA.
+% MODIF(OBJETO_BASE) "debe de" permitir la aplicación de la otra
+% REGLA_DE_OPERACION.
+% MODIF(OBJETO_BASE) "debe de" permitir la ejecución de la ACCION.
+%
+% RESTRICCION DE INTEGRIDAD de tipo CRONOMETRO
+% permits or leads by a specified threashold the existence of the correspondent 
+% object.
+% Redacción:
+% MODIF(OBJETO_BASE) "debe de" permitir o causar la creación de instancias
+% de ESTRUCTURA con un LIMITE.
+% MODIF(OBJETO_BASE) "debe de" permitir o causar la aplicación de la otra
+% REGLA_DE_OPERACION con un LIMITE.
+% MODIF(OBJETO_BASE) "debe de" permitir o causar la ejecución de la ACCION 
+% bajo un LIMITE.
+%
+% RESTRICCION de tipo EJECUTIVO
+% Redacción:
+% MODIF(OBJETO_BASE) "debe de" causar la creación de instancias
+% de ESTRUCTURA.
+% MODIF(OBJETO_BASE) "debe de" causar la aplicación de la otra
+% REGLA_DE_OPERACION.
+% MODIF(OBJETO_BASE) "debe de" causar la ejecución de la ACCION.
+%
+% AUTORIZACIÓN
+% an assertion that a specific prerogative or privilege has been defined with 
+% respect to one or more CONSTRUCTS. An AUTHORIZATION is an
+% assertion represented the predicate: “(Only) x may do y,” where x typically 
+% is a user and y is an action that may be executed.
+% Redacción: CUANTIFICADOR OBJETO_BASE "puede hacer/ser" 
+% OBJETO_RELACIONADO(S)
+%
+% AUTORIZACIÓN de tipo HABILITADOR
+% Redacción:
+% MODIF(OBJETO_BASE) "está autorizado a" crear instancias de ESTRUCTURA
+% MODIF(OBJETO_BASE) "está autorizado a" realizar la ACCIÓN
+%
+% AUTORIZACIÓN de tipo CRONOMETRO
+% Redacción:
+% MODIF(OBJETO_BASE) "está autorizado a" instanciar ESTRUCTURA con un LIMITE.
+% MODIF(OBJETO_BASE) "está autorizado a" realizar la ACCIÓN con un LIMITE.
+%
+% AUTORIZACIÓN de tipo EJECUTIVO
+% Redacción:
+% No definido?
+%
+% Control/Influencia
+% Debe ser, hacer, instanciar. / Puede ser, hacer, instanciar.
+%
+% DERIVACIÓN
+% . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+% DERIVACIÓN ::= CALCULO o INFERENCIA
+%
+% CALCULO
+% a DERIVATION that produces a DERIVED FACT according to a specified
+%  mathematical algorithm.
+% Redacción:
+% TERMINO "se calcula de" | "::=" EXPRESION(REGLAS DE NEGOCIO)
+%
+% INFERENCIA
+% a DERIVATION that produces a DERIVED FACT using logical induction (from 
+% particulars) or deduction (from general principles).
+% Redacción:
+% TERMINO "se infiere de" EXPRESION(REGLAS DE NEGOCIO) 
+%	"mediante una relacion" ("muchos a muchos" | "uno a muchos" | etc.)
+%
+%=====================================================================
+
+
+%-------------------------------------------------------------------------------------------
+% Definir un Termino del Negocio.
+% use: 
+% \BRterm{Término} Descripción.
+% \BRterm{Literal} Descripción, tipo al que pertenece.
+% \BRterm{Tipo} Descripción, Nombre del conjunto, instancias de ejemplo.
+% \BRterm{Sensor} Descripción, especificando: lo que reporta y con que frecuencia.
+\newcommand{\BRterm}[2]{\item[]\hypertarget{gl:#1}{{\bf{#2}}:}}
+
+%-------------------------------------------------------------------------------------------
+% Definir un Hechos.
+
+\newenvironment{BussinesFact}[1]%
+{%
+	\hypertarget{#1}{}%
+	\begin{description}\addtolength{\itemsep}{-0.5\baselineskip}%
+	\BRitem{Asociación} {#1}%
+}%
+{%
+	\\ \end{description}%
+}
+
+
+%-------------------------------------------------------------------------------------------
+% Comando para colocar una descripción de una regla de negocio
+% use:
+% \begin{BusinessRule}{id}{nombre}{clase y/o tipo}{fortaleza}
+%	\BRitem{Descripción}{Descripcion textual de la regla.}
+%	\BRitem{Caso correcto}{Un ejemplo en el que se cumple la regla.}
+%	\BRitem{Caso incorecto}{Un ejemplo en el que se cumple la regla.}
+%	\BRitem{Sentencia}{Expresión formal de la regla.}
+% \end{BusinessRule}
+% Clase: Condición, Restricción de integridad, Autorización, Cálculo, Inferencia.
+% Tipo(solo para las tres primeras clases): Habilitador, Cronometro,  Ejecutor
+% Fortaleza: Controla / Influye el comportamiento.
+% Como describir una regla:
+% CONDICION:
+% Regla Condición-Habilitador: si M(OBJ) entonces Habilita/permite RN
+% Regla Condición-Cronómetro: si M(OBJ) REL LIMITE entonces Habilita/Ejecuta RN
+% Regla Condición-Ejecución:  si M(OBJ) entonces Ejecuta/Crea RN
+% RESTRICCION DE INTEGRIDAD
+% Regla Restricción de Integridad-Habilitador: 
+%	M(OBJ) Debe/Puede RN
+% Regla Restricción de Integridad-Cronómetro: 
+%	M(OBJ) Debe/Puede REL LIMITE RN
+% Regla Restricción de Integridad-Ejecución:  
+% 	M(OBJ) Debe Ejecuta/Crea RN
+%
+\newenvironment{BussinesRule}[4]
+{%
+	\hypertarget{#1}{}%
+	\hypertarget{actor:#2}{}%
+	\noindent{\includegraphics[width=\textwidth]{images/uc/BRRule}}
+	\begin{description}\addtolength{\itemsep}{-0.5\baselineskip}%
+	\BRitem{Regla}{{#1} {#2}}%
+	\BRitem{Tipo}{#3}%
+	\BRitem{Nivel}{#4}%
+}%
+{%
+	\end{description}%
+}
+
+\newcommand{\BRitem}[2]{%
+	\item[{#1}:]  {#2}%
+}
+
+\def \varBusinessEntityId {}
+
+% \begin{BusinessEntity}{id}{Nombre}
+\newenvironment{BusinessEntity}[3]
+{%
+	\noindent\ignorespaces
+	\def \varBusinessEntityId {ent:#1}
+	\def \varBusinessEntityName {#2}
+	
+	\hypertarget{ent:#1}{\subsection{#2}}%
+	\noindent{\includegraphics[width=\textwidth]{images/uc/classRule}}\\%
+	#3\\
+	\subsubsection{Atributos}%
+	\begin{description}%
+}%
+{%
+	\end{description}
+}
+
+\newenvironment{BusinessEntityNoAttribute}[3]
+{%
+	\def \varBusinessEntityId {ent:#1}
+	\def \varBusinessEntityName {#2}
+	\hypertarget{ent:#1}{\subsection{#2}}%
+	\noindent{\includegraphics[width=\textwidth]{images/uc/classRule}}\\%
+	#3\\
+	\begin{description}%
+}%
+{%
+	\end{description}%
+}
+
+% Atributo de una entidad
+% \Battr{id}{nombre}{tipo y longitud}{Descripción}{obligatorio/opcional}
+\newcommand{\Battr}[5]{%
+	\item[#2:]\hypertarget{\varBusinessEntityId:#1} #4. #5 de tipo #3.
+}
+
+%Atributo de una entidad con referencia a una relación
+% \BattrRel{id}{nombre}{Descripción}{id relación}{nombre relación}
+\newcommand{\BattrRel}[5]{%
+	\item[#2:]\hypertarget{\varBusinessEntityId:#1rel} #3. Se obtiene de la relación \hyperlink{\varBusinessEntityId:#4}{\textit{{\varBusinessEntityName} -- #5.}}
+}
+
+%Definir relaciones entre las entidades
+%\Brel{id}{Entidad}{descripción}{tipo}{cardinalidad}{restricción}
+\newcommand{\Brel}[6]
+{
+	
+	 \item[]\hypertarget{\varBusinessEntityId:#1}{\textbf{{\varBusinessEntityName} -- #2}}
+	 \begin{description}
+			 \item[Descripción:] #3
+			 \item[Tipo:] #4
+			 \item[Cardinalidad:] #5
+			 \item[Restricción:] #6\\
+	\end{description}
+}
+
+%\newcommand{\obligatorio}{Es un dato \hyperlink{obligatorio}{Obligatorio}}
+%\newcommand{\opcional}{Es un dato \hyperlink{opcional}{Opcional}}
+
+\newcommand{\obligatorio}{Es un dato {\em Obligatorio}}
+\newcommand{\opcional}{Es un dato {\em Opcional}}
+
+%-------------------------------------------------------------------------------------------
+% Referencia a una Entidad
+%use \refEnt{Id}{nombre}
+\newcommand{\refEnt}[2]{%
+	\hyperlink{ent:#1}{#2}%
+}
+
+%-------------------------------------------------------------------------------------------
+% Referencia a un término del glosario
+%use \refEnt{Id}{nombre}
+\newcommand{\refGl}[2]{%
+	\hyperlink{gl:#1}{#2}%
+}
+
+%-------------------------------------------------------------------------------------------
+% Referencia a una Regla de Negocio
+%use \refBR{Id}{nombre}
+\newcommand{\refBR}[2]{%
+	\hyperlink{#1}{#1 #2}%
+}
+
+%=====================================================================
+% USE CASES
+%=====================================================================
+
+
+%-------------------------------------------------------------------------------------------
+% Definir los atributos de los actores que participan en el sistema.
+% \begin{Actor}[icono]{Nombre del actor}
+% 	\item[Descripción:] Descripción del usuario.
+% 	\item[Área:] Área(s) dentro de la organización a la(s) que pertenece el actor
+%	\item[Responsabilidades:]  Liste las responsabilidades que desempeña el actor dentro de la organización.
+% 	\item[Perfil:] Especifique el nivel académico, área de conocimiento, capacidades y/o habilidades que debe contar el personal que participa en el sistema con este rol.
+% 	\item[Cantidad:] Especifique la cantidad estimada (orden de magnitud: decentas, centenas, millares, etc.) de personas con este perfil que usarán el sistema.
+% \end{Actor}
+\newenvironment{Actor}[3][ActorRule]
+{%
+	\hypertarget{actor:#2}{}%
+	\noindent{\includegraphics[width=\textwidth]{images/uc/#1}}\\%\color{cdtBlackColor}\rule{\textwidth}{.5mm}}\\\noindent%
+	{\bf Nombre:} #2%
+	\begin{description}%
+	\item[Descripción:] #3%
+}{%
+	\end{description}%
+}
+
+%-------------------------------------------------------------------------------------------
+% Referencia a un Actor
+% use: \refActor{Id}
+\newcommand{\refActor}[1]{%
+	\hypersetup{linkcolor=cdtRefColor}%
+	\hyperlink{actor:#1}{#1}%
+	\hypersetup{linkcolor=cdtRefColor}%
+}
+
+
+%----------------------------------------------------------------------------------------
+\newcounter{counterUC}
+
+%-------------------------------------------------------------------------------------------
+% Comando para describir un Use Cases
+% use:
+% \begin{UseCase}[fileImagenUC]{idUC}{nomUC}{descripción completa}
+%   \UCitem{Actor} {Vendedor}
+%   ...
+% \end{UseCase}
+%
+% Ejemplo: 
+% \begin{UseCase}[UCXimage]{idUC}{nomUC}
+%	{
+%		Resumen del CU
+%	}
+%	\UCitem{Versión}{Versión del CU}
+%	\UCsection{Administración de Requerimientos}
+%	\UCitem{Autor}{Nombre del responsable de la especificación del Use Case o de las modificaciones de la versión}
+%	\UCitem{Evaluador}{Nombre del responsable de la Evaluación y aprobación del CU.}
+%	\UCitem{Operación}{Consulta, Altas Bajas y Cambios, Negocio, Reporte, Selección/Asignación de datos, Calculo masivo, etc..}
+%	\UCitem{Prioridad}{Importancia de este CU con respecto a los demás: Alta/Media/Baja}
+%	\UCitem{Terminado}{Fecha de el último cambio al Use Case}
+%	\UCitem{Evaluado}{Fecha de el último cambio al Use Case}
+%	\UCitem{Complejidad}{Complejidad del CU: Muy alta/Alta/Media/Baja/ Muy baja}
+%	\UCitem{Volatilidad}{Frecuencia y magnitud de los cambios que ha sufrido: Muy alta/Alta/Media/Baja/ Muy baja}
+%	\UCitem{Madurez}{Nivel de comprensión y confianza en que el CU está completo y es correcto: Muy alta/Alta/Media/Baja/ Muy baja}
+%	\UCitem{Status}{Edición/Terminado/Evaluado/Aprobado.}
+%	\UCsection{Atributos}
+%	\UCitem{Hereda de}{Use Case del que hereda}
+%	\UCitem{Actor(es)}{\refActor{Nombre} Nombres de los actores que ejecutan el CU}
+%	\UCitem{Propósito}{Razón o motivación del actor para realizar el Use Case}
+%	\UCitem{Entradas}{Liste o referencíe los datos de entrada al sistema durante el CU: Nombre, tipo y descripción, etc. Especifique el método de introducción de los mismos: teclado, ratón, cámara, lector de barras, algún sensor, etc.}
+%	\UCitem{Salidas}{Liste o referencíe los datos de salida o resultados del sistema, Especifique el dispositivo en donde se presentarán las salidas: pantalla, impresora, otro sistema, brazo mecánico, etc. }
+%	\UCitem{Precondiciones}{Estado inicial necesario para ejecutar el Use Case (especifique el }
+%	\UCitem{Postcondiciones}{Estado final del sistema después de ejecutar el Use Case. Efectos colaterales}
+%	\UCitem{Errores}{Especifíque los posibles errores (casos excepcionales: falla de algún sistema, del la BD; etc.): \refError{id}{Nombre}}
+%	\UCitem{Tipo}{Primario o secundario (viene de un PE o una Inclusión). En caso de ser secundario especifique el CU del cual Extiende o se Incluye: Secundario, extiende/incluye de \refUC{IdCU}.}
+%	\UCitem{Fuente}{Documentos, personas o especificaciones que proporcionaron información para la especificación de este UseCase}
+%	\UCitem{Observaciones}{Especifique cualquier aspecto que considere relevante a considerar para la interpretación e implementación del CU.}
+% \end{UseCase}
+\newenvironment{UseCase}[4][UCRule]
+{\newpage%
+\addtocounter{counterUC}{1}
+\ThisCenterWallPaper{0.85}{images/uc/#1}
+%\includegraphics[width=\textwidth]{images/uc/#1}\\
+\section{#2 #3}%
+\noindent\hypertarget{#2}{}%
+\subsection{Resumen}%
+#4%
+\subsection{Descripción}%
+\par\begin{longtable}{| p{.17\textwidth} | p{.75\textwidth} |}%
+	\arrayrulecolor{black}
+	\rowcolor{black}
+	\UCitem{\color{white}Caso de Uso}{\color{white}#2 #3}%
+	\endhead%
+	\arrayrulecolor{black}%
+%	\UCitem{Nombre}{#3}%
+}
+{\end{longtable}%
+\subsection{Trayectorias del Caso de Uso}}  
+%%%%%%%
+%-------------------------------------------------------------------------------------------	
+% Agregar un elemento a la descripción del CU
+% use \UCitem{item}{descripción}
+\newcommand{\UCitem}[2]{{\bf {#1:}} & {#2} \\ \hline}%
+\newcommand{\UCccitem}[2]{{\bf {\color{cdtRefColor}#1:}} & {\color{cdtRefColor}#2} \\ \hline}%
+%-------------------------------------------------------------------------------------------
+% Agregar una sección en la descripción del CU
+% use \UCseccion[color]{descripción}
+\newcommand{\UCsection}[1]{\multicolumn{2}{|c|}{{\bf \color{cdtBlackColor}#1}}\\ \hline}
+\newcommand{\UCccsection}[1]{\multicolumn{2}{|c|}{{\bf \color{cdtRefColor}#1}}\\ \hline}
+
+%-------------------------------------------------------------------------------------------
+% Agregar una lista de datos en la tabla de descripción de Casos de Uso
+% use:
+% \begin{UClist}
+% 		\UCitem Bla bla bla
+% 		\UCitem[o] Bla bla bla
+% \end{UClist}	
+\newenvironment{UClist}{\vspace{-1em}}{\vspace{0em}}
+%-------------------------------------------------------------------------------------------
+% Definir un error:
+% \UCerr{num}{Condición}{Resultado}
+\newcommand{\UCerr}[3]{
+	\UCli \textbf{E#1:} \hypertarget{\arabic{counterUC}:err#1} #2 #3
+}
+
+%-------------------------------------------------------------------------------------------
+% 
+% use \RCitem{id}{descripción}{status}
+\newcommand{\UCli}[1][$\bullet$]{%
+	\vspace{3pt}\par{ \color{sectionColor}{#1} }%
+}
+
+
+\newcommand{\TODO}{\color{cdtTODOColor}TODO}%
+\newcommand{\TOCHK}{\color{cdtTOCHKColor}TOCHK}%
+\newcommand{\DONE}{\color{cdtDONEColor}DONE}%
+%-------------------------------------------------------------------------------------------
+% Agregar una petición de cambio
+% use \RCitem{id}{descripción}{status: \DONE, \TODO o \TOCHK}
+\newcommand{\RCitem}[3]{%
+	\UCli {{\bf #1} #2 {\em #3}}%
+}
+
+%-------------------------------------------------------------------------------------------
+% Referencia a un Caso de Uso
+% use: \UCref{Id}
+\newcommand{\refUC}[1]{%
+	\hypersetup{linkcolor=cdtRefColor}%
+	\hyperlink{#1}{#1}%
+	\hypersetup{linkcolor=cdtRefColor}%
+}
+
+
+\newcommand{\ioEscribir}{Se escribe }
+\newcommand{\ioSeleccionar}{Se selecciona }
+\newcommand{\ioEscanear}[1][Código de Barras]{Se lee con un escáner de #1 }
+\newcommand{\ioObtener}{Se obtiene de la sesión }
+
+%-------------------------------------------------------------------------------------------
+% Comando para escribir una trayectoria principal
+% use: 
+% \begin{UCtrayectoria}
+%    \UCpaso[\UCActor] Oprime el botón buscar
+%    \UCpaso[\UCsist] Verifica que el usuario tenga permisos \refTray{IDTrayectoria}
+%    \UCpaso[\UCsist] El sistema ...
+%    \UCpaso[\UCsist] El sistema ...
+%    \UCpaso[\UCsist] El sistema ...
+%    ...
+% \end{UCtrayectoria}
+\newenvironment{UCtrayectoria}
+{%
+	\bigskip\noindent {\large {\bf Trayectoria principal}\\}%
+	\renewcommand{\varCurrentIdTray}{}%
+	\renewcommand{\labelenumi}{\textcolor{black}{\bf \theenumi}}%
+	\begin{enumerate}\addtolength{\itemsep}{-0.5\baselineskip}%
+}%
+{%
+	\item[- -] - - {\em Fin del caso de uso}. \end{enumerate}%
+	\renewcommand{\labelenumi}{\theenumi}%
+}
+
+\newcommand{\varCurrentIdTray}{}
+\newcommand{\varCurrentFinTray}{}
+%-------------------------------------------------------------------------------------------
+% Comando para describir trayectorias Alternativas
+% use: 
+% \begin{UCtrayectoriaA}{Id}{Condición}
+%    \UCpaso[\UCActor] El actor oprime el botón buscar
+%    \UCpaso[\UCsist] El sistema ...
+%    ...
+% \end{UCtrayectoria}
+\newenvironment{UCtrayectoriaA}[3][Fin de la trayectoria]
+{%
+	\renewcommand{\varCurrentFinTray}{#1}%
+	\renewcommand{\varCurrentIdTray}{#2}%
+	\bigskip\noindent \hypertarget{tray:\arabic{counterUC}#2}{\large {\bf Trayectoria alternativa #2:}}%
+	\\{\small{\em\bf Condición:} {\em {#3}}}%
+	\renewcommand{\labelenumi}{\textcolor{black}{\bf {#2}-\theenumi}}%
+	\normalsize\begin{enumerate}\addtolength{\itemsep}{-0.5\baselineskip}%
+}%
+{%
+	\item[- -] - - {\em \varCurrentFinTray}. \end{enumerate}%
+	\renewcommand{\labelenumi}{\theenumi}%
+}
+
+%-------------------------------------------------------------------------------------------
+% Comando para agregar un paso a una trayectoria, el paso puede ser 
+% dado por el actor \UCactor o por el sistema \UCsist, por defecto el 
+% paso es dado por el sistema.
+% use: 
+%	\UCpaso[\UCactor] Descripción del paso.
+% 	\UCpaso[\UCsist] Descripción del paso.
+% 	\UCpaso Descripción del paso (tiene el mismo efecto que el anterior).
+\newcommand{\UCpaso}[1][\UCsist]{\item {#1} }
+
+
+%
+% Comando para agregar un paso con herencia
+ \newcommand{\UCpasoH}[4][\UCsist]{
+ 	\item Realiza los pasos {#2} a {#3} del Caso de Uso  \refUC{#4}.
+ }
+% Comando para especificar Ídem CUX
+ \newcommand{\IdemCU}[1]{Idéntico al Caso de Uso \refUC{#1}}
+%-------------------------------------------------------------------------------------------
+% Referencia a un Error.
+% use: \refErr{Número}
+\newcommand{\refErr}[1]{%
+	%
+	\hyperlink{\arabic{counterUC}:err#1}{ $[$Error  #1$]$}%
+}
+%-------------------------------------------------------------------------------------------
+% Referencia a una Trayectoria Alternativa.
+% use: \refTray{Id}
+\newcommand{\refTray}[1]{%
+	%
+	\hyperlink{tray:\arabic{counterUC}#1}{ $[$Trayectoria  #1$]$}%
+}
+
+%-------------------------------------------------------------------------------------------
+% Referencia a un caso de uso incluido
+% use: \includeUC{Id}
+\newcommand{\includeUC}[1]{\hyperlink{#1}{$[${\bf Incluye:} #1$]$}}
+
+
+%-------------------------------------------------------------------------------------------
+% Referencia a un Punto de Extensión
+%use: \UCExtensionPoint{nombre}{Situación que genera la extensión.}{región(sección de la trayectoria en la que se puede dar la extensión)}{CU al que extienda}
+% Ejemplo: 
+%	\UCExtensionPoint{Agregar artículo}{El actor quiere agregar un artículo a su carrito de compras.}{del paso 2 al paso 7}{\refUC{CU7.1}} 
+\newcommand{\UCExtensionPoint}[4]{%
+\begin{description}\addtolength{\itemsep}{-0.5\baselineskip}%
+	\item[PE #1:] #2.%
+	\item[Región:] #3.%
+	\item[Extiende a:] #4.%
+\end{description}%
+}%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referencia para un Mensaje
+%use \UCMessage{Id}{nombre}
+\newcommand{\refMSG}[2]{%
+	\hypersetup{linkcolor=cdtRefColor}%
+	\hyperlink{#1}{#1 #2}%
+	\hypersetup{linkcolor=cdtRefColor}%
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referencia a un Requerimiento Funcional
+% use: \RFref{id}
+\newcommand{\refRF}[1]{%
+\hypersetup{linkcolor=RFReferenceColor}%
+\hyperlink{#1}{#1}%
+\hypersetup{linkcolor=refColor}%
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Comando para  referenciar una Interfaz de Usuario
+% use \IUref{Id}{Nombre}
+\newcommand{\refIU}[2]{%
+\hypersetup{linkcolor=cdtRefColor}%
+\hyperlink{#1}{\ref{#1} #2}%
+\hypersetup{linkcolor=cdtRefColor}%
+}
+
+\newcommand{\refSec}[2]{%
+\hypersetup{linkcolor=cdtRefColor}%
+\hyperlink{#1}{\ref{#1} #2}%
+\hypersetup{linkcolor=cdtRefColor}%
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Que es esto?
+% use \UCInterface{Id}{Nombre}
+\newcommand{\refCMD}[2]{%
+\includegraphics[height=10pt]{images/cmd}~%
+\hypersetup{linkcolor=UCCommandColor}%
+\hyperlink{#1}{#1 #2}%
+\hypersetup{linkcolor=refColor}%
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Insertar una Interfaz de Usuario
+% use: \IUfig[width]{imagefile}{IU1}{Nombre de la pantalla}
+\newcommand{\IUfig}[4][0.7]{%
+	\begin{figure}[htbp!]%
+		\hypertarget{#3}{}%{\includegraphics[width=#1\textwidth]{images/#2}}%
+		\begin{center}%
+{\includegraphics[width=#1\textwidth]{#2}}%
+			\caption{#4}%
+			\label{#3}%
+		\end{center}%
+	\end{figure}%
+}
+
+
+
+
+
+\newenvironment{Message}[2]
+{%
+	\hypertarget{#1}{}%
+	{\large {\bf Mensaje:}#1 #2}%
+	\begin{description}\addtolength{\itemsep}{-0.5\baselineskip}%
+}
+{%
+	\end{description}
+	\bigskip%
+}
+
+\newenvironment{UIElmento}[2]
+{%
+	\hypertarget{#1}{}%
+	{\large {\bf Elmentos:}#1 #2}%
+	\begin{description}\addtolength{\itemsep}{-0.5\baselineskip}%
+}
+{%
+	\end{description}
+	\bigskip%
+}
+
+
+\newcommand{\MSGitem}[2]{\item[#1] {#2}}
+
+\newcommand{\ELitem}[2]{\item[#1] {#2}}
+
+\newcommand{\IUCombo}[1]{\framebox[1.1\width][c]{#1 $\blacktriangledown$}}
+
+\newcommand{\IUbutton}[1]{\keystroke{#1}}
+
+\newcommand{\IUbuttonView}[1][0.1]{\IUbutton{\includegraphics[scale=#1]{images/icons/ver.png}}}
+
+\newcommand{\IUbuttonModify}[1][0.1]{\IUbutton{\includegraphics[scale=#1]{images/icons/editar.png}}}
+
+\newcommand{\IUbuttonDelete}[1][0.1]{\IUbutton{\includegraphics[scale=#1]{images/icons/eliminar.png}}}
+
+\newcommand{\IUGraphicButton}[2][0.4]{\IUbutton{\includegraphics[scale=#1]{images/icons/#2}}}
+
+\newenvironment{Citemize}%
+{%
+	\begin{itemize}\addtolength{\itemsep}{-0.3\baselineskip}%
+}{%
+	\end{itemize}%
+}%
+
+%%==========================================================================
+% Para definir un mensaje.
+% Use:
+%
+%\begin{mensaje}{MSGX}{Nombre del mensaje}{Operación/Notificación/Alerta/Error}
+%	\item[Redacción:] Redacción del mensaje.
+%	\item[Parámetros:] El mesaje se instancía con base en los siguientes parámetros:
+%		\begin{Citemize}
+% 			\item Nombre del parametro: Descripción del Parametro.
+%		\end{Citemize}
+%	\item[Ejemplo:] Uno o varios ejemplo del mensaje.
+%\end{mensaje}
+%==========================================================================
+\newenvironment{mensaje}[3]{%
+	\hypertarget{#1}{\hspace{1pt}}%
+	\subsection{#1~#2} %
+	\begin{description}%
+		\item[Tipo:] #3 %Operación Realizada/Notificación/Alerta/Error
+}{%
+	\end{description}%
+}
+
+
+\newcommand{\hideControlVersion}{%
+	\renewcommand{\RCitem}[3]{}
+	\renewcommand{\UCccitem}[2]{}
+	\renewcommand{\UCccsection}[1]{}
+}
+
+%=======================================================================
+%Comando para los errores en el manual de usuario
+
+\newenvironment{Errores}
+{
+	\definecolor{headcolor}{rgb}{0.0, 0.0, 0.0}
+	\definecolor{backcolor}{rgb}{1, 0.88, 0.8}	
+	\subsubsection{Errores Comunes}
+	\begin{center}
+	\begin{longtable}{|m{0.4\textwidth}|m{0.6\textwidth}|}
+	\hline
+		\rowcolor{backcolor}
+		\multicolumn{1}{|c|}{\bf\color{headcolor}{Error}} & \multicolumn{1}{|c|}{\bf\color{headcolor}{Posibles Soluciones}}\\ \hline
+	\endhead
+}{
+	\end{longtable}
+	\end{center}
+}
+\newcommand{\error}[2]
+{
+	{#1} & {#2}  \\ \hline
+}
+
+
+
+\newcommand{\myhyper}[2]{}
+\let\myhyper=\hyperlink
+\renewcommand{\hyperlink}[2]{\makeatletter\@ifundefined{r@#1:Target}{{\bf ??}}{\myhyper{#1}{#2}}\makeatother}
+
+
+\newcommand{\mytarget}[2]{}
+\let\mytarget=\hypertarget
+\renewcommand{\hypertarget}[2]{%
+	~\label{#1:Target}%
+	~\mytarget{#1}{#2}%
+}
+
+
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}
+\renewcommand{\theenumii}{.\arabic{enumii}}
