@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.15)  15 OCT 2018 02:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.15)  15 OCT 2018 14:07
 entering extended mode
 **./Base.tex
 (Base.tex
@@ -596,12 +596,6 @@ LaTeX Warning: Label `fig:APA' multiply defined.
 LaTeX Warning: Label `seccion:IniciarSesion:Target' multiply defined.
 
 
-LaTeX Warning: Label `fig:APA:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA' multiply defined.
-
-
 LaTeX Warning: Label `seccion:IniciarSesion:Target' multiply defined.
 
 
@@ -639,12 +633,6 @@ LaTeX Warning: Label `fig:APA' multiply defined.
 
 
 LaTeX Warning: Label `seccion:IniciarSesion:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA' multiply defined.
 
 
 LaTeX Warning: Label `fig:instalacionjava:Target' multiply defined.
@@ -793,12 +781,12 @@ File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
 
 
 {C:/Users/kevin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<cdt/theme/headerPar.png, id=110, 251.94125pt x 201.75375pt>
+<cdt/theme/headerPar.png, id=118, 251.94125pt x 201.75375pt>
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
 Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 56.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
-<cdt/theme/logoPar.png, id=111, 501.875pt x 348.30125pt>
+<cdt/theme/logoPar.png, id=119, 501.875pt x 348.30125pt>
 File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 56.
@@ -847,7 +835,7 @@ Package spanish Warning: Replacing `OT1/cmbr/m/sc' by
 ]
 Cap\'{\i }tulo 1.
 (capitulo1/introduccion.tex
-<capitulo1/images/IU-APA.png, id=159, 1649.16125pt x 868.24374pt>
+<capitulo1/images/IU-APA.png, id=169, 1649.16125pt x 868.24374pt>
 File: capitulo1/images/IU-APA.png Graphic file (type png)
 <use capitulo1/images/IU-APA.png>
 Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
@@ -941,12 +929,12 @@ File: capitulo1/images/IU-APA.png Graphic file (type png)
 <use capitulo1/images/IU-APA.png>
 Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
 (pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
-<cdt/theme/logoInp.png, id=185, 251.94125pt x 201.75375pt>
+<cdt/theme/logoInp.png, id=195, 251.94125pt x 201.75375pt>
 File: cdt/theme/logoInp.png Graphic file (type png)
 <use cdt/theme/logoInp.png>
 Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 26.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
-<cdt/theme/headerInp.png, id=186, 501.875pt x 348.30125pt>
+<cdt/theme/headerInp.png, id=196, 501.875pt x 348.30125pt>
 File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 26.
@@ -1054,13 +1042,7 @@ ed
 <to be read again> 
                    \relax 
 l.1 ...target{seccion:IniciarSesion}{\vspace{1pt}}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{fig:APA}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.14 		\hypertarget{fig:APA}{\hspace{1pt}}
-                                          
+                                                  
 File: capitulo1/images/IU-APA.png Graphic file (type png)
 <use capitulo1/images/IU-APA.png>
 Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
@@ -1272,135 +1254,165 @@ Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 97.
 
 ]
 Cap\'{\i }tulo 2.
-(capitulo2/marcoteorico.texpdfTeX warning (ext4): destination with the same ide
-ntifier (name{seccion:IniciarSesion}) has been already used, duplicate ignored
+(capitulo2/marcoteorico.tex
+
+! LaTeX Error: Can be used only in preamble.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \usepackage
+               {amsmath}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+pdfTeX warning (ext4): destination with the same identifier (name{seccion:Inici
+arSesion}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 ...target{seccion:IniciarSesion}{\vspace{1pt}}
+l.3 ...target{seccion:IniciarSesion}{\vspace{1pt}}
                                                    [13]
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
 
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
-Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 47.
+Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 55.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
-Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 47.
+Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 55.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [14]
-<capitulo2/images/arbol-decision-ejemplo.png, id=299, 292.09125pt x 173.64874pt
+[14]
+<capitulo2/images/arbol-decision-ejemplo.png, id=314, 292.09125pt x 173.64874pt
 >
 File: capitulo2/images/arbol-decision-ejemplo.png Graphic file (type png)
 <use capitulo2/images/arbol-decision-ejemplo.png>
 Package pdftex.def Info: capitulo2/images/arbol-decision-ejemplo.png  used on i
-nput line 50.
+nput line 59.
 (pdftex.def)             Requested size: 343.74654pt x 204.34976pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
 LaTeX Font Warning: Font shape `OT1/cmbr/bx/it' undefined
-(Font)              using `OT1/cmbr/bx/n' instead on input line 65.
+(Font)              using `OT1/cmbr/bx/n' instead on input line 69.
 
-LaTeX Font Info:    Font shape `OT1/cmbr/m/it' in size <10> not available
-(Font)              Font shape `OT1/cmbr/m/sl' tried instead on input line 72.
+! Undefined control sequence.
+l.74 \bg
+        _white Entropía\; H(X) = -\sum p(X)\log p(X)\\ Ganancia\; I(X,Y)= H...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+! Missing $ inserted.
+<inserted text> 
+                $
+l.74 \bg_
+         white Entropía\; H(X) = -\sum p(X)\log p(X)\\ Ganancia\; I(X,Y)= H...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
- []
+
+LaTeX Warning: Command \' invalid in math mode on input line 74.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.74 \bg_white Entropí
+                       a\; H(X) = -\sum p(X)\log p(X)\\ Ganancia\; I(X,Y)= H...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.74 \bg_white Entropí
+                       a\; H(X) = -\sum p(X)\log p(X)\\ Ganancia\; I(X,Y)= H...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Command \i invalid in math mode on input line 74.
 
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.74 \bg_white Entropí
+                       a\; H(X) = -\sum p(X)\log p(X)\\ Ganancia\; I(X,Y)= H...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.75 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.75 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no � in font cmex10!
+File: capitulo1/images/IU-APA.png Graphic file (type png)
+<use capitulo1/images/IU-APA.png>
+Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 91.
+(pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
 File: cdt/theme/logoInp.png Graphic file (type png)
 <use cdt/theme/logoInp.png>
-Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 78.
+Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 102.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
-Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 78.
+Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 102.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-1}) has been already used, duplicate ignored
+[15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.78 \begin
-           {figure}[!htbp] <./capitulo2/images/arbol-decision-ejemplo.png>]
-<capitulo2/images/formula-entropia.png, id=315, 187.902pt x 57.21375pt>
-File: capitulo2/images/formula-entropia.png Graphic file (type png)
-<use capitulo2/images/formula-entropia.png>
-Package pdftex.def Info: capitulo2/images/formula-entropia.png  used on input l
-ine 81.
-(pdftex.def)             Requested size: 150.15263pt x 47.68817pt.
-pdfTeX warning (ext4): destination with the same identifier (name{fig:APA}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.101 		\hypertarget{fig:APA}{\hspace{1pt}}
-                                           
-File: capitulo1/images/IU-APA.png Graphic file (type png)
-<use capitulo1/images/IU-APA.png>
-Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 103.
-(pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
-File: cdt/theme/headerPar.png Graphic file (type png)
-<use cdt/theme/headerPar.png>
-Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 114.
-(pdftex.def)             Requested size: 43.70595pt x 35.0pt.
-File: cdt/theme/logoPar.png Graphic file (type png)
-<use cdt/theme/logoPar.png>
-Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 114.
-(pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.114 \newpage
-              pdfTeX warning (ext4): destination with the same identifier (name
-{figure.2.3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.114 \newpage
-               <./capitulo2/images/formula-entropia.png>]
-Overfull \hbox (25.19997pt too wide) in alignment at lines 115--115
+l.102 \newpage
+               <./capitulo2/images/arbol-decision-ejemplo.png>]
+Overfull \hbox (25.19997pt too wide) in alignment at lines 103--103
  [] [] 
  []
 
 
-Overfull \hbox (25.19997pt too wide) in alignment at lines 115--132
+Overfull \hbox (25.19997pt too wide) in alignment at lines 103--120
  [] [] 
  []
 
 )
-File: cdt/theme/logoInp.png Graphic file (type png)
-<use cdt/theme/logoInp.png>
-Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 101.
-(pdftex.def)             Requested size: 43.70595pt x 35.0pt.
-File: cdt/theme/headerInp.png Graphic file (type png)
-<use cdt/theme/headerInp.png>
-Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 101.
-(pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [17]
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
 Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 101.
@@ -1409,24 +1421,30 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 101.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [18
+ [16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+2}) has been already used, duplicate ignored
 
-]
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.101 	\chapter
+               {Capitulo 3}\label{cap:Cap3}]
 Cap\'{\i }tulo 3.
 (capitulo3/prototipo1.tex
-<capitulo3/images/im1.png, id=337, 500.5902pt x 299.6796pt>
+<capitulo3/images/im1.png, id=339, 500.5902pt x 299.6796pt>
 File: capitulo3/images/im1.png Graphic file (type png)
 <use capitulo3/images/im1.png>
 Package pdftex.def Info: capitulo3/images/im1.png  used on input line 15.
 (pdftex.def)             Requested size: 350.33727pt x 209.73769pt.
- [19pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-1}) has been already used, duplicate ignored
+ [17
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.28  	\end{lstlisting}
                         <./capitulo3/images/im1.png>]
-<capitulo3/images/im2.png, id=349, 543.53062pt x 52.69687pt>
+<capitulo3/images/im2.png, id=351, 543.53062pt x 52.69687pt>
 File: capitulo3/images/im2.png Graphic file (type png)
 <use capitulo3/images/im2.png>
 Package pdftex.def Info: capitulo3/images/im2.png  used on input line 33.
@@ -1440,13 +1458,13 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 106.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [20pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+ [18pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.106 \chapter
-              {Capitulo 4}\label{cap:Cap4} <./capitulo3/images/im2.png>]
+l.106 	\chapter
+               {Capitulo 4}\label{cap:Cap4} <./capitulo3/images/im2.png>]
 Cap\'{\i }tulo 4.
 (capitulo4/prototipo2.texpdfTeX warning (ext4): destination with the same ident
 ifier (name{fig:instalacionjava}) has been already used, duplicate ignored
@@ -1454,12 +1472,12 @@ ifier (name{fig:instalacionjava}) has been already used, duplicate ignored
                    \relax 
 l.13 ...rtarget{fig:instalacionjava}{\hspace{1pt}}
                                                   
-<capitulo4/images/im1.png, id=358, 500.5902pt x 299.6796pt>
+<capitulo4/images/im1.png, id=360, 500.5902pt x 299.6796pt>
 File: capitulo4/images/im1.png Graphic file (type png)
 <use capitulo4/images/im1.png>
 Package pdftex.def Info: capitulo4/images/im1.png  used on input line 15.
 (pdftex.def)             Requested size: 350.33727pt x 209.73769pt.
- [21
+ [19
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) 
 has been already used, duplicate ignored
@@ -1474,7 +1492,7 @@ tination with the same identifier (name{fig:instalacionjava2}) has been already
                    \relax 
 l.31 ...target{fig:instalacionjava2}{\hspace{1pt}}
                                                   
-<capitulo4/images/im2.png, id=370, 543.53062pt x 52.69687pt>
+<capitulo4/images/im2.png, id=371, 543.53062pt x 52.69687pt>
 File: capitulo4/images/im2.png Graphic file (type png)
 <use capitulo4/images/im2.png>
 Package pdftex.def Info: capitulo4/images/im2.png  used on input line 33.
@@ -1488,13 +1506,13 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 111.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [22pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [20pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.111 \chapter
-              {Capitulo 5}\label{cap:Cap5} <./capitulo4/images/im2.png>]
+l.111 	\chapter
+               {Capitulo 5}\label{cap:Cap5} <./capitulo4/images/im2.png>]
 Cap\'{\i }tulo 5.
 (capitulo5/instalador.texpdfTeX warning (ext4): destination with the same ident
 ifier (name{fig:instalacionjava}) has been already used, duplicate ignored
@@ -1502,12 +1520,12 @@ ifier (name{fig:instalacionjava}) has been already used, duplicate ignored
                    \relax 
 l.13 ...rtarget{fig:instalacionjava}{\hspace{1pt}}
                                                   
-<capitulo5/images/im1.png, id=378, 500.5902pt x 299.6796pt>
+<capitulo5/images/im1.png, id=379, 500.5902pt x 299.6796pt>
 File: capitulo5/images/im1.png Graphic file (type png)
 <use capitulo5/images/im1.png>
 Package pdftex.def Info: capitulo5/images/im1.png  used on input line 15.
 (pdftex.def)             Requested size: 350.33727pt x 209.73769pt.
- [23
+ [21
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
 has been already used, duplicate ignored
@@ -1522,7 +1540,7 @@ tination with the same identifier (name{fig:instalacionjava2}) has been already
                    \relax 
 l.31 ...target{fig:instalacionjava2}{\hspace{1pt}}
                                                   
-<capitulo5/images/im2.png, id=389, 543.53062pt x 52.69687pt>
+<capitulo5/images/im2.png, id=391, 543.53062pt x 52.69687pt>
 File: capitulo5/images/im2.png Graphic file (type png)
 <use capitulo5/images/im2.png>
 Package pdftex.def Info: capitulo5/images/im2.png  used on input line 33.
@@ -1537,7 +1555,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 115.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [24pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [22pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1552,7 +1570,7 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `Base.out' has not changed.
-(rerunfilecheck)             Checksum: C775E58A9BD386FB546F590C634BF2B3;1499.
+(rerunfilecheck)             Checksum: 5AC7ECBB83390565219E76452592FFD5;1645.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1564,33 +1582,35 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
  ) 
 Here is how much of TeX's memory you used:
  10457 strings out of 492970
- 151506 string characters out of 3126593
- 263721 words of memory out of 3000000
- 13943 multiletter control sequences out of 15000+200000
- 15520 words of font info for 58 fonts, out of 3000000 for 9000
+ 151334 string characters out of 3126593
+ 265776 words of memory out of 3000000
+ 13941 multiletter control sequences out of 15000+200000
+ 15168 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,15n,47p,821b,1061s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,15n,47p,822b,1061s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi
-600\cmbrsl10.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\publi
-c\cmbright\dpi720\cmbrbx10.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\p
-k\ljfour\public\cmbright\dpi600\cmbrsy10.pk> <C:\Users\kevin\AppData\Local\MiKT
-eX\2.9\fonts\pk\ljfour\public\cmbright\dpi864\cmbrbx10.pk> <C:\Users\kevin\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi450\cmbr8.pk> <C:\Users
-\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi525\cmbr8.pk
-> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi6
-00\cmbr10.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\c
-mbright\dpi600\cmbrbx10.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\public\cmbright\dpi864\cmbr10.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.
-9\fonts\pk\ljfour\public\cmbright\dpi375\cmbrsl8.pk> <C:\Users\kevin\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cmbr8.pk> <C:\Users\kevin
-\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi720\cmbr10.pk> <C:
-\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cm
-br17.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbrig
-ht\dpi864\cmbr17.pk><C:/Users/kevin/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/marvosym/marvosym.pfb>
-Output written on Base.pdf (28 pages, 2231040 bytes).
+600\cmbrmi10.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\publi
+c\cmbright\dpi525\cmbrmi8.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\public\cmbright\dpi720\cmbrbx10.pk> <C:\Users\kevin\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cmbrsy10.pk> <C:\Users\kevin\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi864\cmbrbx10.pk> <C:\Use
+rs\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi450\cmbr8.
+pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dp
+i525\cmbr8.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\
+cmbright\dpi600\cmbr10.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\lj
+four\public\cmbright\dpi600\cmbrbx10.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\public\cmbright\dpi864\cmbr10.pk> <C:\Users\kevin\AppData\Lo
+cal\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi375\cmbrsl8.pk> <C:\Users\kev
+in\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cmbr8.pk> <C
+:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi720\c
+mbr10.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbri
+ght\dpi600\cmbr17.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+public\cmbright\dpi864\cmbr17.pk><C:/Users/kevin/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/kevin/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/marvosym/marvosym.pfb>
+Output written on Base.pdf (26 pages, 2234762 bytes).
 PDF statistics:
- 796 PDF objects out of 1000 (max. 8388607)
- 146 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 822 PDF objects out of 1000 (max. 8388607)
+ 150 named destinations out of 1000 (max. 500000)
+ 284 words of extra memory for PDF output out of 10000 (max. 10000000)
 

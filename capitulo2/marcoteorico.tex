@@ -5,11 +5,12 @@
 El término Big Data se refiere a cantidades enormes de información, por ejemplo, la cantidad de información que se produce todos los días con el uso de una red social como Facebook, o la cantidad de datos que producen computadoras y dispositivos electrónicos que se auto monitorean mediante sensores. Esos volúmenes masivos de datos pueden ser utilizados para extraer conocimiento de ellos, y posteriormente atacar problemas que no sería posible resolver sin el Big Data.
 
 \subsubsection{Las 3 Vs del Big Data}
+Al ser el Big Data un concepto emergente y relativamente nuevo, se han tenido ciertas dificultades para definirlo de manera uniforme. Debido a las dimensiones de todo lo que conlleva entender Big Data, resultó conveniente entre los estudiosos del tema definir y acentuar las magnitudes que lo definen. Estas magnitudes se conocen como las 3 Vs del Big Data.
 
 \begin{enumerate}
-	\item \textbf{Volumen:} Con Big Data, se tendrán que procesar grandes volúmenes de información de baja densidad y sin estructura.
-	\item \textbf{Velocidad:} Qué tan rápido se leen o se procesan los datos.
-	\item \textbf{Variedad:} Múltiples tipos de datos y de archivos que se pueden procesar con el uso de Big Data.
+	\item \textbf{Volumen:} Con Big Data, se tendrán que procesar enormes volúmenes de información. Este punto es importante ya que el crecimiento de la nececidad de almacenamiento de datos en el mundo moderno, crece de forma exponencial.
+	\item \textbf{Velocidad:} Usando Big Data, se abre la posibilidad de acceso y flujo de datos a velocidades que no se podrían conseguir de manera convencional.
+	\item \textbf{Variedad:} Procesamiento de datos de naturaleza heterogénea, es decir, múltiples tipos de datos.
 \end{enumerate}
 
 \subsubsection{Casos de uso del Big Data}
@@ -22,28 +23,34 @@ El término Big Data se refiere a cantidades enormes de información, por ejempl
 \end{UClist}
 
 \subsection{Minería de datos}
-La minería de datos es el proceso de detectar la información procesable de los conjuntos grandes de datos. Utiliza el análisis matemático para deducir los patrones y tendencias que existen en los datos. Normalmente, estos patrones no se pueden detectar mediante la exploración tradicional de los datos porque las relaciones son demasiado complejas o porque hay demasiado datos.
-Estos patrones y tendencias se pueden recopilar y definir como un modelo de minería de datos. Los modelos de minería de datos se pueden aplicar en escenarios como los siguientes:
+La minería de datos es el proceso de generar conocimiento a partir de un conjunto de información de gran tamaño. Para generar ese conocimiento se utilizan diferentes técnicas de análisis que detectan patrones y tendencias en la información que se está procesando. Si se intentara utilizar algún método de análisis tradicional, sería muy complicado o incluso imposible a veces encontrar patrones y tendencias útiles, ya que es muy probable que dentro de los datos existan relaciones muy complejas o simplemente la cantidad de datos sea demasiado grande.\\
+
+La minería de datos puede utilizarse en escenarios como los que se enuncian a continuación: \\
 \begin{UClist}
-	\UCli \textbf{Pronóstico:} Cálculo de las ventas y predicción de las cargas del servidor o del tiempo de inactividad del servidor.
-	\UCli \textbf{Riesgo y probabilidad:} Elección de los mejores clientes para la distribución de correo directo, determinación del punto de equilibrio probable para los escenarios de riesgo, y asignación de probabilidades a diagnósticos y otros resultados.
-	\UCli \textbf{Recomendaciones:} Determinación de los productos que se pueden vender juntos y generación de recomendaciones.
-	\UCli \textbf{Búsqueda de secuencias:} Análisis de los artículos que los clientes han introducido en el carrito de la compra y predicción de posibles eventos.
-	\UCli \textbf{Agrupación:} Distribución de clientes o eventos en grupos de elementos relacionados, y análisis y predicción de afinidades.
+	\UCli \textbf{Pronóstico:} Predicción de datos y eventos que vendrán a futuro a partir del comportamiento de conjuntos de datos que se tienen en el presente. Por ejemplo, predicción de ventas y tendencias de compra.
+	\UCli \textbf{Riesgo y probabilidad:} Es un escenario muy común dentro de los negocios de Bussiness Intelligence. Por ejemplo, se llega a utilizar para encontrar puntos de equilibrio probable para escenarios de riesgo.
+	Elección de los mejores clientes para la distribución de correo directo, determinación del punto de equilibrio probable para los escenarios de riesgo, y asignación de probabilidades a diagnósticos y otros resultados.
+	\UCli \textbf{Recomendaciones:} Muy utilizado en sistemas como MercadoLibre o Amazon, en módulos que toman la información de búsqueda de cada usuario, la procesan y le arrojan recomendaciones de productos o servicios.
+	\UCli \textbf{Búsqueda de secuencias:} Al igual que el escenario de \textbf{recomendaciones}, se utiliza mucho en sistemas de venta de artículos por internet. Se analiza el orden de los artículos que se meten a un carrito de compra para poder hacer predicciones útiles y generar conocimiento.
+	\UCli \textbf{Agrupación:} Clasificación de los elementos de un conjunto de información para el posterior análisis de sus afinidades.
 \end{UClist}
 
 \subsection{Árboles de decisión}
-Un árbol de decisión es una representación de una función multivariada y que fue posible utilizar de manera práctica a partir del desarrollo de las computadoras modernas. El interés por el uso práctico de los árboles de decisión tuvo su origen las necesidades de las ciencias sociales.\\
+Un árbol de decisión es un modelo de predicción que apoya al proceso de toma de decisiones. Esta herramienta tiene un campo de aplicación extremadamente amplio, pudiendo ir desde el área de finanzas hasta el área del aprendizaje de máquina. A partir de un conjunto de datos de entrada, se construyen los caminos, dentro del árbol, que llevarán a cada una de las decisiones posibles.\\
 
-Los árboles de decisión están formados por los siguientes elementos:
+Los árboles de decisión están formados por los siguientes elementos:\\
 
-\begin{UClist}
-	\UCli \textbf{Nodos:} Nombres o identificadores de los atributos.
-	\UCli \textbf{Ramas:} Posibles valores del atributo asociado al nodo.
-	\UCli \textbf{Hojas:} Conjuntos ya clasificados de ejemplos y etiquetados con el nombre	de una clase. 
-\end{UClist}
+\begin{enumerate}
+	\item \textbf{Nodos:} Un nodo es un punto del proceso en el que de acuerdo a ciertas condiciones o decisiones se redefine el rumbo del camino. Existen dos tipos de nodo:
+	\begin{enumerate}
+		\item \textbf{Nodo de decisión:} Es un nodo en el cual se toma una decisión consciente de acuerdo a las necesidades del problema en cuestión. Estos nodos se representan con un cuadrado.
+		\item \textbf{Nodo de incertidumbre: } Es un nodo en el que actúan las probabilidades y la heurística para definir el rumbo que tomará el camino que se hará dentro del árbol. Estos nodos se representan con un círculo
+	\end{enumerate}
+	\item \textbf{Ramas:} Una rama es una de las respuestas o acciones que se toman a partir de la pregunta o escenario que se presentó en un nodo del cual salió esa rama. Una rama es el camino a otro nodo o escenario resultado de la decisión o evento que definió la rama. Este elemento se representa con una línea.
+	\item \textbf{Hojas:} Son escenarios finales, ya clasificados. No tienen ramificaciones, y son el resultado final de seguir un camino de decisiones, acciones y probabilidades. Este elemento se representa con un triángulo.
+\end{enumerate}
 
-\pagebreak
+\newpage
 \begin{figure}[!htbp]
 	\hypertarget{fig:arbol-decision-ejemplo}{\hspace{1pt}}
 	\begin{center}
@@ -53,63 +60,36 @@ Los árboles de decisión están formados por los siguientes elementos:
 	\end{center}
 \end{figure}
 
-Quinlan (1986) desarrolló el algoritmo \nameref{id3} este utiliza la medida de entropía de la información para crear los árboles. Este fue mejorado y fue denominado \nameref{c4.5} por su autor Quinlan (1993).\\
+\subsection{ID3 (Iterative Dichotomiser 3)} \label{id3}
 
-A continuación se dará una breve descripción de los algoritmos \nameref{id3} y \nameref{c4.5}.
+El algoritmo ID3 es uno de los algoritmos que utilizan árboles de decisión más populares. ID3 genera un árbol a partir de un conjunto de datos llamado \textbf{tabla de inducción}. Es útil para hacer toma de decisiones en escenarios binarios, es decir, que tienen 2 posibilidades finales.\\
 
-\subsubsection{ID3 (Iterative Dichotomiser 3)} \label{id3}
-Este algoritmo construye un árbol de decisión que mantenga cada instancia de la secuencia de datos de entrada lo más compacta posible. Estos datos de enrtada se toman a partir de una tabla llamada \textbf{tabla de inducción}.\\
+El resultado de la ejecución de este algoritmo puede expresarse como un conjunto de reglas \textbf{\textit{si-entonces}}.
 
-Una característica importante a destacar de este algoritmo es que el árbol de decisión que se genera es útil para aproximar una función objetivo de valores \textbf{discretos} utilizando la \textbf{entropía}.\\
+\subsubsection{Entropía}
+La entropía es la medida de la aleatoriedad. En otras palabras, la medidad e la impredictibilidad. La entropía es más alta cuando todos los eventos posibles en un escenario son igualmente probables, por ejemplo, al tirar una moneda al aire, se tiene 50\% de probabilidad de que caiga cara y 50\% de probabilidad de que caiga cruz, por lo que la entropía es de 1. Este parámetro comienca a decrecer cuando hay una probabilidad o probabilidades que parezcan aplastantes sobre las otras. La fórmula para calcular la entropía es la siguiente:
 
-El resultado de la ejecución de este algoritmo puede expresarse como un conjunto de reglas \textbf{\textit{si-entonces}}.\\
-
-Los datos de entrada del algoritmo son los siguientes:\\
-
-\begin{UClist}
-	\UCli \textbf{Atributos:} Son los factores que influencian la clasificación o decisión. La selección de estos atributos debe basarse en el conociento acumulado por la experiencia. Cada atributo forma un nodo intermedio en un árbol cuyas hojas o nodos terminales son las clases o decisiones.
-	\UCli \textbf{Clase:} Posible valor de solúción.
-	\UCli \textbf{Conjunto de ejemplos:} Conjunto de combinaciones de atributos dados. Dado este conjunto, el ID3 selecciona el atributo que subdivide los ejemplos \textit{de la mejor manera}.
-	\UCli \textbf{Entropía:} La entropía es la medida de la incertidumbre que hay en un sistema. Es decir, ante una determinada situación, la probabilidad de que ocurra cada uno de los posibles resultados. La entropía máxima que se puede tener es 1, la mínima es 0.\\
-
-Este parámetro se calcula con la siguiente fórmula:
-
-\pagebreak
-\begin{figure}[!htbp]
-	\hypertarget{fig:formula-entropia}{\hspace{1pt}}
-	\begin{center}
-		\includegraphics[width=0.3\textwidth, height=0.07\textheight]{capitulo2/images/formula-entropia.png}
-		\caption{Fórmula para calcular la entropía}
-		\label{fig:formula-entropia}
-	\end{center}
-\end{figure}
-\end{UClist}
-
-\subsubsection{C4.5} \label{c4.5}
+\subsection{C4.5} \label{c4.5}
 
 \subsection{Spark}
 Es una herramienta de código abierto. Es un motor de análisis de datos unificado para Big Data y Machine Learning. 
 \subsection{Hadoop}
 Es un framework de software que soporta aplicaciones distribuidas bajo una licencia libre. Permite a las aplicaciones trabajar con miles de nodos y petabytes de datos. Hadoop se inspiró en los documentos Google para MapReduce y Google File System (GFS). Hadoop utiliza su propio sistema de archivos HDFS, que divide archivos grandes y los distribuye en diferentes nodos para su procesamiento.
-% Para que la ELD pueda mantener actualizado el status de pago de los aspirantes que realizaron la operación en sucursal bancaria, es necesario que el \textbf{Contador General} actualice de forma manual dichos pagos, esto se logra con ayuda del archivo brindado por BANAMEX, el cual servirá para ser cargado en el sistema y este lo interprete y determine si es correcto, en caso de ser correcto actualizar el estado de pago de los aspirantes que allí se encuentran, de lo contrario mostrar las inconsistencias.\\
-% Una de las operaciones que brinda el sistema, es la actualización manual del status de pago de un aspirante, esta acción le permite tener el control para la actualización del status de pago de los aspirantes, esto con la finalidad de no depender del archivo de BANAMEX en caso de que presentaran conflictos con el mismo.
-%\subsubsection{Procedimiento}
+
 \begin{enumerate}
 	\item Solicite administrar los pagos admisión seleccionando la opción \textbf{Administración de pagos} del menú \refIU{fig:menuPrincipalCG}{Menú del Contador General} y posteriormente la opción \textbf{Pagos Admisión} del menú \refIU{fig:menuPagosA}{Menú Pagos Admisión}.
-	\item Se mostrará la pantalla \refIU{fig:APA}{Administrar Pagos Admisión}.
+	\item Se mostrará la pantalla \refIU{fig:ss}{Administrar Pagos Admisión}.
 	\begin{figure}[!htbp]
-		\hypertarget{fig:APA}{\hspace{1pt}}
+		\hypertarget{fig:ss}{\hspace{1pt}}
 		\begin{center}
 			\includegraphics[height=0.3\textheight]{capitulo1/images/IU-APA.png}
 			\caption{Administrar Pagos Admisión}
-			\label{fig:APA}
+			\label{fig:ss}
 		\end{center}
 	\end{figure}
 
 	
 \end{enumerate}
-	
-
 
 \newpage
 \begin{Errores}
