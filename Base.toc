@@ -31,12 +31,13 @@
 \contentsline {subsubsection}{Entrop\IeC {\'\i }a}{15}{section*.14}
 \contentsline {subsubsection}{Ejecuci\IeC {\'o}n del algoritmo ID3}{16}{section*.15}
 \contentsline {subsection}{\numberline {2.1.5}C4.5}{20}{subsection.2.1.5}
-\contentsline {subsection}{\numberline {2.1.6}Spark}{20}{subsection.2.1.6}
-\contentsline {subsection}{\numberline {2.1.7}Hadoop}{20}{subsection.2.1.7}
-\contentsline {subsubsection}{Errores Comunes}{21}{section*.16}
-\contentsline {chapter}{\numberline {3}Capitulo 3}{23}{chapter.3}
-\contentsline {section}{\numberline {3.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{23}{section.3.1}
-\contentsline {chapter}{\numberline {4}Capitulo 4}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{25}{section.4.1}
-\contentsline {chapter}{\numberline {5}Capitulo 5}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{27}{section.5.1}
+\contentsline {subsubsection}{Ejecuci\IeC {\'o}n del algoritmo C4.5}{20}{section*.16}
+\contentsline {subsection}{\numberline {2.1.6}Spark}{25}{subsection.2.1.6}
+\contentsline {subsection}{\numberline {2.1.7}Hadoop}{25}{subsection.2.1.7}
+\contentsline {subsubsection}{Errores Comunes}{26}{section*.17}
+\contentsline {chapter}{\numberline {3}Capitulo 3}{27}{chapter.3}
+\contentsline {section}{\numberline {3.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{27}{section.3.1}
+\contentsline {chapter}{\numberline {4}Capitulo 4}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{29}{section.4.1}
+\contentsline {chapter}{\numberline {5}Capitulo 5}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{31}{section.5.1}

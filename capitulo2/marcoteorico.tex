@@ -87,13 +87,13 @@ La entropía es la medida de la aleatoriedad. En otras palabras, la medidad e la
 	\end{center}
 \end{figure}
 
-\subsubsection{Ejecución del algoritmo ID3}
+\subsubsection{Ejecución del algoritmo ID3} \label{ejecucionID3}
 
 Para ilustrar el funcionamiento del algoritmo ID3, utilizaremos la siguiente tabla de inducción que contiene información sobre factores que influyen al tomar la decisión de si un partido de tenis debería o no debería jugarse:
 
 \begin{table}[!hb]
 	\begin{center}
-		\label{tab:tablaInduccion}
+		\label{tab:tablaInduccionID3}
 		\begin{tabular}{c|c|c|c|c|c}
 			\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
 			\hline
@@ -113,7 +113,7 @@ Para ilustrar el funcionamiento del algoritmo ID3, utilizaremos la siguiente tab
 			14 & Lluvioso & Templado & Alta & Fuerte & No\\
 		\end{tabular}
 	\end{center}
-	\caption{Tabla de inducción para juegos de tenis.}
+	\caption{Tabla de inducción para juegos de tenis ID3.}
 \end{table}
 
 Necesitaremos de la \refIU{fig:formula-entropia}{fórmula para calcular la entropía} y de la \refIU{fig:formula-ganancia}{fórmula para calcular la ganancia} para poder proceder con la ejecución del algoritmo.\\
@@ -324,11 +324,243 @@ Necesitaremos de la \refIU{fig:formula-entropia}{fórmula para calcular la entro
 
 
 \subsection{C4.5} \label{c4.5}
-El algoritmo C4.5 es la evolución del algoritmo ID3. Éste genera un árbol de decisión a partir de un conjunto de dstos de entrada de manera recursiva, al igual que su precursor. Sin embargo, aunque ID3 y C4.5 son algoritmos muy semejantes, existen ciertas diferencias:
+El algoritmo C4.5 es la evolución del algoritmo ID3. Éste genera un árbol de decisión a partir de un conjunto de dstos de entrada de manera recursiva, al igual que su precursor. Sin embargo, aunque ID3 y C4.5 son algoritmos muy semejantes, existen ciertas diferencias:\\
 
 \begin{UClist}
-	\UCli C4.5 permite trabajar con valores continuos, mientras que ID3 solamente trabaja con valores discretos.
-	\UCli Los árboles de C4.5 son más compactos, y esto se debe a que cada nodo hoja engloba un conjunto de clases y no una sola clase particular.
+	\UCli C4.5 permite trabajar con valores continuos, mientras que ID3 solamente trabaja con valores discretos.\\
+	\UCli Los árboles de C4.5 son más compactos, y esto se debe a que cada nodo hoja engloba un conjunto de clases y no una sola clase particular.\\
+	\UCli C4.5 es más eficiente computacionalmente hablando.\\
+	\UCli C4.5 utiliza un nuevo parámetro llamado \textbf{Gain Ratio}, en lugar de la ganancia simple. Y este a su vez requiere de la ganancia y de otro parámetro nuevo llamado \textbf{SplitInfo} cuyas fórmulas se enuncian a continuación:
+	
+	\begin{figure}[H]
+		\hypertarget{fig:formula-gainratio}{\hspace{1pt}}
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{capitulo2/images/formula-gainratio.png}
+			\caption{Fórmula para obtener el Gain Ratio}
+			\label{fig:formula-gainratio}
+		\end{center}
+	\end{figure}
+
+	\begin{figure}[H]
+		\hypertarget{fig:formula-splitinfo}{\hspace{1pt}}
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{capitulo2/images/formula-splitinfo.png}
+			\caption{Fórmula para obtener SplitInfo}
+			\label{fig:formula-splitinfo}
+		\end{center}
+	\end{figure}
+
+\end{UClist}
+
+\subsubsection{Ejecución del algoritmo C4.5}
+Para mostrar la forma en la que se ejecuta el algoritmo C4.5 y los pasos que se deben llevar a cabo, se utilizará la siguiente tabla de inducción:
+
+\begin{table}[H]
+	\begin{center}
+		\label{tab:tablaInduccionC4.5}
+		\begin{tabular}{c|c|c|c|c|c}
+			\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+			\hline
+			1 & Soleado & 85 & 85 & Ligero & No\\
+			2 & Soleado & 80 & 90 & Fuerte & No\\
+			3 & Nublado & 83 & 78 & Ligero & Sí\\
+			4 & Lluvioso & 70 & 96 & Ligero & Sí\\
+			5 & Lluvioso & 68 & 80 & Ligero & Sí\\
+			6 & Lluvioso & 65 & 70 & Fuerte & No\\
+			7 & Nublado & 64 & 65 & Fuerte & Sí\\
+			8 & Soleado & 72 & 95 & Ligero & No\\
+			9 & Soleado & 69 & 70 & Ligero & Sí\\
+			10 & Lluvioso & 75 & 80 & Ligero & Sí\\
+			11 & Soleado & 75 & 70 & Fuerte & Sí\\
+			12 & Nublado & 72 & 90 & Fuerte & Sí\\
+			13 & Nublado & 81 & 75 & Ligero & Sí\\
+			14 & Lluvioso & 80 & 80 & Fuerte & No\\
+		\end{tabular}
+	\end{center}
+	\caption{Tabla de inducción para juegos de tenis C4.5.}
+\end{table}
+
+\begin{UClist}
+	\UCli Al igual que con el ejemplo \nameref{ejecucionID3}, lo primero que se hace es calcular la entropía general. Hay 15 instancias de las cuales 9 tienen una decisión final de \textbf{sí} y 5 tienen \textbf{no}. Al sustituir los valores correspondientes en la \refIU{fig:formula-entropia}{fórmula para calcular la entropía} el resultado que obtenemos es \emph{0.940}.\\
+
+	\UCli En C4.5 se utilizan \textbf{Gain Ratios} (radios de ganancia), mientras que en ID3 se utilizan ganancias.\\
+
+	\UCli Empezaremos por analizar el atributo de \textbf{Viento}.\\
+
+	Se tienen 8 instancias de \emph{viento ligero}, dos de ellas concluyen en un \textbf{no}, y las otras 6 concluyen en \textbf{sí} por lo que:\\
+
+	\begin{enumerate}
+		\item Entropía(Decisión, Viento = Ligero) = 0.811\\
+		\item Entropía(Decisión, Viento = Fuerte) = 1\\
+		\item Ganancia(Decisión, Viento) = 0.049\\
+	\end{enumerate}
+
+	Existen 6 instancias de viento fuerte por lo que:
+
+	\begin{enumerate}
+		\item SplitInfo(Decisión, Viento) = 0.985\\
+		\item GainRatio(Decisión, Viento) = Gain(Decisión, Viento) / SplitInfo(Decision, Viento) = 0.049\\
+	\end{enumerate}
+
+	\UCli Continuamos analizando ahora el atributo \textbf{Aspecto}.\\
+
+	Se tienen 5 instancias para el aspecto \emph{soleado}, de las cuales 3 concluyen en \textbf{no} y las otras 2 concluyen en \textbf{sí}. Calculando sus valores de entropías, ganancia, SplitInfo y GainRatio:\\
+
+	\begin{enumerate}
+		\item Entropía(Decisión, Aspecto = Soleado) = 0.970\\
+		\item Entropía(Decisión, Aspecto = Nublado) = 0\\
+		\item Entropía(Decisión, Aspecto = Lluvioso) = 0.970\\
+		\item Ganancia(Decisión, Aspecto) = 0.246\\
+		Hay 5 instancias para \emph{soleado}, 4 instancias para \emph{nublado} y 5 para \emph{lluvioso}, por lo que:\\
+		\item SplitInfo(Decisión, Aspecto) = 1.577\\
+		\item GainRatio(Decisión, Aspecto) = 0.155\\
+	\end{enumerate}
+
+	\UCli Procedemos a analizar el atributo de humedad. Cuyo caso es diferente al de los demás atributos, ya que este es un atributo continuo. Necesitamos convertir valoress continuos a valores nominales (como todos los demás atributos). C4.5 propone hacer una división binaria a partir de algún valor que podamos tomar como umbral. El umbral debe ser el valor que mayor ganancia ofrezca para ese atributo. Para esto, primero se deben ordenar las instancias de humedad de menor a mayor.\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaInduccionC4.5Humedad}
+			\begin{tabular}{c|c|c}
+				\textbf{Día} & \textbf{Humedad} & \textbf{Decisión}\\
+				\hline
+				7 & 65 & Sí\\
+				6 & 70 & No\\
+				9 & 70 & Sí\\
+				11 & 70 & Sí\\
+				13 & 75 & Sí\\
+				3 & 78 & Sí\\
+				5 & 80 & Sí\\
+				10 & 80 & Sí\\
+				14 & 80 & No\\
+				1 & 85 & No\\
+				2 & 90 & No\\
+				12 & 90 & Sí\\
+				8 & 95 & No\\
+				4 & 96 & Sí\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de l atributo \emph{humedad} ordenada de menor a mayor.}
+	\end{table}
+
+	Ahora debemos recorrer todos los valores de humedad y separar el conjunto de datos en dos partes. Se calcularán la \textbf{Ganancia} y el \textbf{GainRatio} y el valor que maximice la ganancia será el umbral.\\
+
+	\begin{enumerate}
+		\item Se propone 65 como umbral.
+		\begin{enumerate}
+			\item Entropía(Decisión, Humedad <= 65) = 0
+			\item Entropía(Decisión, Humedad > 65) = 0.961
+			\item Ganancia(Decisión, Humedad <> 65) = 0.048
+			\item SplitInfo(Decisión, Humedad <> 65) = 0.371
+			\item GainRatio(Decisión, Humedad <> 65) = 0.126\\
+		\end{enumerate}
+		\item Se propone 70 como umbral.
+		\begin{enumerate}
+			\item Entropía(Decisión, Humedad <= 70) = 0.811
+			\item Entropía(Decisión, Humedad > 70) = 0.970
+			\item Ganancia(Decisión, Humedad <> 70) = 0.014
+			\item SplitInfo(Decisión, Humedad <> 70) = 0.863
+			\item GainRatio(Decisión, Humedad <> 70) = 0.016\\
+		\end{enumerate}
+		\item Se propone 75 como umbral.
+		\begin{enumerate}
+			\item Entropía(Decisión, Humedad <= 75) = 0.721
+			\item Entropía(Decisión, Humedad > 75) = 0.991
+			\item Ganancia(Decisión, Humedad <> 75) = 0.045
+			\item SplitInfo(Decisión, Humedad <> 75) = 0.940
+			\item GainRatio(Decisión, Humedad <> 75) = 0.047\\
+		\end{enumerate}
+		\item Se continúa haciendo lo mismo para cada valor nuevo de humedad que se vaya encontrando en la tabla. Resumiendo:
+		\item Ganancia(Decisión, Humedad <> 78) = 0.090
+		\item Ganancia(Decisión, Humedad <> 80) = 0.107
+		\item Ganancia(Decisión, Humedad <> 85) = 0.027
+		\item Ganancia(Decisión, Humedad <> 90) = 0.016
+	\end{enumerate}
+
+	\UCli Como podemos ver, el valor que maximiza la ganancia es el de 80. Lo que significa que ahora se debe comparar los otros valores nominales con el valor 80 del atributo \emph{humedad} para crear una rama en nuestro árbol. De esta forma podemos resumir los resultados en la siguiente tabla:\\
+
+	\begin{table}[H]
+		\label{tab:tablaComparacionHumedadAtributos}
+		\begin{center}
+			\begin{tabular}{c|c|c}
+				\textbf{Atributo} & \textbf{Ganancia} & \textbf{GainRatio}\\
+				\hline
+				Viento & 0.049 & 0.049\\
+				Aspecto & 0.246 & 0.155\\
+				Humedad <> 80 & 0.101 & 0.107\\
+			\end{tabular}
+			\caption{Comparación de las ganancias entre atributos.}
+		\end{center}
+	\end{table} 
+
+	\UCli Al igual que en el ejemplo del algoritmo ID3, el atributo \textbf{aspecto} es el nodo raíz del árbol de decisión, por lo que ahora se deben analizar todos los posibles valores que puede adquirir dicho atributo.\\
+
+	\UCli Aspecto Soleado.\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaSoleadoC4.5}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				1 & Soleado & 85 & 85 & Ligero & No\\
+				2 & Soleado & 80 & 90 & Fuerte & No\\
+				8 & Soleado & 72 & 95 & Ligero & No\\
+				9 & Soleado & 69 & 70 & Ligero & Sí\\
+				11 & Soleado & 75 & 70 & Fuerte & Sí\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de inducción para el atributo \emph{Aspecto} con el valor \emph{Soleado}.}
+	\end{table}
+
+	Ya hemos dividido la humedad a partir de su punto de umbral que es 80. Podemos observar en la siguiente tabla que la decisión final será \textbf{no}, si la humedad es mayor a 80 y el aspecto del día es soleado. La decisión final será \textbf{sí}, si la humedad es menor o igual a 80 para un día soleado.\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaNubladoC4.5}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				3 & Nublado & 83 & 78 & Ligero & Sí\\
+				7 & Nublado & 64 & 65 & Fuerte & Sí\\
+				12 & Nublado & 72 & 90 & Fuerte & Sí\\
+				13 & Nublado & 81 & 75 & Ligero & Sí\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de inducción para el atributo \emph{Aspecto} con el valor \emph{Nublado}.}
+	\end{table}
+
+	Cuando el aspecto del día es \textbf{nublado}, no importa ninguna otra condición; ni temperatura, ni humedad. La decisión final siempre será \textbf{sí}.\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaLluviosoC4.5}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				4 & Lluvioso & 70 & 96 & Ligero & Sí\\
+				5 & Lluvioso & 68 & 80 & Ligero & Sí\\
+				6 & Lluvioso & 65 & 70 & Fuerte & No\\
+				10 & Lluvioso & 75 & 80 & Ligero & Sí\\
+				14 & Lluvioso & 80 & 80 & Fuerte & No\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de inducción para el atributo \emph{Aspecto} con el valor \emph{Lluvioso}.}
+	\end{table}
+
+	Cuando el aspecto es \textbf{lluvioso}, la decisión será \textbf{sí} cuando el viento es ligero, y será \textbf{no} cuando sea fuerte.\\
+
+	\UCli De todo lo anterior se concluye un árbol de decisión con la siguiente estructura:\\
+
+	\begin{figure}[H]
+		\hypertarget{fig:arbol-final-c45}{\hspace{1pt}}
+		\begin{center}
+			\includegraphics{capitulo2/images/arbol-final-c45.png}
+			\caption{Arbol de decisión construido con C4.5.}
+			\label{fig:arbol-final-c45}
+		\end{center}
+	\end{figure}
+
 \end{UClist}
 
 \subsection{Spark}
