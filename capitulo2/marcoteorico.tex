@@ -50,7 +50,6 @@ Los árboles de decisión están formados por los siguientes elementos:\\
 	\item \textbf{Hojas:} Son escenarios finales, ya clasificados. No tienen ramificaciones, y son el resultado final de seguir un camino de decisiones, acciones y probabilidades. Este elemento se representa con un triángulo.
 \end{enumerate}
 
-\newpage
 \begin{figure}[!htbp]
 	\hypertarget{fig:arbol-decision-ejemplo}{\hspace{1pt}}
 	\begin{center}
@@ -60,6 +59,7 @@ Los árboles de decisión están formados por los siguientes elementos:\\
 	\end{center}
 \end{figure}
 
+\newpage
 \subsection{ID3 (Iterative Dichotomiser 3)} \label{id3}
 
 El algoritmo ID3 es uno de los algoritmos que utilizan árboles de decisión más populares. ID3 genera un árbol a partir de un conjunto de datos llamado \textbf{tabla de inducción}. Es útil para hacer toma de decisiones en escenarios binarios, es decir, que tienen 2 posibilidades finales.\\
@@ -67,15 +67,275 @@ El algoritmo ID3 es uno de los algoritmos que utilizan árboles de decisión má
 El resultado de la ejecución de este algoritmo puede expresarse como un conjunto de reglas \textbf{\textit{si-entonces}}.
 
 \subsubsection{Entropía}
-La entropía es la medida de la aleatoriedad. En otras palabras, la medidad e la impredictibilidad. La entropía es más alta cuando todos los eventos posibles en un escenario son igualmente probables, por ejemplo, al tirar una moneda al aire, se tiene 50\% de probabilidad de que caiga cara y 50\% de probabilidad de que caiga cruz, por lo que la entropía es de 1. Este parámetro comienca a decrecer cuando hay una probabilidad o probabilidades que parezcan aplastantes sobre las otras. La fórmula para calcular la entropía es la siguiente:
+La entropía es la medida de la aleatoriedad. En otras palabras, la medidad e la impredictibilidad. La entropía es más alta cuando todos los eventos posibles en un escenario son igualmente probables, por ejemplo, al tirar una moneda al aire, se tiene 50\% de probabilidad de que caiga cara y 50\% de probabilidad de que caiga cruz, por lo que la entropía es de 1. Este parámetro comienca a decrecer cuando hay una probabilidad o probabilidades que parezcan aplastantes sobre las otras. Las fórmulas para calcular la entropía y la ganancia son las siguiente:\\
+
+\begin{figure}[!htbp]
+	\hypertarget{fig:formula-entropia}{\hspace{1pt}}
+	\begin{center}
+		\includegraphics{capitulo2/images/formula-entropia.png}
+		\caption{Fórmula para calcular la entropía.}
+		\label{fig:formula-entropia}
+	\end{center}
+\end{figure}
+
+\begin{figure}[!htbp]
+	\hypertarget{fig:formula-ganancia}{\hspace{1pt}}
+	\begin{center}
+		\includegraphics{capitulo2/images/formula-ganancia.png}
+		\caption{Fórmula para calcular la ganancia.}
+		\label{fig:formula-ganancia}
+	\end{center}
+\end{figure}
+
+\subsubsection{Ejecución del algoritmo ID3}
+
+Para ilustrar el funcionamiento del algoritmo ID3, utilizaremos la siguiente tabla de inducción que contiene información sobre factores que influyen al tomar la decisión de si un partido de tenis debería o no debería jugarse:
+
+\begin{table}[!hb]
+	\begin{center}
+		\label{tab:tablaInduccion}
+		\begin{tabular}{c|c|c|c|c|c}
+			\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+			\hline
+			1 & Soleado & Caluroso & Alta & Ligero & No\\
+			2 & Soleado & Caluroso & Alta & Fuerte & No\\
+			3 & Nublado & Caluroso & Alta & Ligero & Sí\\
+			4 & Lluvioso & Templado & Alta & Ligero & Sí\\
+			5 & Lluvioso & Fresco & Normal & Ligero & Sí\\
+			6 & Lluvioso & Fresco & Normal & Fuerte & No\\
+			7 & Nublado & Fresco & Normal & Fuerte & Sí\\
+			8 & Soleado & Templado & Alta & Ligero & No\\
+			9 & Soleado & Fresco & Normal & Ligero & Sí\\
+			10 & Lluvioso & Templado & Normal & Ligero & Sí\\
+			11 & Soleado & Templado & Normal & Fuerte & Sí\\
+			12 & Nublado & Templado & Alta & Fuerte & Sí\\
+			13 & Nublado & Caluroso & Normal & Ligero & Sí\\
+			14 & Lluvioso & Templado & Alta & Fuerte & No\\
+		\end{tabular}
+	\end{center}
+	\caption{Tabla de inducción para juegos de tenis.}
+\end{table}
+
+Necesitaremos de la \refIU{fig:formula-entropia}{fórmula para calcular la entropía} y de la \refIU{fig:formula-ganancia}{fórmula para calcular la ganancia} para poder proceder con la ejecución del algoritmo.\\
+
+\begin{UClist}
+	\UCli Primeramente se calcula la entropía. La columna de \textbf{Decisión} consta de 14 instancias e incluye dos posibles valores: \textbf{sí} y \textbf{no}. Hay 9 decisiones con la etiqueta \textbf{sí} y 5 con la etiqueta \textbf{no}. Utilizando la fórmula de la entropía, se encuentra que el resultado es de \emph{0.940}.\\
+	\UCli Después de los 5 factores disponibles, se busca el factor más dominante para tomar la decisión. Utilizando la fórmula de la ganancia tomando como parámetros la entropía de la columna \textbf{Decisión} y \textbf{Viento}.\\
+	\UCli El atributo de viento tiene dos posibles valores: \textbf{fuerte} y \textbf{ligero}. Y al reflejar estos dos posibles valores en la fórmula, ésta se vería más o menos así: \emph{Ganancia(Decisión, Viento) = Entropía(Decisión) - [p(Decisión, Viento = Ligero)*Entropía(Decisión, Viento = Ligero)]-[p(Decisión, Viento = Fuerte)*Entropía(Decisión, Viento = Fuerte)]}.\\
+	\UCli Ahora se calcula \emph{(Decisión, Viento = Ligero)} y \emph{(Decisión, Viento = Fuerte)} respectivamente.\\
+
+	\begin{table}[!hb]
+		\begin{center}
+			\label{tab:tablaInduccionVientoLigero}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				1 & Soleado & Caluroso & Alta & Ligero & No\\
+				3 & Nublado & Caluroso & Alta & Ligero & Sí\\
+				4 & Lluvioso & Templado & Alta & Ligero & Sí\\
+				5 & Lluvioso & Fresco & Normal & Ligero & Sí\\
+				8 & Soleado & Templado & Alta & Ligero & No\\
+				9 & Soleado & Fresco & Normal & Ligero & Sí\\
+				10 & Lluvioso & Templado & Normal & Ligero & Sí\\
+				13 & Nublado & Caluroso & Normal & Ligero & Sí\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de para el factor de decisión \emph{Viento Ligero}.}
+	\end{table}
+
+	Dentro de la tabla de viento ligero hay 8 instancias en total, de las cuales 2 tienen la decisión final \textbf{no} y 6 tienen la decisión final \textbf{sí}. Al introducir estos datos en la \refIU{fig:formula-entropia}{fórmula de la entropía}, y obtenemos una entropía de \emph{0.811}.\\
+
+	\newpage
+	\begin{table}[!hb]
+		\begin{center}
+			\label{tab:tablaInduccionVientoFuerte}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				2 & Soleado & Caluroso & Alta & Fuerte & No\\
+				6 & Lluvioso & Fresco & Normal & Fuerte & No\\
+				7 & Nublado & Fresco & Normal & Fuerte & Sí\\
+				11 & Soleado & Templado & Normal & Fuerte & Sí\\
+				12 & Nublado & Templado & Alta & Fuerte & Sí\\
+				14 & Lluvioso & Templado & Alta & Fuerte & No\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de para el factor de decisión \emph{Viento Fuerte}.}
+	\end{table}
+
+	En la tabla de viento fuerte encontramos 6 instancias divididas en 2 partes iguales: 3 tienen la decisión final \textbf{sí} y 3 tienen la decisión final \textbf{no}. Al sustituir estos datos en la \refIU{fig:formula-entropia}{fórmula de la entropía}, obtenemos una entropía de \emph{1}.\\
+
+	\UCli Ahora que tenemos esos dos valores, podemos volver a la ecuación de la ganancia. El resultado queda expresado como \emph{Ganancia(Decisión, Viento) = 0.940-[(8/14)*0.811]-[(6/14)*1] = 0.048}.\\
+
+	\UCli En este punto se ha concluido ya el cálculo para el factor de decisión \emph{Viento}. Ahora se necesita hacer lo mismo para todas las demas colúmnas/factores.\\
+
+	\UCli A modo de resumen:
+
+	\begin{enumerate}
+		\item Ganancia(Decisión, Aspecto) = 0.246
+		\item Ganancia(Decisión, Temperatura) = 0.029
+		\item Ganancia(Decisión, Humedad) = 0.151
+	\end{enumerate}
+
+	\UCli Como podemos ver, el factor de decisión \emph{Aspecto} es el que produce el valor de ganancia más alto. Por tal motivo, ese factor de decisión será el nodo raíz del árbol de decisión.\\
+
+	\UCli Ahora debemos probar todos los valores posibles que tiene el factor de decisión \emph{Aspecto}:\\
+
+	\UCli Aspecto Nublado\\
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaInduccionAspectoNublado}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				3 & Nublado & Caluroso & Alta & Ligero & Sí\\
+				7 & Nublado & Fresco & Normal & Fuerte & Sí\\
+				12 & Nublado & Templado & Alta & Fuerte & Sí\\
+				13 & Nublado & Caluroso & Normal & Ligero & Sí\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de días con aspecto \emph{nublado}.}
+	\end{table}
+
+	Podemos observar que siempre que el aspecto del día sea \textbf{nublado}, la decisión final sería \textbf{sí}.\\
+
+	\UCli Aspecto Soleado\\
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaInduccionAspectoSoleado}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				1 & Soleado & Caluroso & Alta & Ligero & No\\
+				2 & Soleado & Caluroso & Alta & Fuerte & No\\
+				8 & Soleado & Templado & Alta & Ligero & No\\
+				9 & Soleado & Fresco & Normal & Ligero & Sí\\
+				11 & Soleado & Templado & Normal & Fuerte & Sí\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla días con aspecto \emph{soleado}.}
+	\end{table}
+
+	En esta tabla tenemos 5 instancias para el aspecto \textbf{soleado}. Hay 3 de esas instancias que tienen como decisión final \textbf{sí} y 2 que tienen \textbf{no}. Por lo que los valores de ganancia del factor de decisión \textbf{Aspecto Soleado} con respecto a todos los demás factores de decisión quedarán de la siguiente manera:\\
+
+	\begin{enumerate}
+		\item Ganancia(Aspecto = Soleado, Temperatura) = 0.570
+		\item Ganancia(Aspecto = Soleado, Humedad) = 0.970
+		\item Ganancia(Aspecto = Soleado, Viento) = 0.019
+	\end{enumerate}
+
+	En este punto, la humedad es el factor de decisión con mayor ganancia cuando el aspecto del día es soleado. Por lo que debemos probar todos los valores posibles para el factor de decisión \emph{humedad}.\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaInduccionAspectoSoleadoHumedadAlta}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				1 & Soleado & Caluroso & Alta & Ligero & No\\
+				2 & Soleado & Caluroso & Alta & Fuerte & No\\
+				8 & Soleado & Templado & Alta & Ligero & No\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla días con aspecto \emph{soleado} y humedad \emph{alta}.}
+	\end{table}
+
+	La decisión siempre será \textbf{no} cuando la humedad sea \textbf{alta}.\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaInduccionAspectoSoleadoHumedadNormal}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				9 & Soleado & Fresco & Normal & Ligero & Sí\\
+				11 & Soleado & Templado & Normal & Fuerte & Sí\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla días con aspecto \emph{soleado} y humedad \emph{normal}.}
+	\end{table}
+
+	Por otro lado, la decisión siempre será \textbf{sí} cuando la humedad es \textbf{normal}.\\
+
+	De lo anterior concluimos que deberemos verificar la humedad y decidir si el aspecto del día es \textbf{soleado}.\\
+
+	\UCli Aspecto Lluvioso\\
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaInduccionAspectoLluvioso}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				4 & Lluvioso & Templado & Alta & Ligero & Sí\\
+				5 & Lluvioso & Fresco & Normal & Ligero & Sí\\
+				6 & Lluvioso & Fresco & Normal & Fuerte & No\\
+				10 & Lluvioso & Templado & Normal & Ligero & Sí\\
+				14 & Lluvioso & Templado & Alta & Fuerte & No\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de días con aspecto \emph{lluvioso}.}
+	\end{table}
+
+	Al evaluar los valores de ganancia de los días con aspecto \textbf{lluvioso} con respecto a los demás factores de decisión, se encuentra que el factor que genera una mayor ganancia es el viento. Por lo cual se tienen que checar todos los posibles valores de ese factor de decisión.\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaInduccionAspectoLluviosoVientoLigero}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				4 & Lluvioso & Templado & Alta & Ligero & Sí\\
+				5 & Lluvioso & Fresco & Normal & Ligero & Sí\\
+				10 & Lluvioso & Templado & Normal & Ligero & Sí\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de días con aspecto \emph{lluvioso} y con viento \emph{ligero}.}
+	\end{table}
+
+	De la tabla de aspecto \textbf{lluvioso} y viento \textbf{ligero} podemos deducir que siempre que existan estas dos condiciones al mismo tiempo, la decisión final será \textbf{sí}.\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaInduccionAspectoLluvioso}
+			\begin{tabular}{c|c|c|c|c|c}
+				\textbf{Día} & \textbf{Aspecto} & \textbf{Temperatura} & \textbf{Humedad} & \textbf{Viento} & \textbf{Decisión}\\
+				\hline
+				6 & Lluvioso & Fresco & Normal & Fuerte & No\\
+				14 & Lluvioso & Templado & Alta & Fuerte & No\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de días con aspecto \emph{lluvioso}.}
+	\end{table}
+
+	De la tabla de aspecto \textbf{lluvioso} y viento \textbf{fuerte} podemos deducir que siempre que existan estas dos condiciones al mismo tiempo, la decisión final será \textbf{no}.\\
+
+	\UCli Finalmente la construcción de este árbol de decisión es la siguiente:
+
+	\begin{figure}[H]
+		\hypertarget{fig:arbol-decision-final}{\hspace{1pt}}
+		\begin{center}
+			\includegraphics{capitulo2/images/arbol-decision-final.png}
+			\caption{Árbol de decisión resultante.}
+			\label{fig:arbol-decision-final}
+		\end{center}
+	\end{figure}
+
+\end{UClist}
+
 
 \subsection{C4.5} \label{c4.5}
+El algoritmo C4.5 es la evolución del algoritmo ID3. Éste genera un árbol de decisión a partir de un conjunto de dstos de entrada de manera recursiva, al igual que su precursor. Sin embargo, aunque ID3 y C4.5 son algoritmos muy semejantes, existen ciertas diferencias:
+
+\begin{UClist}
+	\UCli C4.5 permite trabajar con valores continuos, mientras que ID3 solamente trabaja con valores discretos.
+	\UCli Los árboles de C4.5 son más compactos, y esto se debe a que cada nodo hoja engloba un conjunto de clases y no una sola clase particular.
+\end{UClist}
 
 \subsection{Spark}
 Es una herramienta de código abierto. Es un motor de análisis de datos unificado para Big Data y Machine Learning. 
 \subsection{Hadoop}
 Es un framework de software que soporta aplicaciones distribuidas bajo una licencia libre. Permite a las aplicaciones trabajar con miles de nodos y petabytes de datos. Hadoop se inspiró en los documentos Google para MapReduce y Google File System (GFS). Hadoop utiliza su propio sistema de archivos HDFS, que divide archivos grandes y los distribuye en diferentes nodos para su procesamiento.
-
+% Para que la ELD pueda mantener actualizado el status de pago de los aspirantes que realizaron la operación en sucursal bancaria, es necesario que el \textbf{Contador General} actualice de forma manual dichos pagos, esto se logra con ayuda de
 \begin{enumerate}
 	\item Solicite administrar los pagos admisión seleccionando la opción \textbf{Administración de pagos} del menú \refIU{fig:menuPrincipalCG}{Menú del Contador General} y posteriormente la opción \textbf{Pagos Admisión} del menú \refIU{fig:menuPagosA}{Menú Pagos Admisión}.
 	\item Se mostrará la pantalla \refIU{fig:ss}{Administrar Pagos Admisión}.
@@ -90,6 +350,8 @@ Es un framework de software que soporta aplicaciones distribuidas bajo una licen
 
 	
 \end{enumerate}
+	
+
 
 \newpage
 \begin{Errores}
