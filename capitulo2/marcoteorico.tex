@@ -87,7 +87,7 @@ La entropía es la medida de la aleatoriedad. En otras palabras, la medidad e la
 	\end{center}
 \end{figure}
 
-\subsubsection{Ejecución del algoritmo ID3} \label{ejecucionID3}
+\subsubsection{Ejemplo de ejecución del algoritmo ID3} \label{ejecucionID3}
 
 Para ilustrar el funcionamiento del algoritmo ID3, utilizaremos la siguiente tabla de inducción que contiene información sobre factores que influyen al tomar la decisión de si un partido de tenis debería o no debería jugarse:
 
@@ -352,7 +352,7 @@ El algoritmo C4.5 es la evolución del algoritmo ID3. Éste genera un árbol de 
 
 \end{UClist}
 
-\subsubsection{Ejecución del algoritmo C4.5}
+\subsubsection{Ejemplo de ejecución del algoritmo C4.5}
 Para mostrar la forma en la que se ejecuta el algoritmo C4.5 y los pasos que se deben llevar a cabo, se utilizará la siguiente tabla de inducción:
 
 \begin{table}[H]
@@ -563,11 +563,364 @@ Para mostrar la forma en la que se ejecuta el algoritmo C4.5 y los pasos que se 
 
 \end{UClist}
 
-\subsection{Spark}
-Es una herramienta de código abierto. Es un motor de análisis de datos unificado para Big Data y Machine Learning. 
-\subsection{Hadoop}
-Es un framework de software que soporta aplicaciones distribuidas bajo una licencia libre. Permite a las aplicaciones trabajar con miles de nodos y petabytes de datos. Hadoop se inspiró en los documentos Google para MapReduce y Google File System (GFS). Hadoop utiliza su propio sistema de archivos HDFS, que divide archivos grandes y los distribuye en diferentes nodos para su procesamiento.
-% Para que la ELD pueda mantener actualizado el status de pago de los aspirantes que realizaron la operación en sucursal bancaria, es necesario que el \textbf{Contador General} actualice de forma manual dichos pagos, esto se logra con ayuda de
+\newpage
+\subsection{Algoritmo KNN (K-Nearest Neighbor)}
+El algoritmo KNN es un algoritmo de aprendizaje no supervisado en el que se busca clasificar un punto en una categoría con la ayuda de un conjunto de entrenamiento.\\
+
+Los pasos que sigue el algoritmo KNN se enumeran a continuación:\\
+
+\begin{enumerate}
+	\item Se calcula la similitud entre puntos basaándose en una función de distancia.\\
+	\item Se encuentran los \emph{K} vecinos más cercanos.\\
+\end{enumerate}
+
+\subsubsection{Ejemplo de ejecución del algoritmo KNN}
+Con base en la siguiente información que relaciona el peso, la altura y la talla de playera de personas, se hará la ejecución del algoritmo KNN.\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaKNN}
+			\begin{tabular}{c|c|c}
+				\textbf{Altura (cm)} & \textbf{Peso (kg)} & \textbf{Talla}\\
+				\hline
+				158 & 58 & M\\
+				158 & 59 & M\\
+				158 & 63 & M\\
+				160 & 59 & M\\
+				160 & 60 & M\\
+				163 & 60 & M\\
+				163 & 61 & M\\
+				160 & 64 & L\\
+				163 & 64 & L\\
+				165 & 61 & L\\
+				165 & 62 & L\\
+				165 & 65 & L\\
+				168 & 62 & L\\
+				168 & 63 & L\\
+				168 & 66 & L\\
+				170 & 63 & L\\
+				170 & 64 & L\\
+				170 & 68 & L\\
+			\end{tabular}
+		\end{center}
+		\caption{Conjunto de entrenamiento para el algoritmo KNN.}
+	\end{table}
+
+\begin{UClist}
+	\textbf{Nuevo dato: Altura = 161 cm, Peso = 61 kg}
+
+	\UCli Se calcula la distancia Euclidiana entre el dato de entrada y cada uno de los datos del conjunto de entrenamiento, utilizando la siguiente fórmula.\\
+
+	\begin{figure}[H]
+		\begin{center}
+			\hypertarget{fig:distanciaEuclidiana}{\hspace{1pt}}
+			\includegraphics{capitulo2/images/distanciaEuclidiana.png}
+			\caption{Fórmula para calcular la distancia Euclidiana.}
+			\label{fig:distanciaEuclidiana}
+		\end{center}
+	\end{figure}
+
+	Obtenemos lo siguiente:\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaKNNDistancias}
+			\begin{tabular}{c|c|c|c}
+				\textbf{Altura (cm)} & \textbf{Peso (kg)} & \textbf{Talla} & \textbf{Distancia}\\
+				\hline
+				158 & 58 & M & 4.2\\
+				158 & 59 & M & 3.6\\
+				158 & 63 & M & 3.6\\
+				160 & 59 & M & 2.2\\
+				160 & 60 & M & 1.4\\
+				163 & 60 & M & 2.2\\
+				163 & 61 & M & 2.0\\
+				160 & 64 & L & 3.2\\
+				163 & 64 & L & 3.6\\
+				165 & 61 & L & 4.0\\
+				165 & 62 & L & 4.1\\
+				165 & 65 & L & 5.7\\
+				168 & 62 & L & 7.1\\
+				168 & 63 & L & 7.3\\
+				168 & 66 & L & 8.6\\
+				170 & 63 & L & 9.2\\
+				170 & 64 & L & 9.5\\
+				170 & 68 & L & 11.4\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla del conjunto de entrenamiento con la columna \textbf{Distancia} ya calculada.}
+	\end{table}
+
+	\UCli Se toma la distancia más pequeña para determinar al vecino más cercano de entre todas las distancias Euclidianas calculadas previamente. Esta distancia es \textbf{1.4}.\\
+
+	\UCli Se define \emph{K} como el número de vecinos más cercanos que queramos conocer. Para este caso definiremos \emph{K} igual a 5. Por lo que se tomarán los 5 valores más pequeños.\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:tablaKNNDistanciasMinimas}
+			\begin{tabular}{c|c|c|c}
+				\textbf{Altura (cm)} & \textbf{Peso (kg)} & \textbf{Talla} & \textbf{Distancia}\\
+				\hline
+				160 & 60 & M & 1.4\\
+				163 & 61 & M & 2.0\\
+				163 & 60 & M & 2.2\\
+				160 & 59 & M & 2.2\\
+				160 & 64 & L & 3.2\\
+			\end{tabular}
+		\end{center}
+		\caption{Instancias de la tabla con menor distancia al nuevo dato.}
+	\end{table}
+
+\end{UClist}
+
+\subsection{Algoritmo K-Means}
+El algoritmo K-Means es un algoritmo de agrupamiento que utiliza aprendizaje no supervisado, el cual es utilizado cuando se tienen datos no etiquetados, es decir sin categorías o grupos definidos. El objetivo de este algoritmo es encontrar grupos en los datos, con el número de grupos se representa la variable \emph{K}. El algoritmo arrojará como resultado final lo siguiente:\\
+
+\begin{enumerate}
+	\item Los centroides de los \emph{K} grupos.\\
+	\item Etiquetas para los datos de entrenamiento. Cada dato es asignado a un solo grupo.\\
+\end{enumerate}
+
+\subsubsection{Ejemplo de ejecución del algoritmo K-Means}
+Para ilustrar el funcionamiento del algoritmo K-means, se utilizará el siguiente conjunto de entrenamiento correspondiente a la puntuación de 7 individuos en 2 pruebas:
+
+\begin{table}[H]
+	\begin{center}
+		\label{tab:conjuntoKMeans}
+		\begin{tabular}{c|c|c}
+			\textbf{Individuo} & \textbf{Prueba 1} & \textbf{Prueba 2}\\
+			\hline
+			1 & 1.0 & 1.0\\
+			2 & 1.5 & 2.0\\
+			3 & 3.0 & 4.0\\
+			4 & 5.0 & 7.0\\
+			5 & 3.5 & 5.0\\
+			6 & 4.5 & 5.0\\
+			7 & 3.5 & 4.5\\
+		\end{tabular}
+	\end{center}
+	\caption{Conjunto de entrenamiento para el algoritmo K-Means.}
+\end{table}
+
+\begin{UClist}
+	\UCli El conjunto de datos se agrupa en dos grupos distintos. Para esto, se toman los valores de la \emph{Prueba 1} y \emph{Prueba 2} de los individuos que tengan estos valores más lejanos, es decir:\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:gruposInicialesKMeans}
+			\begin{tabular}{c|c|c}
+				\textbf{Grupo} & \textbf{Individuo} & \textbf{Vector (Centroide)}\\
+				\hline
+				Grupo 1 & 1 & (1.0, 1.0)\\
+				Grupo 2 & 4 & (5.0, 7.0)\\
+			\end{tabular}
+		\end{center}
+		\caption{Partición inicial.}
+	\end{table}
+
+	\UCli Los individuos restantes ahora son examinados secuencialmente y son ubicados en el grupo al que son más cercanos en términos de distancia Euclidiana. El vector es recalculado cada que un nuevo miembro es agregado.
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:gruposIndividuosCompletosGrupo1}
+			\begin{tabular}{c|c|c}
+				\textbf{Iteración} & \textbf{Individuo} & \textbf{Vector (Centroide)}\\
+				\hline
+				1 & 1 & (1.0, 1.0)\\
+				2 & 1, 2 & (1.2, 1.5)\\
+				3 & 1, 2, 3 & (1.8, 2.3)\\
+				4 & 1, 2, 3 & (1.8, 2.3)\\
+				5 & 1, 2, 3 & (1.8, 2.3)\\
+				6 & 1, 2, 3 & (1.8, 2.3)\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de individuos agregados secuencialmente al \textbf{Grupo 1}.}
+	\end{table}
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:gruposIndividuosCompletosGrupo2}
+			\begin{tabular}{c|c|c}
+				\textbf{Iteración} & \textbf{Individuo} & \textbf{Vector (Centroide)}\\
+				\hline
+				1 & 4 & (5.0, 7.0)\\
+				2 & 4 & (5.0, 7.0)\\
+				3 & 4 & (5.0, 7.0)\\
+				4 & 4, 5 & (4.2, 6.0)\\
+				5 & 4, 5, 6 & (4.3, 5.7)\\
+				6 & 4, 5, 6, 7 & (4.1, 5.4)\\
+			\end{tabular}
+		\end{center}
+		\caption{Tabla de individuos agregados secuencialmente al \textbf{Grupo 2}.}
+	\end{table}
+
+	\UCli Ahora la partición inicial ha cambiado, y los dos grupos tienen las siguientes características:
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:gruposModificadosKMeans}
+			\begin{tabular}{c|c|c}
+				\textbf{Grupo} & \textbf{Individuo} & \textbf{Vector (Centroide)}\\
+				\hline
+				Grupo 1 & 1, 2, 3 & (1.8, 2.3)\\
+				Grupo 2 & 4, 5, 6, 7 & (4.1, 5.4)\\
+			\end{tabular}
+		\end{center}
+		\caption{Partición inicial modificada.}
+	\end{table}
+
+	\UCli Sin embargo, no podemos asegurarnos de que esas son las clasificaciones correctas para cada dato. Así que comparamos la distancia de cada individuo a su propio grupo y al grupo opuesto:
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:distanciasACadaGrupo}
+			\begin{tabular}{c|c|c}
+				\textbf{Individuo} & \textbf{Distancia al Grupo 1} & \textbf{Distancia al Grupo 2}\\
+				\hline
+				1 & 1.5 & 5.4\\
+				2 & 0.4 & 4.3\\
+				3 & 2.1 & 1.8\\
+				4 & 5.7 & 1.8\\
+				5 & 3.2 & 0.7\\
+				6 & 3.8 & 0.6\\
+				7 & 2.8 & 1.1\\
+			\end{tabular}
+		\end{center}
+		\caption{Cálculo de distancia de cada dato a su grupo y al opuesto.}
+	\end{table}
+
+	\UCli Solamente el individuo 3 está más cerca al centroide del grupo opuesto (Grupo 2) que de su propio grupo (Grupo 1). Por lo que el individuo 3 se reubica en el Grupo 2. Resultando la siguiente partición:\\
+
+	\begin{table}[H]
+		\begin{center}
+			\label{tab:particionFinal}
+			\begin{tabular}{c|c|c}
+				\textbf{Grupo} & \textbf{Individuo} & \textbf{Vector (Centroide)}\\
+				\hline
+				Grupo 1 & 1, 2 & (1.8, 1.5)\\
+				Grupo 2 & 3, 4, 5, 6, 7 & (3.9, 5.1)\\
+			\end{tabular}
+		\end{center}
+		\caption{Partición final.}
+	\end{table}
+
+	\UCli Las iteraciones continuarían hasta que ya no haya más reubicaciones.\\
+
+	\UCli Es probable que el algoritmo no encuentre una solución final.
+
+\end{UClist}
+
+\subsection{MapReduce}
+MapReduce es un paradigma de programación que permite escalabilidad masiva a través de cientos o miles de servidores en un clúster Hadoop. \emph{MapReduce} se refiere a dos tareas distintas y separadas. La primera, \emph{Map}, consiste en realizar mapeos. Ésta convierte un conjunto de datos en otro conjunto de datos diferente en el que los elementos individuales son separados en tuplas. La segunda, \emph{Reduce}, toma los datos que arroja de \emph{Map}, y combina esas tuplas en un conjunto más pequeño de tuplas. MapReduce es el corazón de Hadoop.\\
+
+\subsection{Hadoop} \label{sect:hadoop}
+Es un framework de software que soporta aplicaciones distribuidas bajo una licencia libre. Permite a las aplicaciones trabajar con miles de nodos y petabytes de datos. Hadoop se inspiró en los documentos Google para MapReduce y Google File System (GFS). Hadoop utiliza su propio sistema de archivos HDFS, que divide archivos grandes y los distribuye en diferentes nodos para su procesamiento.\\
+
+\subsubsection{Características principales de Hadoop}
+
+\begin{UClist}
+	\UCli \textbf{Procesamiento distribuido:} Hadoop distribuye los datos en los diferentes nodos que formen parte de la arquitectura de clúster que estén haciendo uso de él. Pretende paalelizar tareas de procesamiento de datos.\\
+	\UCli \textbf{Eficiencia:} Mediante la paralelización, se consigue una ganancia considerable en el tiempo de procesamiento de información.\\
+	\UCli \textbf{Económico:} Propicia un ambiente fácilmente escalable en el que resulta sencillo añadir nodos de manera horizontal conforme se vaya requiriendo.\\
+	\UCli \textbf{Código abierto:} Es un proyecto de los llamados \textbf{open source}.\\
+	\UCli \textbf{Tolerancia a fallos:} Utiliza replicación de datos haciendo uso de \textbf{HDFS (Hadoop Distributed File System)}. Si un nodo falla o cae, hay nodos de respaldo que permiten mantener el ambiente en funcionamiento.\\
+\end{UClist}
+
+\newpage
+\subsubsection{Arquitectura de Hadoop}
+\begin{figure}[H]
+	\begin{center}
+		\hypertarget{fig:hadoopComponentes}{\hspace{1pt}}
+		\includegraphics{capitulo2/images/hadoopComponentes.png}
+		\caption{Arquitectura básica de Hadoop.}
+		\label{fig:hadoopComponentes}
+	\end{center}
+\end{figure}
+
+\begin{UClist}
+	\UCli \textbf{MapReduce:} Es el módulo que permite ejecutar cómputo distribuido. Pretende la paralelización de procesos.\\
+	\UCli \textbf{HDFS (Hadoop Distributed File System:)} Es el sistema de archivos distribuido que utiliza Hadoop. Éste parte los datos en fragmentos y los almacena en los nodos que conforman el clúster donde Hadoop esté ejecutándose.\\
+	\UCli \textbf{YARN:} Es el gestor de recursos de Hadoop.
+	\UCli \textbf{Common Utilities:} Librerías y códifo necesario para ejecutar Hadoop.\\
+\end{UClist}
+
+\newpage
+\subsubsection{Arquitectura de un clúster Hadoop}
+Habitualmente, un clúster Hadoop tiene la estructura \textbf{\emph{maestro - esclavo}}. Lo que significa que hay un nodo \textbf{maestro} que estará coordinando la ejecución de tareas y las asignará a los nodos \textbf{esclavos}.\\
+
+\begin{figure}[H]
+	\begin{center}
+		\hypertarget{fig:arquitecturaMaestroEsclavo}{\hspace{1pt}}
+		\includegraphics{capitulo2/images/arquitecturaMaestroEsclavo.png}
+		\caption{Arquitectura de maestros y esclavos.}
+		\label{fig:arquitecturaMaestroEsclavo}
+	\end{center}
+\end{figure}
+
+\subsubsection{Distribuciones Comerciales de Hadoop}
+Existen varias opciones actualmente en el mercado para hacer uso de las capacidades de Hadoop, entre las cuales destacan 3 principalmente:\\
+
+\begin{UClist}
+	\UCli \textbf{Cloudera:} Fue la primera de todas las distribuciones comerciales de Hadoop. Cuenta con una herramienta llamada Cloudera Manager que permite gestionar el clúster.\\
+	\UCli \textbf{Hortonworks:} Es la distribución de Hadoop más nueva. Permite instalar el clúster mediante un cliente de virtualización.\\
+	\UCli \textbf{Microsoft Azure:} Es una distribución desarrollada por Microsoft que permite tener las máquinas del clúster en la nube.\\
+\end{UClist}
+
+\subsection{Apache Spark}
+Es un motor de análisis de datos unificado para Big Data y Machine Learning. Que se basa en Hadoop Map Reduce. Es una herramienta de código abierto que permite \textbf{dividir y ejecutar tareas de manera paralela}. Esta cualidad de Spark de poder paralelizar el trabajo se debe a que éste software en la gran mayoría de los casos es ejecutado en sistemas con arquitectura de clúster. \\
+
+\subsubsection{Características principales de Spark}
+\begin{UClist}
+	\UCli Integrado con Apache Hadoop.\\
+	\UCli Ofrece un desempeño veloz.\\
+	\UCli El almacenamiento de datos se administra en memoria. Se reducen mucho los tiempos de ejecución ya que hay muchas menos operaciones de lectura y escritura en disco.\\
+	\UCli Puede ejecutar algoritmos escritos en Java, Scala, Python y R.\\
+	\UCli Permite procesamiento en tiempo real.\\
+\end{UClist}
+
+\subsubsection{Ventajas de usar Apache Spark}
+Utilizar Spark para el procesamiento de volúmenes de información de gran tamaño ofrece varios beneficios. Los principales beneficios son los siguientes:\\
+
+\begin{UClist}
+	\UCli \textbf{Velocidad:} Gran velocidad en el procesamiento de información. Esto se debe a lo ya mencionado anteriormente sobre la gestion de datos desde memoria.\\
+	\UCli \textbf{Potencia:} Spark nos permite aprovechar el hardware de los equipos que lo estén utilizando.\\
+
+	\UCli \textbf{Fácil uso:} A diferencia de Hadoop, que requería de un amplio conocimiento de MapReduce y de Java, Spark permite usar lenguajes de más alto nivel como Python y Scala además de Java.\\
+
+	\UCli \textbf{Integración SQL:} Como resultado de contener el módulo Spark SQL, es posible realizar consultas en conjuntos de datos semi-estructurados utilizando lenguaje SQL.\\
+
+	\UCli \textbf{Constante mejora del propio sistema:} Al ser un proyecto de código abierto, cada vez hay más personas que contribuyen a la mejora y ampliación de los alcances de Spark.\\
+
+	\UCli \textbf{Escalabilidad:} Spark permite que incrementar el tamaño del clúster conforme se vaya necesitando.\\
+\end{UClist}
+
+\subsubsection{Componentes de Apache Spark}
+Podría decirse que Spark es un conjunto de módulos que nos permiten generar conocimiento usando diferentes técnicas y tecnologías.\\
+
+El diagrama mostrado a continuación ilustra los principales módulos o \textbf{componentes} que conforman Apache Spark.\\
+
+\begin{figure}[H]
+	\hypertarget{fig:sparkComponentes}{\hspace{1pt}}
+	\begin{center}
+		\includegraphics{capitulo2/images/sparkComponentes.png}
+		\caption{Componentes que conforman Apache Spark.}
+		\label{fig:sparkComponentes}
+	\end{center}
+\end{figure}
+
+\begin{UClist}
+	\UCli \textbf{Spark Core:} Es el núcleo de Spark. Contiene librerías que se utilizan en todos los demás módulos.\\
+
+	\UCli \textbf{Spark SQL:} Módulo para el procesamiento de datos estructurados y semi-estructurados. Esto se conoce como \emph{SchemaRDD}. Este módulo hace posible el uso de lenguaje SQL para hacer consultas.\\
+
+	\UCli \textbf{Spark Streaming:} Este módulo hace posible el procesamiento en tiempo real. Hace posible el flujo de gran cantidad de datos a alta velocidad.\\
+
+	\UCli \textbf{MLib:} Este módulo contiene herramientas y algoritmos muy variados para usar de manera fácil, práctica y escalable al \emph{machine learning}.\\
+
+	\UCli \textbf{GraphX:} Este módulo permite el procesamiento gráfico. No pinta gráficos, sino que realiza operaciones con grafos.\\
+
+\end{UClist}
+
 \begin{enumerate}
 	\item Solicite administrar los pagos admisión seleccionando la opción \textbf{Administración de pagos} del menú \refIU{fig:menuPrincipalCG}{Menú del Contador General} y posteriormente la opción \textbf{Pagos Admisión} del menú \refIU{fig:menuPagosA}{Menú Pagos Admisión}.
 	\item Se mostrará la pantalla \refIU{fig:ss}{Administrar Pagos Admisión}.

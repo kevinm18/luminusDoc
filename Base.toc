@@ -29,15 +29,27 @@
 \contentsline {subsection}{\numberline {2.1.3}\IeC {\'A}rboles de decisi\IeC {\'o}n}{14}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}ID3 (Iterative Dichotomiser 3)}{15}{subsection.2.1.4}
 \contentsline {subsubsection}{Entrop\IeC {\'\i }a}{15}{section*.14}
-\contentsline {subsubsection}{Ejecuci\IeC {\'o}n del algoritmo ID3}{16}{section*.15}
+\contentsline {subsubsection}{Ejemplo de ejecuci\IeC {\'o}n del algoritmo ID3}{16}{section*.15}
 \contentsline {subsection}{\numberline {2.1.5}C4.5}{20}{subsection.2.1.5}
-\contentsline {subsubsection}{Ejecuci\IeC {\'o}n del algoritmo C4.5}{20}{section*.16}
-\contentsline {subsection}{\numberline {2.1.6}Spark}{25}{subsection.2.1.6}
-\contentsline {subsection}{\numberline {2.1.7}Hadoop}{25}{subsection.2.1.7}
-\contentsline {subsubsection}{Errores Comunes}{26}{section*.17}
-\contentsline {chapter}{\numberline {3}Capitulo 3}{27}{chapter.3}
-\contentsline {section}{\numberline {3.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{27}{section.3.1}
-\contentsline {chapter}{\numberline {4}Capitulo 4}{29}{chapter.4}
-\contentsline {section}{\numberline {4.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{29}{section.4.1}
-\contentsline {chapter}{\numberline {5}Capitulo 5}{31}{chapter.5}
-\contentsline {section}{\numberline {5.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{31}{section.5.1}
+\contentsline {subsubsection}{Ejemplo de ejecuci\IeC {\'o}n del algoritmo C4.5}{20}{section*.16}
+\contentsline {subsection}{\numberline {2.1.6}Algoritmo KNN (K-Nearest Neighbor)}{25}{subsection.2.1.6}
+\contentsline {subsubsection}{Ejemplo de ejecuci\IeC {\'o}n del algoritmo KNN}{25}{section*.17}
+\contentsline {subsection}{\numberline {2.1.7}Algoritmo K-Means}{26}{subsection.2.1.7}
+\contentsline {subsubsection}{Ejemplo de ejecuci\IeC {\'o}n del algoritmo K-Means}{27}{section*.18}
+\contentsline {subsection}{\numberline {2.1.8}MapReduce}{28}{subsection.2.1.8}
+\contentsline {subsection}{\numberline {2.1.9}Hadoop}{28}{subsection.2.1.9}
+\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas principales de Hadoop}{29}{section*.19}
+\contentsline {subsubsection}{Arquitectura de Hadoop}{30}{section*.20}
+\contentsline {subsubsection}{Arquitectura de un cl\IeC {\'u}ster Hadoop}{31}{section*.21}
+\contentsline {subsubsection}{Distribuciones Comerciales de Hadoop}{31}{section*.22}
+\contentsline {subsection}{\numberline {2.1.10}Apache Spark}{31}{subsection.2.1.10}
+\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas principales de Spark}{31}{section*.23}
+\contentsline {subsubsection}{Ventajas de usar Apache Spark}{32}{section*.24}
+\contentsline {subsubsection}{Componentes de Apache Spark}{32}{section*.25}
+\contentsline {subsubsection}{Errores Comunes}{34}{section*.26}
+\contentsline {chapter}{\numberline {3}Capitulo 3}{35}{chapter.3}
+\contentsline {section}{\numberline {3.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{35}{section.3.1}
+\contentsline {chapter}{\numberline {4}Capitulo 4}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{37}{section.4.1}
+\contentsline {chapter}{\numberline {5}Capitulo 5}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de java}{39}{section.5.1}

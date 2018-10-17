@@ -16,11 +16,14 @@
 \BOOKMARK [2][-]{subsection.2.1.3}{\301rboles de decisi\363n}{section.2.1}% 16
 \BOOKMARK [2][-]{subsection.2.1.4}{ID3 \(Iterative Dichotomiser 3\)}{section.2.1}% 17
 \BOOKMARK [2][-]{subsection.2.1.5}{C4.5}{section.2.1}% 18
-\BOOKMARK [2][-]{subsection.2.1.6}{Spark}{section.2.1}% 19
-\BOOKMARK [2][-]{subsection.2.1.7}{Hadoop}{section.2.1}% 20
-\BOOKMARK [0][-]{chapter.3}{Capitulo 3}{}% 21
-\BOOKMARK [1][-]{section.3.1}{Instalaci\363n de la paqueter\355a de java}{chapter.3}% 22
-\BOOKMARK [0][-]{chapter.4}{Capitulo 4}{}% 23
-\BOOKMARK [1][-]{section.4.1}{Instalaci\363n de la paqueter\355a de java}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Capitulo 5}{}% 25
-\BOOKMARK [1][-]{section.5.1}{Instalaci\363n de la paqueter\355a de java}{chapter.5}% 26
+\BOOKMARK [2][-]{subsection.2.1.6}{Algoritmo KNN \(K-Nearest Neighbor\)}{section.2.1}% 19
+\BOOKMARK [2][-]{subsection.2.1.7}{Algoritmo K-Means}{section.2.1}% 20
+\BOOKMARK [2][-]{subsection.2.1.8}{MapReduce}{section.2.1}% 21
+\BOOKMARK [2][-]{subsection.2.1.9}{Hadoop}{section.2.1}% 22
+\BOOKMARK [2][-]{subsection.2.1.10}{Apache Spark}{section.2.1}% 23
+\BOOKMARK [0][-]{chapter.3}{Capitulo 3}{}% 24
+\BOOKMARK [1][-]{section.3.1}{Instalaci\363n de la paqueter\355a de java}{chapter.3}% 25
+\BOOKMARK [0][-]{chapter.4}{Capitulo 4}{}% 26
+\BOOKMARK [1][-]{section.4.1}{Instalaci\363n de la paqueter\355a de java}{chapter.4}% 27
+\BOOKMARK [0][-]{chapter.5}{Capitulo 5}{}% 28
+\BOOKMARK [1][-]{section.5.1}{Instalaci\363n de la paqueter\355a de java}{chapter.5}% 29
