@@ -22,8 +22,17 @@
 \BOOKMARK [2][-]{subsection.2.1.9}{Hadoop}{section.2.1}% 22
 \BOOKMARK [2][-]{subsection.2.1.10}{Apache Spark}{section.2.1}% 23
 \BOOKMARK [0][-]{chapter.3}{Capitulo 3}{}% 24
-\BOOKMARK [1][-]{section.3.1}{Instalaci\363n de la paqueter\355a de java}{chapter.3}% 25
-\BOOKMARK [0][-]{chapter.4}{Capitulo 4}{}% 26
-\BOOKMARK [1][-]{section.4.1}{Instalaci\363n de la paqueter\355a de java}{chapter.4}% 27
-\BOOKMARK [0][-]{chapter.5}{Capitulo 5}{}% 28
-\BOOKMARK [1][-]{section.5.1}{Instalaci\363n de la paqueter\355a de java}{chapter.5}% 29
+\BOOKMARK [1][-]{section.3.1}{Descripci\363n del prototipo}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.2}{An\341lisis}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.2.1}{An\341lisis de la red distribuida}{section.3.2}% 27
+\BOOKMARK [2][-]{subsection.3.2.2}{An\341lisis de los datos}{section.3.2}% 28
+\BOOKMARK [1][-]{section.3.3}{Dise\361o}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.1}{Dise\361o de la red distribuida}{section.3.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.2}{Dise\361o de propuesta de agrupaci\363n de acuerdo a los nodos definidos en la red distribuida}{section.3.3}% 31
+\BOOKMARK [1][-]{section.3.4}{Desarrollo}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.5}{Pruebas}{chapter.3}% 33
+\BOOKMARK [0][-]{chapter.4}{Capitulo 4}{}% 34
+\BOOKMARK [1][-]{section.4.1}{Instalaci\363n de la paqueter\355a de java}{chapter.4}% 35
+\BOOKMARK [0][-]{chapter.5}{Capitulo 5}{}% 36
+\BOOKMARK [1][-]{section.5.1}{Instalador del ambiente de an\341lisis de datos}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.1.1}{Diagrama de flujo}{section.5.1}% 38

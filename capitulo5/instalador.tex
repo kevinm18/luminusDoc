@@ -1,57 +1,17 @@
-\section{Instalación de la paquetería de java}
+\section{Instalador del ambiente de análisis de datos}
 %%%%%%%%%%%%%% RESUMEN 5%%%%%%%%%%%%%%%%%%
-Primeramente será necesario instalar el open-jdk de java en el sistema, esto con el objetivo de permitir la ejecución de los algoritmos de minería de datos que serán ejecutados por el map reduce haciendo uso de java. Para realizar esta tarea realizaremos lo siguiente:
-Acceder a la terminal GNU con privilegios de root e ingresar el siguiente comando.
+Uno de los objetivos de este trabajo terminal es permitir al usuario empezar a hacer uso de Big Data de una manera más sencilla y sin demasiadas complicaciones. Por lo que se comenzó el desarrollo de un instalador que simplifique el proceso de puesta en marcha del ambiente de análisis de datos.\\
 
-\begin{enumerate}
-	\item
-	\begin{lstlisting} 
-	root@maestro:~# apt-get install openjdk-8-jdk openjdk-8-jre
- 	\end{lstlisting}
+Si bien, el instalador, en este punto del trabajo terminal se encuentra en una fase aún experimental, logra el cometido de simplificar el proceso de puesta en marcha. Esto puede verse reflejado al comparar el número de pasos que se enuncian en el manual de instalación de Luminus, contra el número de pasos que se siguen al utilizar el instalador.\\
 
-\begin{figure}[!htbp]
-	\hypertarget{fig:instalacionjava}{\hspace{1pt}}
+La manera en que el instalador simplifica el proceso de instalación es automatizando algunas tareas que de otra forma el usuario tendría que realizar una a una.\\
+
+\subsection{Diagrama de flujo}
+\begin{figure}[H]
+	\hypertarget{fig:diagramaFlujo}{\hspace{1pt}}
 	\begin{center}
-		\includegraphics[width=.7\textwidth]{capitulo5/images/im1.png}
-		\caption{Instalación de java en el nodo maestro}
-		\label{fig:instalacionjava}
+		\includegraphics{capitulo5/images/diagramaFlujo.png}
+		\caption{Diagrama de flujo de los pasos básicos que sigue el instalador.}
 	\end{center}
 \end{figure}
 
-Este programa ocupara 165MB de espacio de disco y nos pedirá que confirmemos su instalación a lo que se contestará 
-	\item ‘S’ 
-para que proceda con la instalación.
-Una vez que esta termine se podrá consultar la versión de java en el sistema con el comando
-
-	\begin{lstlisting} 
-	root@maestro:~# java -version
- 	\end{lstlisting}
- 	
-\begin{figure}[!htbp]
-	\hypertarget{fig:instalacionjava2}{\hspace{1pt}}
-	\begin{center}
-		\includegraphics[width=.7\textwidth]{capitulo5/images/im2.png}
-		\caption{Versión de java}
-		\label{fig:instalacionjava2}
-	\end{center}
-\end{figure}
-\end{enumerate}
-%\subsubsection{Aspirante}
-%\begin{itemize}
-%	\item \textbf{Tarea 1. Administrar pagos realizados en sucursal}: Esta tarea permite al contador general mantener actualizado el status de pago de los aspirantes que realizaron la operación en sucursal bancaria, esto mediante las tareas : \textbf{Tarea 1.1. Generar Línea de captura}, \textbf{Tarea1.2. Actualizar pagos con la información de BANAMEX}, \textbf{Tarea1.3. Autorización de pagos}. Es importante mencionar que el actor solo podrá realizar dichas tareas cuando la convocatoria de ingreso tenga asociada toda la información correspondiente a las evaluaciones y haya cupos disponibles en la asignación de citas para la aplicación de las mismas, esto es, que la convocatoria no haya llegado a su límite de aspirantes a evaluar.
-%	 \begin{itemize}
-%	 	
-%	
-%	\item \textbf{Tarea 1.1. Generar Línea de captura}: Esta tarea le permite al actor, generar la línea de captura de un aspirante que la solicite de forma personal. Es importante mencionar que esta acción se logrará una vez que el aspirante haya aceptado los términos y condiciones de pagos desde su cuenta personal.
-%	
-%	
-%	\item \textbf{Tarea1.2.	Actualizar pagos con la información de BANAMEX}: Esta tarea permite al actor, actualizar la información del status de pago de los aspirantes por medio de un archivo, el cual es proporcionado por BANAMEX. Es importante mencionar que el actor deberá de realizar los cambios pertinentes en el archivo para que este pueda ser interpretado por el sistema.
-%		
-%	\item \textbf{Tarea1.3. Autorización de pagos}: Esta tarea permite al actor establecer el estado de pago de un aspirante como exitoso, esto en el caso de que el aspirare haya realizado el pago y no se haya visto reflejado en el sistema por un problema externo. Cabe mencionar que esta tarea deberá de manejarse en casos muy específicos, ya que el sistema no registrará un monto al aspirante, simplemente le permitirá continuar con su proceso de admisión. 
-%		 \end{itemize}
-%\end{itemize}
-%
-%%A continuación se describen a detalle las funcionalidades del sistema, en función de que el aspirate pueda realizar cada una de las tareas descritas anteriormente. 
-%
-%
-%
