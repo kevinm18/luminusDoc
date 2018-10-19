@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.15)  18 OCT 2018 19:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.15)  19 OCT 2018 02:30
 entering extended mode
 **./Base.tex
 (Base.tex
@@ -573,12 +573,6 @@ LaTeX Info: Redefining \% on input line 23.
 LaTeX Warning: Label `seccion:IniciarSesion:Target' multiply defined.
 
 
-LaTeX Warning: Label `fig:APA:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA' multiply defined.
-
-
 LaTeX Warning: Label `seccion:IniciarSesion:Target' multiply defined.
 
 
@@ -589,42 +583,6 @@ LaTeX Warning: Label `fig:APA' multiply defined.
 
 
 LaTeX Warning: Label `seccion:IniciarSesion:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA' multiply defined.
-
-
-LaTeX Warning: Label `seccion:IniciarSesion:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA' multiply defined.
-
-
-LaTeX Warning: Label `seccion:IniciarSesion:Target' multiply defined.
-
-
-LaTeX Warning: Label `seccion:IniciarSesion:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA' multiply defined.
-
-
-LaTeX Warning: Label `seccion:IniciarSesion:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA:Target' multiply defined.
-
-
-LaTeX Warning: Label `fig:APA' multiply defined.
 
 
 LaTeX Warning: Label `seccion:IniciarSesion:Target' multiply defined.
@@ -773,12 +731,12 @@ File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
 
 
 {C:/Users/kevin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<cdt/theme/headerPar.png, id=166, 251.94125pt x 201.75375pt>
+<cdt/theme/headerPar.png, id=206, 251.94125pt x 201.75375pt>
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
 Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 57.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
-<cdt/theme/logoPar.png, id=167, 501.875pt x 348.30125pt>
+<cdt/theme/logoPar.png, id=207, 501.875pt x 348.30125pt>
 File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 57.
@@ -796,11 +754,11 @@ LaTeX Info: Redefining \% on input line 1.
 
 
 LaTeX Font Warning: Font shape `T1/cmbr/m/sc' undefined
-(Font)              using `T1/cmbr/m/n' instead on input line 63.
+(Font)              using `T1/cmbr/m/n' instead on input line 57.
 
 
 Package spanish Warning: Replacing `T1/cmbr/m/sc' by 
-(spanish)                faked small caps on input line 63.
+(spanish)                faked small caps on input line 57.
 
 [1
 
@@ -824,43 +782,35 @@ Package spanish Warning: Replacing `T1/cmbr/m/sc' by
 [2]
 Cap\'{\i }tulo 1.
 (capitulo1/introduccion.tex
-<capitulo1/images/IU-APA.png, id=229, 1649.16125pt x 868.24374pt>
-File: capitulo1/images/IU-APA.png Graphic file (type png)
-<use capitulo1/images/IU-APA.png>
-Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
-(pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.26 \newpage
-              [1
+LaTeX Font Info:    Try loading font information for OMS+cmbr on input line 11.
 
 
-]
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--27
- [] [] 
- []
-
-
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--44
- [] [] 
- []
-
+("C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\cmbright\omscmbr.f
+d"
+File: omscmbr.fd 2005/04/13 v8.1 (WaS)
+)
+LaTeX Font Info:    Font shape `OMS/cmbr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmbrs/m/n' tried instead on input line 11.
 ) (capitulo1/antecedentes.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{seccion:IniciarSesion}) has been already used, duplicate ignore
-d
+dentifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 ...target{seccion:IniciarSesion}{\vspace{1pt}}
-                                                  
+l.10 \begin{enumerate}
+                       [1
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{seccion:Inici
+arSesion}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.10 \begin{enumerate}
+                      ]
+<capitulo1/images/IU-APA.png, id=285, 1649.16125pt x 868.24374pt>
 File: capitulo1/images/IU-APA.png Graphic file (type png)
 <use capitulo1/images/IU-APA.png>
 Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
 (pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
-
-Overfull \vbox (210.00174pt too high) has occurred while \output is active []
-
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
 Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 25.
@@ -876,18 +826,6 @@ been already used, duplicate ignored
 l.25 \newpage
               [2pdfTeX warning (ext4): destination with the same identifier (na
 me{figure.1.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.25 \newpage
-             pdfTeX warning (ext4): destination with the same identifier (name{
-fig:APA}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.25 \newpage
-             pdfTeX warning (ext4): destination with the same identifier (name{
-figure.1.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -919,17 +857,17 @@ File: capitulo1/images/IU-APA.png Graphic file (type png)
 <use capitulo1/images/IU-APA.png>
 Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
 (pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
-<cdt/theme/logoInp.png, id=255, 251.94125pt x 201.75375pt>
+<cdt/theme/logoInp.png, id=298, 251.94125pt x 201.75375pt>
 File: cdt/theme/logoInp.png Graphic file (type png)
 <use cdt/theme/logoInp.png>
 Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 26.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
-<cdt/theme/headerInp.png, id=256, 501.875pt x 348.30125pt>
+<cdt/theme/headerInp.png, id=299, 501.875pt x 348.30125pt>
 File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 26.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -950,166 +888,77 @@ ntifier (name{seccion:IniciarSesion}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 ...target{seccion:IniciarSesion}{\vspace{1pt}}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{fig:APA}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.14 		\hypertarget{fig:APA}{\hspace{1pt}}
-                                          
-File: capitulo1/images/IU-APA.png Graphic file (type png)
-<use capitulo1/images/IU-APA.png>
-Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
-(pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
+                                                  
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 4.
+
+
+Overfull \hbox (11.06157pt too wide) in paragraph at lines 5--12
+[][] 
+ []
+
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
-Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 26.
+Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 13.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
-Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 26.
+Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 13.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.26 \newpage
-             ]
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--27
- [] [] 
- []
-
-
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--44
- [] [] 
- []
-
-) (capitulo1/propuestasolucion.texpdfTeX warning (ext4): destination with the s
-ame identifier (name{seccion:IniciarSesion}) has been already used, duplicate i
-gnored
-<to be read again> 
-                   \relax 
-l.1 ...target{seccion:IniciarSesion}{\vspace{1pt}}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{fig:APA}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.14 		\hypertarget{fig:APA}{\hspace{1pt}}
-                                          
-File: capitulo1/images/IU-APA.png Graphic file (type png)
-<use capitulo1/images/IU-APA.png>
-Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
-(pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
+[4]
 File: cdt/theme/logoInp.png Graphic file (type png)
 <use cdt/theme/logoInp.png>
-Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 26.
+Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 13.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
-Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 26.
+Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 13.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [5pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5
-}) has been already used, duplicate ignored
+ [5]) (capitulo1/propuestasolucion.tex) (capitulo1/justificacion.tex)
+(capitulo1/objetivos.tex) (capitulo1/arquitectura.tex
+<capitulo1/images/im1.png, id=320, 1324.95pt x 642.4pt>
+File: capitulo1/images/im1.png Graphic file (type png)
+<use capitulo1/images/im1.png>
+Package pdftex.def Info: capitulo1/images/im1.png  used on input line 12.
+(pdftex.def)             Requested size: 421.46553pt x 204.34976pt.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.26 \newpage
-             ]
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--27
- [] [] 
+Underfull \hbox (badness 10000) in paragraph at lines 4--25
+
  []
 
-
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--44
- [] [] 
- []
-
-) (capitulo1/justificacion.texpdfTeX warning (ext4): destination with the same 
+File: cdt/theme/headerPar.png Graphic file (type png)
+<use cdt/theme/headerPar.png>
+Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 25.
+(pdftex.def)             Requested size: 43.70595pt x 35.0pt.
+File: cdt/theme/logoPar.png Graphic file (type png)
+<use cdt/theme/logoPar.png>
+Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 25.
+(pdftex.def)             Requested size: 50.42783pt x 35.0pt.
+[6]) (capitulo1/limitantes.texpdfTeX warning (ext4): destination with the same 
 identifier (name{seccion:IniciarSesion}) has been already used, duplicate ignor
 ed
 <to be read again> 
                    \relax 
 l.1 ...target{seccion:IniciarSesion}{\vspace{1pt}}
                                                   
-File: capitulo1/images/IU-APA.png Graphic file (type png)
-<use capitulo1/images/IU-APA.png>
-Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
-(pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
-File: cdt/theme/headerPar.png Graphic file (type png)
-<use cdt/theme/headerPar.png>
-Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 26.
-(pdftex.def)             Requested size: 43.70595pt x 35.0pt.
-File: cdt/theme/logoPar.png Graphic file (type png)
-<use cdt/theme/logoPar.png>
-Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 26.
-(pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [6pdfTeX warning (ext4): destination with the same identifier (name{figure.1.6
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.26 \newpage
-             ]
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--27
- [] [] 
- []
-
-
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--44
- [] [] 
- []
-
-) (capitulo1/objetivos.texpdfTeX warning (ext4): destination with the same iden
-tifier (name{seccion:IniciarSesion}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 ...target{seccion:IniciarSesion}{\vspace{1pt}}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{fig:APA}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.14 		\hypertarget{fig:APA}{\hspace{1pt}}
-                                          
-File: capitulo1/images/IU-APA.png Graphic file (type png)
-<use capitulo1/images/IU-APA.png>
-Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
-(pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
 File: cdt/theme/logoInp.png Graphic file (type png)
 <use cdt/theme/logoInp.png>
-Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 26.
+Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 11.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
-Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 26.
+Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 11.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.1.7
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.26 \newpage
-             ]
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--27
- [] [] 
- []
-
-
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--44
- [] [] 
- []
-
-) (capitulo1/arquitectura.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{seccion:IniciarSesion}) has been already used, duplicate ignore
-d
-<to be read again> 
-                   \relax 
-l.1 ...target{seccion:IniciarSesion}{\vspace{1pt}}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{fig:APA}) has been already used, duplicate
- ignored
+l.11 	\item S
+             olicite administrar los pagos admisión seleccionando la opció...
+ <./capitulo1/images/im1.png>]pdfTeX warning (ext4): destination with the same 
+identifier (name{fig:APA}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.14 		\hypertarget{fig:APA}{\hspace{1pt}}
@@ -1126,47 +975,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 26.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [8pdfTeX warning (ext4): destination with the same identifier (name{figure.1.8
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.26 \newpage
-             ]
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--27
- [] [] 
- []
-
-
-Overfull \hbox (25.19997pt too wide) in alignment at lines 27--44
- [] [] 
- []
-
-) (capitulo1/limitantes.texpdfTeX warning (ext4): destination with the same ide
-ntifier (name{seccion:IniciarSesion}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 ...target{seccion:IniciarSesion}{\vspace{1pt}}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{fig:APA}) has been already used, duplicate
- ignored
-<to be read again> 
-                   \relax 
-l.14 		\hypertarget{fig:APA}{\hspace{1pt}}
-                                          
-File: capitulo1/images/IU-APA.png Graphic file (type png)
-<use capitulo1/images/IU-APA.png>
-Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
-(pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
-File: cdt/theme/logoInp.png Graphic file (type png)
-<use cdt/theme/logoInp.png>
-Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 26.
-(pdftex.def)             Requested size: 43.70595pt x 35.0pt.
-File: cdt/theme/headerInp.png Graphic file (type png)
-<use cdt/theme/headerInp.png>
-Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 26.
-(pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [9pdfTeX warning (ext4): destination with the same identifier (name{figure.1.9
+ [8pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1198,16 +1007,16 @@ File: capitulo1/images/IU-APA.png Graphic file (type png)
 <use capitulo1/images/IU-APA.png>
 Package pdftex.def Info: capitulo1/images/IU-APA.png  used on input line 16.
 (pdftex.def)             Requested size: 388.13173pt x 204.34976pt.
-File: cdt/theme/headerPar.png Graphic file (type png)
-<use cdt/theme/headerPar.png>
-Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 27.
+File: cdt/theme/logoInp.png Graphic file (type png)
+<use cdt/theme/logoInp.png>
+Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 27.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
-File: cdt/theme/logoPar.png Graphic file (type png)
-<use cdt/theme/logoPar.png>
-Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 27.
+File: cdt/theme/headerInp.png Graphic file (type png)
+<use cdt/theme/headerInp.png>
+Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 27.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [10pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
-10}) has been already used, duplicate ignored
+ [9pdfTeX warning (ext4): destination with the same identifier (name{figure.1.5
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1223,15 +1032,6 @@ Overfull \hbox (25.19997pt too wide) in alignment at lines 28--45
  []
 
 )
-File: cdt/theme/logoInp.png Graphic file (type png)
-<use cdt/theme/logoInp.png>
-Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 98.
-(pdftex.def)             Requested size: 43.70595pt x 35.0pt.
-File: cdt/theme/headerInp.png Graphic file (type png)
-<use cdt/theme/headerInp.png>
-Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 98.
-(pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [11]
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
 Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 98.
@@ -1240,16 +1040,16 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 98.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [12
-
-]
+ [10]
 Cap\'{\i }tulo 2.
 (capitulo2/marcoteorico.texpdfTeX warning (ext4): destination with the same ide
 ntifier (name{seccion:IniciarSesion}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 ...target{seccion:IniciarSesion}{\vspace{1pt}}
-                                                   [13]
+                                                   [11
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
@@ -1264,7 +1064,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
-<capitulo2/images/arbol-decision-ejemplo.png, id=365, 292.09125pt x 173.64874pt
+<capitulo2/images/arbol-decision-ejemplo.png, id=372, 292.09125pt x 173.64874pt
 >
 File: capitulo2/images/arbol-decision-ejemplo.png Graphic file (type png)
 <use capitulo2/images/arbol-decision-ejemplo.png>
@@ -1279,7 +1079,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 60.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[14]
+[12]
 File: cdt/theme/logoInp.png Graphic file (type png)
 <use cdt/theme/logoInp.png>
 Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 62.
@@ -1288,7 +1088,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 62.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+ [13pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1308,13 +1108,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
-<capitulo2/images/formula-entropia.png, id=383, 180.675pt x 42.1575pt>
+<capitulo2/images/formula-entropia.png, id=389, 180.675pt x 42.1575pt>
 File: capitulo2/images/formula-entropia.png Graphic file (type png)
 <use capitulo2/images/formula-entropia.png>
 Package pdftex.def Info: capitulo2/images/formula-entropia.png  used on input l
 ine 75.
 (pdftex.def)             Requested size: 180.67455pt x 42.15738pt.
-<capitulo2/images/formula-ganancia.png, id=384, 320.397pt x 45.16875pt>
+<capitulo2/images/formula-ganancia.png, id=390, 320.397pt x 45.16875pt>
 File: capitulo2/images/formula-ganancia.png Graphic file (type png)
 <use capitulo2/images/formula-ganancia.png>
 Package pdftex.def Info: capitulo2/images/formula-ganancia.png  used on input l
@@ -1345,7 +1145,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 147.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
+[14pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1367,7 +1167,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 148.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [17pdfTeX warning (ext4): destination with the same identifier (name{table.2.1
+ [15pdfTeX warning (ext4): destination with the same identifier (name{table.2.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1430,7 +1230,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 218.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [18pdfTeX warning (ext4): destination with the same identifier (name{table.2.3
+ [16pdfTeX warning (ext4): destination with the same identifier (name{table.2.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1485,7 +1285,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 280.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[19pdfTeX warning (ext4): destination with the same identifier (name{table.2.5}
+[17pdfTeX warning (ext4): destination with the same identifier (name{table.2.5}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1519,7 +1319,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
-<capitulo2/images/arbol-decision-final.png, id=432, 477.58424pt x 298.11375pt>
+<capitulo2/images/arbol-decision-final.png, id=439, 477.58424pt x 298.11375pt>
 File: capitulo2/images/arbol-decision-final.png Graphic file (type png)
 <use capitulo2/images/arbol-decision-final.png>
 Package pdftex.def Info: capitulo2/images/arbol-decision-final.png  used on inp
@@ -1533,7 +1333,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 326.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[20pdfTeX warning (ext4): destination with the same identifier (name{table.2.9}
+[18pdfTeX warning (ext4): destination with the same identifier (name{table.2.9}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1557,13 +1357,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 327--328
 
  []
 
-<capitulo2/images/formula-gainratio.png, id=441, 330.033pt x 69.25874pt>
+<capitulo2/images/formula-gainratio.png, id=448, 330.033pt x 69.25874pt>
 File: capitulo2/images/formula-gainratio.png Graphic file (type png)
 <use capitulo2/images/formula-gainratio.png>
 Package pdftex.def Info: capitulo2/images/formula-gainratio.png  used on input 
 line 338.
 (pdftex.def)             Requested size: 250.24199pt x 52.51353pt.
-<capitulo2/images/formula-splitinfo.png, id=442, 399.894pt x 80.09924pt>
+<capitulo2/images/formula-splitinfo.png, id=449, 399.894pt x 80.09924pt>
 File: capitulo2/images/formula-splitinfo.png Graphic file (type png)
 <use capitulo2/images/formula-splitinfo.png>
 Package pdftex.def Info: capitulo2/images/formula-splitinfo.png  used on input 
@@ -1580,7 +1380,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 382.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [21pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+ [19pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1671,7 +1471,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 413.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[22pdfTeX warning (ext4): destination with the same identifier (name{table.2.11
+[20pdfTeX warning (ext4): destination with the same identifier (name{table.2.11
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1720,7 +1520,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 464.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[23pdfTeX warning (ext4): destination with the same identifier (name{table.2.12
+[21pdfTeX warning (ext4): destination with the same identifier (name{table.2.12
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1759,7 +1559,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 532.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[24pdfTeX warning (ext4): destination with the same identifier (name{table.2.13
+[22pdfTeX warning (ext4): destination with the same identifier (name{table.2.13
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1786,7 +1586,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 553--554
 
  []
 
-<capitulo2/images/arbol-final-c45.png, id=508, 477.58424pt x 218.0145pt>
+<capitulo2/images/arbol-final-c45.png, id=515, 477.58424pt x 218.0145pt>
 File: capitulo2/images/arbol-final-c45.png Graphic file (type png)
 <use capitulo2/images/arbol-final-c45.png>
 Package pdftex.def Info: capitulo2/images/arbol-final-c45.png  used on input li
@@ -1800,7 +1600,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 566.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[25pdfTeX warning (ext4): destination with the same identifier (name{table.2.15
+[23pdfTeX warning (ext4): destination with the same identifier (name{table.2.15
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1848,7 +1648,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 612--613
 
  []
 
-<capitulo2/images/distanciaEuclidiana.png, id=518, 418.56375pt x 52.39575pt>
+<capitulo2/images/distanciaEuclidiana.png, id=525, 418.56375pt x 52.39575pt>
 File: capitulo2/images/distanciaEuclidiana.png Graphic file (type png)
 <use capitulo2/images/distanciaEuclidiana.png>
 Package pdftex.def Info: capitulo2/images/distanciaEuclidiana.png  used on inpu
@@ -1867,7 +1667,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 653.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[26pdfTeX warning (ext4): destination with the same identifier (name{table.2.17
+[24pdfTeX warning (ext4): destination with the same identifier (name{table.2.17
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1912,7 +1712,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 703.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[27pdfTeX warning (ext4): destination with the same identifier (name{table.2.18
+[25pdfTeX warning (ext4): destination with the same identifier (name{table.2.18
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1937,7 +1737,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 771.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[28pdfTeX warning (ext4): destination with the same identifier (name{table.2.20
+[26pdfTeX warning (ext4): destination with the same identifier (name{table.2.20
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1989,7 +1789,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 823.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[29pdfTeX warning (ext4): destination with the same identifier (name{table.2.24
+[27pdfTeX warning (ext4): destination with the same identifier (name{table.2.24
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2019,8 +1819,8 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 829.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [30]
-<capitulo2/images/hadoopComponentes.png, id=560, 213.79875pt x 301.125pt>
+ [28]
+<capitulo2/images/hadoopComponentes.png, id=567, 213.79875pt x 301.125pt>
 File: capitulo2/images/hadoopComponentes.png Graphic file (type png)
 <use capitulo2/images/hadoopComponentes.png>
 Package pdftex.def Info: capitulo2/images/hadoopComponentes.png  used on input 
@@ -2034,7 +1834,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 847.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [31pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+ [29pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2045,7 +1845,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 849--850
 
  []
 
-<capitulo2/images/arquitecturaMaestroEsclavo.png, id=568, 387.849pt x 238.491pt
+<capitulo2/images/arquitecturaMaestroEsclavo.png, id=575, 387.849pt x 238.491pt
 >
 File: capitulo2/images/arquitecturaMaestroEsclavo.png Graphic file (type png)
 <use capitulo2/images/arquitecturaMaestroEsclavo.png>
@@ -2070,7 +1870,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 876.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[32pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+[30pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
 0}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2112,7 +1912,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 900--901
 
  []
 
-<capitulo2/images/sparkComponentes.png, id=578, 454.69875pt x 203.5605pt>
+<capitulo2/images/sparkComponentes.png, id=585, 454.69875pt x 203.5605pt>
 File: capitulo2/images/sparkComponentes.png Graphic file (type png)
 <use capitulo2/images/sparkComponentes.png>
 Package pdftex.def Info: capitulo2/images/sparkComponentes.png  used on input l
@@ -2129,7 +1929,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 910.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [33]
+ [31]
 Underfull \hbox (badness 10000) in paragraph at lines 912--913
 
  []
@@ -2163,7 +1963,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 101.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [34pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+ [32pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2177,16 +1977,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--14
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmbr on input line 15.
-
-
-("C:\Users\kevin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\cmbright\omscmbr.f
-d"
-File: omscmbr.fd 2005/04/13 v8.1 (WaS)
-)
-LaTeX Font Info:    Font shape `OMS/cmbr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmbrs/m/n' tried instead on input line 15.
- [35
+[33
 
 ]
 Overfull \hbox (16.115pt too wide) in paragraph at lines 47--48
@@ -2216,7 +2007,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 80.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[36]
+[34]
 Underfull \hbox (badness 10000) in paragraph at lines 88--110
 
  []
@@ -2239,13 +2030,13 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 123.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[37]
-<capitulo3/images/im1.png, id=638, 500.5902pt x 299.6796pt>
+[35]
+<capitulo3/images/im1.png, id=645, 500.5902pt x 299.6796pt>
 File: capitulo3/images/im1.png Graphic file (type png)
 <use capitulo3/images/im1.png>
 Package pdftex.def Info: capitulo3/images/im1.png  used on input line 127.
 (pdftex.def)             Requested size: 350.33727pt x 209.73769pt.
-<capitulo3/images/im2.png, id=640, 543.53062pt x 52.69687pt>
+<capitulo3/images/im2.png, id=647, 543.53062pt x 52.69687pt>
 File: capitulo3/images/im2.png Graphic file (type png)
 <use capitulo3/images/im2.png>
 Package pdftex.def Info: capitulo3/images/im2.png  used on input line 147.
@@ -2258,7 +2049,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 152.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [38pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+ [36pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2280,8 +2071,8 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 165.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
 
-[39]
-<capitulo3/images/im3.png, id=656, 1161.33875pt x 705.63625pt>
+[37]
+<capitulo3/images/im3.png, id=662, 1161.33875pt x 705.63625pt>
 File: capitulo3/images/im3.png Graphic file (type png)
 <use capitulo3/images/im3.png>
 Package pdftex.def Info: capitulo3/images/im3.png  used on input line 169.
@@ -2301,29 +2092,29 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 208.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [40pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+ [38pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.208 \section{Pruebas}
                         <./capitulo3/images/im3.png>]
-<capitulo3/images/im9.png, id=664, 807.015pt x 444.66125pt>
+<capitulo3/images/im9.png, id=670, 807.015pt x 444.66125pt>
 File: capitulo3/images/im9.png Graphic file (type png)
 <use capitulo3/images/im9.png>
 Package pdftex.def Info: capitulo3/images/im9.png  used on input line 223.
 (pdftex.def)             Requested size: 350.33727pt x 193.03255pt.
-<capitulo3/images/im12.png, id=665, 1213.53375pt x 498.86375pt>
+<capitulo3/images/im12.png, id=671, 1213.53375pt x 498.86375pt>
 File: capitulo3/images/im12.png Graphic file (type png)
 <use capitulo3/images/im12.png>
 Package pdftex.def Info: capitulo3/images/im12.png  used on input line 232.
 (pdftex.def)             Requested size: 350.33727pt x 144.01976pt.
-<capitulo3/images/im6.png, id=666, 1275.76625pt x 638.385pt>
+<capitulo3/images/im6.png, id=672, 1275.76625pt x 638.385pt>
 File: capitulo3/images/im6.png Graphic file (type png)
 <use capitulo3/images/im6.png>
 Package pdftex.def Info: capitulo3/images/im6.png  used on input line 243.
 (pdftex.def)             Requested size: 350.33727pt x 175.30801pt.
-<capitulo3/images/im10.png, id=667, 1252.68pt x 522.95375pt>
+<capitulo3/images/im10.png, id=673, 1252.68pt x 522.95375pt>
 File: capitulo3/images/im10.png Graphic file (type png)
 <use capitulo3/images/im10.png>
 Package pdftex.def Info: capitulo3/images/im10.png  used on input line 253.
@@ -2336,7 +2127,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 259.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [41pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+ [39pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2358,7 +2149,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 259.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
 
-[42pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2371,7 +2162,7 @@ l.259 \newpage
                                                   \fi \fi 
 l.259 \newpage
                <./capitulo3/images/im6.png> <./capitulo3/images/im10.png>]
-<capitulo3/images/im11.png, id=688, 1233.60875pt x 444.66125pt>
+<capitulo3/images/im11.png, id=695, 1233.60875pt x 444.66125pt>
 File: capitulo3/images/im11.png Graphic file (type png)
 <use capitulo3/images/im11.png>
 Package pdftex.def Info: capitulo3/images/im11.png  used on input line 263.
@@ -2386,7 +2177,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 106.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
 
-[43pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8
+[41pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2402,28 +2193,70 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 106.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
 
-[44
+[42
 
 ]
 Cap\'{\i }tulo 4.
-(capitulo4/prototipo2.tex
-<capitulo4/images/im1.png, id=698, 500.5902pt x 299.6796pt>
+(capitulo4/prototipo2.tex [43]
+<capitulo4/images/im3.png, id=712, 1181.8554pt x 443.256pt>
+File: capitulo4/images/im3.png Graphic file (type png)
+<use capitulo4/images/im3.png>
+Package pdftex.def Info: capitulo4/images/im3.png  used on input line 26.
+(pdftex.def)             Requested size: 350.33727pt x 131.39516pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--45
+
+ []
+
+<capitulo4/images/im1.png, id=714, 836.12375pt x 679.53876pt>
 File: capitulo4/images/im1.png Graphic file (type png)
 <use capitulo4/images/im1.png>
-Package pdftex.def Info: capitulo4/images/im1.png  used on input line 15.
-(pdftex.def)             Requested size: 350.33727pt x 209.73769pt.
- [45pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-1}) has been already used, duplicate ignored
+Package pdftex.def Info: capitulo4/images/im1.png  used on input line 59.
+(pdftex.def)             Requested size: 350.33727pt x 284.73036pt.
+File: cdt/theme/headerPar.png Graphic file (type png)
+<use cdt/theme/headerPar.png>
+Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 75.
+(pdftex.def)             Requested size: 43.70595pt x 35.0pt.
+File: cdt/theme/logoPar.png Graphic file (type png)
+<use cdt/theme/logoPar.png>
+Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 75.
+(pdftex.def)             Requested size: 50.42783pt x 35.0pt.
+[44pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.28  	\end{lstlisting}
-                        <./capitulo4/images/im1.png>]
-<capitulo4/images/im2.png, id=711, 543.53062pt x 52.69687pt>
+l.75 \begin{lstlisting}
+                        <./capitulo4/images/im3.png>]
+Overfull \hbox (3.51503pt too wide) in paragraph at lines 76--77
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+File: cdt/theme/logoInp.png Graphic file (type png)
+<use cdt/theme/logoInp.png>
+Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 98.
+(pdftex.def)             Requested size: 43.70595pt x 35.0pt.
+File: cdt/theme/headerInp.png Graphic file (type png)
+<use cdt/theme/headerInp.png>
+Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 98.
+(pdftex.def)             Requested size: 50.42783pt x 35.0pt.
+[45pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.98 \end{lstlisting}
+                      <./capitulo4/images/im1.png>]
+<capitulo4/images/im2.png, id=743, 1472.3808pt x 456.2646pt>
 File: capitulo4/images/im2.png Graphic file (type png)
 <use capitulo4/images/im2.png>
-Package pdftex.def Info: capitulo4/images/im2.png  used on input line 33.
-(pdftex.def)             Requested size: 350.33727pt x 33.9679pt.
+Package pdftex.def Info: capitulo4/images/im2.png  used on input line 105.
+(pdftex.def)             Requested size: 450.43253pt x 139.57474pt.
 )
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
@@ -2434,15 +2267,19 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 111.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
  [46pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-2}) has been already used, duplicate ignored
+3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.111 	\chapter
-               {Capitulo 5}\label{cap:Cap5} <./capitulo4/images/im2.png>]
+               {Capitulo 5}\label{cap:Cap5} <./capitulo4/images/im2.png
+
+pdfTeX warning: pdflatex.exe (file ./capitulo4/images/im2.png): large interlace
+d PNG might cause out of memory (use non-interlaced PNG to fix this)
+>]
 Cap\'{\i }tulo 5.
 (capitulo5/instalador.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
 
@@ -2456,23 +2293,121 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<capitulo5/images/diagramaFlujo.png, id=720, 512.21362pt x 542.47668pt>
-File: capitulo5/images/diagramaFlujo.png Graphic file (type png)
-<use capitulo5/images/diagramaFlujo.png>
-Package pdftex.def Info: capitulo5/images/diagramaFlujo.png  used on input line
- 13.
-(pdftex.def)             Requested size: 512.21237pt x 542.47536pt.
 
-Overfull \hbox (11.72838pt too wide) in paragraph at lines 13--14
- [] 
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
  []
 
-)
+<capitulo5/images/hostnoencontrado.png, id=761, 744.7825pt x 461.725pt>
+File: capitulo5/images/hostnoencontrado.png Graphic file (type png)
+<use capitulo5/images/hostnoencontrado.png>
+Package pdftex.def Info: capitulo5/images/hostnoencontrado.png  used on input l
+ine 17.
+(pdftex.def)             Requested size: 350.33727pt x 217.19395pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47
 
 ]
+<capitulo5/images/hostencontrado.png, id=766, 738.76pt x 462.72874pt>
+File: capitulo5/images/hostencontrado.png Graphic file (type png)
+<use capitulo5/images/hostencontrado.png>
+Package pdftex.def Info: capitulo5/images/hostencontrado.png  used on input lin
+e 25.
+(pdftex.def)             Requested size: 350.33727pt x 219.43834pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
+
+ []
+
+<capitulo5/images/instalacion.png, id=767, 737.75626pt x 460.72125pt>
+File: capitulo5/images/instalacion.png Graphic file (type png)
+<use capitulo5/images/instalacion.png>
+Package pdftex.def Info: capitulo5/images/instalacion.png  used on input line 3
+5.
+(pdftex.def)             Requested size: 350.33727pt x 218.78159pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: cdt/theme/headerPar.png Graphic file (type png)
+<use cdt/theme/headerPar.png>
+Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 39.
+(pdftex.def)             Requested size: 43.70595pt x 35.0pt.
+File: cdt/theme/logoPar.png Graphic file (type png)
+<use cdt/theme/logoPar.png>
+Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 39.
+(pdftex.def)             Requested size: 50.42783pt x 35.0pt.
+ [48pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.39 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.5
+.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.39 
+      <./capitulo5/images/hostnoencontrado.png> <./capitulo5/images/hostencontr
+ado.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+File: cdt/theme/logoInp.png Graphic file (type png)
+<use cdt/theme/logoInp.png>
+Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 54.
+(pdftex.def)             Requested size: 43.70595pt x 35.0pt.
+File: cdt/theme/headerInp.png Graphic file (type png)
+<use cdt/theme/headerInp.png>
+Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 54.
+(pdftex.def)             Requested size: 50.42783pt x 35.0pt.
+[49pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.54 \newpage
+              <./capitulo5/images/instalacion.png>]
+<capitulo5/images/diagramaFlujo.png, id=785, 512.21362pt x 542.47668pt>
+File: capitulo5/images/diagramaFlujo.png Graphic file (type png)
+<use capitulo5/images/diagramaFlujo.png>
+Package pdftex.def Info: capitulo5/images/diagramaFlujo.png  used on input line
+ 59.
+(pdftex.def)             Requested size: 512.21237pt x 542.47536pt.
+
+Overfull \hbox (11.72838pt too wide) in paragraph at lines 59--60
+ [] 
+ []
+
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
@@ -2482,9 +2417,8 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 115.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-
-[48pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
-}) has been already used, duplicate ignored
+ [50pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -2498,7 +2432,7 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `Base.out' has not changed.
-(rerunfilecheck)             Checksum: 21D594204444AD520DD2D735D3F2A5D0;2574.
+(rerunfilecheck)             Checksum: 11CE16F541A655703F68E055924FC219;3363.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2509,13 +2443,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
  ) 
 Here is how much of TeX's memory you used:
- 11021 strings out of 492970
- 160236 string characters out of 3126593
- 292810 words of memory out of 3000000
- 14302 multiletter control sequences out of 15000+200000
+ 11075 strings out of 492970
+ 161520 string characters out of 3126593
+ 292104 words of memory out of 3000000
+ 14340 multiletter control sequences out of 15000+200000
  23962 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,16n,47p,822b,1059s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,17n,47p,877b,984s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi
 600\ebtl10.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\
 cmbright\dpi600\ebmo10.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\lj
@@ -2535,9 +2469,9 @@ C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\
 ebmr17.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbr
 ight\dpi864\ebmr17.pk><C:/Users/kevin/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/marvosym/marvosym.pfb>
-Output written on Base.pdf (52 pages, 2691342 bytes).
+Output written on Base.pdf (54 pages, 3048441 bytes).
 PDF statistics:
- 1311 PDF objects out of 1440 (max. 8388607)
- 318 named destinations out of 1000 (max. 500000)
- 455 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1401 PDF objects out of 1440 (max. 8388607)
+ 331 named destinations out of 1000 (max. 500000)
+ 560 words of extra memory for PDF output out of 10000 (max. 10000000)
 
