@@ -1,44 +1,33 @@
-\hypertarget{seccion:IniciarSesion}{\vspace{1pt}}
-\section{Introduccion}
-%\subsection{Administrar pagos admisión}
+\section{Justificación}
 
-
-
-Para que la ELD pueda mantener actualizado el status de pago de los aspirantes que realizaron la operación en sucursal bancaria, es necesario que el \textbf{Contador General} actualice de forma manual dichos pagos, esto se logra con ayuda del archivo brindado por BANAMEX, el cual servirá para ser cargado en el sistema y este lo interprete y determine si es correcto, en caso de ser correcto actualizar el estado de pago de los aspirantes que allí se encuentran, de lo contrario mostrar las inconsistencias.\\
-Una de las operaciones que brinda el sistema, es la actualización manual del status de pago de un aspirante, esta acción le permite tener el control para la actualización del status de pago de los aspirantes, esto con la finalidad de no depender del archivo de BANAMEX en caso de que presentaran conflictos con el mismo.
-%\subsubsection{Procedimiento}
-\begin{enumerate}
-	\item Solicite administrar los pagos admisión seleccionando la opción \textbf{Administración de pagos} del menú \refIU{fig:menuPrincipalCG}{Menú del Contador General} y posteriormente la opción \textbf{Pagos Admisión} del menú \refIU{fig:menuPagosA}{Menú Pagos Admisión}.
-	\item Se mostrará la pantalla \refIU{fig:APA}{Administrar Pagos Admisión}.
-	\begin{figure}[!htbp]
-		\hypertarget{fig:oo}{\hspace{1pt}}
-		\begin{center}
-			\includegraphics[height=0.3\textheight]{capitulo1/images/IU-APA.png}
-			\caption{Administrar Pagos Admisión}
-			\label{fig:oo}
-		\end{center}
-	\end{figure}
-	
-\end{enumerate}
-	
-
-
-\newpage
-\begin{Errores}
-	\error{El sistema muestra un mensaje indicando que falta información para realizar la operación.}
-	{
-		\begin{UClist}
-			\UCli	Verifique que exista una convocatoria \textbf{Publicada}.
-			\UCli	Verifique que exista un periodo de pagos.
-			\UCli	Verifique que exista un periodo de pre-registro CENEVAL vigente.
-		\end{UClist}
-	}
-	\error{El sistema muestra un mensaje indicando que no se ha realizado la asociación de fechas de CENEVAL y Psicométrico.}
-	{
-		\begin{UClist}
-			\UCli	Verifique que la Coordinación de Control Escolar haya asociado las fechas CENEVAL y Psicométrico.
-		\end{UClist}
-	}
-	
-
-\end{Errores}
+El principal motivo de desarrollo de la presente propuesta es el de facilitar a las empresas u organizaciones la implementación de
+un ambiente de Big Data, dado que se tiene la creencia de que es un proceso complicado, tardado y muy costoso. Cada uno de los
+factores mencionados anteriormente puede ser justificado de la siguiente manera: la complejidad de la implementación de Big Data
+se puede reducir mediante la preparación previa del software necesario para la infraestructura que tenga actualmente la empresa; de
+igual forma se pueden reducir los tiempos de implementación mediante la automatización de las configuraciones y pre
+procesamiento de datos; y finalmente los costos estarán de acuerdo a las computadoras disponibles (al menos 4) que puedan actuar
+como nodos de procesamiento y almacenamiento de datos que serán procesados.
+\\
+Esta herramienta estaría dedicada a empresas u organizaciones que busquen implementar un ambiente de Big Data de una manera
+más rápida, sencilla, eficiente y a un menor costo. Para que con su adecuado uso, cualquiera de estas entidades sea capaz de
+mejorar, ser más competitiva, y tener un mayor control sobre su propia información, ya que el conocimiento adquirido a partir de
+la aplicación de técnicas de minería de datos sobre grandes volúmenes de información estaría siendo de vital importancia para que
+dichas organizaciones planeen y ejecuten estrategias que les permitan alcanzar sus objetivos.
+\\
+Se ha hecho especial hincapié en el sector empresarial en esta sección, ya que, en general, podría decirse que pequeñas y medianas
+empresas son los principales clientes potenciales. Esto debido a que la mayoría cuenta con cierta infraestructura de datos y con
+bitácoras que contienen información sobre sus ingresos y egresos. Toda esa información será la materia prima que será utilizada
+por la herramienta para la generación de conocimiento.
+\\
+Si bien, existen algunas implementaciones comerciales (las cuales ya se han mencionado en los apartados previos) que realizan la
+automatización de la implementación de Big Data, son realmente costosas en recursos de cómputo, y el licenciamiento tiene un
+costo elevado con relación a los usuarios y/o equipos a usar. Algunas implementaciones están basadas en máquinas virtuales,
+que, si bien, automatizan todo el trabajo, de igual forma resultan costosas con relación al equipo necesario y dinero invertido.
+Además, el costo de las herramientas comerciales más robustas puede llegar a los cientos de miles de pesos.
+\\
+Para la realización de esta propuesta se requerirá dominio en el manejo de bases de datos relacionales y no relacionales;
+conocimiento de técnicas de minería de datos y su adecuada aplicación; manejo de herramientas y Frameworks dedicados al
+desarrollo de aplicaciones que se ejecuten de manera distribuida; conocimiento en el ámbito de complejidades algorítmicas
+para así poder justificar la mejora en la eficiencia de esta herramienta con respecto a las otras ya existentes; manejo de distintos
+lenguajes de programación, debido a que el lenguaje que se utilizara para el desarrollo de la aplicación principal será distinto al
+lenguaje que se utilizara para la implementación de los algoritmos de minería de datos.
