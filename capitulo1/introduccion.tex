@@ -1,44 +1,35 @@
 \hypertarget{seccion:IniciarSesion}{\vspace{1pt}}
 \section{Introduccion}
-%\subsection{Administrar pagos admisión}
-
-
-
-Para que la ELD pueda mantener actualizado el status de pago de los aspirantes que realizaron la operación en sucursal bancaria, es necesario que el \textbf{Contador General} actualice de forma manual dichos pagos, esto se logra con ayuda del archivo brindado por BANAMEX, el cual servirá para ser cargado en el sistema y este lo interprete y determine si es correcto, en caso de ser correcto actualizar el estado de pago de los aspirantes que allí se encuentran, de lo contrario mostrar las inconsistencias.\\
-Una de las operaciones que brinda el sistema, es la actualización manual del status de pago de un aspirante, esta acción le permite tener el control para la actualización del status de pago de los aspirantes, esto con la finalidad de no depender del archivo de BANAMEX en caso de que presentaran conflictos con el mismo.
-%\subsubsection{Procedimiento}
-\begin{enumerate}
-	\item Solicite administrar los pagos admisión seleccionando la opción \textbf{Administración de pagos} del menú \refIU{fig:menuPrincipalCG}{Menú del Contador General} y posteriormente la opción \textbf{Pagos Admisión} del menú \refIU{fig:menuPagosA}{Menú Pagos Admisión}.
-	\item Se mostrará la pantalla \refIU{fig:APA}{Administrar Pagos Admisión}.
-	\begin{figure}[!htbp]
-		\hypertarget{fig:APA}{\hspace{1pt}}
-		\begin{center}
-			\includegraphics[height=0.3\textheight]{capitulo1/images/IU-APA.png}
-			\caption{Administrar Pagos Admisión}
-			\label{fig:APA}
-		\end{center}
-	\end{figure}
-	
-\end{enumerate}
-	
-
-
-\newpage
-\begin{Errores}
-	\error{El sistema muestra un mensaje indicando que falta información para realizar la operación.}
-	{
-		\begin{UClist}
-			\UCli	Verifique que exista una convocatoria \textbf{Publicada}.
-			\UCli	Verifique que exista un periodo de pagos.
-			\UCli	Verifique que exista un periodo de pre-registro CENEVAL vigente.
-		\end{UClist}
-	}
-	\error{El sistema muestra un mensaje indicando que no se ha realizado la asociación de fechas de CENEVAL y Psicométrico.}
-	{
-		\begin{UClist}
-			\UCli	Verifique que la Coordinación de Control Escolar haya asociado las fechas CENEVAL y Psicométrico.
-		\end{UClist}
-	}
-	
-
-\end{Errores}
+En la actualidad, el valor de los datos es muy importante para las empresas; cuando se hace un análisis correcto de la información
+histórica almacenada, se pueden hacer estadísticas de comportamiento, inclusive predicciones futuras, las cuales ayudan a la toma
+de decisiones. Conforme los datos crecen en el tiempo, también la complejidad en el procesamiento de estos datos aumenta.
+Una de las tendencias de años recientes, llamada Big Data, utiliza un esquema de cómputo distribuido para aprovechar la
+infraestructura de cómputo disponible en la empresa, y resuelve de manera cooperativa los problemas de análisis de datos.
+\\
+Como son:
+\begin{itemize}
+\item Datos de gran volumen 
+\item Los datos cambian rápidamente por lo que su tiempo de validez es muy corto
+\item En ocasiones es difícil encontrar patrones para agrupar datos provenientes de diversas fuentes 
+\item Es necesario discernir entre qué datos son importantes en el análisis y cuáles no lo son 
+\item Es necesario integrar diferentes tipos de datos (estructurados, no estructurados, semiestructurados) 
+\item No existen estándares de calidad de datos unificados
+Además de otros factores 
+\end{itemize}
+La propuesta de solución va encaminada a desarrollar un ambiente de Big Data, que incluya los procesos de verificación de datos,
+selección y aplicación de los algoritmos de minería de datos (clasificación y reglas de asociación) necesarios, y generación de los
+resultados del análisis, con el fin de que sea atractivo de implementar de manera real en las empresas y puedan hacer analítica de
+los datos empresarias.
+\\
+Se busca que los clientes potenciales sean pequeñas y medianas empresas, ya que estas se encuentran generando grandes
+cantidades de datos todo el tiempo. Un conjunto de estos datos están relacionados a los ingresos y egresos que posee la empresa.
+Información de la que se hará uso para generar conocimiento nuevo haciendo uso del ambiente de Big Data mencionado
+anteriormente.
+\\
+Por otro lado, se requiere definir dos conceptos clave para este trabajo terminal, y como es que serán entendidos dentro del mismo:
+\\
+\textbf{Big Data}: Se refiere a conjuntos de datos cuyo tamaño está más allá de las capacidades de las herramientas típicas de software de
+bases de datos para capturar, gestionar y analizar.
+\\
+\textbf{Data Mining}: Proceso de descubrimiento de nuevas y significativas relaciones, patrones y tendencias al examinar grandes
+cantidades de datos

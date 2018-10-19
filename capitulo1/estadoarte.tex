@@ -1,44 +1,13 @@
 \hypertarget{seccion:IniciarSesion}{\vspace{1pt}}
-\section{Introduccion}
-%\subsection{Administrar pagos admisión}
-
-
-
-Para que la ELD pueda mantener actualizado el status de pago de los aspirantes que realizaron la operación en sucursal bancaria, es necesario que el \textbf{Contador General} actualice de forma manual dichos pagos, esto se logra con ayuda del archivo brindado por BANAMEX, el cual servirá para ser cargado en el sistema y este lo interprete y determine si es correcto, en caso de ser correcto actualizar el estado de pago de los aspirantes que allí se encuentran, de lo contrario mostrar las inconsistencias.\\
-Una de las operaciones que brinda el sistema, es la actualización manual del status de pago de un aspirante, esta acción le permite tener el control para la actualización del status de pago de los aspirantes, esto con la finalidad de no depender del archivo de BANAMEX en caso de que presentaran conflictos con el mismo.
-%\subsubsection{Procedimiento}
-\begin{enumerate}
-	\item Solicite administrar los pagos admisión seleccionando la opción \textbf{Administración de pagos} del menú \refIU{fig:menuPrincipalCG}{Menú del Contador General} y posteriormente la opción \textbf{Pagos Admisión} del menú \refIU{fig:menuPagosA}{Menú Pagos Admisión}.
-	\item Se mostrará la pantalla \refIU{fig:APA}{Administrar Pagos Admisión}.
-	\begin{figure}[!htbp]
-		\hypertarget{fig:APA}{\hspace{1pt}}
-		\begin{center}
-			\includegraphics[height=0.3\textheight]{capitulo1/images/IU-APA.png}
-			\caption{Administrar Pagos Admisión}
-			\label{fig:APA}
-		\end{center}
-	\end{figure}
-	
-\end{enumerate}
-	
-
-
+\section{Estado del arte}
+A continuación se muestra 
+\begin{table}[]
+	\begin{tabular}{lll}
+		SOFTWARE       &   CARACTERÍSTICAS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          & PRECIO EN EL MERCADO                                                                                                                                                                                        \\
+		Luminus          & \begin{tabular}[c]{@{}l@{}}-Trabaja con datos que se encuentra en distintos equipos\\ de cómputo (Red distribuida)\\ -Se puede seleccionar el algoritmo de minería de datos a\\ utilizar para su funcionamiento dentro de un listado de\\ algoritmos disponibles\\ -Es capaz de detectar cuando alguno de los nodos de datos\\ es modificado antes de resolver un determinado problema\\ -Los datos son extraídos directamente de los repositorios\\ en tiempo real\\ -Se trabaja con archivos JSON de los datos de entrada\\ -Ejecuta flujos de datos directamente hacia Spark\end{tabular} & Próximamente en el mercado                                                                                                                                                                                  \\
+		Knime            & \begin{tabular}[c]{@{}l@{}}-Diferentes maneras de presentar los datos como creación\\ de modelos estadísticos y de minería de datos, como\\ árboles de decisión, máquinas de vector soporte,\\ regresiones, etc.\\ -Aplicación de modelos creados con Knime sobre\\ conjuntos nuevos de datos.\\ -Creación de informes\\ -Posible incorporación de nuevos módulos en lenguaje R o\\ Python por el usuario final.\\ Tamaño de instalación: 1.98GB para la versión gratuita\end{tabular}                                                                                                       & \begin{tabular}[c]{@{}l@{}}Gratuita (Menos funcionalidad)/\\ De costo\\ Desde \$44,200 pesos al año por\\ un usuario\\ Hasta \$466,410 pesos al año\\ por 5 usuarios\end{tabular}                             \\
+		SPSS Modeler IBM & \begin{tabular}[c]{@{}l@{}}-Posible incorporación de nuevos módulos en lenguaje R\\ Python, Hadoop, Spark u otras tecnologías de código\\ abierto por el usuario final.\\ -Diferentes maneras de presentar los datos mediante la\\ creación de modelos.\\ -Acceso y Exportación de datos sin límite de tamaño.\\ -  Más de 30 algoritmos de minería de datos implementados\\ -Ejecuta flujos de datos directamente hacia Spark o\\ Hadoop\\ -Soporte técnico\\ Tamaño de instalación: 1.4GB para la versión de prueba\end{tabular}                                                           & \begin{tabular}[c]{@{}l@{}}Gratuita (Prueba 30 días)/De\\ costo\\ Es necesario contactar\\ directamente con IBM para\\ obtener el precio de la\\ herramienta personalizado para\\ cada empresa\end{tabular} \\
+		                                                                		Rapid Miner      & \begin{tabular}[c]{@{}l@{}}-Cuenta con gráficos para visualización de información\\ -Comparte reutiliza e implementa modelos predictivos\\ -Ejecuta flujos de datos directamente hacia Hadoop\\ -Presentación de datos desde diferentes representaciones\\ gráficas en tiempo real incluso la creación de árboles de\\ decisión\end{tabular}                                                                                                                                                                                                                                                 & \begin{tabular}[c]{@{}l@{}}Desde \$2500.00 pesos al año\\ hasta \$10000.00 pesos al año\end{tabular}                              
+	\end{tabular}
+\end{table}
 \newpage
-\begin{Errores}
-	\error{El sistema muestra un mensaje indicando que falta información para realizar la operación.}
-	{
-		\begin{UClist}
-			\UCli	Verifique que exista una convocatoria \textbf{Publicada}.
-			\UCli	Verifique que exista un periodo de pagos.
-			\UCli	Verifique que exista un periodo de pre-registro CENEVAL vigente.
-		\end{UClist}
-	}
-	\error{El sistema muestra un mensaje indicando que no se ha realizado la asociación de fechas de CENEVAL y Psicométrico.}
-	{
-		\begin{UClist}
-			\UCli	Verifique que la Coordinación de Control Escolar haya asociado las fechas CENEVAL y Psicométrico.
-		\end{UClist}
-	}
-	
-
-\end{Errores}
