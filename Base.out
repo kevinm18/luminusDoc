@@ -41,10 +41,12 @@
 \BOOKMARK [2][-]{subsection.4.3.1}{Dise\361o de la red distribuida con nodos de datos}{section.4.3}% 41
 \BOOKMARK [2][-]{subsection.4.3.2}{Dise\361o de pruebas de obtenci\363n de informaci\363n}{section.4.3}% 42
 \BOOKMARK [1][-]{section.4.4}{Desarrollo}{chapter.4}% 43
-\BOOKMARK [1][-]{section.4.5}{Pruebas}{chapter.4}% 44
-\BOOKMARK [0][-]{chapter.5}{Instalador de Luminus}{}% 45
-\BOOKMARK [1][-]{section.5.1}{Descripci\363n del protoipo}{chapter.5}% 46
-\BOOKMARK [1][-]{section.5.2}{Construcci\363n y funcionamiento del prototipo}{chapter.5}% 47
-\BOOKMARK [2][-]{subsection.5.2.1}{Diagrama de flujo}{section.5.2}% 48
-\BOOKMARK [1][-]{section.5.3}{Alcances y trabajo a futuro}{chapter.5}% 49
-\BOOKMARK [0][-]{chapter.6}{Anexos}{}% 50
+\BOOKMARK [2][-]{subsection.4.4.1}{Algoritmo de prueba}{section.4.4}% 44
+\BOOKMARK [1][-]{section.4.5}{Pruebas}{chapter.4}% 45
+\BOOKMARK [0][-]{chapter.5}{Instalador de Luminus}{}% 46
+\BOOKMARK [1][-]{section.5.1}{Descripci\363n del prototipo}{chapter.5}% 47
+\BOOKMARK [1][-]{section.5.2}{Construcci\363n y funcionamiento del prototipo}{chapter.5}% 48
+\BOOKMARK [2][-]{subsection.5.2.1}{Diagrama de flujo}{section.5.2}% 49
+\BOOKMARK [1][-]{section.5.3}{Alcances y trabajo a futuro}{chapter.5}% 50
+\BOOKMARK [0][-]{chapter.6}{Anexos}{}% 51
+\BOOKMARK [1][-]{section.6.1}{Anexo A: Codigo JAVA Map-Reduce}{chapter.6}% 52
