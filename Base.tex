@@ -1,0 +1,118 @@
+\documentclass[10pt]{book}
+\usepackage{tabulary}
+\usepackage{cdt/cdtAnalisis}
+\usepackage{cdt/cdtAnalisis}
+\usepackage{cdt/Admision}
+%\usepackage{sigra}
+%\usepackage{sinacem}
+\usepackage{cdt/cdtFormal}
+\usepackage[T1]{fontenc}
+%\usepackage{subfigure}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage{array}
+\usepackage{float}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+
+\sistema{Manual de Usuario del GST}
+
+\proyecto[SIGRA]{Luminus}
+
+%\documento{Inicial}{Externo}{}{ Manual de usuario perfil: Contador General}{1.0}
+
+
+\fecha{\today}
+%\fecha{25 de marzo de 2013}
+
+\author{Escuela Superior de Cómputo del IPN}
+
+\elaboro[]{Raúl Kevin Monteón Valdés} 
+\elaboro[]{Mayra Patricia Tovar Barba} 
+
+\title{\varProyecto}
+\subtitle{\varCveDocumento--\varDocumento}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	
+	%=========================================================
+	% Portada
+	%\ThisLRCornerWallPaper{1}{cdt/theme/agua.png}
+	\thispagestyle{empty}
+	\maketitle
+	
+	
+	%=========================================================
+	% Hoja de revisión
+	%\makeDocInfo
+	%\makeElemRefs
+	%\makeDocRefs
+	%\makeObservaciones[3cm]
+	%\vspace{2cm}
+	%\makeFirmas
+	
+	%=========================================================
+	% Indices del documento
+	\frontmatter
+	%\newpage
+	%
+	%\LRCornerWallPaper{1}{cdt/theme/pleca.png}
+	
+	
+	% \hideControlVersion
+	
+	\tableofcontents
+	
+	\mainmatter
+	
+	%----------------------------------------------------------
+	%\chapter{Introducción}\label{cap:Introduccion}
+	%\cfinput{introduccion}
+	%
+	%%----------------------------------------------------------
+	%\chapter{Descripión del proceso}\label{cap:Introduccion}
+	%\cfinput{proceso}
+	%
+	%%----------------------------------------------------------
+	%\chapter{Glosario de Términos}\label{cap:Glosario}
+	%\cfinput{glosario}
+	%
+	%
+	%%---------------------------------------------------------
+	%%----------------------------------------------------------
+	%\chapter{Admisión}\label{cap:Admision}
+	%%===================================================================
+	\chapter{Capitulo 1}\label{cap:Cap1}
+	\cfinput{capitulo1/introduccion} %si
+	\cfinput{capitulo1/planteamientoproblema} %no
+	\cfinput{capitulo1/propuestasolucion}
+	\cfinput{capitulo1/estadoarte} %si
+	\cfinput{capitulo1/justificacion} %si
+	\cfinput{capitulo1/objetivos} %si
+	\cfinput{capitulo1/arquitectura} %si
+	\cfinput{capitulo1/limitantes} %si
+	\cfinput{capitulo1/trabajoafuturo} %si 
+	%
+	\chapter{Marco teórico}\label{cap:Cap2}
+	\cfinput{capitulo2/marcoteorico}
+	
+	\chapter{Evaluación y definición de requerimientos de la red distribuida}\label{cap:Cap3}
+	%Realizar Pagos
+	%\newpage
+	\cfinput{capitulo3/prototipo1}%% Administrar pagos admisión
+	%
+	\chapter{Integración de requerimientos de la red distribuida}\label{cap:Cap4}
+	%Realizar Pagos
+	%\newpage
+	\cfinput{capitulo4/prototipo2}
+	%
+	\chapter{Instalador de Luminus}\label{cap:Cap5}
+	
+	\cfinput{capitulo5/instalador}
+	
+	\chapter{Anexos}
+	\cfinput{capitulo6/a}\label{anexoa}
+	
+\end{document}
