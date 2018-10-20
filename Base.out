@@ -1,0 +1,44 @@
+\BOOKMARK [0][-]{chapter.1}{Capitulo 1}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Introduccion}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Estado del arte}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Justificaci\363n}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Objetivos}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.4.1}{General}{section.1.4}% 6
+\BOOKMARK [2][-]{subsection.1.4.2}{Especificos}{section.1.4}% 7
+\BOOKMARK [1][-]{section.1.5}{Arquitectura de la red distribuida}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{Capitulo 2}{}% 9
+\BOOKMARK [1][-]{section.2.1}{Marco Te\363rico}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.1.1}{Big Data}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.2}{Miner\355a de datos}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.3}{\301rboles de decisi\363n}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.4}{ID3 \(Iterative Dichotomiser 3\)}{section.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.1.5}{C4.5}{section.2.1}% 15
+\BOOKMARK [2][-]{subsection.2.1.6}{Algoritmo KNN \(K-Nearest Neighbor\)}{section.2.1}% 16
+\BOOKMARK [2][-]{subsection.2.1.7}{Algoritmo K-Means}{section.2.1}% 17
+\BOOKMARK [2][-]{subsection.2.1.8}{MapReduce}{section.2.1}% 18
+\BOOKMARK [2][-]{subsection.2.1.9}{Hadoop}{section.2.1}% 19
+\BOOKMARK [2][-]{subsection.2.1.10}{Apache Spark}{section.2.1}% 20
+\BOOKMARK [0][-]{chapter.3}{Capitulo 3: Evaluaci\363n y definici\363n de requerimientos de la red distribuida}{}% 21
+\BOOKMARK [1][-]{section.3.1}{Descripci\363n del prototipo}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{An\341lisis}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.2.1}{An\341lisis de la red distribuida}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.2}{An\341lisis de los datos}{section.3.2}% 25
+\BOOKMARK [1][-]{section.3.3}{Dise\361o}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.1}{Dise\361o de la red distribuida}{section.3.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.2}{Dise\361o de propuesta de agrupaci\363n de acuerdo a los nodos definidos en la red distribuida}{section.3.3}% 28
+\BOOKMARK [1][-]{section.3.4}{Desarrollo}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.5}{Pruebas}{chapter.3}% 30
+\BOOKMARK [0][-]{chapter.4}{Capitulo 4: Integraci\363n de requerimientos de la red distribuida}{}% 31
+\BOOKMARK [1][-]{section.4.1}{Descripci\363n del prototipo}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.2}{An\341lisis}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.2.1}{An\341lisis de la adaptaci\363n de los datos a la red distribuida}{section.4.2}% 34
+\BOOKMARK [1][-]{section.4.3}{Dise\361o}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.3.1}{Dise\361o de la red distribuida con nodos de datos}{section.4.3}% 36
+\BOOKMARK [2][-]{subsection.4.3.2}{Dise\361o de pruebas de obtenci\363n de informaci\363n}{section.4.3}% 37
+\BOOKMARK [1][-]{section.4.4}{Desarrollo}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.5}{Pruebas}{chapter.4}% 39
+\BOOKMARK [0][-]{chapter.5}{Capitulo 5}{}% 40
+\BOOKMARK [1][-]{section.5.1}{Descripci\363n del protoipo}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.2}{Construcci\363n y funcionamiento del prototipo}{chapter.5}% 42
+\BOOKMARK [2][-]{subsection.5.2.1}{Diagrama de flujo}{section.5.2}% 43
+\BOOKMARK [1][-]{section.5.3}{Alcances y trabajo a futuro}{chapter.5}% 44
