@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.15)  19 OCT 2018 09:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.15)  20 OCT 2018 12:15
 entering extended mode
 **./Base.tex
 (Base.tex
@@ -2408,25 +2408,31 @@ Overfull \hbox (11.72838pt too wide) in paragraph at lines 59--60
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
-Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 68.
+Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 66.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
-Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 68.
+Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 66.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
 [50pdfTeX warning (ext4): destination with the same identifier (name{figure.5.4
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.68 \begin{itemize}
-                     <./capitulo5/images/diagramaFlujo.png>]
+l.66 \section{Alcances y trabajo a futuro}
+                                           <./capitulo5/images/diagramaFlujo.pn
+g>]
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
@@ -2442,7 +2448,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
@@ -2502,9 +2523,9 @@ C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\
 ebmr17.pk> <C:\Users\kevin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbr
 ight\dpi864\ebmr17.pk><C:/Users/kevin/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/public/marvosym/marvosym.pfb>
-Output written on Base.pdf (55 pages, 3050942 bytes).
+Output written on Base.pdf (55 pages, 3050885 bytes).
 PDF statistics:
- 1411 PDF objects out of 1440 (max. 8388607)
+ 1410 PDF objects out of 1440 (max. 8388607)
  333 named destinations out of 1000 (max. 500000)
  568 words of extra memory for PDF output out of 10000 (max. 10000000)
 

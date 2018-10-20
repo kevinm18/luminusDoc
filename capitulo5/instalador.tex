@@ -61,14 +61,19 @@ Finalmente se realiza la instalación y configuración de Hadoop en el nodo maes
 	\end{center}
 \end{figure}
 
-Este prorotipo se realizó por completo utilizando la tecnología Shell Script en Ubuntu 18.04.
+Este prorotipo se realizó por completo utilizando la tecnología Shell Script en Ubuntu 18.04.\\
 
 \section{Alcances y trabajo a futuro}
-Un instalador suele ser un sistema bastante complejo, ya que realiza instalaciones, ejecuta comandos en el shell de la computadora, verifica software que ya está instalado en la computadora, y generalmente es capaz de bajarlo o subirlo de versión, entre muchas otras cosas. Para la realización de este trabajo terminal, se pretende que durante el desarrollo del Trabajo Terminal 2, este prorotipo se vuelva más robusto de lo que es ahora, es decir:\\
+Un instalador suele ser un sistema bastante complejo, ya que realiza las siguientes tareas:\\
 \begin{itemize}
-	\item Que haga una mayor cantidad de validaciones con respecto el software ya instalado en el sistema al sistema donde se estará realizando la instalación de Luminus.\\
-	\item Que sea capaz de continuar con el proceso de instalación aun después de este haber sido interrumpido.\\
-	\item Que realice todas las validaciones de usuario necesarias para evitar el fallo del sistema por errores del usuario.\\
-	\item Un diseño mejor y más completo.\\
+ 	\item Instalación de software\\
+ 	\item Ejecuta comandos en el shell de la computadora\\
+ 	\item Verifica software que ya está instalado en la computadora y generalmente es capaz de cambiar la versión\\
 \end{itemize}
-
+Para la realización de este trabajo terminal, se pretende que durante el desarrollo del Trabajo Terminal 2, este prorotipo se vuelva más robusto de lo que es ahora, es decir:\\
+\begin{itemize}
+	\item Que sea capaz de reanudar el proceso de instalación cuando éste haya sido interrumpido. Ya sea por decisión del usuario o por un error en el proceso de instalación. El instalador, debe retomar el proceso a partir del punto en el que fue interrumpido.\\
+	\item Que pueda agregar nodos a la red y remover nodos de la red.\\
+	\item Que sea capaz actualizar las IPs de los nodos cuando exista algún cambio en ellas.\\
+	\item Que pueda identificar si alguna de las tecnologías requeridas para la instalación de Luminus, ya existe en alguno de los nodos. De ser así, se validará la versión de la tecnología en cuestión. Si la versión es diferente a la que necesita Luminus, se pregunta al usuario si desea conservar su versión del software, o la versión necesaria para Luminus. Si la versión del software previamente instalada es la correcta, se notifica que Luminus no instaló esa tecnología.\\
+\end{itemize}
