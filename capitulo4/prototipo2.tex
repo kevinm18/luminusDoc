@@ -1,5 +1,5 @@
 \section{Descripción del prototipo}
-El prototipo actual busca que sea posible integrar los datos del caso de estudio a el cluster definido en el prototipo 1 que se encuentra en el capitulo \ref{cap:Cap3} \texttt{ Evaluación y definición de requerimientos de la red distribuida}.
+El prototipo actual busca que sea posible integrar los datos del caso de estudio a el cluster definido en el prototipo 1 que se encuentra en el capitulo \nameref{cap:Cap3}.
 \\
 Una vez que los datos sean cargados a los nodos, se busca comprobar que el cluster siga funcionando correctamente y que se puedan hacer consultas sobre los datos que este almacena, comprobando con esto su accesibilidad, disponibilidad y correcta asignación de los mismos a la red.
 \section{Análisis}
@@ -18,7 +18,7 @@ por lo que, haciendo uso de este sistema de manejo de archivos y teniendo las ca
 
 \section{Diseño}
 \subsection{Diseño de la red distribuida con nodos de datos}
-La red distribuida cuenta con 3 nodos de datos/replica y un nodo maestro, una vez que se apliquen las configuraciones correspondientes a la asignación de los datos en los nodos de datos/replica así como un algoritmo para probar que los datos asignados son accesibles, la red distribuida deberá verse como la que se muestra en la imagen \ref{fig:redi3}
+La red distribuida cuenta con 3 nodos de datos/replica y un nodo maestro, una vez que se apliquen las configuraciones correspondientes a la asignación de los datos en los nodos de datos/replica así como un algoritmo para probar que los datos asignados son accesibles, la red distribuida deberá verse como la que se muestra en la imagen \nameref{fig:redi3}
 \newpage
 \begin{figure}[!htbp]
 	\hypertarget{fig:redi3}{\hspace{1pt}}
@@ -34,6 +34,7 @@ Los nodos de datos/replica no se comunicarán entre si al momento de ejecutar op
 \\
 %diagrama de como quedo constituida la red distribuida con apache hadoop y spark 
 \subsection{Diseño de pruebas de obtención de información}
+\label{osh}
 Para poder conocer si los datos fueron distribuidos correctamente y el cluster se encuentra en funcionamiento es posible utilizar un algoritmo que use los datos que se encuentran en el cluster y al final regrese un resultado.
 \\
 Los algoritmos de big data que serán necesarios para este trabajo son algoritmos que utilizan como base una tecnología llamada Map Reduce.
@@ -51,7 +52,7 @@ El algoritmo funciona de la siguiente manera:
 \item En caso de que la palabra sea encontrada nuevamente, entonces se reemplazara el número asociado a esa palabra por el número que tenia en ese momento + 1.
 \item Termina cuando llega al final del archivo y por lo tanto todas las palabras nuevas fueron registradas y se conoce cuantas veces aparecen en el archivo.
 \end{itemize} 
-El procedimiento descrito anteriormente se explicará de igual forma con el diagrama de flujo que se muestra en la Imagen \ref{fig:redi}.
+El procedimiento descrito anteriormente se explicará de igual forma con el diagrama de flujo que se muestra en la Imagen \nameref{fig:redi}.
 
 \begin{figure}[!htbp]
 	\hypertarget{fig:redi}{\hspace{1pt}}
@@ -98,7 +99,7 @@ para estas entradas, el conjunto de salida de la función reduce seria:
 \end{lstlisting} 
 Sin embargo, cabe destacar que el sistema de Hadoop no solo trabaja con las funciones map y reduce, sino que tiene otras funciones internas que el sistema controla.
 \\
-En la imagen \ref{fig:redi2} se puede visualizar el funcionamiento completo que tendría que ejecutarse en el cluster para llevar a cabo este algoritmo.
+En la imagen \nameref{fig:redi2} se puede visualizar el funcionamiento completo que tendría que ejecutarse en el cluster para llevar a cabo este algoritmo.
 \begin{figure}[!htbp]
 	\hypertarget{fig:redi2}{\hspace{1pt}}
 	\begin{center}
@@ -107,12 +108,12 @@ En la imagen \ref{fig:redi2} se puede visualizar el funcionamiento completo que 
 		\label{fig:redi2}
 	\end{center}
 \end{figure}
-Teniendo como referencia la imagen \ref{fig:redi2} se explicarán los módulos que ejecuta Hadoop de forma interna para una aplicación Map Reduce de forma breve.
+Teniendo como referencia la imagen \nameref{fig:redi2} se explicarán los módulos que ejecuta Hadoop de forma interna para una aplicación Map Reduce de forma breve.
 \begin{enumerate}
 	\item \textbf{Partición}: Se requiere definir un parametro de partición, esto para que se puedan reconocer las unidades a analizar y con esto poder asignar tareas a los nodos. el parámetro de partición puede ser cualquier cosa, por ejemplo, dividir por espacio, coma, punto y coma, o incluso por una nueva línea ('\ n').
-	\item \textbf{Mapeo}: Se explico anteriormente en \ref{funcionmap} \texttt{Función Map}.
+	\item \textbf{Mapeo}: Se explico anteriormente en \nameref{funcionmap} \texttt{Función Map}.
 	\item \textbf{Partición intermedia}:Se busca generar grupos con los datos que después de pasar por el modulo de mapeo y tener la estructura de salida de este modulo tienen la misma CLAVE, al cumplir esta condición se asignan en el mismo grupo. Se generan tantos grupos como claves existan.
-	\item \textbf{Reducción}: Se explico anteriormente en \ref{funcionreduce} \texttt{Función Reduce}. 
+	\item \textbf{Reducción}: Se explico anteriormente en \nameref{funcionreduce} \texttt{Función Reduce}. 
 	\item \textbf{Combinación}: Todos los datos de salida que arrojo la función de reducción son combinados y puestos en un solo grupo para generar un resultado final.
 \end{enumerate}
 
@@ -130,10 +131,176 @@ en sus secciones
 6. Puesta en funcionamiento
 	6.1. Puesta en funcionamiento del Cluster manejado por el Servidor Apache Hadoop
 \end{verbatim}
-Las cuales nos permitirán instalar Apache Hadoop
-% para permitir la conexión entre los nodos de datos/replica y el maestro haciendo uso de una red de internet local en la que se encuentren conectados todos los nodos.
-%Además de contener todas las configuraciones necesarias para tal objetivo.  
-%como se instala hadoop
-%como rayos se hace el algoritmo (desde java)
+Las cuales nos permitirán instalar Apache Hadoop el cual tendrá al mismo tiempo todas las configuraciones necesarias
+requeridas para este proyecto, tanto en el nodo maestro como también en los nodos de datos/replica.
+Dentro del manual de instalación se explica para cada uno de los archivos de configuración de hadoop como es que
+estos se configuran y cual es el objetivo de cada configuración de manera detallada.
+Una vez que las configuraciones se hayan ejecutado de manera correcta y el cluster se encuentre en funcionamiento
+haciendo uso de hadoop, se subirá un archivo a la plataforma, esto se hará siguiendo el manual de instalación de luminus
+en la sección
+\begin{verbatim}
+6.2. Subir un archivo al HDFS
+\end{verbatim}
+En el momento de subir el archivo al HDFS se puede comprobar que la red distribuida permite realizar esta operación
+para lo cual es indispensable comunicarse con todos los nodos que se encuentran dentro de la misma. Esto con el
+objetivo de realizar el almacenamiento de manera distribuida haciendo uso de todos los nodos de datos/replica. Por lo
+tanto se sabe que la red distribuida tiene conectividad y se encuentra funcionando de manera apropiada.
+\subsection{Algoritmo de prueba}
+El siguiente algoritmo escrito en JAVA servirá para comprobar que se pueden realizar operaciones sobre los datos
+que se encuentran en el cluster.
+\\
+Como se explico en la sección \nameref{osh} de este capitulo, se utilizará el algoritmo wordcount para cumplir con este objetivo.
+También, se menciono que las únicas secciones que se requiere programar para ejecutar un algoritmo de tipo map
+reduce es la función map y la función reduce. ya que hadoop se encarga de el resto de funciones.
+\\
+Por otro lado se explico la forma en que este algoritmo en particular funcionar y un ejemplo de su funcionamiento en
+la imagen \nameref{fig:redi2}.
+\\
+Se decidió que se considere que se encontró una palabra cada que aparezca una ","dentro del archivo como parámetro
+de la función de partición, esto debido a que cada atributo de la tabla de datos esta separado por una coma y esto nos
+permitiría comprobar cuantas veces aparece un atributo dentro del archivo en lugar de solamente conocer la repetición
+de las palabras por separado. Lo cual esta orientado para el archivo de datos del caso de estudio y nos puede dar
+información de la frecuencia con la que ciertos registros aparecen dentro del mismo.
+\\
+El codigo JAVA para tal objetivo se puede visualizar en el \nameref{anexoa}
+dentro del cual se pueden destacar algunas observaciones
+\begin{itemize}
+	\item Se importan las librerías de Apache Hadoop para que pueda reconocerse que se trata de un programa Map Reduce
+	que se ejecutará sobre este programa.
+	\item Se tiene la clase main la cual principalmente manda a llamar a las clases map y reduce,establece los valores por
+	defecto para empezar a contar, Establece los canales de lectura y escritura para que este pueda acceder a los
+	archivos del cluster a analizar y pueda tambien escribir sus resultados.
+	\item Se tiene la clase map la cual toma la palabra encontrada y le da la estructura (CLAVE, VALOR) , además de
+	pasarla a mayúsculas para que considere que se trata de la misma palabra cuando tenga las mismas letras sin
+	importar si originalmente estaba escrita en mayúsculas, minúsculas o una combinación de ambas.
+	\item La clase reduce que cuenta cuantas veces se repiten en total las palabras en el grupo que se genero de todas las
+	palabras iguales que se encontraron en cada uno de los nodos. para sacar una suma total para cada palabra del
+	archivo.
+\end{itemize}
+Este algoritmo tiene que ser compilado ya sea con un IDE de java o directamente desde Hadoop para generar el jar
+que posteriormente sera ejecutado por Hadoop.
+\\
+El codigo desde consola para generar este JAR es el siguiente.
+\\
+\begin{verbatim}
+	bin/hadoop com.sun.tools.javac.Main [clase_principal_java].java
+	jar cf [Nombre_jar].jar [clase_principal_java]*.class
+\end{verbatim}
 \section{Pruebas}
-%como se ve cuando lo ejecutas el algoritmo 
+Una vez que se tiene el .JAR a ejecutar se puede hacer uso del siguiente comando para que este entre en funcionamiento dentro de la red distribuida.
+\\
+\begin{verbatim}
+	yarn jar <ruta/a/archivo.jar> <NombreDeClase> <Parametros>
+\end{verbatim}
+Para nuestro ejemplo especifico el comando seria:
+\begin{verbatim}
+root@maestro:/opt/hadoop/etc/hadoop: yarn jar /home/mayra/Escritorio/MRProgramsDemo.jar 
+PackageDemo.WordCount "user/root/productos/inserts.txt" output6
+\end{verbatim}
+output6 sera una carpeta que se creará en el sistema de archivos de HDFS para almacenar los resultados de salida.
+Esta carpeta puede tener el nombre que se desee y se asigna en esta sección, sin embargo, no puede existir dentro del
+sistema de archivos al momento de ejecutar este comando. La carpeta se creará en el directorio /user/root/nombreasignado
+\\
+Una vez que se ejecute esta instrucción se procederá a revisar las conexiones con los nodos y hacer los ajustes necesarios
+para comenzar a ejecutar este algoritmo.
+esta información de salida y el comienzo de la ejecución del algoritmo con la parte de la función map pueden verse en
+la imagen \nameref{fig:redi4}
+este algoritmo.
+\begin{figure}[!htbp]
+	\hypertarget{fig:redi4}{\hspace{1pt}}
+	\begin{center}
+		\includegraphics[width=.9\textwidth]{capitulo4/images/ejemplo2.png}
+		\caption{Ejecución de algoritmo map reduce para contar palabras: Comenzando el proceso}
+		\label{fig:redi4}
+	\end{center}
+\end{figure}
+esto se hará para todos los porcentajes de la función map, una vez que estos finalicen, comenzará a ejecutar
+la función reduce y con ella sus porcentajes de progreso como se muestra en la imagen \nameref{fig:redi5}.
+\begin{figure}[!htbp]
+	\hypertarget{fig:redi5}{\hspace{1pt}}
+	\begin{center}
+		\includegraphics[width=.9\textwidth]{capitulo4/images/ejemplo3.png}
+		\caption{Ejecución de algoritmo map reduce para contar palabras: Inicio de funcion reduce}
+		\label{fig:redi5}
+	\end{center}
+\end{figure}
+\newpage
+Cuando se complete la función reduce procederá a notificar que el algoritmo fue ejecutado correctamente y mostrará
+estadísticas de:
+\begin{itemize}
+	\item File System Counter
+	\item Job Counter
+	\item MapReduce Framework
+\end{itemize}
+Dichas estadisticas y resultados finales para este algoritmo se muestran en las figuras \nameref{fig:redi6} y \nameref{fig:redi7}
+\begin{figure}[!htbp]
+	\hypertarget{fig:redi6}{\hspace{1pt}}
+	\begin{center}
+		\includegraphics[width=.9\textwidth]{capitulo4/images/ejemplo6.png}
+		\caption{Ejecución de algoritmo map reduce para contar palabras: Termina la ejecución del algoritmo}
+		\label{fig:redi6}
+	\end{center}
+\end{figure}
+\newpage
+\begin{figure}[!htbp]
+	\hypertarget{fig:redi7}{\hspace{1pt}}
+	\begin{center}
+		\includegraphics[width=.9\textwidth]{capitulo4/images/ejemplo8.png}
+		\caption{Ejecución de algoritmo map reduce para contar palabras: Estadísticas}
+		\label{fig:redi7}
+	\end{center}
+\end{figure}
+Ahora, para poder visualizar el resultado de este algoritmo se puede hacer un listado de los archivos que contiene el directorio de salida
+que se creo, para ello se utiliza el comando siguiente
+\begin{verbatim}
+root@maestro:/opt/hadoop/etc/hadoop:hdfs dfs -ls /user/root/output6
+\end{verbatim}
+Con lo cual se genera la salida que se despliega en la imagen \ref{fig:redi8} la cual muestra que la operación fue exitosa y las dimensiones generadas para el archivo de salida.
+\begin{figure}[!htbp]
+	\hypertarget{fig:redi8}{\hspace{1pt}}
+	\begin{center}
+		\includegraphics[width=.9\textwidth]{capitulo4/images/ejemplo9.png}
+		\caption{Contenido del directorio de salida}
+		\label{fig:redi8}
+	\end{center}
+\end{figure}
+
+Debido a que se trata de un archivo muy grande, para efectos de simplificación solo se mostrará en este documento un
+fragmento de dicho archivo que deje ver el trabajo que fue realizado dicho fragmento se muestra en la imagen \ref{fig:redi9}.
+\begin{figure}[!htbp]
+	\hypertarget{fig:redi9}{\hspace{1pt}}
+	\begin{center}
+		\includegraphics[width=.9\textwidth]{capitulo4/images/ejemplo10.png}
+		\caption{Contenido del archivo de resultados}
+		\label{fig:redi9}
+	\end{center}
+\end{figure}
+Dentro de esta imagen podemos ver por ejemplo, cuantas veces aparecen determinados precios dentro del archivo,
+direcciones o bien descripciones de productos, entre otros.\\
+Por lo cual se puede ver que el archivo fue estudiado en su totalidad y que se tienen coincidencias para diferentes
+entradas que se encontraban dentro del archivo.\\
+Un resultado interesante obtenido que se puede observar en la imagen \ref{fig:redi10} es que, al menos para este archivo la fecha
+de registro es irrelevante pues para cada articulo se tiene una diferente o bien comparten una misma fecha cuando la
+hora establecida es 0hrs para una gran cantidad de registros que fueron dados de alta el mismo día, pero en realidad
+no proporciona información real de los articulos y genera mucho ruido en el archivo.\\
+Existen mas entradas de fechas que información de los productos, comportamiento que dificultaría el análisis de los
+datos en un futuro por lo cual este atributo sera retirado del archivo correspondiente al caso de estudio.
+\begin{figure}[!htbp]
+	\hypertarget{fig:redi9}{\hspace{1pt}}
+	\begin{center}
+		\includegraphics[width=.9\textwidth]{capitulo4/images/ejemplo11.png}
+		\caption{Fechas de registro en el archivo de resultados}
+		\label{fig:redi10}
+	\end{center}
+\end{figure}
+Con lo que podemos concluir:
+\begin{itemize}
+	\item El cluster funciona correctamente
+	\item Existe comunicación entre los nodos
+	\item Los nodos de datos/replica son capaces de identificar al nodo maestro y recibir instrucciones de el
+	\item El nodo maestro es capaz de comunicar trabajos a los nodos de datos/replica y de interpretar los resultados de
+	sus trabajos de manera satisfactoria
+	\item Se tiene el archivo del caso de estudio almacenado de manera distribuida en los nodos
+	\item El archivo del caso de estudio es accesible y se pueden ejecutar operaciones sobre de el
+\end{itemize}
+Por lo tanto, el prototipo dos concluye de manera exitosa
