@@ -1,0 +1,120 @@
+\section{Anexo B: Código del instalador}
+Código de la clase principal luminus-ins.sh
+\begin{lstlisting} 
+#!/bin/bash
+# Instalador general de luminus version 4.
+
+# El instalador pide al usuario introducir las ips de los nodos incluida la del master.
+# Las ips son almacenadas en un archivo de texto.
+
+echo "*************** Bienvenido a Luminus ***************"
+
+echo "Introduce la ip del nodo maestro:"
+read ipMaestro
+echo "Introduce el nombre del nodo maestro:"
+read nodoMaestro
+echo $nodoMaestro > nombres.txt
+echo $ipMaestro > ips.txt
+echo "$ipMaestro $nodoMaestro maestro" >> /etc/hosts
+
+confirmacion=1
+contador=1
+while [ $confirmacion -eq 1 ]
+do
+	echo "Introduce la ip del nodo $contador:"
+	read ipNodo
+	ping -c1 -qq $ipNodo
+	if [ $? -ne 0 ]
+	then
+		echo "Host no encontrado."
+	else
+		echo "Host encontrado!"
+		echo "Introduzca el nombre del host:"
+		read nodo
+		echo "$ipNodo $nodo nodo$contador" >> /etc/hosts
+		echo $nodo >> nombres.txt
+		echo $ipNodo >> ips.txt
+		contador=$((contador + 1))
+	fi
+	echo "Si desea agregar otro nodo escriba 1. Si no, escriba 0. (1/0)"
+	read confirmacion
+done
+
+# Inicia proceso de instalacion.
+# Instalacion de Spark en nodo maestro.
+./spark-ins.sh
+
+# Instalacion de Spark en nodos esclavos.-
+contador=1
+while read line
+do
+	if [ $contador -ne 1 ]
+	then
+		echo $line
+		ssh -qq root@$line < spark-ins.sh
+	fi
+contador="$((contador + 1))"
+done < ips.txt
+
+# Configuracion de spark en maestro.
+cp /opt/spark/conf/slaves.template /opt/spark/conf/slaves
+
+# Se agregan los esclavos y el maestro a la lista de nodos de la red.
+contador=0
+echo "" >> /opt/spark/conf/slaves 
+while read line
+do
+	if [ $contador -ne 0 ]
+	then
+		echo "nodo$contador" >> /opt/spark/conf/slaves 
+	else
+		echo "maestro" >> /opt/spark/conf/slaves
+	fi
+	contador=$((contador + 1))
+done < ips.txt
+
+# Se agrega el maestro al archivo spark-env.sh
+cp /opt/spark/conf/spark-env.sh.template /opt/spark/conf/spark-env.sh
+echo "export SPARK_MASTER_HOST=maestro" >> /opt/spark/conf/spark-env.sh
+echo "export SPARK_WORKER_CORES=1" >> /opt/spark/conf/spark-env.sh
+echo "export SPARK_WORKER_INSTANCES=1" >> /opt/spark/conf/spark-env.sh
+\end{lstlisting} 
+\newpage
+
+Código de java-ins.sh
+\\
+\begin{lstlisting}
+echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" >
+ /etc/apt/sources.list.d/webupd8team-java.list
+echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" >> 
+/etc/apt/sources.list.d/webupd8team-java.list
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+apt-get update
+apt-get install oracle-java8-installer
+java -version
+\end{lstlisting}
+Código de openssh-ins.sh
+\begin{lstlisting}
+# Instalacion de OpenSSH
+apt-get install openssh-server
+#nano /etc/ssh/sshd_config
+service ssh restart
+\end{lstlisting} 
+Código de scala-ins.sh
+\begin{lstlisting}
+# Instalacion de Scala
+wget https://downloads.lightbend.com/scala/2.13.0-M1/scala-2.13.0-M1.deb
+dpkg -i scala-2.13.0-M1.deb
+scala -version
+\end{lstlisting} 
+Código de spark-ins.sh
+\begin{lstlisting}
+# Instalacion de Spark
+wget http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz
+mkdir /opt/spark
+tar -xzvf spark-2.1.0-bin-hadoop2.7.tgz
+mv spark-2.1.0-bin-hadoop2.7/* /opt/spark/
+echo 'export SPARK_HOME=/opt/spark/' >> ~/.bashrc
+echo 'export PATH="/opt/spark/bin/:/opt/spark/sbin/:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+\end{lstlisting}

@@ -59,7 +59,7 @@ Los árboles de decisión están formados por los siguientes elementos:\\
 	\end{center}
 \end{figure}
 
-\newpage
+% \newpage
 \subsection{ID3 (Iterative Dichotomiser 3)} \label{id3}
 
 El algoritmo ID3 es uno de los algoritmos que utilizan árboles de decisión más populares. ID3 genera un árbol a partir de un conjunto de datos llamado \textbf{tabla de inducción}. Es útil para hacer toma de decisiones en escenarios binarios, es decir, que tienen 2 posibilidades finales.\\
@@ -87,6 +87,7 @@ La entropía es la medida de la aleatoriedad. En otras palabras, la medidad e la
 	\end{center}
 \end{figure}
 
+\newpage
 \subsubsection{Ejemplo de ejecución del algoritmo ID3} \label{ejecucionID3}
 
 Para ilustrar el funcionamiento del algoritmo ID3, utilizaremos la siguiente tabla de inducción que contiene información sobre factores que influyen al tomar la decisión de si un partido de tenis debería o no debería jugarse:
@@ -306,7 +307,7 @@ Necesitaremos de la \refIU{fig:formula-entropia}{fórmula para calcular la entro
 		\end{center}
 		\caption{Tabla de días con aspecto \emph{lluvioso}.}
 	\end{table}
-
+	\newpage
 	De la tabla de aspecto \textbf{lluvioso} y viento \textbf{fuerte} podemos deducir que siempre que existan estas dos condiciones al mismo tiempo, la decisión final será \textbf{no}.\\
 
 	\UCli Finalmente la construcción de este árbol de decisión es la siguiente:
@@ -319,12 +320,9 @@ Necesitaremos de la \refIU{fig:formula-entropia}{fórmula para calcular la entro
 			\label{fig:arbol-decision-final}
 		\end{center}
 	\end{figure}
-
 \end{UClist}
-
-
 \subsection{C4.5} \label{c4.5}
-El algoritmo C4.5 es la evolución del algoritmo ID3. Éste genera un árbol de decisión a partir de un conjunto de dstos de entrada de manera recursiva, al igual que su precursor. Sin embargo, aunque ID3 y C4.5 son algoritmos muy semejantes, existen ciertas diferencias:\\
+El algoritmo C4.5 es la evolución del algoritmo ID3. Éste genera un árbol de decisión a partir de un conjunto de datos de entrada de manera recursiva, al igual que su precursor. Sin embargo, aunque ID3 y C4.5 son algoritmos muy semejantes, existen ciertas diferencias:\\
 
 \begin{UClist}
 	\UCli C4.5 permite trabajar con valores continuos, mientras que ID3 solamente trabaja con valores discretos.\\
@@ -819,7 +817,7 @@ Es un framework de software que soporta aplicaciones distribuidas bajo una licen
 \subsubsection{Características principales de Hadoop}
 
 \begin{UClist}
-	\UCli \textbf{Procesamiento distribuido:} Hadoop distribuye los datos en los diferentes nodos que formen parte de la arquitectura de clúster que estén haciendo uso de él. Pretende paalelizar tareas de procesamiento de datos.\\
+	\UCli \textbf{Procesamiento distribuido:} Hadoop distribuye los datos en los diferentes nodos que formen parte de la arquitectura de clúster que estén haciendo uso de él. Pretende paralelizar tareas de procesamiento de datos.\\
 	\UCli \textbf{Eficiencia:} Mediante la paralelización, se consigue una ganancia considerable en el tiempo de procesamiento de información.\\
 	\UCli \textbf{Económico:} Propicia un ambiente fácilmente escalable en el que resulta sencillo añadir nodos de manera horizontal conforme se vaya requiriendo.\\
 	\UCli \textbf{Código abierto:} Es un proyecto de los llamados \textbf{open source}.\\
@@ -868,7 +866,7 @@ Existen varias opciones actualmente en el mercado para hacer uso de las capacida
 
 \subsection{Apache Spark}
 Es un motor de análisis de datos unificado para Big Data y Machine Learning. Que se basa en Hadoop Map Reduce. Es una herramienta de código abierto que permite \textbf{dividir y ejecutar tareas de manera paralela}. Esta cualidad de Spark de poder paralelizar el trabajo se debe a que éste software en la gran mayoría de los casos es ejecutado en sistemas con arquitectura de clúster. \\
-
+\newpage
 \subsubsection{Características principales de Spark}
 \begin{UClist}
 	\UCli Integrado con Apache Hadoop.\\
@@ -893,7 +891,7 @@ Utilizar Spark para el procesamiento de volúmenes de información de gran tama�
 
 	\UCli \textbf{Escalabilidad:} Spark permite que incrementar el tamaño del clúster conforme se vaya necesitando.\\
 \end{UClist}
-
+\newpage
 \subsubsection{Componentes de Apache Spark}
 Podría decirse que Spark es un conjunto de módulos que nos permiten generar conocimiento usando diferentes técnicas y tecnologías.\\
 
