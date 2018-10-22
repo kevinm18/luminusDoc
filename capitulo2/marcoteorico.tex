@@ -2,52 +2,52 @@
 \section{Marco Teórico}
 
 \subsection{Big Data}
-El término Big Data se refiere a cantidades enormes de información, por ejemplo, la cantidad de información que se produce todos los días con el uso de una red social como Facebook, o la cantidad de datos que producen computadoras y dispositivos electrónicos que se auto monitorean mediante sensores. Esos volúmenes masivos de datos pueden ser utilizados para extraer conocimiento de ellos, y posteriormente atacar problemas que no sería posible resolver sin el Big Data.
+El término Big Data se refiere a cantidades enormes de información, por ejemplo, la cantidad de información que se produce todos los días con el uso de una red social como Facebook, o la cantidad de datos que producen computadoras y dispositivos electrónicos que se auto monitorean mediante sensores. Esos volúmenes masivos de datos pueden ser utilizados para extraer conocimiento de ellos, y posteriormente atacar problemas que no sería posible resolver sin el Big Data.\cite{bigDataDef}
 
 \subsubsection{Las 3 Vs del Big Data}
 Al ser el Big Data un concepto emergente y relativamente nuevo, se han tenido ciertas dificultades para definirlo de manera uniforme. Debido a las dimensiones de todo lo que conlleva entender Big Data, resultó conveniente entre los estudiosos del tema definir y acentuar las magnitudes que lo definen. Estas magnitudes se conocen como las 3 Vs del Big Data.
 
 \begin{enumerate}
-	\item \textbf{Volumen:} Con Big Data, se tendrán que procesar enormes volúmenes de información. Este punto es importante ya que el crecimiento de la nececidad de almacenamiento de datos en el mundo moderno, crece de forma exponencial.
-	\item \textbf{Velocidad:} Usando Big Data, se abre la posibilidad de acceso y flujo de datos a velocidades que no se podrían conseguir de manera convencional.
-	\item \textbf{Variedad:} Procesamiento de datos de naturaleza heterogénea, es decir, múltiples tipos de datos.
+	\item \textbf{Volumen:} Con Big Data, se tendrán que procesar enormes volúmenes de información. Este punto es importante ya que el crecimiento de la nececidad de almacenamiento de datos en el mundo moderno, crece de forma exponencial.\cite{bigDataDef}
+	\item \textbf{Velocidad:} Usando Big Data, se abre la posibilidad de acceso y flujo de datos a velocidades que no se podrían conseguir de manera convencional.\cite{bigDataDef}
+	\item \textbf{Variedad:} Procesamiento de datos de naturaleza heterogénea, es decir, múltiples tipos de datos.\cite{bigDataDef}
 \end{enumerate}
 
 \subsubsection{Casos de uso del Big Data}
 
 \begin{UClist}
-	\UCli \textbf{Desarrollo de productos:} Compañías como Netflix y Procter \& Gamble utilizan el Big Data para anticiparse a la demanda de los consumidores de sus productos. Utilizan modelos predictivos para sus nuevos productos clasificando atributos clave de sus anteriores productos modelando las relaciones entre esos atributos.\\
-	\UCli \textbf{Mantenimiento predictivo:} Se pueden predecir fallas mecánicas en maquinaria que de otra forma quedarían fácilmente ignoradas. Mejorando así ampliamente la calidad y el costo del mantenimiento de dichos equipos.\\
-	\UCli \textbf{Experiencia de usuario:} El uso de Big Data permite recopilar toda la información sobre el usuario y utilizarla a favor de su experiencia en un sitio o aplicación. Por ejemplo, sus búsquedas frecuentes, los sitios que visita, etc. Para de esta manera empezar a hacerle ofertas o anuncios personalizados, según sus intereses particulares.\\
-	\UCli \textbf{Machine Learning:} Actualmente el machine learning es un área de mucho auge, ya que permite entrenar a las computadoras mediante conjuntos de datos de entrenamiento en lugar de programarlas. El Big Data facilita esa tarea.\\
+	\UCli \textbf{Desarrollo de productos:} Compañías como Netflix y Procter \& Gamble utilizan el Big Data para anticiparse a la demanda de los consumidores de sus productos. Utilizan modelos predictivos para sus nuevos productos clasificando atributos clave de sus anteriores productos modelando las relaciones entre esos atributos.\cite{bigUso}\\
+	\UCli \textbf{Mantenimiento predictivo:} Se pueden predecir fallas mecánicas en maquinaria que de otra forma quedarían fácilmente ignoradas. Mejorando así ampliamente la calidad y el costo del mantenimiento de dichos equipos.\cite{bigUso}\\
+	\UCli \textbf{Experiencia de usuario:} El uso de Big Data permite recopilar toda la información sobre el usuario y utilizarla a favor de su experiencia en un sitio o aplicación. Por ejemplo, sus búsquedas frecuentes, los sitios que visita, etc. Para de esta manera empezar a hacerle ofertas o anuncios personalizados, según sus intereses particulares.\cite{bigUso}\\
+	\UCli \textbf{Machine Learning:} Actualmente el machine learning es un área de mucho auge, ya que permite entrenar a las computadoras mediante conjuntos de datos de entrenamiento en lugar de programarlas. El Big Data facilita esa tarea.\cite{bigUso}\\
 \end{UClist}
 
 \subsection{Minería de datos}
-La minería de datos es el proceso de generar conocimiento a partir de un conjunto de información de gran tamaño. Para generar ese conocimiento se utilizan diferentes técnicas de análisis que detectan patrones y tendencias en la información que se está procesando. Si se intentara utilizar algún método de análisis tradicional, sería muy complicado o incluso imposible a veces encontrar patrones y tendencias útiles, ya que es muy probable que dentro de los datos existan relaciones muy complejas o simplemente la cantidad de datos sea demasiado grande.\\
+La minería de datos es el proceso de generar conocimiento a partir de un conjunto de información de gran tamaño. Para generar ese conocimiento se utilizan diferentes técnicas de análisis que detectan patrones y tendencias en la información que se está procesando. Si se intentara utilizar algún método de análisis tradicional, sería muy complicado o incluso imposible a veces encontrar patrones y tendencias útiles, ya que es muy probable que dentro de los datos existan relaciones muy complejas o simplemente la cantidad de datos sea demasiado grande.\cite{mineriaDef}\\
 
 La minería de datos puede utilizarse en escenarios como los que se enuncian a continuación: \\
 \begin{UClist}
-	\UCli \textbf{Pronóstico:} Predicción de datos y eventos que vendrán a futuro a partir del comportamiento de conjuntos de datos que se tienen en el presente. Por ejemplo, predicción de ventas y tendencias de compra.
+	\UCli \textbf{Pronóstico:} Predicción de datos y eventos que vendrán a futuro a partir del comportamiento de conjuntos de datos que se tienen en el presente. Por ejemplo, predicción de ventas y tendencias de compra.\cite{mineriaEsc}
 	\UCli \textbf{Riesgo y probabilidad:} Es un escenario muy común dentro de los negocios de Bussiness Intelligence. Por ejemplo, se llega a utilizar para encontrar puntos de equilibrio probable para escenarios de riesgo.
-	Elección de los mejores clientes para la distribución de correo directo, determinación del punto de equilibrio probable para los escenarios de riesgo, y asignación de probabilidades a diagnósticos y otros resultados.
-	\UCli \textbf{Recomendaciones:} Muy utilizado en sistemas como MercadoLibre o Amazon, en módulos que toman la información de búsqueda de cada usuario, la procesan y le arrojan recomendaciones de productos o servicios.
-	\UCli \textbf{Búsqueda de secuencias:} Al igual que el escenario de \textbf{recomendaciones}, se utiliza mucho en sistemas de venta de artículos por internet. Se analiza el orden de los artículos que se meten a un carrito de compra para poder hacer predicciones útiles y generar conocimiento.
-	\UCli \textbf{Agrupación:} Clasificación de los elementos de un conjunto de información para el posterior análisis de sus afinidades.
+	Elección de los mejores clientes para la distribución de correo directo, determinación del punto de equilibrio probable para los escenarios de riesgo, y asignación de probabilidades a diagnósticos y otros resultados.\cite{mineriaEsc}
+	\UCli \textbf{Recomendaciones:} Muy utilizado en sistemas como MercadoLibre o Amazon, en módulos que toman la información de búsqueda de cada usuario, la procesan y le arrojan recomendaciones de productos o servicios.\cite{mineriaEsc}
+	\UCli \textbf{Búsqueda de secuencias:} Al igual que el escenario de \textbf{recomendaciones}, se utiliza mucho en sistemas de venta de artículos por internet. Se analiza el orden de los artículos que se meten a un carrito de compra para poder hacer predicciones útiles y generar conocimiento.\cite{mineriaEsc}
+	\UCli \textbf{Agrupación:} Clasificación de los elementos de un conjunto de información para el posterior análisis de sus afinidades.\cite{mineriaEsc}
 \end{UClist}
 
 \subsection{Árboles de decisión}
-Un árbol de decisión es un modelo de predicción que apoya al proceso de toma de decisiones. Esta herramienta tiene un campo de aplicación extremadamente amplio, pudiendo ir desde el área de finanzas hasta el área del aprendizaje de máquina. A partir de un conjunto de datos de entrada, se construyen los caminos, dentro del árbol, que llevarán a cada una de las decisiones posibles.\\
+Un árbol de decisión es un modelo de predicción que apoya al proceso de toma de decisiones. Esta herramienta tiene un campo de aplicación extremadamente amplio, pudiendo ir desde el área de finanzas hasta el área del aprendizaje de máquina. A partir de un conjunto de datos de entrada, se construyen los caminos, dentro del árbol, que llevarán a cada una de las decisiones posibles.\cite{arbolesDes}\\
 
 Los árboles de decisión están formados por los siguientes elementos:\\
 
 \begin{enumerate}
-	\item \textbf{Nodos:} Un nodo es un punto del proceso en el que de acuerdo a ciertas condiciones o decisiones se redefine el rumbo del camino. Existen dos tipos de nodo:
+	\item \textbf{Nodos:} Un nodo es un punto del proceso en el que de acuerdo a ciertas condiciones o decisiones se redefine el rumbo del camino. Existen dos tipos de nodo\cite{arbolPartes}:
 	\begin{enumerate}
 		\item \textbf{Nodo de decisión:} Es un nodo en el cual se toma una decisión consciente de acuerdo a las necesidades del problema en cuestión. Estos nodos se representan con un cuadrado.
 		\item \textbf{Nodo de incertidumbre: } Es un nodo en el que actúan las probabilidades y la heurística para definir el rumbo que tomará el camino que se hará dentro del árbol. Estos nodos se representan con un círculo
 	\end{enumerate}
-	\item \textbf{Ramas:} Una rama es una de las respuestas o acciones que se toman a partir de la pregunta o escenario que se presentó en un nodo del cual salió esa rama. Una rama es el camino a otro nodo o escenario resultado de la decisión o evento que definió la rama. Este elemento se representa con una línea.
-	\item \textbf{Hojas:} Son escenarios finales, ya clasificados. No tienen ramificaciones, y son el resultado final de seguir un camino de decisiones, acciones y probabilidades. Este elemento se representa con un triángulo.
+	\item \textbf{Ramas:} Una rama es una de las respuestas o acciones que se toman a partir de la pregunta o escenario que se presentó en un nodo del cual salió esa rama. Una rama es el camino a otro nodo o escenario resultado de la decisión o evento que definió la rama. Este elemento se representa con una línea\cite{arbolPartes}.
+	\item \textbf{Hojas:} Son escenarios finales, ya clasificados. No tienen ramificaciones, y son el resultado final de seguir un camino de decisiones, acciones y probabilidades. Este elemento se representa con un triángulo\cite{arbolPartes}.
 \end{enumerate}
 
 \begin{figure}[!htbp]
@@ -62,7 +62,7 @@ Los árboles de decisión están formados por los siguientes elementos:\\
 % \newpage
 \subsection{ID3 (Iterative Dichotomiser 3)} \label{id3}
 
-El algoritmo ID3 es uno de los algoritmos que utilizan árboles de decisión más populares. ID3 genera un árbol a partir de un conjunto de datos llamado \textbf{tabla de inducción}. Es útil para hacer toma de decisiones en escenarios binarios, es decir, que tienen 2 posibilidades finales.\\
+El algoritmo ID3 es uno de los algoritmos que utilizan árboles de decisión más populares. ID3 genera un árbol a partir de un conjunto de datos llamado \textbf{tabla de inducción}. Es útil para hacer toma de decisiones en escenarios binarios, es decir, que tienen 2 posibilidades finales.\cite{id3}\\
 
 El resultado de la ejecución de este algoritmo puede expresarse como un conjunto de reglas \textbf{\textit{si-entonces}}.
 
@@ -322,13 +322,13 @@ Necesitaremos de la \refIU{fig:formula-entropia}{fórmula para calcular la entro
 	\end{figure}
 \end{UClist}
 \subsection{C4.5} \label{c4.5}
-El algoritmo C4.5 es la evolución del algoritmo ID3. Éste genera un árbol de decisión a partir de un conjunto de datos de entrada de manera recursiva, al igual que su precursor. Sin embargo, aunque ID3 y C4.5 son algoritmos muy semejantes, existen ciertas diferencias:\\
+El algoritmo C4.5 es la evolución del algoritmo ID3. Éste genera un árbol de decisión a partir de un conjunto de datos de entrada de manera recursiva, al igual que su precursor\cite{c4.5}. Sin embargo, aunque ID3 y C4.5 son algoritmos muy semejantes, existen ciertas diferencias:\\
 
 \begin{UClist}
 	\UCli C4.5 permite trabajar con valores continuos, mientras que ID3 solamente trabaja con valores discretos.\\
 	\UCli Los árboles de C4.5 son más compactos, y esto se debe a que cada nodo hoja engloba un conjunto de clases y no una sola clase particular.\\
 	\UCli C4.5 es más eficiente computacionalmente hablando.\\
-	\UCli C4.5 utiliza un nuevo parámetro llamado \textbf{Gain Ratio}, en lugar de la ganancia simple. Y este a su vez requiere de la ganancia y de otro parámetro nuevo llamado \textbf{SplitInfo} cuyas fórmulas se enuncian a continuación:
+	\UCli C4.5 utiliza un nuevo parámetro llamado \textbf{Gain Ratio}, en lugar de la ganancia simple. Y este a su vez requiere de la ganancia y de otro parámetro nuevo llamado \textbf{SplitInfo} cuyas fórmulas se enuncian a continuación\cite{c4.5}:
 	
 	\begin{figure}[H]
 		\hypertarget{fig:formula-gainratio}{\hspace{1pt}}
@@ -563,7 +563,7 @@ Para mostrar la forma en la que se ejecuta el algoritmo C4.5 y los pasos que se 
 
 \newpage
 \subsection{Algoritmo KNN (K-Nearest Neighbor)}
-El algoritmo KNN es un algoritmo de aprendizaje no supervisado en el que se busca clasificar un punto en una categoría con la ayuda de un conjunto de entrenamiento.\\
+El algoritmo KNN es un algoritmo de aprendizaje no supervisado en el que se busca clasificar un punto en una categoría con la ayuda de un conjunto de entrenamiento \cite{KNN}.\\
 
 Los pasos que sigue el algoritmo KNN se enumeran a continuación:\\
 
@@ -672,7 +672,7 @@ Con base en la siguiente información que relaciona el peso, la altura y la tall
 \end{UClist}
 
 \subsection{Algoritmo K-Means}
-El algoritmo K-Means es un algoritmo de agrupamiento que utiliza aprendizaje no supervisado, el cual es utilizado cuando se tienen datos no etiquetados, es decir sin categorías o grupos definidos. El objetivo de este algoritmo es encontrar grupos en los datos, con el número de grupos se representa la variable \emph{K}. El algoritmo arrojará como resultado final lo siguiente:\\
+El algoritmo K-Means es un algoritmo de agrupamiento que utiliza aprendizaje no supervisado, el cual es utilizado cuando se tienen datos no etiquetados, es decir sin categorías o grupos definidos. El objetivo de este algoritmo es encontrar grupos en los datos, con el número de grupos se representa la variable \emph{K}\cite{KMeans}. El algoritmo arrojará como resultado final lo siguiente:\\
 
 \begin{enumerate}
 	\item Los centroides de los \emph{K} grupos.\\
@@ -809,19 +809,19 @@ Para ilustrar el funcionamiento del algoritmo K-means, se utilizará el siguient
 \end{UClist}
 
 \subsection{MapReduce}
-MapReduce es un paradigma de programación que permite escalabilidad masiva a través de cientos o miles de servidores en un clúster Hadoop. \emph{MapReduce} se refiere a dos tareas distintas y separadas. La primera, \emph{Map}, consiste en realizar mapeos. Ésta convierte un conjunto de datos en otro conjunto de datos diferente en el que los elementos individuales son separados en tuplas. La segunda, \emph{Reduce}, toma los datos que arroja de \emph{Map}, y combina esas tuplas en un conjunto más pequeño de tuplas. MapReduce es el corazón de Hadoop.\\
+MapReduce es un paradigma de programación que permite escalabilidad masiva a través de cientos o miles de servidores en un clúster Hadoop. \emph{MapReduce} se refiere a dos tareas distintas y separadas. La primera, \emph{Map}, consiste en realizar mapeos. Ésta convierte un conjunto de datos en otro conjunto de datos diferente en el que los elementos individuales son separados en tuplas. La segunda, \emph{Reduce}, toma los datos que arroja de \emph{Map}, y combina esas tuplas en un conjunto más pequeño de tuplas. MapReduce es el corazón de Hadoop.\cite{mapReduce}\\
 
 \subsection{Hadoop} \label{sect:hadoop}
-Es un framework de software que soporta aplicaciones distribuidas bajo una licencia libre. Permite a las aplicaciones trabajar con miles de nodos y petabytes de datos. Hadoop se inspiró en los documentos Google para MapReduce y Google File System (GFS). Hadoop utiliza su propio sistema de archivos HDFS, que divide archivos grandes y los distribuye en diferentes nodos para su procesamiento.\\
+Es un framework de software que soporta aplicaciones distribuidas bajo una licencia libre. Permite a las aplicaciones trabajar con miles de nodos y petabytes de datos. Hadoop se inspiró en los documentos Google para MapReduce y Google File System (GFS). Hadoop utiliza su propio sistema de archivos HDFS, que divide archivos grandes y los distribuye en diferentes nodos para su procesamiento.\cite{hadoop}\\
 
 \subsubsection{Características principales de Hadoop}
 
 \begin{UClist}
-	\UCli \textbf{Procesamiento distribuido:} Hadoop distribuye los datos en los diferentes nodos que formen parte de la arquitectura de clúster que estén haciendo uso de él. Pretende paralelizar tareas de procesamiento de datos.\\
-	\UCli \textbf{Eficiencia:} Mediante la paralelización, se consigue una ganancia considerable en el tiempo de procesamiento de información.\\
-	\UCli \textbf{Económico:} Propicia un ambiente fácilmente escalable en el que resulta sencillo añadir nodos de manera horizontal conforme se vaya requiriendo.\\
-	\UCli \textbf{Código abierto:} Es un proyecto de los llamados \textbf{open source}.\\
-	\UCli \textbf{Tolerancia a fallos:} Utiliza replicación de datos haciendo uso de \textbf{HDFS (Hadoop Distributed File System)}. Si un nodo falla o cae, hay nodos de respaldo que permiten mantener el ambiente en funcionamiento.\\
+	\UCli \textbf{Procesamiento distribuido:} Hadoop distribuye los datos en los diferentes nodos que formen parte de la arquitectura de clúster que estén haciendo uso de él. Pretende paralelizar tareas de procesamiento de datos\cite{hadoop}.\\
+	\UCli \textbf{Eficiencia:} Mediante la paralelización, se consigue una ganancia considerable en el tiempo de procesamiento de información.\cite{hadoop}\\
+	\UCli \textbf{Económico:} Propicia un ambiente fácilmente escalable en el que resulta sencillo añadir nodos de manera horizontal conforme se vaya requiriendo.\cite{hadoop}\\
+	\UCli \textbf{Código abierto:} Es un proyecto de los llamados \textbf{open source}.\cite{hadoop}\\
+	\UCli \textbf{Tolerancia a fallos:} Utiliza replicación de datos haciendo uso de \textbf{HDFS (Hadoop Distributed File System)}. Si un nodo falla o cae, hay nodos de respaldo que permiten mantener el ambiente en funcionamiento.\cite{hadoop}\\
 \end{UClist}
 
 \newpage
@@ -856,7 +856,7 @@ Habitualmente, un clúster Hadoop tiene la estructura \textbf{\emph{maestro - es
 \end{figure}
 
 \subsubsection{Distribuciones Comerciales de Hadoop}
-Existen varias opciones actualmente en el mercado para hacer uso de las capacidades de Hadoop, entre las cuales destacan 3 principalmente:\\
+Existen varias opciones actualmente en el mercado para hacer uso de las capacidades de Hadoop, entre las cuales destacan 3 principalmente\cite{distH}:\\
 
 \begin{UClist}
 	\UCli \textbf{Cloudera:} Fue la primera de todas las distribuciones comerciales de Hadoop. Cuenta con una herramienta llamada Cloudera Manager que permite gestionar el clúster.\\
@@ -865,7 +865,7 @@ Existen varias opciones actualmente en el mercado para hacer uso de las capacida
 \end{UClist}
 
 \subsection{Apache Spark}
-Es un motor de análisis de datos unificado para Big Data y Machine Learning. Que se basa en Hadoop Map Reduce. Es una herramienta de código abierto que permite \textbf{dividir y ejecutar tareas de manera paralela}. Esta cualidad de Spark de poder paralelizar el trabajo se debe a que éste software en la gran mayoría de los casos es ejecutado en sistemas con arquitectura de clúster. \\
+Es un motor de análisis de datos unificado para Big Data y Machine Learning. Que se basa en Hadoop Map Reduce. Es una herramienta de código abierto que permite \textbf{dividir y ejecutar tareas de manera paralela}. Esta cualidad de Spark de poder paralelizar el trabajo se debe a que éste software en la gran mayoría de los casos es ejecutado en sistemas con arquitectura de clúster.\cite{spark} \\
 \newpage
 \subsubsection{Características principales de Spark}
 \begin{UClist}
@@ -877,7 +877,7 @@ Es un motor de análisis de datos unificado para Big Data y Machine Learning. Qu
 \end{UClist}
 
 \subsubsection{Ventajas de usar Apache Spark}
-Utilizar Spark para el procesamiento de volúmenes de información de gran tamaño ofrece varios beneficios. Los principales beneficios son los siguientes:\\
+Utilizar Spark para el procesamiento de volúmenes de información de gran tamaño ofrece varios beneficios.\cite{spark} Los principales beneficios son los siguientes:\\
 
 \begin{UClist}
 	\UCli \textbf{Velocidad:} Gran velocidad en el procesamiento de información. Esto se debe a lo ya mencionado anteriormente sobre la gestion de datos desde memoria.\\
@@ -893,7 +893,7 @@ Utilizar Spark para el procesamiento de volúmenes de información de gran tama�
 \end{UClist}
 \newpage
 \subsubsection{Componentes de Apache Spark}
-Podría decirse que Spark es un conjunto de módulos que nos permiten generar conocimiento usando diferentes técnicas y tecnologías.\\
+Podría decirse que Spark es un conjunto de módulos que nos permiten generar conocimiento usando diferentes técnicas y tecnologías\cite{spark}.\\
 
 El diagrama mostrado a continuación ilustra los principales módulos o \textbf{componentes} que conforman Apache Spark.\\
 

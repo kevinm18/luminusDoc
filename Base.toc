@@ -1,4 +1,4 @@
-\select@language {spanish}
+\babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {1}Capitulo 1}{5}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introduccion}{5}{section.1.1}
 \contentsline {section}{\numberline {1.2}Planteamiento del problema}{5}{section.1.2}
