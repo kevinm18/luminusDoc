@@ -13,8 +13,8 @@
 \contentsline {section}{\numberline {1.9}Trabajo a futuro}{11}{section.1.9}
 \contentsline {subsection}{\numberline {1.9.1}Prototipo 3: P\IeC {\'a}gina web y algoritmos de miner\IeC {\'\i }a de datos}{11}{subsection.1.9.1}
 \contentsline {subsection}{\numberline {1.9.2}Prototipo 4: Algoritmos de miner\IeC {\'\i }a de datos desde una pagina web}{11}{subsection.1.9.2}
-\contentsline {subsection}{\numberline {1.9.3}Prototipo 5: Luminus como framework}{11}{subsection.1.9.3}
-\contentsline {subsubsection}{Framework}{11}{section*.2}
+\contentsline {subsection}{\numberline {1.9.3}Prototipo 5: Luminus}{11}{subsection.1.9.3}
+\contentsline {subsubsection}{Plantilla de ajuste}{11}{section*.2}
 \contentsline {subsubsection}{Instalador}{11}{section*.3}
 \contentsline {chapter}{\numberline {2}Marco te\IeC {\'o}rico}{13}{chapter.2}
 \contentsline {section}{\numberline {2.1}Marco Te\IeC {\'o}rico}{13}{section.2.1}

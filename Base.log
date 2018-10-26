@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.15)  21 OCT 2018 20:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.15)  21 OCT 2018 20:57
 entering extended mode
 **./Base.tex
 (Base.tex
@@ -2409,7 +2409,7 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 125.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
 Package rerunfilecheck Info: File `Base.out' has not changed.
-(rerunfilecheck)             Checksum: 88D2935339C3A1DFEDEE66BE26F21877;4121.
+(rerunfilecheck)             Checksum: 52219E3A02CEF289472C18291D1BDE1E;4106.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2425,7 +2425,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 125.
 Here is how much of TeX's memory you used:
  11824 strings out of 492970
  173546 string characters out of 3126593
- 309703 words of memory out of 3000000
+ 309689 words of memory out of 3000000
  14766 multiletter control sequences out of 15000+200000
  19436 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2447,7 +2447,7 @@ ocal\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi720\ebbx10.pk> <C:\Users\kev
 in\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi864\ebbx10.pk><C
 :/Users/kevin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/marvosym/mar
 vosym.pfb>
-Output written on Base.pdf (70 pages, 3644962 bytes).
+Output written on Base.pdf (70 pages, 3644905 bytes).
 PDF statistics:
  1955 PDF objects out of 2073 (max. 8388607)
  605 named destinations out of 1000 (max. 500000)
