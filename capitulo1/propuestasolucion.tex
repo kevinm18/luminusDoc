@@ -1,2 +1,18 @@
 \section{Propuesta de solución}
-En este trabajo terminal se propone desarrollar un ambiente de Big Data que incluya procesos de verificación de datos, selección, aplicación de algoritmos de minería de datos (clasificación y reglas de asociación) y machine learning necesarios, así como la generación de conocimiento y resultados a partir de la aplicación de esos algoritmos. Esta solución podrá implementarse en computadoras tradicionales, bajando así el costo económico de su implementación en gran medida, ya que se estaría eliminando la necesidad de comprar equipos especializados y ambientarlos.
+En este trabajo terminal se propone desarrollar un ambiente de Big Data que pueda adaptarse a diferentes casos de estudio o dicho en otras palabras, grupos de datos con diferentes características a analizar, incluyendo un archivo de configuración que permita realizar las adaptaciones correspondientes para cada uno de estos casos de estudio.
+\\
+El ambiente de Big Data incluirá la aplicación de los siguientes algoritmos de minería de datos: \\
+\begin{itemize}
+	\item Un algoritmo de reglas de asociación \\
+	\item Un algoritmo de arboles de decisión \\
+\end{itemize}
+Así como la generación de conocimiento y resultados a partir de la aplicación de estos algoritmos.
+\\
+Haciendo un análisis de los datos correspondientes al caso de estudio, se propondrá el algoritmo de minería de datos que se recomienda para el caso de estudio, sin embargo, se podrá aplicar el algoritmo que el usuario experto desee sin que este análisis lo limite.
+\\
+Esta solución podrá implementarse en computadoras tradicionales, reduciendo así el costo económico de su implementación en gran medida, ya que se estaría eliminando la necesidad de comprar equipos especializados y ambientarlos.
+\\
+Debido a que el ambiente de Big Data del que hablamos requiere hacer uso, de varias computadoras tradicionales y cada una de ellas requiere llevar a cabo un proceso de instalación y configuración para que este pueda funcionar. Se desarrollará un instalador que permita simplificar esta tarea realizando todo este proceso desde un solo nodo que sera definido como nodo maestro.  
+\\
+La ejecución y puesta en marcha de los algoritmos de minería de datos se hará desde una plataforma web la cual será accedida por el usuario experto desde el navegador web de un ordenador unicamente conociendo la dirección IP asignada al nodo maestro.
+\\

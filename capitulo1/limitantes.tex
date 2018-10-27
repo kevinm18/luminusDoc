@@ -1,19 +1,27 @@
 \section{Alcances y Limitaciones}
 A continuación se definirán los alcances y limitaciones que tiene este trabajo terminal.
 \\ 
-Primeramente las limitaciones que se han detectado hasta ahora en cuanto a equipo de computo para poder ejecutar el ambiente:
+Primeramente las limitaciones que se han detectado hasta ahora en cuanto a equipo de computo para poder ejecutar el ambiente de Big Data por parte del usuario experto:
 \begin{itemize}
 	\item Se necesitan al menos 2 computadoras para poder tener un cluster distribuido, por lo que, a pesar de que las tecnologías pueden ejecutar en un solo nodo de trabajo, se perderían las ventajas que ofrece el computo distribuido.
-	\item Es necesario que los equipo que se utilicen cuenten con el triple del espacio de almacenamiento del archivo completo cada uno en disco duro, para que además de permitir el almacenamiento de los datos, también sea posible tener espacio para trabajar con ellos.
+	\item Es necesario que los equipo que se utilicen cuenten con el triple del espacio de almacenamiento del archivo completo correspondiente al caso de estudio cada uno en disco duro, para que además de permitir el almacenamiento de los datos, también sea posible tener espacio para trabajar con ellos.
 	\item Equipos con 1GB de RAM o menos no tienen un funcionamiento apropiado con Apache Hadoop y su rendimiento es inconsistente por lo que, no se recomienda trabajar en equipos de con estas características.  
 \end{itemize}
-Por otro lado los alcances del proyecto son limitados por lo que se describirá un poco acerca de ello
+
+Por otro lado existen otro tipo de limitaciones que se presentan durante el desarrollo de este trabajo terminal:
 \begin{itemize}
-	\item Solo se tendrán 3 algoritmos de minería de datos para ejecutar dentro del ambiente, para un estudio mas especializado seria conveniente incluir mas algoritmos.
+	\item Solo se tendrán 2 algoritmos de minería de datos para ejecutar dentro del Framework, para un estudio mas especializado seria conveniente incluir mas algoritmos.
 	\item Las pruebas y desarrollo sobre este trabajo terminal en equipos de computo tradicionales serán ejecutadas unicamente con 3 nodos de datos/replica, por lo que, para un mejor desempeño sería conveniente agregar mas nodos de datos/replica al cluster.
 	\item El archivo de datos proveniente del caso de estudio es de 21 GB, una empresa podría manejar archivos de mayor longitud, por lo que las pruebas realizadas podrían no ser significativos para la cantidad de datos que puedan manejar determinadas empresas. 
-	\item Las tablas de datos que se suban a el repositorio , tendrán que subirse por separado y el manejo de los datos que se podrá ejecutar descargara las relaciones que existan entre las tablas y procesará cada tabla por separado.
-	\item Es posible que no se puedan realizar pruebas o bien suficientes pruebas en otro tipo de equipos de computo para realizar una comparativa del comportamiento que tiene Hadoop, bajo diferentes características computacionales.
+	\item Las tablas de datos que conformen el caso de estudio que se suban a el repositorio , tendrán que subirse por separado y el manejo de los datos que se podrá ejecutar descartará las relaciones que existan entre las tablas y procesará cada tabla por separado.
+	\item Es posible que no se puedan realizar pruebas o bien suficientes pruebas en equipos de computo especializados para realizar una comparativa del comportamiento que tiene Hadoop, bajo diferentes características computacionales.
 	\item El instalador de Luminus tiene muchos casos de errores o casos especiales que no se considerarán y se dejarán a solución del usuario, cuando estos ocurran, ya que por cuestiones de tiempo es imposible englobarlos todos.
-	 
 \end{itemize}
+
+Los alcances que tiene este proyecto se enlistan a continuación en cada uno de sus prototipos:
+\\
+\subsection{Prototipo 1}
+\subsection{Prototipo 2}
+\subsection{Prototipo 3}
+\subsection{Prototipo 4}
+\subsection{Prototipo 5}
