@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.15)  27 OCT 2018 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.15)  27 OCT 2018 21:27
 entering extended mode
 **./Base.tex
 (Base.tex
@@ -893,92 +893,118 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--5
  []
 
 
-Overfull \hbox (11.86156pt too wide) in paragraph at lines 8--21
+Overfull \hbox (11.83388pt too wide) in paragraph at lines 8--19
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--22
+Underfull \hbox (badness 10000) in paragraph at lines 6--20
 
  []
 
 
-Overfull \hbox (6.40614pt too wide) in paragraph at lines 32--32
+Overfull \hbox (6.40614pt too wide) in paragraph at lines 30--30
 []|  
  []
 
 
-Overfull \hbox (39.19409pt too wide) in paragraph at lines 25--35
+Overfull \hbox (39.19409pt too wide) in paragraph at lines 23--33
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--35
+Underfull \hbox (badness 10000) in paragraph at lines 21--33
 
  []
 
 
-Underfull \vbox (badness 7759) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 <cdt/theme/logoInp.png, id=490, 251.94125pt x 201.75375pt>
 File: cdt/theme/logoInp.png Graphic file (type png)
 <use cdt/theme/logoInp.png>
-Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 36.
+Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 34.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 <cdt/theme/headerInp.png, id=491, 501.875pt x 348.30125pt>
 File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
-Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 36.
+Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 34.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [7 <./cdt/theme/logoInp.png> <./cdt/theme/headerInp.png>]) (capitulo1/justific
-acion.tex)
-(capitulo1/objetivos.tex
+ [7 <./cdt/theme/logoInp.png> <./cdt/theme/headerInp.png>]
+LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <10> not available
+(Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 36.
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+) (capitulo1/justificacion.tex) (capitulo1/objetivos.tex
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
-Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 2.
+Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 1.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
-Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 2.
+Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 1.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [8]) (capitulo1/arquitectura.tex
-<capitulo1/images/im1.png, id=520, 1093.686pt x 469.2732pt>
+ [8])
+(capitulo1/arquitectura.tex
+<capitulo1/images/im1.png, id=517, 1093.686pt x 469.2732pt>
 File: capitulo1/images/im1.png Graphic file (type png)
 <use capitulo1/images/im1.png>
 Package pdftex.def Info: capitulo1/images/im1.png  used on input line 6.
 (pdftex.def)             Requested size: 476.25021pt x 204.34976pt.
 File: cdt/theme/logoInp.png Graphic file (type png)
 <use cdt/theme/logoInp.png>
-Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 25.
+Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 26.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
-Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 25.
+Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 26.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [9 <./capitulo1/images/im1.png>]) (capitulo1/limitantes.tex
+ [9]) (capitulo1/limitantes.tex
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
-Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 18.
+Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 9.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
-Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 18.
+Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 9.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [10]
+ [10 <./capitulo1/images/im1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 25--27
 
  []
 
-)
 File: cdt/theme/logoInp.png Graphic file (type png)
 <use cdt/theme/logoInp.png>
-Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 99.
+Package pdftex.def Info: cdt/theme/logoInp.png  used on input line 43.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 File: cdt/theme/headerInp.png Graphic file (type png)
 <use cdt/theme/headerInp.png>
-Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 99.
+Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 43.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [11]
+[11])
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
 Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 99.
@@ -987,14 +1013,9 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 99.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
- [12
-
-]
+ [12]
 Cap\'{\i }tulo 2.
 (capitulo2/marcoteorico.tex
-LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <10> not available
-(Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 1.
-
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
@@ -1009,7 +1030,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-[13]
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+[13
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
@@ -1026,11 +1054,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
-Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 49.
+Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 47.
 (pdftex.def)             Requested size: 43.70595pt x 35.0pt.
 File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
-Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 49.
+Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 47.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
 [14]
 <capitulo2/images/arbol-decision-ejemplo.png, id=591, 292.09125pt x 173.64874pt
@@ -1585,9 +1613,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 822--823
  []
 
 
-LaTeX Warning: Citation `bayesianas' on page 30 undefined on input line 824.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 824--825
 
  []
@@ -1606,9 +1631,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 828--829
  []
 
 
-LaTeX Warning: Citation `ambiente' on page 31 undefined on input line 830.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 830--831
 
  []
@@ -1617,9 +1639,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 830--831
 Underfull \hbox (badness 10000) in paragraph at lines 832--833
 
  []
-
-
-LaTeX Warning: Citation `cluster' on page 31 undefined on input line 835.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 835--836
@@ -1654,7 +1673,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 855.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
  [32]
-<capitulo2/images/hadoopComponentes.png, id=802, 213.79875pt x 301.125pt>
+<capitulo2/images/hadoopComponentes.png, id=808, 213.79875pt x 301.125pt>
 File: capitulo2/images/hadoopComponentes.png Graphic file (type png)
 <use capitulo2/images/hadoopComponentes.png>
 Package pdftex.def Info: capitulo2/images/hadoopComponentes.png  used on input 
@@ -1673,7 +1692,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 875--876
 
  []
 
-<capitulo2/images/arquitecturaMaestroEsclavo.png, id=809, 387.849pt x 238.491pt
+<capitulo2/images/arquitecturaMaestroEsclavo.png, id=815, 387.849pt x 238.491pt
 >
 File: capitulo2/images/arquitecturaMaestroEsclavo.png Graphic file (type png)
 <use capitulo2/images/arquitecturaMaestroEsclavo.png>
@@ -1741,7 +1760,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 926--927
 
  []
 
-<capitulo2/images/sparkComponentes.png, id=826, 454.69875pt x 203.5605pt>
+<capitulo2/images/sparkComponentes.png, id=832, 454.69875pt x 203.5605pt>
 File: capitulo2/images/sparkComponentes.png Graphic file (type png)
 <use capitulo2/images/sparkComponentes.png>
 Package pdftex.def Info: capitulo2/images/sparkComponentes.png  used on input l
@@ -1772,11 +1791,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 946--947
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 951--101
+
+Underfull \hbox (badness 10000) in paragraph at lines 951--952
 
  []
 
+)
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
 Package pdftex.def Info: cdt/theme/headerPar.png  used on input line 102.
@@ -1785,7 +1805,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 <use cdt/theme/logoPar.png>
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 102.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
-[36 <./capitulo2/images/sparkComponentes.png>]
+ [36 <./capitulo2/images/sparkComponentes.png>]
 Cap\'{\i }tulo 3.
 (capitulo3/prototipo1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--14
@@ -1846,12 +1866,12 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 123.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
 [39]
-<capitulo3/images/im1.png, id=880, 1093.686pt x 469.2732pt>
+<capitulo3/images/im1.png, id=886, 1093.686pt x 469.2732pt>
 File: capitulo3/images/im1.png Graphic file (type png)
 <use capitulo3/images/im1.png>
 Package pdftex.def Info: capitulo3/images/im1.png  used on input line 127.
 (pdftex.def)             Requested size: 350.33727pt x 150.32086pt.
-<capitulo3/images/im2.png, id=882, 507.8975pt x 705.63625pt>
+<capitulo3/images/im2.png, id=888, 507.8975pt x 705.63625pt>
 File: capitulo3/images/im2.png Graphic file (type png)
 <use capitulo3/images/im2.png>
 Package pdftex.def Info: capitulo3/images/im2.png  used on input line 147.
@@ -1874,7 +1894,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 165.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
  [41 <./capitulo3/images/im2.png>]
-<capitulo3/images/im3.png, id=898, 1161.33875pt x 705.63625pt>
+<capitulo3/images/im3.png, id=904, 1161.33875pt x 705.63625pt>
 File: capitulo3/images/im3.png Graphic file (type png)
 <use capitulo3/images/im3.png>
 Package pdftex.def Info: capitulo3/images/im3.png  used on input line 169.
@@ -1889,22 +1909,22 @@ Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 209.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
 
 [42 <./capitulo3/images/im3.png>]
-<capitulo3/images/im9.png, id=905, 807.015pt x 444.66125pt>
+<capitulo3/images/im9.png, id=911, 807.015pt x 444.66125pt>
 File: capitulo3/images/im9.png Graphic file (type png)
 <use capitulo3/images/im9.png>
 Package pdftex.def Info: capitulo3/images/im9.png  used on input line 224.
 (pdftex.def)             Requested size: 350.33727pt x 193.03255pt.
-<capitulo3/images/im12.png, id=906, 1213.53375pt x 498.86375pt>
+<capitulo3/images/im12.png, id=912, 1213.53375pt x 498.86375pt>
 File: capitulo3/images/im12.png Graphic file (type png)
 <use capitulo3/images/im12.png>
 Package pdftex.def Info: capitulo3/images/im12.png  used on input line 233.
 (pdftex.def)             Requested size: 350.33727pt x 144.01976pt.
-<capitulo3/images/im6.png, id=907, 1275.76625pt x 638.385pt>
+<capitulo3/images/im6.png, id=913, 1275.76625pt x 638.385pt>
 File: capitulo3/images/im6.png Graphic file (type png)
 <use capitulo3/images/im6.png>
 Package pdftex.def Info: capitulo3/images/im6.png  used on input line 244.
 (pdftex.def)             Requested size: 350.33727pt x 175.30801pt.
-<capitulo3/images/im10.png, id=908, 1252.68pt x 522.95375pt>
+<capitulo3/images/im10.png, id=914, 1252.68pt x 522.95375pt>
 File: capitulo3/images/im10.png Graphic file (type png)
 <use capitulo3/images/im10.png>
 Package pdftex.def Info: capitulo3/images/im10.png  used on input line 254.
@@ -1927,7 +1947,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 260.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
  [44 <./capitulo3/images/im6.png> <./capitulo3/images/im10.png>]
-<capitulo3/images/im11.png, id=930, 1233.60875pt x 444.66125pt>
+<capitulo3/images/im11.png, id=936, 1233.60875pt x 444.66125pt>
 File: capitulo3/images/im11.png Graphic file (type png)
 <use capitulo3/images/im11.png>
 Package pdftex.def Info: capitulo3/images/im11.png  used on input line 264.
@@ -1955,7 +1975,7 @@ Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 107.
 ]
 Cap\'{\i }tulo 4.
 (capitulo4/prototipo2.tex [47]
-<capitulo4/images/im3.png, id=948, 1181.8554pt x 443.256pt>
+<capitulo4/images/im3.png, id=954, 1181.8554pt x 443.256pt>
 File: capitulo4/images/im3.png Graphic file (type png)
 <use capitulo4/images/im3.png>
 Package pdftex.def Info: capitulo4/images/im3.png  used on input line 26.
@@ -1970,7 +1990,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--46
 
  []
 
-<capitulo4/images/im1.png, id=950, 836.12375pt x 679.53876pt>
+<capitulo4/images/im1.png, id=956, 836.12375pt x 679.53876pt>
 File: capitulo4/images/im1.png Graphic file (type png)
 <use capitulo4/images/im1.png>
 Package pdftex.def Info: capitulo4/images/im1.png  used on input line 60.
@@ -1997,7 +2017,7 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 99.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
 [49 <./capitulo4/images/im1.png>]
-<capitulo4/images/im2.png, id=979, 1472.3808pt x 456.2646pt>
+<capitulo4/images/im2.png, id=985, 1472.3808pt x 456.2646pt>
 File: capitulo4/images/im2.png Graphic file (type png)
 <use capitulo4/images/im2.png>
 Package pdftex.def Info: capitulo4/images/im2.png  used on input line 106.
@@ -2033,13 +2053,13 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 192.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
 [51]
-<capitulo4/images/ejemplo2.png, id=1006, 707.64375pt x 714.67pt>
+<capitulo4/images/ejemplo2.png, id=1012, 707.64375pt x 714.67pt>
 File: capitulo4/images/ejemplo2.png Graphic file (type png)
 <use capitulo4/images/ejemplo2.png>
 Package pdftex.def Info: capitulo4/images/ejemplo2.png  used on input line 212.
 
 (pdftex.def)             Requested size: 450.43253pt x 454.9118pt.
-<capitulo4/images/ejemplo3.png, id=1008, 665.48625pt x 685.56125pt>
+<capitulo4/images/ejemplo3.png, id=1014, 665.48625pt x 685.56125pt>
 File: capitulo4/images/ejemplo3.png Graphic file (type png)
 <use capitulo4/images/ejemplo3.png>
 Package pdftex.def Info: capitulo4/images/ejemplo3.png  used on input line 222.
@@ -2072,7 +2092,7 @@ File: cdt/theme/logoPar.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/logoPar.png  used on input line 227.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
  [54 <./capitulo4/images/ejemplo3.png>]
-<capitulo4/images/ejemplo6.png, id=1028, 703.62875pt x 715.67375pt>
+<capitulo4/images/ejemplo6.png, id=1034, 703.62875pt x 715.67375pt>
 File: capitulo4/images/ejemplo6.png Graphic file (type png)
 <use capitulo4/images/ejemplo6.png>
 Package pdftex.def Info: capitulo4/images/ejemplo6.png  used on input line 239.
@@ -2087,25 +2107,25 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 244.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
  [55 <./capitulo4/images/ejemplo6.png>]
-<capitulo4/images/ejemplo8.png, id=1039, 708.6475pt x 488.82625pt>
+<capitulo4/images/ejemplo8.png, id=1045, 708.6475pt x 488.82625pt>
 File: capitulo4/images/ejemplo8.png Graphic file (type png)
 <use capitulo4/images/ejemplo8.png>
 Package pdftex.def Info: capitulo4/images/ejemplo8.png  used on input line 248.
 
 (pdftex.def)             Requested size: 450.43253pt x 310.71448pt.
-<capitulo4/images/ejemplo9.png, id=1041, 715.67375pt x 107.40125pt>
+<capitulo4/images/ejemplo9.png, id=1047, 715.67375pt x 107.40125pt>
 File: capitulo4/images/ejemplo9.png Graphic file (type png)
 <use capitulo4/images/ejemplo9.png>
 Package pdftex.def Info: capitulo4/images/ejemplo9.png  used on input line 262.
 
 (pdftex.def)             Requested size: 450.43253pt x 67.59758pt.
-<capitulo4/images/ejemplo10.png, id=1043, 631.35875pt x 680.5425pt>
+<capitulo4/images/ejemplo10.png, id=1049, 631.35875pt x 680.5425pt>
 File: capitulo4/images/ejemplo10.png Graphic file (type png)
 <use capitulo4/images/ejemplo10.png>
 Package pdftex.def Info: capitulo4/images/ejemplo10.png  used on input line 273
 .
 (pdftex.def)             Requested size: 450.43253pt x 485.52501pt.
-<capitulo4/images/ejemplo11.png, id=1045, 618.31pt x 510.90875pt>
+<capitulo4/images/ejemplo11.png, id=1051, 618.31pt x 510.90875pt>
 File: capitulo4/images/ejemplo11.png Graphic file (type png)
 <use capitulo4/images/ejemplo11.png>
 Package pdftex.def Info: capitulo4/images/ejemplo11.png  used on input line 291
@@ -2161,7 +2181,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<capitulo5/images/diagramaFlujo.png, id=1071, 512.21362pt x 542.47668pt>
+<capitulo5/images/diagramaFlujo.png, id=1077, 512.21362pt x 542.47668pt>
 File: capitulo5/images/diagramaFlujo.png Graphic file (type png)
 <use capitulo5/images/diagramaFlujo.png>
 Package pdftex.def Info: capitulo5/images/diagramaFlujo.png  used on input line
@@ -2197,13 +2217,13 @@ File: cdt/theme/headerInp.png Graphic file (type png)
 Package pdftex.def Info: cdt/theme/headerInp.png  used on input line 81.
 (pdftex.def)             Requested size: 50.42783pt x 35.0pt.
 [61]
-<capitulo5/images/hostnoencontrado.png, id=1093, 744.7825pt x 461.725pt>
+<capitulo5/images/hostnoencontrado.png, id=1099, 744.7825pt x 461.725pt>
 File: capitulo5/images/hostnoencontrado.png Graphic file (type png)
 <use capitulo5/images/hostnoencontrado.png>
 Package pdftex.def Info: capitulo5/images/hostnoencontrado.png  used on input l
 ine 85.
 (pdftex.def)             Requested size: 350.33727pt x 217.19395pt.
-<capitulo5/images/hostencontrado.png, id=1094, 738.76pt x 462.72874pt>
+<capitulo5/images/hostencontrado.png, id=1100, 738.76pt x 462.72874pt>
 File: capitulo5/images/hostencontrado.png Graphic file (type png)
 <use capitulo5/images/hostencontrado.png>
 Package pdftex.def Info: capitulo5/images/hostencontrado.png  used on input lin
@@ -2214,7 +2234,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
-<capitulo5/images/instalacion.png, id=1096, 737.75626pt x 460.72125pt>
+<capitulo5/images/instalacion.png, id=1102, 737.75626pt x 460.72125pt>
 File: capitulo5/images/instalacion.png Graphic file (type png)
 <use capitulo5/images/instalacion.png>
 Package pdftex.def Info: capitulo5/images/instalacion.png  used on input line 1
@@ -2459,6 +2479,18 @@ Underfull \hbox (badness 1281) in paragraph at lines 87--89
 he Spark\T1/cmbr/m/sc/10 , Ju-lio 02, 2018 de Open-We-bi-nars. Si-tio web:
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
+[]\T1/cmbr/m/sc/10 Microsoft (2018) \T1/cmbr/m/sl/10 What is a ser-ver clus-ter
+?\T1/cmbr/m/sc/10 , Ma-yo 28, 2018, de Mi-cro-soft. Si-tio web:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--95
+[]\T1/cmbr/m/sc/10 BTECH (2010) \T1/cmbr/m/sl/10 What is Com-pu-ting En-vi-ron-
+ment?\T1/cmbr/m/sc/10 , Ju-lio 12, 2010, de BTECH. Si-tio web:
+ []
+
 )
 File: cdt/theme/headerPar.png Graphic file (type png)
 <use cdt/theme/headerPar.png>
@@ -2570,10 +2602,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
  ) 
 Here is how much of TeX's memory you used:
- 11890 strings out of 492970
- 174606 string characters out of 3126593
- 310278 words of memory out of 3000000
- 14802 multiletter control sequences out of 15000+200000
+ 11896 strings out of 492970
+ 174677 string characters out of 3126593
+ 310374 words of memory out of 3000000
+ 14805 multiletter control sequences out of 15000+200000
  19436 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,20n,47p,902b,1779s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2594,9 +2626,9 @@ ocal\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi720\ebbx10.pk> <C:\Users\kev
 in\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi864\ebbx10.pk><C
 :/Users/kevin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/marvosym/mar
 vosym.pfb>
-Output written on Base.pdf (80 pages, 3687751 bytes).
+Output written on Base.pdf (80 pages, 3689958 bytes).
 PDF statistics:
- 2155 PDF objects out of 2487 (max. 8388607)
- 629 named destinations out of 1000 (max. 500000)
+ 2163 PDF objects out of 2487 (max. 8388607)
+ 632 named destinations out of 1000 (max. 500000)
  888 words of extra memory for PDF output out of 10000 (max. 10000000)
 
