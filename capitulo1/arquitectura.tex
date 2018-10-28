@@ -10,6 +10,7 @@ El siguiente diagrama muestra la arquitectura prevista del sistema:
 \end{figure}
 \\ 
 Con esta arquitectura será posible adaptar el ambiente de Big Data a diversos casos de estudio de las empresas, modificando únicamente archivos que serán destinados para la configuración de dichos
+
 casos de estudio. 
 \\
 Esto sin tener que modificar la arquitectura del sistema ni entender su funcionamiento interno. Será posible
@@ -28,3 +29,5 @@ A continuación se explicarán cada uno de los bloques que conforman la arquitec
 	\item \textbf{Archivo de configuración del recolector del administrador de tareas }: Este archivo servirá para llevar a cabo el ajuste de los algoritmos de minería de datos a cada caso de estudio que quiera aplicar el usuario experto. sera necesario realizar algunos ajustes en el mismo para que los algoritmos puedan ser ejecutados de manera satisfactoria.
 \end{itemize}
 La arquitectura que se presenta por lo tanto, es una arquitectura del tipo maestro-esclavo, la cual es utilizada para el diseño de un cluster de Hadoop como se detalla en la sección \nameref{sect:hadoop} del marco teórico. 
+\\
+El cluster de Hadoop es el que se utiliza para ambientes distribuidos que hacen uso de Big Data dentro de su funcionamiento al igual que Luminus.  

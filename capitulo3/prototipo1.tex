@@ -1,11 +1,11 @@
 \section{Descripción del prototipo} 
-El prototipo actual busca definir el número de nodos que son necesarios para crear un ambiente de Big Data que nos permita realizar las pruebas a nuestro caso de estudio de manera satisfactoria pero que tampoco escape de las capacidades de computación con las que contamos.
+El prototipo actual busca definir el número de nodos y las características que estos deben tener para crear un ambiente de Big Data que nos permita realizar las pruebas a nuestro caso de estudio de manera satisfactoria pero que tampoco escape de las capacidades de computación con las que contamos.
 \\
 Por otro lado busca definir como serán agrupados los datos que conforman el caso de estudio en los nodos que se establezcan. Para poder conocer con ello la distribución de los datos y el peso en memoria física que se le dará a cada nodo.
 \\
 Se busca entonces encontrar características en común entre los datos que conforman el caso de estudio para de esta manera clasificarlos y facilitar su consulta al momento de aplicar algoritmos de minería de datos. 
 \section{Análisis}
-\subsection{Análisis de la red distribuida}
+\subsection{Análisis de la red distribuida}\label{seccion1}
 %necesidad
 Se pretende establecer las características que tendrá el cluster que se aplicará a la red distribuida para poder con esto, generarlo. 
 \\
@@ -23,7 +23,7 @@ A continuación, se presenta el análisis de los factores que se consideran impo
 \item Para poder comunicar el cluster dentro de una red local se utilizan 2 tecnologías Spark y Hadoop además de las dependencias de estas para funcionar como son SSH y Java. Por lo que es necesario considerar el espacio que ocupa la instalación de dichas tecnologías.
 
 \end{itemize}
-\subsection{Análisis de los datos}
+\subsection{Análisis de los datos} \label{datosagrupados}
 La base de datos que se tiene planeado utilizar como caso de estudio tiene un total de 21GB de texto plano de información de productos que se venden en tiendas departamentales en la república mexicana. 
 \\
 Se trata de un archivo de datos de la PROFECO de uso libre el cual tiene los siguientes campos para cada producto.
@@ -80,10 +80,10 @@ Por otro lado se determino que el sistema de almacenamiento de datos que se va a
 
 Es mas conveniente utilizar la forma en la que Hadoop distribuye los datos debido a que no es necesario controlar el acceso a los datos de manera manual indicando donde se encuentra cada uno de ellos, sino que Hadoop se encarga de esta tarea, además de ofrecer otros beneficios como la escalabilidad, la tolerancia a fallos , replicación en tiempo real, etc. 
 
-A pesar de esto, el análisis realizado para determinar los modos de agrupamiento mas favorables no será desperdiciado pues este buscaba simplificar la operación de los algoritmos de minería de datos. y aunque no se aplique directamente sobre la distribución de los repositorios en los nodos, esta sera aplicada al momento de ejecutar los algoritmos de minería de datos. 
+A pesar de esto, el análisis realizado para determinar los modos de agrupamiento mas favorables no será desperdiciado pues este buscaba simplificar la operación de los algoritmos de minería de datos. y aunque no se aplique directamente sobre la distribución de los repositorios en los nodos, esta será aplicada al momento de ejecutar los algoritmos de minería de datos. 
 
 \section{Diseño}
-\subsection{Diseño de la red distribuida}
+\subsection{Diseño de la red distribuida} \label{seccion2}
 \subsubsection{Características de la red distribuida}
 Las características que tiene la red distribuida se enlistan a continuación:
 Se diseño una red distribuida que cuenta con 4 nodos en total.
@@ -183,7 +183,7 @@ En el servidor maestro se guarda una información conocida como NameNode que per
 conocer dónde se encuentran cada uno de los bloques y sus réplicas, lo que facilita sean encontradas dentro del cluster.
 \\
 Con lo que podemos concluir que si bien no diseñamos la propuesta de agrupación de los datos comprendemos cómo es que esta funciona.
-\section{Desarrollo}
+\section{Desarrollo}\label{seccion3}
 Para que la red distribuida se encuentre en funcionamiento se siguió el Manual de Instalación de Luminus 
 en sus secciones 
 \begin{verbatim}
@@ -206,8 +206,8 @@ en sus secciones
 Las cuales nos permitirán instalar Apache Spark para permitir la conexión entre los nodos de datos/replica y el maestro haciendo uso de una red de internet local en la que se encuentren conectados todos los nodos.
 \\
 Además de contener todas las configuraciones necesarias para tal objetivo.  
-\section{Pruebas}
-Para verificar que la instalación y configuración que se realizo al servidor Apache Spark es correcta sera necesario aplicar un algoritmo de prueba. 
+\section{Pruebas}\label{seccion4}
+Para verificar que la instalación y configuración que se realizo al servidor Apache Spark es correcta será necesario aplicar un algoritmo de prueba. 
 \\
 Un algoritmo de prueba muy común es sparkPi el cual calcula el valor del número pi utilizando todos los nodos de la red distribuida. 
 \\
@@ -235,7 +235,7 @@ como se puede apreciar en la siguiente imagen \\
 		\label{fig:red5}
 	\end{center}
 \end{figure}
-\\ cabe destacar que debido a que el valor es calculado en tiempo real con los recursos que se tiene en el cluster el valor puede variar cada ejecución pero sera muy aproximado al valor real del número.
+\\ cabe destacar que debido a que el valor es calculado en tiempo real con los recursos que se tiene en el cluster el valor puede variar cada ejecución pero será muy aproximado al valor real del número.
 \\
 Ahora, si accedemos a la interfaz web de Spark podremos ver que un trabajo ha sido completado dentro del cluster, antes de esta ejecución no se mostraba nada dentro de esta sección. \\
 \begin{figure}[!htbp]

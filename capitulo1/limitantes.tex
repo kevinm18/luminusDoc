@@ -1,4 +1,5 @@
 \section{Alcances y Limitaciones}
+\subsection{Limitaciones}
 A continuación se definirán los alcances y limitaciones que tiene este trabajo terminal.
 \\ 
 Primeramente las limitaciones que se han detectado hasta ahora en cuanto a equipo de computo para poder ejecutar el ambiente de Big Data por parte del usuario experto:
@@ -10,18 +11,39 @@ Primeramente las limitaciones que se han detectado hasta ahora en cuanto a equip
 
 Por otro lado existen otro tipo de limitaciones que se presentan durante el desarrollo de este trabajo terminal:
 \begin{itemize}
-	\item Solo se tendrán 2 algoritmos de minería de datos para ejecutar dentro del Framework, para un estudio mas especializado seria conveniente incluir mas algoritmos.
+	\item Solo se tendrán 2 algoritmos de minería de datos para ejecutar dentro del ambiente de Big Data, para un estudio mas especializado seria conveniente incluir mas algoritmos.
 	\item Las pruebas y desarrollo sobre este trabajo terminal en equipos de computo tradicionales serán ejecutadas unicamente con 3 nodos de datos/replica, por lo que, para un mejor desempeño sería conveniente agregar mas nodos de datos/replica al cluster.
 	\item El archivo de datos proveniente del caso de estudio es de 21 GB, una empresa podría manejar archivos de mayor longitud, por lo que las pruebas realizadas podrían no ser significativos para la cantidad de datos que puedan manejar determinadas empresas. 
 	\item Las tablas de datos que conformen el caso de estudio que se suban a el repositorio , tendrán que subirse por separado y el manejo de los datos que se podrá ejecutar descartará las relaciones que existan entre las tablas y procesará cada tabla por separado.
 	\item Es posible que no se puedan realizar pruebas o bien suficientes pruebas en equipos de computo especializados para realizar una comparativa del comportamiento que tiene Hadoop, bajo diferentes características computacionales.
 	\item El instalador de Luminus tiene muchos casos de errores o casos especiales que no se considerarán y se dejarán a solución del usuario, cuando estos ocurran, ya que por cuestiones de tiempo es imposible englobarlos todos.
 \end{itemize}
+Las limitaciones mencionadas no son todas las que existen, solo se mencionan las mas importantes de las que se han encontrado y se considera que tienen relevancia alta para este proyecto.
 
-Los alcances que tiene este proyecto se enlistan a continuación en cada uno de sus prototipos:
+\subsection{Alcances}
+
+Los alcances que se tienen para los prototipos 1 y 2 que son los prototipos que se desarrollaron en Trabajo Terminal 1 se enlistan a continuación, mientras que los alcances que se tienen para el resto de los prototipos se encuentran definidos en la sección \nameref{futurolol}
 \\
 \subsection{Prototipo 1}
+El prototipo 1 tiene como productos esperados:
+\begin{itemize}
+	\item Identificar y reconocer las características de los datos que conforman el caso de estudio así como analizar y definir las posibles agrupaciones que pueden ser generadas a partir de estos datos. Los resultados de este análisis a detalle se encuentran en la sección \nameref{datosagrupados} del capitulo 3. 
+	\item Establecer el numero de nodos y características que tendrán los nodos  que se agregarán a el cluster para realizar las pruebas del caso de estudio de manera  distribuida.
+	\\
+	Buscando que con el numero de nodos que se defina se pueda soportar dicho caso de estudio y que además no escapen de las características de computación con las que se cuenta actualmente.
+	\\
+	Los resultados obtenidos se pueden consultar en las secciones \nameref{seccion1} y \nameref{seccion2} del capitulo 3.
+	\item Poner en funcionamiento el cluster con las características que fueron definidas para este en el punto anterior. \label{punto}
+	\\
+	El desarrollo que implico dicha tarea se presenta a detalle en la sección \nameref{seccion3} mientras que las pruebas que se hicieron para demostrar que este desarrolle es funcional se pueden consultar en la sección \nameref{seccion4} ambas secciones se encuentran en el capitulo 3.
+\end{itemize} 
 \subsection{Prototipo 2}
-\subsection{Prototipo 3}
-\subsection{Prototipo 4}
-\subsection{Prototipo 5}
+El prototipo 2 tiene como productos esperados:
+\begin{itemize}
+	\item Cargar los datos que conforman el caso de estudio de prueba a el cluster en funcionamiento que se explica en la sección \ref{punto} en su tercer punto. Con lo cual los datos quedarían almacenados de forma distribuida en el cluster.
+	\\
+	Para conocer mas detalles de la carga de los datos que se realizo se puede consultar la sección \nameref{seccion5} en el capitulo 4.	
+	\item Una vez que los datos son cargados satisfactoriamente a el cluster será necesario comprobar que estos pueden funcionar de manera distribuida y son accesibles, para ello se aplica un algoritmo sencillo sobre los datos. Para conocer mas detalles acerca de esta prueba se puede consultar a partir de la sección  \nameref{seccion6} en el capitulo 4.
+	
+
+\end{itemize} 
