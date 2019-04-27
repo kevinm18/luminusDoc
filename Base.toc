@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {1.8.1}Limitaciones}{10}{subsection.1.8.1}
 \contentsline {subsection}{\numberline {1.8.2}Alcances}{11}{subsection.1.8.2}
 \contentsline {subsection}{\numberline {1.8.3}Prototipo 1}{11}{subsection.1.8.3}
-\contentsline {subsection}{\numberline {1.8.4}Prototipo 2}{12}{subsection.1.8.4}
+\contentsline {subsection}{\numberline {1.8.4}Prototipo 2}{11}{subsection.1.8.4}
 \contentsline {chapter}{\numberline {2}Marco te\IeC {\'o}rico}{13}{chapter.2}
 \contentsline {section}{\numberline {2.1}Big Data}{13}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Las 3 Vs del Big Data}{13}{subsection.2.1.1}
@@ -72,20 +72,22 @@
 \contentsline {section}{\numberline {5.1}Descripci\IeC {\'o}n del prototipo}{59}{section.5.1}
 \contentsline {section}{\numberline {5.2}An\IeC {\'a}lisis}{59}{section.5.2}
 \contentsline {section}{\numberline {5.3}Dise\IeC {\~n}o}{60}{section.5.3}
-\contentsline {section}{\numberline {5.4}Desarrollo}{61}{section.5.4}
-\contentsline {section}{\numberline {5.5}Pruebas}{61}{section.5.5}
-\contentsline {chapter}{\numberline {6}Pruebas}{65}{chapter.6}
-\contentsline {section}{\numberline {6.1}Pruebas}{65}{section.6.1}
-\contentsline {chapter}{\numberline {7}Conclusiones}{67}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusiones}{67}{section.7.1}
-\contentsline {chapter}{\numberline {8}Trabajo a futuro}{69}{chapter.8}
-\contentsline {section}{\numberline {8.1}Trabajo a futuro}{69}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Prototipo 3: P\IeC {\'a}gina web y algoritmos de miner\IeC {\'\i }a de datos}{69}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Prototipo 4: Algoritmos de miner\IeC {\'\i }a de datos desde una pagina web}{69}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}Prototipo 5: Luminus}{69}{subsection.8.1.3}
-\contentsline {subsubsection}{Plantilla de ajuste}{70}{section*.6}
-\contentsline {subsubsection}{Instalador}{70}{section*.7}
-\contentsline {subsection}{\numberline {8.1.4}Propuesta de trabajo a futuro para contribuir a esta idea}{70}{subsection.8.1.4}
-\contentsline {chapter}{\numberline {9}Anexos}{75}{chapter.9}
-\contentsline {section}{\numberline {9.1}Anexo A: Codigo JAVA Map-Reduce}{75}{section.9.1}
-\contentsline {section}{\numberline {9.2}Anexo B: C\IeC {\'o}digo del instalador}{77}{section.9.2}
+\contentsline {subsubsection}{Explicaci\IeC {\'o}n del funcionamiento del instalador}{62}{section*.6}
+\contentsline {section}{\numberline {5.4}Desarrollo}{65}{section.5.4}
+\contentsline {subsubsection}{Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de SSH}{65}{section*.7}
+\contentsline {subsubsection}{Puesta en funcionamiento}{66}{section*.8}
+\contentsline {subsubsection}{Consideraciones adicionales}{66}{section*.9}
+\contentsline {section}{\numberline {5.5}Pruebas}{67}{section.5.5}
+\contentsline {chapter}{\numberline {6}Conclusiones}{71}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusiones}{71}{section.6.1}
+\contentsline {chapter}{\numberline {7}Trabajo a futuro}{73}{chapter.7}
+\contentsline {section}{\numberline {7.1}Trabajo a futuro}{73}{section.7.1}
+\contentsline {subsubsection}{Peque\IeC {\~n}as mejoras e implementaciones que se pueden hacer sobre lo ya propuesto}{73}{section*.10}
+\contentsline {subsubsection}{Una manera de presentarlo de forma diferente: Sitio web}{74}{section*.11}
+\contentsline {section}{\numberline {7.2}1.1 hola}{87}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Resumen}{87}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Descripci\IeC {\'o}n}{87}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Trayectorias del Caso de Uso}{87}{subsection.7.2.3}
+\contentsline {chapter}{\numberline {8}Anexos}{89}{chapter.8}
+\contentsline {section}{\numberline {8.1}Anexo A: Codigo JAVA Map-Reduce}{89}{section.8.1}
+\contentsline {section}{\numberline {8.2}Anexo B: C\IeC {\'o}digo del instalador}{91}{section.8.2}

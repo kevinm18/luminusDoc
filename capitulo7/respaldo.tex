@@ -1,0 +1,47 @@
+\subsection{Prototipo 3: Página web y algoritmos de minería de datos}
+\label{proto3}
+Se pretende desarrollar este prototipo en Trabajo Terminal 2 el cual incluirá las siguientes tareas:
+\begin{itemize}
+	\item Hacer uso de un algoritmo de los tipos de algoritmos de minería de datos que se enlistan a continuación
+	\begin{itemize}
+		\item Reglas de asociación
+		\item Arboles de decisión
+	\end{itemize}
+	 escrito en java que se adapte al caso de estudio así como su personalización para que pueda ser adaptado a otros casos de estudio de manera sencilla.
+	\item Elaboración de las pantallas que conformarán el sitio web, diseño, estructura y contenido que aun no estarán integradas a Luminus por lo tanto, no serán funcionales.  
+\end{itemize}
+\subsection{Prototipo 4: Algoritmos de minería de datos desde una pagina web}
+Se pretende desarrollar este prototipo en Trabajo Terminal 2 el cual comprende el desarrollo de la siguiente tarea:
+\\ 
+\\ 
+Integrar los 2 puntos comprendidos en el prototipo 3 los cuales pueden ser consultados en la sección anterior \ref{proto3} de tal forma que los algoritmos de minera de datos puedan ser accedidos y utilizados desde la pagina web elaborada. 
+\\
+Además de que estos algoritmos se ejecutarán en el cluster generado en los prototipos Prototipo 1 \nameref{cap:Cap3} y Prototipo 2 \nameref{cap:Cap4} desarrollados en trabajo terminal 1.
+\subsection{Prototipo 5: Luminus}
+Este prototipo se encontraba diseñado unicamente para convertir este proyecto a un ambiente de análisis de datos adaptable a otros casos de estudio, sin embargo, se vio la necesidad de crear un instalador que permita cargar todo el contenido del Trabajo Terminal al equipo del cliente para que este pueda utilizarlo.\\
+Esto con el objetivo de que, el instalador cargue a su equipo todo lo que Luminus necesita para funcionar.
+\\
+Una vez que la instalación finalice unicamente se trabajará sobre la plantilla de ajuste. \\
+Por tal motivo se explicarán los alcances de la plantilla y del instalador por separado.
+\subsubsection{Plantilla de ajuste}
+Para la parte de la plantilla de ajuste se busca que se diseñe una plantilla que tenga como entradas los parámetros necesarios para permitir la adaptación para otros casos de estudio a los algoritmos de Big Data, ya que estos tienen diferentes entradas para cada algoritmo y que además cambian para cada caso de estudio.
+\\
+Por lo que será necesario definir las entradas necesarias para cada algoritmo y la forma en la que estas pueden interactuar entre diferentes casos de estudio.
+\\
+Y con ella unicamente se tendrán que establecer dichos valores para que el ambiente de Big Data pueda ponerse a trabajar y ofrecer resultados que se ajusten a cada conjunto de datos en el caso de estudio que se desee aplicar.
+
+\subsubsection{Instalador}
+Un instalador suele ser un sistema bastante complejo, ya que realiza las siguientes tareas:
+\begin{itemize}
+	\item Instalación de software
+	\item Ejecuta comandos en el shell de la computadora
+	\item Verifica software que ya está instalado en la computadora y generalmente es capaz de cambiar la versión
+\end{itemize}
+Se tiene una parte del instalador desarrollada en Trabajo Terminal 1 la cual carece de robustez, por lo que se pretende que durante el desarrollo del Trabajo Terminal 2, este se vuelva más robusto de lo que es ahora, es decir:
+\begin{itemize}
+	\item Que sea capaz de reanudar el proceso de instalación cuando éste haya sido interrumpido. Ya sea por decisión del usuario o por un error en el proceso de instalación. El instalador, debe retomar el proceso a partir del punto en el que fue interrumpido.
+	\item Que pueda agregar nodos a la red y remover nodos de la red.
+	\item Que sea capaz actualizar las IPs de los nodos cuando exista algún cambio en ellas.
+	\item Que pueda identificar si alguna de las tecnologías requeridas para la instalación de Luminus, ya existe en alguno de los nodos. De ser así, se validará la versión de la tecnología en cuestión. Si la versión es diferente a la que necesita Luminus, se pregunta al usuario si desea conservar su versión del software, o la versión necesaria para Luminus. Si la versión del software previamente instalada es la correcta, se notifica que Luminus no instaló esa tecnología.
+\end{itemize}
+Por otro lado, se agregarán al instalador todos los prototipos contenidos en el trabajo terminal.

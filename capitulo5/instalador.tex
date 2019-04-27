@@ -1,63 +1,213 @@
 \section{Descripción del prototipo}
-Uno de los objetivos de la realización de este trabajo terminal es permitir al usuario empezar a hacer uso de Big Data de una manera sencilla y sin demasiadas complicaciones. Por lo que se comenzó el desarrollo de un instalador que simplifique el proceso de puesta en marcha del ambiente de análisis de datos.\\
-
-Podría decirse que la utilidad de este prototipo se refleja al comparar el número de pasos que se enuncian en el manual de instalación de \emph{Luminus}, contra el número de pasos que se siguen al utilizar el instalador.\\
-
-En este punto del trabajo terminal, este prototipo se encuentra en una fase aún experimental, sin embargo logra el 
-cometido de simplificar el proceso de puesta en marcha.\\
+Uno de los objetivos de la realización de este trabajo terminal es permitir al usuario empezar a hacer uso de Big Data de una manera sencilla y sin demasiadas complicaciones. Por lo que se llevo a cabo el desarrollo de un instalador que simplifique el proceso de puesta en marcha del ambiente de análisis de datos.\\
+Se trata de una herramienta que asista al usuario en disminuir el número de pasos necesarios para instalar un ambiente que permita llevar a cabo la realización de Big Data sobre de el. 
+\\
+Podría decirse que la utilidad de este prototipo se refleja al comparar el número de pasos que se enuncian en el manual de instalación de \emph{Luminus}, contra el número de pasos que se siguen al utilizar el instalador mismos que serán comparados dentro de esta sección.\\
 
 \section{Análisis}
 La manera en que se pretende que el instalador simplifique el proceso de instalación es automatizando algunas tareas que de otra forma el usuario tendría que realizar una a una, existiendo así la posibilidad de que éste mismo cometa algún error u omita algún paso, y por lo tanto, el ambiente de análisis de datos no pueda ponerse en funcionamiento.\\
-Existen diferentes tecnologías para solventar la instalación y configuración de un conjunto previamente determinado, por ejemplo, Docker.
-
-%referencia donde leiste eso
-Sin embargo, para el uso de Big Data se utilizan tecnologías como Apache Hadoop o Apache Spark, mismas que, la instalación y puesta en marcha con Docker se encuentran en fase experimental lo que significa que no es consistente y generaría muchos problemas al momento de querer utilizarlo \cite{dockermalo}.   
+Existen diferentes tecnologías para solventar la instalación y configuración de un conjunto previamente determinado de tecnologías, por ejemplo, Docker.\\
+Sin embargo, para el uso de Big Data se utilizan tecnologías como Apache Hadoop y Apache Spark, mismas que para estas tecnologías, la instalación y puesta en marcha con Docker se encuentran en fase experimental lo que significa que no es consistente y generaría muchos problemas al momento de querer utilizarlo \cite{dockermalo}.   
 \\
 Para solventar esto, se decidió hacer uso del Shell Script de Unix/Linux el cual es simplemente un programa que lee los comandos que se teclean y los convierte en una forma mas entendible para el sistema Unix/Linux. También incluye algunas sentencias básicas de programación que permiten: tomar decisiones, realizar ciclos y almacenar valores en variables \cite{Baze}.
 \\
-Por lo que, dadas las características de Shell a pesar de que este es la forma mas rudimentaria re realizar esta tarea, es la que mejores resultados ofrece para las tecnologías que estamos utilizando.
+Por lo que, dadas las características de Shell a pesar de que este es la forma mas rudimentaria de realizar esta tarea, es la que de acuerdo a nuestra investigación ofrece mejores resultados para las tecnologías involucradas.
 \\
-Utilizar Shell Script por otro lado, implica complicaciones ya que todo lo que el script haga, tendrá que ser programado, y esto implica un gran número de validaciones que de utilizar otras tecnologías no se tendría que realizar, ya que la tecnología por si misma lo resuelve.
+Utilizar Shell Script por otro lado, implica un conjunto de complicaciones ya que todo lo que el script haga, tendrá que ser programado, y esto implica un gran número de validaciones que de utilizar otras tecnologías no se tendrían que considerar, ya que estas serían solventadas por la propia tecnología y su robustez.
 \section{Diseño}
-La funcionalidad completa del instalador no se encuentra terminada por el momento además de que por ahora solo se tiene contemplada la instalación de los prototipos \nameref{cap:Cap3} y \nameref{cap:Cap4}. 
+La funcionalidad completa del instalador originalmente estaba planteada para contemplar todos los prototipos del Trabajo Terminal, sin embargo, al cambiar la definición del funcionamiento que tendrían los prototipos 3,4 y 5 se encontró que incluirlos en el instalador, no sería lo mas apropiado de acuerdo a la manera en la que estos funcionan y como esta es independiente en cierto sentido del instalador.
 \\
-El instalador, contempla incluir todos los prototipos de este Trabajo Terminal, sin embargo, debido a que aun no se han finalizado todos los prototipos y se desconocen detalles de los mismos por el momento, no se encuentran incluidos en el diseño actual del instalador.
+Inicialmente, cuando se plantearon estos prototipos de manera general su funcionamiento en conjunto estaba pensado para ser incorporado como un sitio web, por lo que el instalador podría poner los archivos correspondientes de funcionamiento en las carpetas destinadas para el sitio web, con esto, al momento de iniciar Hadoop, ya se podría también entrar en la pestaña \emph{Luminus} de la pantalla de inicio de Hadoop y con esto comenzar a ejecutar las tareas propias de \emph{Luminus} permitiendo de esta forma cargar archivos y ejecutar algoritmos.
 \\
-En el diagrama de flujo que se muestra en la figura \ref{fig:diagramaFlujo} se puede apreciar el diseño actual del instalador.
+Sin embargo, se cambio la forma de Presentar los resultados a una API (Interfaz de Programación de Aplicaciones) por lo que, la forma en la que se incorporen los prototipos 3 , 4 y 5 dependerá de donde se desee que estos sean implementados sobre algún programa Java del usuario final, por lo que, además, no siempre estarían en el mismo equipo que la computadora maestro en el sistema distribuido, con lo que se puede afirmar que, esta administración sería independiente.
+\\
+E incluso bajo esta nueva definición existe la posibilidad de visualizar la totalidad del trabajo como 2 productos separados pero complementarios. Es decir, se puede requerir al instalador, unicamente para iniciar y configurar una red distribuida con las características para soportar Big Data; y por otro lado o en adición requerir, las configuraciones que tiene la API para soportar los algoritmos sobre la instalación previamente configurada que vendría a ser complementaria pero no forzosa.
+\\
+Con ello satisfacer necesidades para diferentes grupos de usuarios considerando a los que no desea consumir los algoritmos de minería de datos, o bien, ser complementario, en caso de que el usuario tenga interés en ambos componentes. 
+\\
+Por lo que, debido a lo anterior el instalador se elaboro, termino y perfecciono para contemplar la instalación de los prototipos \nameref{cap:Cap3} y \nameref{cap:Cap4}.
+\\
+En el diagrama de flujo que se muestra en la figura \ref{fig:diagramaFlujo} se puede apreciar el diseño del instalador.
 \begin{figure}[!htbp]
 	\hypertarget{fig:diagramaFlujo}{\hspace{1pt}}
 	\begin{center}
-		\includegraphics[width=.9\textwidth]{capitulo5/images/diagramaFlujo.png}
+		\includegraphics[width=1\textwidth]{capitulo5/images/diagramaflujoinstalador.png}
 		\caption{Diagrama de flujo del instalador.}
 		\label{fig:diagramaFlujo}
 	\end{center}
 \end{figure}
 \newpage
-Como se puede ver en el mismo los pasos de instalación y configuración de las tecnologías se lleva a cabo de igual forma como lo haría el manual de instalación de Luminus, sin embargo se busca que no se haga ninguna configuración directamente sobre los nodos de datos/replica por lo que se pide la dirección IP de los mismos. 
+El listado de pasos del instalador tal como se puede observar en el diagrama de flujo, si se compará contra el indice del Manual de Instalación de \emph{Luminus}, se podría confirmar que estos en general siguen el mismo proceso y secuencia.
 \\
-Para que el nodo maestro pueda comunicarse remotamente a los nodos de datos/replica y realizar las instalaciones y configuraciones pertinentes.
+Si además se evaluá su flujo paso a paso, sería posible ver que el \emph{Instalador} sigue el mismo flujo que el \emph{Manual de Instalación de Luminus} en cada uno de los pasos, exceptuando que, para algunos de ellos es necesario realizar algunas adecuaciones y consideraciones para que puedan ser ejecutadas desde código y no directamente por el usuario.
 \\
-Se puede ver como las entradas y salidas del diagrama de flujo con respecto a la intervención del usuario en el manual de instalación actual de Luminus, disminuyen demasiado.
-\section{Desarrollo}
-El codigo fuente se escribio en Shell Script este contiene los siguientes pasos que se enuncian en el instalador de Luminus.
+Una vez establecido que el listado de pasos es el mismo,  faltaría conocer cuales son las consideraciones adicionales que se tienen que tomar en cuenta el instalador para poder operar en relación a hacerlo de manera manual las cuales se encuentran listadas en la sección \ref{explicacion}.
+\\
+En Resumen, ambos medios hacen lo mismo, ejecutando los mismos pasos solo que uno de ellos lo  realiza de manera automática y el otro requiere intervención del usuario en cada uno de sus pasos. La principal diferencia entre ambos es que el usuario en este instalador no puede manejar las excepciones de manera directa y se busca que el instalador pueda arrojar el menor numero de errores posible y considerar la mayor cantidad de casos,de manera que a medida de nuestras posibilidades, estos puedan ser manejados y resueltos desde el propio código del instalador.
+\\
+El \emph{Manual de instalación de Luminus} tiene documentados cada uno de los pasos necesarios para el funcionamiento describiendo:
+\begin{itemize}
+	\item Que hace cada uno de los pasos en la instalación
+	\item Como lo hace
+	\item Como se configura
+	\item Que significa cada uno de los parámetros de entrada
+	\item Entre otros
+\end{itemize}
+Es posible que en caso de existir, dudas, interés o algún problema con el \emph{Instalador de Luminus} se recurra a el \emph{Manual de instalación de Luminus} a consultar la documentación de los pasos que hace.
+\\
+Por otro lado, también es de utilidad en caso de desear conocer el detalle de cuales son los pasos para instalar alguna de las paqueterias que son instaladas por el instalador, o bien, lo que se requiere para replicar su instalación en los nodos de datos/replica, toda esta información se encuentra en el  \emph{Manual de instalación de Luminus}. por lo que puede ser utilizado como referencia.
+\\
+Una de las consideraciones importantes que este instalador toma en cuenta es que todos los pasos puedan ser ejecutados desde el nodo maestro, para que con esto, sea mas sencillo para el usuario final, en lugar de realizar cada uno de los pasos en los diferentes equipos de computo involucrados esto lo hace haciendo uso de un programa llamado SSH el cual le permite realizar todas las conexiones pertinentes entre los diferentes equipos de computo involucrados.
+\\
+Esto con el objetivo de que el nodo maestro pueda comunicarse remotamente a los nodos de datos/replica y realizar las instalaciones y configuraciones pertinentes.
+\\
+Las entradas y salidas del diagrama de flujo con respecto a la intervención del usuario en el manual de instalación actual de Luminus, disminuyen demasiado lo cual será detallado y revisado a profundidad en la sección \ref{desarrollo}.
+\\
+\subsubsection{Explicación del funcionamiento del instalador}\label{explicacion}
+A continuación se da una descripción a gran escala de como el instalador lleva a cabo su trabajo en cada uno de los pasos, considerando de manera general, un paso como los que vienen indicados en el diagrama,con un circulo el cual contiene el numero de paso.
+\begin{enumerate}
+	\item \label{paso1}Este paso consiste en comenzar el instalador y llevar a cabo la primera tarea para que inicie su ejecución la cual seria, solicitar la dirección IP de la computadora que tendrá el papel de nodo maestro. 
+	\\
+	Como tal no es un paso de ejecución o completa ninguna tarea en particular, sin embargo, sirve para marcar el inicio de la ejecución del instalador, e identificar en caso de fallo que ya se había intentado realizar la instalación anteriormente.
+	\item \label{paso2} Este paso, permite introducir los datos que identifican al nodo maestro, por lo que, una vez completado este paso se tiene conocimiento de la IP del nodo maestro así como del nombre que se le quiere dar como identificador a este nodo.
+	\\
+	La información de la IP introducida pasa a través de una expresión regular, la cual, permite validar que efectivamente tiene las características de una dirección IP, por ejemplo: 4 octetos, caracteres numéricos, octetos separados por punto, valor de un octeto no mayor a 255, etc. en caso de que los datos recibidos no sean aprobados en esta validación se solicita al usuario que la ingrese nuevamente.
+	\\
+	Si la IP introducida es correcta, se valida que al realizar un ping exista una respuesta, esto para verificar que efectivamente se trate de una IP accesible y asignada a algún equipo de computo dentro de la red.
+	\\
+	Una vez hechas ambas validaciones se solicita un nombre de nodo maestro, para identificar al nodo que se acaba de agregar, a continuación se permite al usuario continuar con el instalador y lo posiciona en el punto 2.
+	
+	\item El siguiente paso, consiste en realizar una operación muy parecida a la que se lleva a cabo en el punto 2, pero en lugar de ser para el nodo maestro se ejecuta para los nodos de datos/replica por lo que, al poder existir más de un nodo de datos/replica esta sección es capaz de repetirse hasta que el usuario haya terminado de ingresar todos los nodos de datos/replica que desee.
+	\\
+	La información de la IP introducida para cada uno de los nodos de datos/replica pasa a través de una expresión regular, la cual, permite validar que efectivamente tiene las características de una dirección IP, por ejemplo: 4 octetos, caracteres numéricos, octetos separados por punto, valor de un octeto no mayor a 255, etc. en caso de que los datos recibidos no sean aprobados en esta validación se solicita al usuario que la ingrese nuevamente.
+	\\
+	Si la IP introducida es correcta, se valida que al realizar un Ping exista una respuesta, esto para verificar que efectivamente se trate de una IP accesible y asignada a algún equipo de computo dentro de la red.
+	\\
+	Una vez hechas ambas validaciones se permite al usuario indicar el identificador que desea dar a este nodo de datos/replica, y posterior a ello tiene la opción de seleccionar si quiere ingresar un nuevo nodo de datos/replica. En caso de indicar que desea hacerlo entonces esta sección se repetirá para el nuevo nodo, cuando el usuario ya no quiera agregar mas nodos de datos/replica se le permitirá continuar con el instalador y lo posiciona en el punto 3. 
+	\item Cuando ya se tienen todas las configuraciones necesarias para iniciar la instalación de los paquetes necesarios, el primero en instalarse es JAVA instalándolo de primera instancia en el nodo maestro. 
+	\\
+	Debido a que muchos usuarios tienen otra instalación de JAVA en sus equipos de computo requerida para otras aplicaciones instalar la versión que se necesita para el instalador, tiene que hacerse de forma independiente, creando una nueva carpeta para su instalación.
+	\\
+	Por lo que la versión de JAVA requerida, no sería la principal del equipo y tampoco empataría con otras versiones disponibles esto quiere decir que no se intentaría actualizar las versiones que se tengan en la maquina. 
+	\\
+	Consultando otras herramientas que también ofrecen soluciones de Big Data como \emph{Cloudera}, la solución mencionada anteriormente es la solución que se implementa para esta problemática. por lo que, tomando como referencia el análisis hecho y el conocimiento de que se trata de una posibilidad ya probada por otros sistemas se recurrió a hacerlo de esta misma forma.
+	\\ 
+	Cuando la versión de JAVA se encuentre correctamente instalada en el nodo maestro, se coloca la instalación en el punto 4.
+	\item Posteriormente se procede a instalar de manera distribuida para cada uno de los nodos que se tienen la paquetería de JAVA, utilizando la misma estrategia propuesta para el nodo maestro, haciendo uso de una carpeta adicional para poder diferenciar esta instalación de otras que pudiera tener el equipo de computo. \\
+	Esta instalación se lleva a cabo comunicándose con el nodo de replica/datos haciendo uso de SSH y con esto, hace el envió de lo requerido para ejecutar la instalación y posteriormente se envían las instrucciones en forma de pasos para la terminal para que esta los ejecute y al finalizar JAVA quede instalado, desde cada uno de los nodos de datos/replica indicados en el paso 2 cuando son invocados para instalación.\\
+	Una vez que esta instalación se concluye de forma satisfactoria se coloca el instalador en el punto 5.
+	\item Otra tecnología importante a considerar durante la instalación es SCALA el cual es un lenguaje de programación moderno multi-paradigma sobre el que pueden ser implementadas muchas operaciones de minería de datos y algoritmos de análisis de datos de gran volumen.\\
+	Esta instalación primero se efectuá en el nodo maestro y posteriormente es replicada haciendo uso de SSH a cada uno de los nodos de datos/replica. \\
+	En lo que respecta a esta instalación en particular solo fue necesario pasar cada uno de los pasos descritos en el manual de instalación a el instalador sin tener que hacer cambios en la lógica de funcionamiento, ni considerar excepciones. \\
+	Una vez que esta instalación se concluye de forma satisfactoria se coloca el instalador en el punto 6.
+	\item \item{paso7} Lo siguiente que hace el instalador en este punto es: Instalar Apache Spark tanto en el nodo maestro como en los nodos de datos/replica.\\
+	Para llevar a cabo esta instalación Apache Spark requiere que un par de archivos de configuración sean modificados, por lo que el instalador crea archivos "Plantilla" Los cuales se crean escribiendo los datos correspondientes a la instalación que se esta efectuando. Es importante que se haga de esta forma, ya que, cada instalación llena estos archivos con información diferente.\\
+	La información que sea escrita en los archivos antes mencionados depende directamente de la información que fue introducida en los pasos \ref{paso1} y \ref{paso2} como identificadores de los nodos ya que, Apache Spark debe ser capaz de identificarlos y para ello se utilizan los identificadores proporcionados.\\
+	\\
+	Una vez que estos archivos son generados de forma satisfactoria se coloca el instalador en el punto 7.
+	\item 
+	Los archivos "Plantilla" que se generan así como el archivo de instalación de Apache Spark es replicado hacia los nodos de datos/replica, para que estos puedan concretar sus propias instalaciones, y los archivos "Plantilla" generados reemplazan a el archivo original que se encuentra en el directorio sin ningún tipo de configuración estos cambios se realizan tanto para el nodo maestro como para los nodos de datos/replica. 
+	\\
+	Por otro lado, también es necesario modificar los archivos de variable de entorno, para que el nodo maestro sea capaz de reconocer a Apache Spark como una variable de entorno y con esto tener acceso a el desde cualquier punto del sistema operativo entre otras ventajas que son ofrecidas por esta configuración.\\
+	una vez hecho esto, se tiene todo lo necesario para poder iniciar Apache Spark unicamente haciendo uso del comando \emph{start-all.sh}.
+	\\
+	Cuando estas configuraciones hayan sido efectuadas de manera exitosa, se coloca el instalador en el punto 8.
+	\item La última tecnología considerada por el instalador es Apache Hadoop, esta es una tecnología con el proceso de instalación de instalación mas pesado de todos los anteriormente contemplados. \\
+	Como primer punto es importante instalarlo de manera satisfactoria en el nodo maestro, para ello , al igual que en Apache Spark se requiere el manejo de archivos "Plantilla", ya que se hacen bastantes configuraciones. \\
+	Las configuraciones requeridas, dependen de la información propia del equipo de computo que alojará la instalación, por lo que es necesario, correr un script que obtiene información del sistema operativo la procesa y obtiene la que es importante para los archivos de configuración.
+	\\
+	además se requieren otro tipo de configuraciones, algunas de los identificadores de los host dentro de la red distribuida y otras del funcionamiento, por lo que los archivos plantilla se construyen a partir de conjuntar toda esta información.\\
+	una vez que se tienen los archivos plantilla antes mencionados, se reemplaza en el nodo maestro los archivos de configuración por los archivos plantilla.\\
+	también se agrega la información de este programa a las variables de entorno para que el mismo pueda ser accedido desde cualquier punto dentro del sistema operativo.\\
+	Cuando estas configuraciones en el nodo maestro hayan sido efectuadas de manera exitosa, se coloca el instalador en el punto 9.
+	\item Lo siguiente que hace el instalador en este punto es: Instalar Apache Hadoop en los nodos de datos/replica.\\
+	Para ello es necesario replicar los archivos plantilla generados a cada uno de los nodos de datos/replica dentro de la red distribuida.\\
+	Realizar la instalación de la plataforma en cada uno de estos nodos y reemplazar los archivos por defecto con los archivos de "Plantilla" que se tienen para realizar estas configuraciones.
+	Una vez que esta instalación se concluye de forma satisfactoria en los nodos de datos, se coloca el instalador en el punto 10.
+	es necesario ponerlo en este punto, ya que, si alguien desea volver a iniciar el instalador, con esta información el instalador será capaz de saber que ya había terminado de ejecutar todas las tareas y no quedaban tareas restantes, por lo que se regresará la solicitud notificando que esta instalación ya había terminado con éxito anteriormente.\\
+	Este es el ultimo paso del instalador y una vez que este termina entonces termina la ejecución del instalador.\\ 
+\end{enumerate}
+Cada uno de los pasos, descritos anteriormente, al ser completado, marca un estatus de progreso en la ejecución del instalador, este permite que , si el instalador o el proceso de instalación presenta alguna falla o problemática que no le permita continuar con su ejecución, será posible volver a iniciar el instalador y que este reconozca el ultimo punto donde estuvo trabajando para continuar a partir de ese punto y re intentar la instalación. Pero sin comenzar desde el principio y conservando los pasos que resultaron exitosos.
+\\
+  
+\section{Desarrollo}\label{desarrollo}
+El codigo fuente que se escribió en Shell Script contiene los siguientes pasos que se enuncian en el manual de instalación de \emph{Luminus}.
 \begin{verbatim}
-1 Instalación de Apache Spark en el nodo
-	1.1. Instalación de la paquetería de java 
-	1.2. Instalación de la paquetería de SSH	
-		1.2.1. Configuración
-		1.2.2. Conexión
-	1.3. Instalación de Spark
-	1.3.1. Configuración maestro
-
+1 Instalación de Apache Spark en el nodo maestro
+    1.1. Instalación de la paquetería de java 
+    1.3. Instalación de Spark
+    1.3.1. Configuración maestro
 2. Instalación de Apache Spark en los nodos de datos
-	2.1. Instalación de la paquetería de java en los nodos de datos
-	2.2. Instalación de la paquetería de SSH en los nodos de datos
-	2.3. Instalación de Spark en los nodos de datos
-		2.3.1. Configuración 
+    2.1. Instalación de la paquetería de java en los nodos de datos
+    2.3. Instalación de Spark en los nodos de datos
+         2.3.1. Configuración 
 3. Puesta en funcionamiento
-	3.1. Configuraciones para poner en funcionamiento Apache Spark en la red distribuida
+    3.1. Configuraciones para poner en funcionamiento Apache Spark en la red distribuida
+    3.2. Puesta en funcionamiento del cluster manejado por el Servidor Apache Spark
+4. Instalación de Apache Hadoop en el nodo maestro
+    4.1. Instalación de Hadoop 
+        4.1.1. Configuración
+        4.1.2. Archivos de configuración
+5. Instalación de Apache Hadoop en los nodos de datos
+    5.1. Instalación de Hadoop en los nodos de datos
+        5.1.1. Configuración
 \end{verbatim}
-Las cuales nos permitirán instalar Apache Spark para permitir la conexión entre los nodos de datos/replica y el maestro haciendo uso de una red de internet local en la que se encuentren conectados todos los nodos.
+Algunos pasos enunciados en el manual de instalación de \emph{Luminus}, no se encuentran detallados en esta parte, por lo que a continuación se procederá a explicar cuales son estos puntos y la razón por la cual no forman parte del instalador.
+Estos pasos, tendrían que ser resueltos de manera manual por el usuario final durante el proceso de instalación.
+\begin{verbatim}
+1 Instalación de Apache Spark en el nodo maestro
+    1.2. Instalación de la paquetería de SSH
+         1.2.1. Configuración
+         1.2.2. Conexión
+2. Instalación de Apache Spark en los nodos de datos         
+    2.2  Instalación de la paqueteria SSH en los nodos de datos
+6. Puesta en funcionamiento
+		6.1. Puesta en funcionamiento del Cluster manejado por el Servidor Apache Hadoop
+		6.2. Subir un archivo al HDFS
+\end{verbatim}
+
+\subsubsection{Instalación de la paquetería de SSH}
+Para el instalador, es muy importante que tanto el nodo maestro como los nodos de datos/replica tengan instalado y configurado correctamente SSH ya que en caso de no ser así, no se podría establecer la conexión entre los nodos y por lo tanto sería imposible realizar la instalación de manera distribuida a cada uno de los nodos.
+\\
+Por lo que se requiere que se encuentre correctamente instalado, el servicio se encuentre iniciado al momento y que además se permitan conexiones de tipo root en cada uno de los nodos.
+\\
+Por otro lado, se requiere la creación de una llave keygen en el servidor SSH para que las contraseñas que se utilicen para establecer las conexiones sean seguras y se encuentren cifradas esto con el fin de proteger los datos internos de la empresa y la información que viaja a través de la red, permitiendo cambiar entre los algoritmos de cifrado a utilizar y la longitud con la que las llaves son generadas.
+\\
+como segundo punto, simplifica el numero de pasos del instalador, ya que de esta manera, no se necesita introducir las contraseñas de root para establecer las conexiones al momento de llevar a cabo el proceso de instalación. 
+\\
+\subsubsection{Puesta en funcionamiento}
+Una vez que se terminan de hacer todas las configuraciones básicas consideradas en el proyecto y se tienen todos los programas necesarios para el mismo, el instalador termina, y con esto es suficiente para que la plataforma de Big Data, este en operación, sin embargo, puede presentarse el caso en que un usuario final requiera realizar mas configuraciones especificas.\\
+En este caso, el usuario, deberá realizar estas configuraciones manualmente antes de poner en funcionamiento, la totalidad del sistema. por lo que, las configuraciones de esta sección tendrían que ser hechas por el usuario, para considerar estas excepciones.\\
+Además de que solo se trata unicamente de 2 pasos los cuales además solo pueden ser hechos en una única ocasión luego de la instalación, y al tratarse de algo tan delicado, por eso lo dejamos como un paso independiente que se considera no es apropiado automatizar.
+\\
+\subsubsection{Consideraciones adicionales}
+A continuación se muestra una tabla, con el listado del número de pasos que implicaba hacer la instalación de estas tecnologías, con respecto al número de pasos que implica hacerlo mediante el instalador. 
+\\
+\begin{table}[]
+\begin{tabular}{|l|l|l|}
+\hline
+Tarea                                                   & \begin{tabular}[c]{@{}l@{}}Número de pasos en el \\ manual de instalación\end{tabular} & \begin{tabular}[c]{@{}l@{}}Número de pasos \\ en el instalador\end{tabular} \\ \hline
+Instalación de la paquetería java en el Nodo Maestro    & 2 pasos                                                                                   & -----                                                                          \\ \hline
+Instalación de la paquetería SSH en el Nodo Maestro     & 9 pasos                                                                                   & 9 pasos                                                                        \\ \hline
+Instalación de Spark en el Nodo Maestro                 & 7 pasos                                                                                   & ----                                                                           \\ \hline
+Instalación de la paquetería java en los nodos de datos & 2 pasos                                                                                   & ----                                                                           \\ \hline
+Instalación de la paquetería SSH en los nodos de datos  & 4 pasos                                                                                   & 4 pasos                                                                        \\ \hline
+Instalación de Spark en los nodos de datos              & 7 pasos                                                                                   & ----                                                                           \\ \hline
+Instalación de Apache Hadoop en el nodo maestro         & 20 pasos                                                                                  & ----                                                                           \\ \hline
+Instalación de Apache Hadoop en los nodos de datos      & 5 pasos                                                                                   & ----                                                                           \\ \hline
+Puesta en funcionamiento (Pasos necesarios)             & 2 pasos                                                                                   & 2 pasos                                                                        \\ \hline
+Pasos adicionales del instalador                        & ----                                                                                      & 5 pasos                                                                        \\ \hline
+TOTAL                                                   & 58 pasos                                                                                  & 20 pasos                                                                       \\ \hline
+\end{tabular}
+\end{table}
+Como se puede notar, el número de pasos necesarios disminuyo considerablemente y esto debido a que algunas de las secciones necesarias de llevar a cabo en el manual de instalación, con el instalador ya no son necesarias.
+\\
+Por otro lado, muchos de los pasos enlistados para la configuración de SSH, puede que algún usuario ya los tenga realizados de instalaciones o configuraciones previas, con lo que en este caso solo sería necesario llevar a cabo \textbf{7 pasos} para tener un ambiente de Big Data, funcionando en su totalidad.\\
+Pero, incluso no existiendo este caso ideal, unicamente seria necesario ejecutar el 34\% de los pasos originales. 
+\\
+
+%aqui 
+cuales nos permitirán instalar Apache Spark para permitir la conexión entre los nodos de datos/replica y el maestro haciendo uso de una red de internet local en la que se encuentren conectados todos los nodos.
 \\
 Además de contener todas las configuraciones necesarias para tal objetivo.  
 \\
@@ -65,7 +215,25 @@ El código fuente actual de este desarrollo se puede consultar en el anexo \ref{
 \\
 Con esto, se logro que el usuario final realice menos pasos de los que tendrían que llevarse a cabo si se siguiera el manual de instalación directamente. 
 \\
-Los repositorios que se utilizan para tal objetivo, son los mismos que los que se enuncian en el manual de instalación. es de nuestro conocimiento que no se puede confiar en que estos repositorios se encuentren disponibles en el momento en que el usuario experto desee realizar la instalación de \emph{Luminus} se buscará la forma de solventar esta problemática.
+Debido a que las versiones de los software a utilizar pueden estar en constante cambio, y que en el momento de ocurrir una actualización de versión en alguno de los software requeridos por el instalador podrían ocurrir fallas en el instalador al no soportar los cambios realizados.
+\\
+Por lo que, se propone utilizar versiones estáticas de el software requerido por el instalador, para que de esta manera se pueda garantizar, actualizar las versiones del instalador en paralelo con las actualizaciones que se realicen sobre la paquetería necesaria para su operación.
+\\
+De esta forma, se puede garantizar, que el instalador sea capaz de soportar la versión que por el mismo descargue, y no por una actualización del repositorio origen este deje de funcionar de manera correcta o incluso, no existiría la necesidad de buscar entre diferentes servidores para localizar donde se encuentre disponible el archivo que se esta buscando, ya que la información que cada uno de estos servidores independientes tiene disponible no es gestionada por \emph{Luminus}.
+\\
+Al momento de descargar el instalador desde el servidor que lo aloje, se descargaran también los paquetes requeridos de las tecnologías a utilizar de esta versión.
+\\
+Dichos paquetes se irían actualizando en el servidor de versiones de \emph{Luminus} para que, con ello, para cada nueva versión que se genere de \emph{Luminus} se actualice también la paquetería necesaria.
+\\
+\\
+Por ejemplo, para la primera versión de este instalador se utilizarían las siguientes versiones de los paquetes a instalar:
+\begin{itemize}
+	\item Java Open JDK 1.8
+	\item Scala 2.6.11
+	\item Spark 2.7
+	\item Hadoop 3.1.1
+	
+\end{itemize}
 \section{Pruebas}
 Se presenta a continuación un ejemplo de instalación con el proceso actual a seguir por parte del instalador, así como una descripción de los pasos que este ejecuta. 
 \\

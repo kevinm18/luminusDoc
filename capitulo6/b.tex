@@ -7,98 +7,375 @@ Código de la clase principal luminus-ins.sh
 # El instalador pide al usuario introducir las ips de los nodos incluida la del master.
 # Las ips son almacenadas en un archivo de texto.
 
+# Funcion que valida el formato de las ips mediante el uso de expresiones regulares.
+function validar_ip() {
+	local valida=0
+	local ip=$1
+	if [[ $ip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+	    OIFS=$IFS
+	    IFS='.'
+	    ip=($ip)
+	    IFS=$OIFS
+	    if [[ ${ip[0]} -le 255 && ${ip[1]} -le 255 \
+	        && ${ip[2]} -le 255 && ${ip[3]} -le 255 ]]
+	    then
+	    	valida=1
+	    	echo $valida
+	    else
+	    	echo $valida
+	    fi
+	else
+		echo $valida
+	fi
+}
+
+# Lectura de la ip del nodo maestro
+function pedir_ip_maestro() {
+	# Se escribe un 1 en el log del progreso de instalacion.
+	# El 1 corresponde a que solmente se inicio pero no se completo el primer paso.
+	echo "1" > luminus-ins.log
+	cp /etc/hosts.back /etc/hosts
+	confirmacionIPMaestro=0
+	while [ $confirmacionIPMaestro -eq 0 ]
+	do
+		echo "Introduce la ip del nodo maestro:"
+		read ipMaestro
+		if [ $(validar_ip $ipMaestro) -eq 1 ]
+		then
+			echo "Introduce el nombre del nodo maestro:"
+			read nodoMaestro
+			echo $nodoMaestro > nombres.txt
+			echo $ipMaestro > ips.txt
+			echo "$ipMaestro $nodoMaestro maestro" >> /etc/hosts
+			echo "$ipMaestro $nodoMaestro maestro" > hosts.maestro
+			cp /etc/hosts /etc/hosts.back
+			cp ~/.bashrc ~/bashrc.back
+			ssh-keygen -f "/root/.ssh/known_hosts" -R $ipMaestro
+			confirmacionIPMaestro=1
+		else	
+			echo "Introduzca una IP valida."
+		fi
+	done
+	# Se escribe un 2 en el log de progreso de instalacion.
+	# El 2 corresponde a que se intrudujo de manera satisfactoria la IP del nodo maestro.
+	echo "2" > luminus-ins.log
+	pedir_ips_esclavos
+}
+
+# Lectura de las ips de los nodos esclavos. 
+# Escritura de las ips en el archivo hosts del nodo maestro.
+# Adicion de la ip del nodo maestro al archivo hosts de los nodos esclavos.
+function pedir_ips_esclavos() {
+	confirmacion=1
+	confirmacionIP=0
+	contador=1
+	while [ $confirmacion -eq 1 ]
+	do
+		while [ $confirmacionIP -eq 0 ]
+		do
+			echo "Introduce la ip del nodo $contador:"
+			read ipNodo
+			if [ $(validar_ip $ipNodo) -eq 1 ]
+			then
+				ping -c1 -qq $ipNodo
+				if [ $? -ne 0 ]
+				then
+					echo "Host no encontrado."
+				else
+					echo "Host encontrado!"
+					echo "Introduzca el nombre del host:"
+					read nodo
+					echo "$ipNodo $nodo $nodo" >> /etc/hosts
+					ssh-copy-id -i ~/.ssh/id_rsa.pub root@$ipNodo
+					ssh root@$ipNodo "cp /etc/hosts.back /etc/hosts"
+					scp hosts.maestro root@$ipNodo:/etc/
+					ssh root@$ipNodo "cat /etc/hosts.maestro >> /etc/hosts"
+					ssh root@$ipNodo "rm /etc/hosts.maestro"
+					ssh root@$ipNodo "cp /etc/hosts /etc/hosts.back"
+					ssh root@$ipNodo "cp ~/bashrc ~/bashrc.back"
+					ssh-keygen -f "/root/.ssh/known_hosts" -R $ipNodo
+					echo $nodo >> nombres.txt
+					echo $ipNodo >> ips.txt
+					contador=$((contador + 1))
+					confirmacionIP=1
+				fi
+			else
+				echo "Introduzca una IP valida."
+			fi
+		done
+		echo "Si desea agregar otro nodo escriba 1. Si no, escriba 0. (1/0)"
+		read confirmacion
+	done
+	# Numero de replicacion para el hdfs segun el numero de nodos esclavos
+	cp config-files/hdfs-site-config.back.xml config-files/hdfs-site-config.xml
+	numNodos=$((contador - 1))
+	echo $numNodos >> config-files/hdfs-site-config.xml
+	echo "</value> </property> </configuration>" >> config-files/hdfs-site-config.xml
+	# Se escribe un 3 en el log de progreso de instalacion.
+	# El 3 corresponde a que se introdujeron de manera satisfactoria las IPs de los esclavos.
+	echo "3" > luminus-ins.log
+	instalar_java_maestro
+}
+
+# Instalacion de java 1.8 especifico para hadoop
+function instalar_java_maestro() {
+	rm -rf /usr/lib/jvm/java-8-oracle-hadoop
+	mkdir /usr/lib/jvm
+	tar -xvf jdk-8u201-linux-x64.tar.gz
+	mv jdk1.8.0_201/ /usr/lib/jvm/java-8-oracle-hadoop
+	update-alternatives --install /usr/bin/java java /usr/lib/jvm/java-8-oracle-hadoop/bin/java 1061
+	# Se escribe un 4 en el log de progreso de instalacion.
+	# El 4 corresponde a la instalacion de java de manera satisfactoria en el nodo maestro.
+	echo "4" > luminus-ins.log
+	instalar_java_esclavos
+}
+
+function instalar_java_esclavos() {
+	contador=1
+	while read line
+	do
+		if [ $contador -ne 1 ]
+		then
+			scp jdk-8u201-linux-x64.tar.gz root@$line:/home/
+			ssh -n root@$line "rm -rf /usr/lib/jvm/java-8-oracle-hadoop"
+			ssh -n root@$line "mkdir /usr/lib/jvm/"
+			ssh -n root@$line "tar -xvf /home/jdk-8u201-linux-x64.tar.gz"
+			ssh -n root@$line "mv jdk1.8.0_201/ /usr/lib/jvm/java-8-oracle-hadoop"
+			ssh -n root@$line "update-alternatives --install /usr/bin/java java /usr/lib/jvm/java-8-oracle-hadoop/bin/java 1061"
+		fi
+		contador="$((contador + 1))"
+	done < ips.txt
+	cp  ~/.bashrc.backup ~/.bashrc
+
+	# Se escribe un 5 en el log de progreso de instalacion.
+	# El 5 corresponde a la instalacion de java de manera satisfactoria en los esclavos.
+	echo "5" > luminus-ins.log
+	#instalar_scala
+}
+
+#Instalacion de Scala en todos los nodos.
+function instalar_scala() {
+	./scala-ins.sh
+	contador=1
+	while read line
+	do
+		if [ $contador -ne 1 ]
+		then
+			echo $line
+			ssh -qq root@$line < scala-ins.sh
+		fi
+		contador="$((contador + 1))"
+	done < ips.txt
+
+	# Se escribe un 6 en el log de progreso de instalacion.
+	# El 6 corresponde a la instalacion de scala de manera satisfactoria en el maestro y los esclavos.
+	echo "6" > luminus-ins.log
+	instalar_spark
+}
+
+# Instalacion de spark en todos los nodos.
+function instalar_spark() {
+	./spark-ins.sh
+	contador=1
+	while read line
+	do
+		if [ $contador -ne 1 ]
+		then
+			echo $line
+			ssh -qq root@$line < spark-ins.sh
+		fi
+		contador="$((contador + 1))"
+	done < ips.txt
+
+	# Se escribe un 7 en el log de progreso de instalacion.
+	# El 7 corresponde a la instalacion de Spark de manera satisfactoria en el maestro y los esclavos.
+	echo "7" > luminus-ins.log
+	configurar_spark_maestro
+}
+
+# Configuracion de Spark en el nodo maestro.
+function configurar_spark_maestro() {
+	# Copia de la plantilla de esclavos de Spark.
+	cp /opt/spark/conf/slaves.template /opt/spark/conf/slaves
+
+	# Se agregan los esclavos y el maestro a la lista de nodos de la red.
+	cat ips.txt > /opt/spark/conf/slaves 
+
+	# Se copia la plantilla de spark-env
+	cp /opt/spark/conf/spark-env.sh.template /opt/spark/conf/spark-env.sh
+
+	# Se agrega el maestro al archivo spark-env.sh
+	echo "export SPARK_MASTER_HOST=$ipMaestro" >> /opt/spark/conf/spark-env.sh
+	
+	# Se escribe un 8 en el log de progreso de instalacion.
+	# El 8 corresponde a la configuracion de Spark de manera satisfactoria en el maestro.
+	echo "8" > luminus-ins.log
+	instalar_hadoop_maestro
+}
+
+# Instalacion de Hadoop.
+function instalar_hadoop_maestro() {
+	# wget http://mirrors.sonic.net/apache/hadoop/common/hadoop-3.1.1/hadoop-3.1.1.tar.gz
+	rm -rf /opt/hadoop
+	mkdir /opt/hadoop
+	tar -xzvf hadoop-3.1.1.tar.gz
+	mv hadoop-3.1.1/* /opt/hadoop/
+
+	# Archivo de configuracion de las variables de entorno
+	cat config-files/config-bash.txt >> ~/.bashrc
+	source ~/.bashrc
+
+	# Modificacion del arhcivo de configuracion hadoop-env.sh
+	# Respaldo del archivo hadoop-env.sh
+	cp /opt/hadoop/etc/hadoop/hadoop-env.sh /opt/hadoop/etc/hadoop/hadoop-env.backup.sh 
+	# Limpieza del ar 	chivo
+	# echo "" > /opt/hadoop/etc/hadoop/hadoop-env.sh
+	# Sustitucion por el archivo con la variable de entorno JAVA_HOME con su valor correcto
+	cp config-files/hadoop-env-config.sh /opt/hadoop/etc/hadoop/hadoop-env.sh
+
+	# Modificacion del archivo de configuracion core-site.xml
+	# Respaldo del archivo core-site.xml
+	cp /opt/hadoop/etc/hadoop/core-site.xml /opt/hadoop/etc/hadoop/core-site.backup.xml
+	# Limpieza del archivo 
+	# echo "" > /opt/hadoop/etc/hadoop/core-site.xml
+	# Sustitucion por el archivo con la configuracion correcta
+	cp config-files/core-site-config.xml /opt/hadoop/etc/hadoop/core-site.xml
+
+	# Modificacion del archivo de configuracion hdfs-site.xml
+	# Respaldo del archivo hdfs-site.xml
+	cp /opt/hadoop/etc/hadoop/hdfs-site.xml /opt/hadoop/etc/hadoop/hdfs-site.backup.xml
+	# Limpieza del archivo
+	# echo "" > /opt/hadoop/etc/hadoop/hdfs-site.xml
+
+	# Sustitucion por el archivo con la configuracion correspondiente
+	cp config-files/hdfs-site-config.xml /opt/hadoop/etc/hadoop/hdfs-site.xml
+
+	# Configuracion de los archivos mapred y yarn.
+	./parser.sh
+
+	# Modificacion del archivo de configuracion mapred-site.xml
+	# Respaldo del archivo mapred-site.xml
+	cp /opt/hadoop/etc/hadoop/mapred-site.xml /opt/hadoop/etc/hadoop/mapred-site.backup.xml
+	# Limpieza del archivo
+	# echo "" > /opt/hadoop/etc/hadoop/mapred-site.xml
+	# Sustitucion por el archivo con la configuracion correspondiente
+	cp config-files/mapred-site-config.xml /opt/hadoop/etc/hadoop/mapred-site.xml
+
+	# Modificacion del archivo de configuracion yarn-site.xml
+	# Respaldo del archivo yarn-site.xml
+	cp /opt/hadoop/etc/hadoop/yarn-site.xml /opt/hadoop/etc/hadoop/yarn-site.backup.xml
+	# Limpieza del archivo
+	# echo "" > /opt/hadoop/etc/hadoop/yarn-site.xml
+	# Sustitucion por el archivo con la configuracion correspondiente
+	cp config-files/yarn-site-config.xml /opt/hadoop/etc/hadoop/yarn-site.xml
+
+	# Configuracion del archivo workers
+	contador=1
+	while read line
+	do
+		if [ $contador -ne 1 ]
+		then
+			echo $line >> /opt/hadoop/etc/hadoop/workers
+		fi
+		contador="$((contador + 1))"
+	done < ips.txt
+
+	# Se escribe un 9 en el log de progreso de instalacion.
+	# El 9 corresponde a la configuracion de Hadoop de manera satisfactoria en el maestro.
+	echo "9" > luminus-ins.log
+	instalar_hadoop_esclavos
+}
+
+function instalar_hadoop_esclavos() {
+	# Copiado de los archivos de configuracion de hadoop del nodo maestro a los nodos esclavos
+	contador=1
+	while read line
+	do
+		if [ $contador -ne 1 ]
+		then
+			echo "Instalando Hadoop en nodo $contador ($line)..."
+			scp hadoop-3.1.1.tar.gz root@$line:/home/
+			ssh -qq root@$line < hadoop-ins.sh
+			scp config-files/core-site-config.xml root@$line:/opt/hadoop/etc/hadoop/core-site.xml
+			scp config-files/hadoop-env-config.sh root@$line:/opt/hadoop/etc/hadoop/hadoop-env.sh
+			scp config-files/hdfs-site-config.xml root@$line:/opt/hadoop/etc/hadoop/hdfs-site.xml
+			scp config-files/mapred-site-config.xml root@$line:/opt/hadoop/etc/hadoop/mapred-site.xml
+			scp config-files/yarn-site-config.xml root@$line:/opt/hadoop/etc/hadoop/yarn-site.xml
+			scp /opt/hadoop/etc/hadoop/workers root@$line:/opt/hadoop/etc/hadoop/workers
+			contador=$((contador + 1))
+		fi
+		contador="$((contador + 1))"
+	done < ips.txt
+
+	# Se escribe un 10 en el log de progreso de instalacion.
+	# El 10 corresponde a la configuracion e instalacion de Hadoop en los nodos esclavos 
+	# de manera satisfactoria en el maestro.
+	echo "10" > luminus-ins.log
+}
+
 echo "*************** Bienvenido a Luminus ***************"
 
-echo "Introduce la ip del nodo maestro:"
-read ipMaestro
-echo "Introduce el nombre del nodo maestro:"
-read nodoMaestro
-echo $nodoMaestro > nombres.txt
-echo $ipMaestro > ips.txt
-echo "$ipMaestro $nodoMaestro maestro" >> /etc/hosts
+pedir_ip_maestro
+instalar_hadoop_maestro
 
-confirmacion=1
-contador=1
-while [ $confirmacion -eq 1 ]
-do
-	echo "Introduce la ip del nodo $contador:"
-	read ipNodo
-	ping -c1 -qq $ipNodo
-	if [ $? -ne 0 ]
-	then
-		echo "Host no encontrado."
-	else
-		echo "Host encontrado!"
-		echo "Introduzca el nombre del host:"
-		read nodo
-		echo "$ipNodo $nodo nodo$contador" >> /etc/hosts
-		echo $nodo >> nombres.txt
-		echo $ipNodo >> ips.txt
-		contador=$((contador + 1))
-	fi
-	echo "Si desea agregar otro nodo escriba 1. Si no, escriba 0. (1/0)"
-	read confirmacion
-done
+# # Ciclo para recolectar la informacion del archivo log
+# contador=1
+# while read line
+# do
+# 	if [ $contador -eq 1 ] 
+# 	then
+# 		line=$line
+# 		break
+# 	fi
+# done < luminus-ins.log
 
-# Inicia proceso de instalacion.
-# Instalacion de Spark en nodo maestro.
-./spark-ins.sh
+# echo $line
 
-# Instalacion de Spark en nodos esclavos.-
-contador=1
-while read line
-do
-	if [ $contador -ne 1 ]
-	then
-		echo $line
-		ssh -qq root@$line < spark-ins.sh
-	fi
-contador="$((contador + 1))"
-done < ips.txt
-
-# Configuracion de spark en maestro.
-cp /opt/spark/conf/slaves.template /opt/spark/conf/slaves
-
-# Se agregan los esclavos y el maestro a la lista de nodos de la red.
-contador=0
-echo "" >> /opt/spark/conf/slaves 
-while read line
-do
-	if [ $contador -ne 0 ]
-	then
-		echo "nodo$contador" >> /opt/spark/conf/slaves 
-	else
-		echo "maestro" >> /opt/spark/conf/slaves
-	fi
-	contador=$((contador + 1))
-done < ips.txt
-
-# Se agrega el maestro al archivo spark-env.sh
-cp /opt/spark/conf/spark-env.sh.template /opt/spark/conf/spark-env.sh
-echo "export SPARK_MASTER_HOST=maestro" >> /opt/spark/conf/spark-env.sh
-echo "export SPARK_WORKER_CORES=1" >> /opt/spark/conf/spark-env.sh
-echo "export SPARK_WORKER_INSTANCES=1" >> /opt/spark/conf/spark-env.sh
-\end{lstlisting} 
-\newpage
-
-Código de java-ins.sh
-\\
-\begin{lstlisting}
-echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" >
- /etc/apt/sources.list.d/webupd8team-java.list
-echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" >> 
-/etc/apt/sources.list.d/webupd8team-java.list
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
-apt-get update
-apt-get install oracle-java8-installer
-java -version
-\end{lstlisting}
-Código de openssh-ins.sh
-\begin{lstlisting}
-# Instalacion de OpenSSH
-apt-get install openssh-server
-#nano /etc/ssh/sshd_config
-service ssh restart
+# # Switch para saber en que paso iniciara el instalador
+# if [ $line -eq '1' ] || [ $line -eq '10' ]
+# then
+# 	pedir_ip_maestro
+# fi
+# if [ $line -eq '2' ]
+# then
+# 	echo "REANJUNDANDO INSTALACION..."
+# 	pedir_ips_esclavos
+# fi
+# if [ $line -eq '3' ]
+# then
+# 	echo "REANJUNDANDO INSTALACION..."
+# 	instalar_java_maestro
+# fi
+# if [ $line -eq '4' ]
+# then
+# 	echo "REANJUNDANDO INSTALACION..."
+# 	instalar_java_esclavos
+# fi
+# if [ $line -eq '5' ]
+# then
+# 	echo "REANJUNDANDO INSTALACION..."
+# 	instalar_scala
+# fi
+# if [ $line -eq '6' ]
+# then
+# 	echo "REANJUNDANDO INSTALACION..."
+# 	instalar_spark
+# fi
+# if [ $line -eq '7' ]
+# then
+# 	echo "REANJUNDANDO INSTALACION..."
+# 	configurar_spark_maestro
+# fi
+# if [ $line -eq '8' ]
+# then
+# 	echo "REANJUNDANDO INSTALACION..."
+# 	instalar_hadoop_maestro
+# fi
+# if [ $line -eq '9' ]
+# then
+# 	echo "REANJUNDANDO INSTALACION..."
+# 	instalar_hadoop_esclavos
+# fi
 \end{lstlisting} 
 Código de scala-ins.sh
 \begin{lstlisting}
@@ -106,15 +383,108 @@ Código de scala-ins.sh
 wget https://downloads.lightbend.com/scala/2.13.0-M1/scala-2.13.0-M1.deb
 dpkg -i scala-2.13.0-M1.deb
 scala -version
-\end{lstlisting} 
+\end{lstlisting}
 Código de spark-ins.sh
 \begin{lstlisting}
 # Instalacion de Spark
+rm spark-2.1.0-bin-hadoop2.7.tgz
 wget http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz
 mkdir /opt/spark
 tar -xzvf spark-2.1.0-bin-hadoop2.7.tgz
-mv spark-2.1.0-bin-hadoop2.7/* /opt/spark/
+cp -a spark-2.1.0-bin-hadoop2.7/. /opt/spark/
+rm -rf spark-2.1.0-bin-hadoop2.7
 echo 'export SPARK_HOME=/opt/spark/' >> ~/.bashrc
 echo 'export PATH="/opt/spark/bin/:/opt/spark/sbin/:$PATH"' >> ~/.bashrc
 source ~/.bashrc
+\end{lstlisting}
+Código de hadoop-ins.sh
+\begin{lstlisting}
+# Inicia instalacion de hadoop
+# Descarga, descompresion y movimiento del
+# contenido de hadoop a su carpeta
+
+#wget http://mirrors.sonic.net/apache/hadoop/common/hadoop-3.1.1/hadoop-3.1.1.tar.gz
+rm -rf /opt/hadoop
+mkdir /opt/hadoop
+tar -xzvf /home/hadoop-3.1.1.tar.gz
+mv hadoop-3.1.1/* /opt/hadoop/
+\end{lstlisting}
+Código de backup.sh
+\begin{lstlisting}
+# Se ejecuta en el nodo maestro.
+cp /etc/hosts /etc/hosts.back
+cp ~/.bashrc ~/bashrc.back
+
+# Se ejecuta en cada uno de los nodos.
+contador=1
+while read line
+do
+	if [ contador -ne 1 ]
+		ssh root@$line "cp /etc/hosts /etc/hosts.back"
+		ssh root@$line "cp ~/bashrc ~/bashrc.back"
+	then
+	contador="$((contador + 1))"
+	fi 
+done
+\end{lstlisting}
+Código de parser.sh
+\begin{lstlisting}
+#!/usr/bin/env bash
+function parsear_conjunto_valores_hdp() {
+rm -rf valores_hdp.txt
+while IFS='=' read -ra line; do
+  for i in "${line[@]}"; do
+      while IFS=' ' read -ra value; do
+      	for j in "${value[1]}"; do
+      		echo $value >> valores_hdp.txt
+      	done
+      done <<< $i
+  done
+done <<< $(echo $(python hdp_conf_files/scripts/yarn-utils.py -c 1 -m 1 -d 1 false))
+}
+function generar_property() {
+	echo "<property>" >> $3
+	echo "<name>$1</name>" >> $3
+	echo "<value>$(sed $2'q;d' valores_hdp.txt)</value>" >> $3
+	echo "</property>" >> $3
+}
+
+# Metodo que construye el archivo mapred-site-config.xml.
+function generar_mapred_site_xml() {
+	cp config-files/mapred-site-config.back.xml config-files/mapred-site-config.xml
+	# Property para el valor yarn.app.mapreduce.am.command-opts
+	# generar_property 'yarn.app.mapreduce.am.command-opts' '23' 'config-files/mapred-site-config.xml'
+	# Property para el valor mapred.map.memory.mb
+	generar_property 'mapreduce.map.memory.mb' '18' 'config-files/mapred-site-config.xml'
+	# Property para el valor mapreduce.reduce.memory.mb
+	generar_property 'mapreduce.reduce.memory.mb' '20' 'config-files/mapred-site-config.xml'
+	# Property para el valor yarn.app.mapreduce.am.resource.mb
+	generar_property 'yarn.app.mapreduce.am.resource.mb' '22' 'config-files/mapred-site-config.xml'
+	# Property para el valor mapreduce.map.java.opts
+	# generar_property 'mapreduce.map.java.opts' '19' 'config-files/mapred-site-config.xml'
+	# Property para el valor mapreduce.java.opts
+	# generar_property 'mapreduce.reduce.java.opts' '21' 'config-files/mapred-site-config.xml'
+	# Property para el valor mapreduce.task.io.sort.mb
+	# generar_property 'mapreduce.task.io.sort.mb' '24' 'config-files/mapred-site-config.xml'
+
+	echo '</configuration>' >> config-files/mapred-site-config.xml 
+}
+
+# Metodo que construye el archivo yarn-site-config.xml
+function generar_yarn_site_xml() {
+	cp config-files/yarn-site-config.back.xml config-files/yarn-site-config.xml
+	# Property para el valor yarn.nodemanager.resource.memory-mb
+	generar_property 'yarn.nodemanager.resource.memory-mb' '17' 'config-files/yarn-site-config.xml'
+	# Property para el valor yarn.scheuler.maximum.allocation-mb
+	generar_property 'yarn.scheduler.maximum.allocation-mb' '16' 'config-files/yarn-site-config.xml'
+	# Property para el valor yarn.scheuler.minimum.allocation-mb
+	generar_property 'yarn.scheduler.mimimum.allocation-mb' '15' 'config-files/yarn-site-config.xml'
+	# Property para el valor yarn.app.mapreduce.am.command-opts
+	# generar_property 'yarn.app.mapreduce.am.command-opts' '23' 'config-files/yarn-site-config.xml'
+	echo '</configuration>' >> config-files/yarn-site-config.xml
+}
+
+parsear_conjunto_valores_hdp
+generar_yarn_site_xml
+generar_mapred_site_xml
 \end{lstlisting}
