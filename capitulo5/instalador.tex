@@ -100,7 +100,7 @@ A continuación se da una descripción a gran escala de como el instalador lleva
 	Esta instalación primero se efectuá en el nodo maestro y posteriormente es replicada haciendo uso de SSH a cada uno de los nodos de datos/replica. \\
 	En lo que respecta a esta instalación en particular solo fue necesario pasar cada uno de los pasos descritos en el manual de instalación a el instalador sin tener que hacer cambios en la lógica de funcionamiento, ni considerar excepciones. \\
 	Una vez que esta instalación se concluye de forma satisfactoria se coloca el instalador en el punto 6.
-	\item \item{paso7} Lo siguiente que hace el instalador en este punto es: Instalar Apache Spark tanto en el nodo maestro como en los nodos de datos/replica.\\
+	\item Lo siguiente que hace el instalador en este punto es: Instalar Apache Spark tanto en el nodo maestro como en los nodos de datos/replica.\\
 	Para llevar a cabo esta instalación Apache Spark requiere que un par de archivos de configuración sean modificados, por lo que el instalador crea archivos "Plantilla" Los cuales se crean escribiendo los datos correspondientes a la instalación que se esta efectuando. Es importante que se haga de esta forma, ya que, cada instalación llena estos archivos con información diferente.\\
 	La información que sea escrita en los archivos antes mencionados depende directamente de la información que fue introducida en los pasos \ref{paso1} y \ref{paso2} como identificadores de los nodos ya que, Apache Spark debe ser capaz de identificarlos y para ello se utilizan los identificadores proporcionados.\\
 	\\
@@ -108,22 +108,28 @@ A continuación se da una descripción a gran escala de como el instalador lleva
 	\item 
 	Los archivos "Plantilla" que se generan así como el archivo de instalación de Apache Spark es replicado hacia los nodos de datos/replica, para que estos puedan concretar sus propias instalaciones, y los archivos "Plantilla" generados reemplazan a el archivo original que se encuentra en el directorio sin ningún tipo de configuración estos cambios se realizan tanto para el nodo maestro como para los nodos de datos/replica. 
 	\\
-	Por otro lado, también es necesario modificar los archivos de variable de entorno, para que el nodo maestro sea capaz de reconocer a Apache Spark como una variable de entorno y con esto tener acceso a el desde cualquier punto del sistema operativo entre otras ventajas que son ofrecidas por esta configuración.\\
+	Por otro lado, también es necesario modificar los archivos de variable de entorno, para que el nodo maestro sea capaz de reconocer a Apache Spark como una variable de entorno y con esto tener acceso a el desde cualquier punto del sistema operativo entre otras ventajas que son ofrecidas por esta configuración.
+	\\
 	una vez hecho esto, se tiene todo lo necesario para poder iniciar Apache Spark unicamente haciendo uso del comando \emph{start-all.sh}.
 	\\
 	Cuando estas configuraciones hayan sido efectuadas de manera exitosa, se coloca el instalador en el punto 8.
-	\item La última tecnología considerada por el instalador es Apache Hadoop, esta es una tecnología con el proceso de instalación de instalación mas pesado de todos los anteriormente contemplados. \\
-	Como primer punto es importante instalarlo de manera satisfactoria en el nodo maestro, para ello , al igual que en Apache Spark se requiere el manejo de archivos "Plantilla", ya que se hacen bastantes configuraciones. \\
+	\item La última tecnología considerada por el instalador es Apache Hadoop, esta es una tecnología que con el proceso de instalación resulta la mas pesada de todas las anteriormente contempladas. \\
+	Como primer punto es importante instalarlo de manera satisfactoria en el nodo maestro, para ello , al igual que en Apache Spark se requiere el manejo de archivos "Plantilla", ya que se hacen bastantes configuraciones en diferentes archivos. \\
 	Las configuraciones requeridas, dependen de la información propia del equipo de computo que alojará la instalación, por lo que es necesario, correr un script que obtiene información del sistema operativo la procesa y obtiene la que es importante para los archivos de configuración.
 	\\
-	además se requieren otro tipo de configuraciones, algunas de los identificadores de los host dentro de la red distribuida y otras del funcionamiento, por lo que los archivos plantilla se construyen a partir de conjuntar toda esta información.\\
-	una vez que se tienen los archivos plantilla antes mencionados, se reemplaza en el nodo maestro los archivos de configuración por los archivos plantilla.\\
-	también se agrega la información de este programa a las variables de entorno para que el mismo pueda ser accedido desde cualquier punto dentro del sistema operativo.\\
+	además se requieren otro tipo de configuraciones, por ejemplo datos proporcionados en los pasos \ref{paso1} y \ref{paso 2} y otro conjunto de configuraciones de como se espera que sea el funcionamiento Hadoop por ejemplo, delimitadores dentro de un conjunto permitido de valores para que el ambiente pueda ser adaptado a diferentes necesidades.
+	\\
+	Cuando se tienen todos los datos necesarios para la configuración de los archivos, Se construyen los archivos de configuración "Plantilla" con los datos recabados en las secciones correspondientes.
+	\\
+	Una vez que se tienen los archivos plantilla antes mencionados, se reemplaza en el nodo maestro los archivos de configuración por los archivos "Plantilla".
+	\\
+	también se agrega la información de Apache Hadoop a las variables de entorno para este pueda ser accedido desde cualquier punto dentro del sistema operativo.\\
 	Cuando estas configuraciones en el nodo maestro hayan sido efectuadas de manera exitosa, se coloca el instalador en el punto 9.
 	\item Lo siguiente que hace el instalador en este punto es: Instalar Apache Hadoop en los nodos de datos/replica.\\
-	Para ello es necesario replicar los archivos plantilla generados a cada uno de los nodos de datos/replica dentro de la red distribuida.\\
-	Realizar la instalación de la plataforma en cada uno de estos nodos y reemplazar los archivos por defecto con los archivos de "Plantilla" que se tienen para realizar estas configuraciones.
-	Una vez que esta instalación se concluye de forma satisfactoria en los nodos de datos, se coloca el instalador en el punto 10.
+	Para ello es necesario replicar los archivos de configuración "Plantilla" generados a cada uno de los nodos de datos/replica dentro de la red distribuida.\\
+	Realizar la instalación de Apache Hadoop en cada uno de los nodos de datos/replica y reemplazar los archivos de configuración por defecto con los archivos de "Plantilla" que se tienen para realizar estas configuraciones.
+	\\
+	Una vez que esta instalación se concluye de forma satisfactoria en los nodos de datos/replica, se coloca el instalador en el punto 10.\\
 	es necesario ponerlo en este punto, ya que, si alguien desea volver a iniciar el instalador, con esta información el instalador será capaz de saber que ya había terminado de ejecutar todas las tareas y no quedaban tareas restantes, por lo que se regresará la solicitud notificando que esta instalación ya había terminado con éxito anteriormente.\\
 	Este es el ultimo paso del instalador y una vez que este termina entonces termina la ejecución del instalador.\\ 
 \end{enumerate}
@@ -181,9 +187,9 @@ En este caso, el usuario, deberá realizar estas configuraciones manualmente ant
 Además de que solo se trata unicamente de 2 pasos los cuales además solo pueden ser hechos en una única ocasión luego de la instalación, y al tratarse de algo tan delicado, por eso lo dejamos como un paso independiente que se considera no es apropiado automatizar.
 \\
 \subsubsection{Consideraciones adicionales}
-A continuación se muestra una tabla, con el listado del número de pasos que implicaba hacer la instalación de estas tecnologías, con respecto al número de pasos que implica hacerlo mediante el instalador. 
+A continuación se muestra una tabla, con el listado del número de pasos que implica hacer la instalación mediante el \emph{Manual de instalación de Luminus} de estas tecnologías, con respecto al número de pasos que implica hacerlo mediante el instalador. 
 \\
-\begin{table}[]
+\begin{table}[H]
 \begin{tabular}{|l|l|l|}
 \hline
 Tarea                                                   & \begin{tabular}[c]{@{}l@{}}Número de pasos en el \\ manual de instalación\end{tabular} & \begin{tabular}[c]{@{}l@{}}Número de pasos \\ en el instalador\end{tabular} \\ \hline
@@ -200,21 +206,16 @@ Pasos adicionales del instalador                        & ----                  
 TOTAL                                                   & 58 pasos                                                                                  & 20 pasos                                                                       \\ \hline
 \end{tabular}
 \end{table}
-Como se puede notar, el número de pasos necesarios disminuyo considerablemente y esto debido a que algunas de las secciones necesarias de llevar a cabo en el manual de instalación, con el instalador ya no son necesarias.
+Como se puede notar, el número de pasos necesarios disminuyo considerablemente y esto debido a que algunas de las secciones necesarias de llevar a cabo en el \emph{Manual de Instalación de Luminus} haciendo uso del instalador ya no son necesarias.
 \\
 Por otro lado, muchos de los pasos enlistados para la configuración de SSH, puede que algún usuario ya los tenga realizados de instalaciones o configuraciones previas, con lo que en este caso solo sería necesario llevar a cabo \textbf{7 pasos} para tener un ambiente de Big Data, funcionando en su totalidad.\\
-Pero, incluso no existiendo este caso ideal, unicamente seria necesario ejecutar el 34\% de los pasos originales. 
-\\
-
-%aqui 
-cuales nos permitirán instalar Apache Spark para permitir la conexión entre los nodos de datos/replica y el maestro haciendo uso de una red de internet local en la que se encuentren conectados todos los nodos.
-\\
-Además de contener todas las configuraciones necesarias para tal objetivo.  
+Pero, incluso no existiendo este caso ideal, unicamente seria necesario ejecutar el \textbf{34\% de los pasos originales}. 
 \\
 El código fuente actual de este desarrollo se puede consultar en el anexo \ref{anexob}.
 \\
-Con esto, se logro que el usuario final realice menos pasos de los que tendrían que llevarse a cabo si se siguiera el manual de instalación directamente. 
+Con esto, se logro que el usuario final realice menos pasos de los que tendrían que llevarse a cabo si se siguiera el \emph{Manual de Instalación de Luminus}directamente. 
 \\
+\subsubsection{Manejo de versionamiento de Software involucrado}
 Debido a que las versiones de los software a utilizar pueden estar en constante cambio, y que en el momento de ocurrir una actualización de versión en alguno de los software requeridos por el instalador podrían ocurrir fallas en el instalador al no soportar los cambios realizados.
 \\
 Por lo que, se propone utilizar versiones estáticas de el software requerido por el instalador, para que de esta manera se pueda garantizar, actualizar las versiones del instalador en paralelo con las actualizaciones que se realicen sobre la paquetería necesaria para su operación.
@@ -235,61 +236,272 @@ Por ejemplo, para la primera versión de este instalador se utilizarían las sig
 	
 \end{itemize}
 \section{Pruebas}
-Se presenta a continuación un ejemplo de instalación con el proceso actual a seguir por parte del instalador, así como una descripción de los pasos que este ejecuta. 
+Se presenta a continuación una prueba demostrativa del funcionamiento del instalador y como este es operado por el usuario final: Que es lo que el ve, en que momento se despliegan los pasos, cuales son las tareas que tiene que llevar a cabo, etc.
 \\
-El instalador será ejecutado solamente desde la máquina que ocupe el rol de nodo maestro de la red distribuida haciendo uso de su terminal con privilegios de super usuario y ejecutando el siguiente comando. 
+Para la documentación de esta prueba se procede a listar paso por paso lo que el instalador va haciendo, además se agrega evidencia de como esto se visualiza en las salidas arrojadas por el instalador.
+\\
+El instalador cuenta con 10 pasos importantes durante su ejecución de acuerdo con el diagrama de flujo que se muestra en la imagen \ref{fig:diagramaFlujo} y con la descripción de los pasos del instalador que se realiza en la sección \nameref{explicacion} se tomarán como referencia estos pasos para clasificar cada uno de los elementos del instalador, por lo que en esta sección no se hará mucha referencia a la manera en que estos operan ya que esta información puede ser encontrada en la sección \ref{explicacion}, sino mas bien en como el usuario participa en cada una de estas secciones y como es que estas secciones se visualizan para el usuario final.
+\\
+\subsubsection{Paso 1 y Paso 2}
+Para comenzar, el instalador será ejecutado solamente desde la máquina que ocupe el rol de nodo maestro de la red distribuida haciendo uso de su terminal con privilegios de super usuario y ejecutando el siguiente comando. 
 \\
 \begin{verbatim}
 ./lum-ins.sh
 \end{verbatim}
-Éste preguntará al usuario por la IP del nodo maestro. Luego preguntará por las IPs de los nodos que conformarán la red distribuida. Cada que el usuario introduzca una IP, el prototipo hará un ping para comprobar si hay conexión con el nodo cuya IP se desea agregar a la red distribuida. Si hay respuesta por parte del nodo en cuestión, se procede a almacenar ese dato en un archivo y se le pregunta al usuario si desea agregar otro nodo. Si su respuesta es afirmativa, este proceso se repite. 
+\begin{figure}[H]
+	\hypertarget{fig:ejecucion}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/ejecucion.png}
+		\caption{Ejecución del instalador.}
+		\label{fig:Ejecucion del instalador}
+	\end{center}
+\end{figure}
+Éste preguntará al usuario por la IP del nodo maestro, Luego preguntará por las IPs de los nodos que conformarán la red distribuida. \\
+Cuando una dirección IP es introducida, el instalador valida que efectivamente se trate de un formato de dirección IP valida, revisando sus características como cadena haciendo uso de una expresión regular, en caso de no tratarse de una dirección IP valida, entonces, se indicara el error como se muestra en la figura \ref{fig:hostnoencontrado} para que el usuario pueda intentar nuevamente introducirla y no se almacena ningún tipo de información referente a este host erroneo.
 \\
-El instalador, es capaz de detectar cuando la IP introducida no corresponde a un Host que se encuentre dentro de la red local y notifica al usuario experto de esto, como se muestra en la figura \ref{fig:hostnoencontrado}, sin embargo, la salida cuando se puede encontrar el host es diferente, como se puede observar en la figura \ref{fig:hostencontrado}.
+Además, el instalador hará un ping para comprobar si hay conexión con el nodo cuya IP se desea agregar a la red distribuida. Si hay respuesta por parte del nodo en cuestión, se pregunta el nombre con el que se desea almacenar este nodo y se procede a almacenar estos datos en un archivo.
 \\
-
+\begin{figure}[H]
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/ipmaestro.png}
+		\caption{IP del Maestro.}
+		\label{fig:maestro}
+	\end{center}
+\end{figure}
+\begin{figure}[H]
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/ipmaestro.png}
+		\caption{IP del nodo datos/replica.}
+		\label{fig:esclavo}
+	\end{center}
+\end{figure}
+finalmente, una vez que el nodo es agregado, se le pregunta al usuario si desea agregar otro nodo como se muestra en la figura \ref{fig:nuevonodo}. Si su respuesta es afirmativa, este proceso se repite. 
+\begin{figure}[H]
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/copiadohosts.png}
+		\caption{Nuevo nodo}
+		\label{fig:nuevonodo}
+	\end{center}
+\end{figure}
+El instalador, es capaz de detectar cuando la IP introducida no corresponde a un Host que se encuentre dentro de la red local y notifica al usuario experto de esto, como se muestra en la figura \ref{fig:hostnoencontrado} además de no realizar ningún tipo de almacenamiento de información referente a este host, erroneo.
+En esta situación, el usuario puede volver a introducir los datos del host una vez que este los verifique, o bien, introducir los datos de algún otro host luego de comprobar que el host introducido no es accesible desde el nodo maestro y que los datos introducidos por el fueron correctos.
+\\
 \begin{figure}[H]
 	\hypertarget{fig:hostnoencontrado}{\hspace{1pt}}
 	\begin{center}	
-		\includegraphics[width=.7\textwidth]{capitulo5/images/hostnoencontrado.png}
+		\includegraphics[width=.7\textwidth]{capitulo5/images/hostno.png}
 		\caption{El usuario introdujo la IP de un host no encontrado.}
+		\label{fig:hostnoencontrado}
 	\end{center}
-	\label{fig:hostnoencontrado}
 \end{figure}
+\subsubsection{Paso 3}
+Posteriormente, cuando ya no se deseen agregar más nodos, el instalador comenzará su trabajo llevando a cabo la instalación de los paquetes necesarios, en cada uno de los nodos que conforman la red distribuida.\\
+En este punto el usuario experto, deja de tener mucha injerencia en el proceso de instalación y solo tiene que esperar que los pasos vayan siendo completados de manera exitosa. \\
+Por lo que ya no se verá tanta participación por parte del usuario experto a partir de este paso en el instalador y los posteriores.\\
+Lo primero que se instala es la Paquetería de java comenzando por hacerlo desde el nodo maestro. Como se muestra en la imagen \ref{fig:javamaestro} es necesario ejecutar la descompresión del archivo correspondiente a este paquete que viene con el instalador, en el nodo maestro para posteriormente, proceder a realizar la instalación del mismo.\\
+como se menciona en la sección \nameref{explicacion} se busca que, incluso en caso de que alguno de los equipos de computo involucrados en la red distribuida tengan instalada alguna versión de Java, no se tenga ningún tipo de conflicto con ella, y en su lugar, puedan vivir ambas instalaciones en el equipo de computo.
+\begin{figure}[H]
+	\hypertarget{fig:javamaestro}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/instalacionjavamaestro.png}
+		\caption{Instalación de Java en el Nodo Maestro.}
+		\label{fig:javamaestro}
+	\end{center}
+\end{figure}
+\subsubsection{Paso 4}
+Una vez que la paquetería de JAVA esta correctamente instalada en el nodo maestro, se procede a instalarla en cada uno de los nodos de datos/replica que fueron configurados.\\
+Es necesario hacer un copiado mediante el uso de SSH de los archivos como se puede apreciar en la figura \ref{fig:copiajava}. y cuando estos archivos ya se encuentran en cada uno de los nodos de datos/replica, entonces se procede a hacer la descompresión de estos de la misma forma en que lo efectuá en el nodo maestro, y puede ser observado en la imagen \ref{fig:javamaestro}.
+\\
+Cuando los archivos se encuentran descomprimidos, se hace la instalación de java en cada uno de los nodos, esto se hace de la misma forma que en el nodo maestro. la cual es: crear una carpeta que contenga la versión de JAVA que se pretende instalar, para que esta versión pueda vivir en el equipo de computo,ademas de que si se encuentra alguna otra versión de JAVA instalada en el equipo de computo no se genere ningún conflicto con ella y ambas puedan funcionar estar en funcionamiento dentro del equipo de computo.
+\begin{figure}[H]
+	\hypertarget{fig:copiajava}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=1\textwidth]{capitulo5/images/copiaeinstalacionjava.png}
+		\caption{Copiado de los archivos correspondientes de java.}
+		\label{fig:copiajava}
+	\end{center}
+\end{figure}
+\subsubsection{Paso 5}
+Posterior a la instalación de Java se procede a realizar la instalación de Scala, la cual se lleva a cabo de una forma muy similar a como se hizo la instalación de Java.
+\\ 
+Es necesario descargar el archivo comprimido de Scala desde la liga que lo contiene, para esta versión del instalador en el nodo maestro como se muestra en la figura \ref{fig:descarga}. 
+\begin{figure}[H]
+	\hypertarget{fig:descarga}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/descargascala.png}
+		\caption{Descarga de Scala en el nodo Maestro}
+		\label{fig:descarga}
+	\end{center}
+\end{figure}
+Posteriormente se procede a descomprimir los archivos de Scala descargados al nodo maestro y realizando la instalación de los mismos como se muestra en la figura \ref{fig:scala} .
+Para esta instalación no es necesario realizar configuraciones adicionales o algún tipo de adecuación y se siguen los mismos pasos de el \emph{Manual de instalación de Luminus}
+\begin{figure}[H]
+	\hypertarget{fig:scala}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/instalacionscalam.png}
+		\caption{Instalación de Scala}
+		\label{fig:scala}
+	\end{center}
+\end{figure}
+\subsubsection{Paso 6}
+Cuando la instalación esta completa en el nodo maestro, se envía el archivo .deb a cada uno de los nodos de datos/replica haciendo uso de SSH como se muestra en la figura \ref{fig:scalaesclavo}.\\
+Una vez que se encuentran en el nodo de datos/replica se procede a hacer la descompresión de este archivo y posteriomente a realizar la instalación como se muestra en la figura \ref{fig:scala} 
+\begin{figure}[H]
+	\hypertarget{fig:scalaesclavo}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/descargascalaesclavo.png}
+		\caption{Descarga de Scala en los nodos de datos/replica.}
+		\label{fig:scalaesclavo}
+	\end{center}
+\end{figure}
+\subsubsection{Paso 7}
+La siguiente tecnologia a instalar es Apache Spark, en este caso, de la misma manera que se realizo con las tecnologias anteriores se realiza la descarga de los paquetes necesarios en el nodo maestro tal como se muestra en la figura \ref{fig:sparkmaestro}
+\begin{figure}[H]
+	\hypertarget{fig:sparkmaestro}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/descargasparkmaster.png}
+		\caption{Descarga de Apache Spark en el nodo maestro.}
+		\label{fig:sparkmaestro}
+	\end{center}
+\end{figure}
+Una vez que se tienen los paquetes necesarios, estos se descomprimen en el nodo maestro como se muestra en la figura \ref{fig:una1}. 
+\begin{figure}[H]
+	\hypertarget{fig:una1}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/instalacionsparkmaestro.png}
+		\caption{Instalación de Spark en el nodo Maestro.}
+		\label{fig:una1}
+	\end{center}
+\end{figure}
+\subsubsection{Paso 8}
+Cuando la descompresión esta completada en el nodo maestro se procede a elaborar los archivos de configuración "Plantilla" para reemplazar a los archivos de configuración iniciales.
+Una vez que Apache Spark queda correctamente instalado y configurado en el nodo maestro se procede a realizar lo mismo para los nodos de datos/replica. en este punto, se envía a los nodos esclavos tanto el .deb con los datos del comprimido de Apache Spark como los archivos de configuración generados, este paso se muestra en la figura \ref{fig:dos}
+\begin{figure}[H]
+	\hypertarget{fig:dos}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/descargasparkesclavo.png}
+		\caption{Descargar Spark en los nodos esclavos.}
+		\label{fig:dos}
+	\end{center}
+\end{figure}
+Al finalizar esta transferencia se procede a descomprimir los archivos de configuración enviados, reemplazar los archivos plantilla con los archivos de configuración y a realizar la instalación pertinente para cada uno de los nodos de datos.
+\\
+cuando este proceso termina, es suficiente con que se ejecute un paso manual adicional posterior a que este paso resulte exitoso en el instalador esto con el objetivo de iniciar las dependencias desde la consulta con privilegios de súper usuario el nodo maestro.\\
+El paso es el siguiente:
+\begin{verbatim}
+./start-all.sh
+\end{verbatim}
+Lo cual iniciará todas las dependencias de Apache Spark como se muestra en la imagen \ref{fig:iniciaspark}
+\begin{figure}[H]
+	\hypertarget{fig:iniciaspark}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/im27.png}
+		\caption{Inicio de Apache Spark}
+		\label{fig:iniciaspark}
+	\end{center}
+\end{figure}
+Cuando se inicia Apache Spark en todos los nodos configurados mediante el paso mencionado ya se puede acceder a su vista de configuración de esta herramienta desde la que se puede controlar su funcionalidad.
+\\
+Esto, se puede hacer accediendo a la dirección ip del nodo maestro en el puerto 8080 con el siguiente comando desde un navegador web :
+\begin{verbatim}
+[Direccion IP Maestro]:8080
+\end{verbatim}
+si se desea acceder a esta vista desde el propio nodo maestro se puede reemplazar la dirección ip con la instrucción de hacerlo en local host como se muestra a continuación:
+\begin{verbatim}
+localhost:8080
+\end{verbatim}
+La salida entonces para esta dirección web será como se muestra en la imagen \ref{fig:salida} donde podremos ver toda la configuración de todos los nodos en la red distribuida para Apache Spark. 
+\begin{figure}[H]
+	\hypertarget{fig:salida}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/im28.png}
+		\caption{Pantalla de configuración de Apache Spark}
+		\label{fig:salida}
+	\end{center}
+\end{figure}
+\subsubsection{Paso 9}
+Otra tecnología que se instala es Apache Hadoop, para ello es necesario nuevamente, descargar los paquetes necesarios para efectuar esta instalación y posteriormente descomprimirlos dentro del nodo maestro, el proceso de descompresión puede ser observado en la figura \ref{fig:hadoopmaestro}.
+\\
+\begin{figure}[H]
+	\hypertarget{fig:hadoopmaestro}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/instalacionhadoopmaestro.png}
+		\caption{Instalación de Hadoop en el nodo maestro}
+		\label{fig:hadoopmaestro}
+	\end{center}
+\end{figure}
+una vez que se termina la descompresión se procede a escribir los archivos de configuración "Plantilla" necesarios para estas tecnologías, estos se obtienen de: los datos proporcionados en los pasos 1 y 2 de este manual de instalación, algunos datos por defecto que se establecieron al definir el instalador y que tienen que ser replicados a los archivos de configuración cada vez que se haga una instalación de este tipo y algunos datos particulares de las maquinas donde se pretende establecer el ambiente de Big Data, para ello, se corre otro Script que permite obtener esta información para poder escribirla sobre a los archivos de configuración "Plantilla".
+\\
+una vez que los archivos de configuración "Plantilla" generados, estan listos, se procede a realizar el copiado de los mismos con las configuraciones establecidas reemplazando los archivos de configuración por defecto, este proceso de copiado se muestra en la figura \ref{fig:copiado}.
+\begin{figure}[H]
+	\hypertarget{fig:copiado}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/configuracionhadoopesclavo.png}
+		\caption{Instalación de Hadoop en el nodo maestro}
+		\label{fig:copiado}
+	\end{center}
+\end{figure}
+\subsubsection{Paso 10}
+El siguiente paso, es instalar Apache Hadoop en los nodos de datos/replica, para ello es necesario pasar tanto los archivos binarios de instalación como los archivos de configuración generados como se muestra en la figura \ref{fig:pasarhadoop}
+\begin{figure}[H]
+	\hypertarget{fig:pasarhadoop}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/configuracionhadoopesclavo.png}
+		\caption{Instalación de Hadoop en los nodos de datos/replica}
+		\label{fig:pasarhadoop}
+	\end{center}
+\end{figure}
+Una vez hecho esto, se procede a realizar la descompresión de los mismos y posteriormente a sobre escribir los archivos de configuración por defecto de Apache Hadoop por los archivos de configuración "Plantilla" recibidos del nodo maestro.\\
+Con esto se terminaría el proceso de instalación y estaría todo listo para las tecnologías contempladas.\\
+Al finalizar el instalador se deja a decisión y consideración del usuario realizar cambios sobre los archivos en caso de que requiera efectuar algún cambio antes de comenzar con su ambiente.\\
+Cuando termine de hacer los cambios pertinentes, tendrá que ejecutar el siguiente comando en una terminal del nodo maestro con privilegios de super usuario:
+\begin{verbatim}
+hdfs namenode -format
+\end{verbatim}
+Lo que formateará toda la información contenida en el HDFS y con esto lo dejará disponible para ser utilizado como se puede ver en la figura \ref{fig:limpieza}.
+\\
+Es importante mencionar que esta tarea solo puede ser ejecutada una vez antes de comenzar el ambiente de Big Data. 
+\begin{figure}[H]
+	\hypertarget{fig:limpieza}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.7\textwidth]{capitulo5/images/hadoop.jpeg}
+		\caption{Limpieza del HDFS}
+		\label{fig:limpieza}
+	\end{center}
+\end{figure}
+Cuando el formateo esta terminado, entonces se procede a iniciar Apache Hadoop para que empiece su funcionamiento dentro de el ambiente distribuido, esto se puede hacer ejecutando el siguiente comando.
+\begin{verbatim}
+start-all.sh
+\end{verbatim}
+Con lo que comenzará a levantar e inicializar todas las dependencias necesarias para el funcionamiento de este framework como se puede ver en la figura \ref{fig:inicio}. 
+\begin{figure}[H]
+	\hypertarget{fig:inicio}{\hspace{1pt}}
+	\begin{center}	
+		\includegraphics[width=.5\textwidth]{capitulo5/images/indice.jpeg}
+		\caption{Inicio de Apache Hadoop}
+		\label{fig:inicio}
+	\end{center}
+\end{figure}
+Cuando se inicia Apache Hadoop en todos los nodos configurados mediante el instalador ya se puede acceder a su vista de configuración de esta herramienta desde la que se puede controlar su funcionalidad.
+\\
+Esto, se puede hacer accediendo a la dirección ip del nodo maestro en el puerto 9870 con el siguiente comando desde un navegador web :
+\begin{verbatim}
+[Direccion IP Maestro]:9870
+\end{verbatim}
+si se desea acceder a esta vista desde el propio nodo maestro se puede reemplazar la dirección ip con la instrucción de hacerlo en local host como se muestra a continuación:
+\begin{verbatim}
+localhost:9870
+\end{verbatim}
+La salida entonces para esta dirección web será como se muestra en la imagen \ref{fig:confi} donde podremos ver toda la configuración de todos los nodos en la red distribuida para Apache Hadoop. 
 
 \begin{figure}[H]
-	\hypertarget{fig:hostencontrado}{\hspace{1pt}}
+	\hypertarget{fig:confi}{\hspace{1pt}}
 	\begin{center}	
-		\includegraphics[width=.7\textwidth]{capitulo5/images/hostencontrado.png}
-		\caption{El usuario introdujo la IP de un host encontrado.}
+		\includegraphics[width=.7\textwidth]{capitulo5/images/im54.png}
+		\caption{Pantalla de configuración de Apache Hadoop}
+		\label{fig:confi}
 	\end{center}
-	\label{fig:hostencontrado}
 \end{figure}
+En este punto se da por terminado, las actividades y alcances del instalador, una vez terminado el paso 10 y comprobado que todo funciona correctamente, se puede afirmar que ya se tiene un ambiente de Big Data correctamente instalado y configurado ejecutándose en los equipos que forman parte de la red distribuida.
 
-Posteriormente, cuando ya no se deseen agregar más nodos, el instalador ejecutará varios scripts de instalación en el nodo maestro, desde donde fue ejecutado proceso que puede ser observado en la imagen \ref{fig:instalacion}.\\
-
-\begin{figure}[H]
-	\hypertarget{fig:instalacion}{\hspace{1pt}}
-	\begin{center}	
-		\includegraphics[width=.7\textwidth]{capitulo5/images/instalacion.png}
-		\caption{Comienza el proceso de instalación.}
-	\end{center}
-	\label{fig:instalacion}
-\end{figure}
-
-Estos scripts instalarán las tecnologías necesarias para que \emph{Luminus} pueda funcionar de manera adecuada. Estas tecnologías son las siguientes:\\
-
-\begin{enumerate}
-	\item SSH. \\
-	\item Java.\\
-	\item Scala.\\
-	\item Spark.\\
-\end{enumerate}
-
-Después se procede a establecer conexiones SSH con los nodos de la red. Mediante SSH se ejecutan los mismos scripts que se ejecutaron en el nodo maestro pero de manera remota, es decir, sin la necesidad de tener almacenado el script en el nodo donde se va a iniciar la puesta en marcha del ambiente de análisis de datos.\\
-
-Posteriormente se configura Spark en el nodo maestro, es decir, se asignan roles a los nodos de la red que introdujo el usuario al sistema en un principio.\\
-
-Finalmente se realiza la instalación y configuración de Hadoop en el nodo maestro. Y por último en los nodos de datos/replica.
-
-Una vez que este proceso de instalación finaliza se tiene instalado los prototipos \nameref{cap:Cap3} y \nameref{cap:Cap4} los cuales tendrán todas las configuraciones necesarias para que luminus pueda funcionar correctamente.
 
