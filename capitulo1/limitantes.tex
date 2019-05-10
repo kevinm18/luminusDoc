@@ -11,39 +11,102 @@ Primeramente las limitaciones que se han detectado hasta ahora en cuanto a equip
 
 Por otro lado existen otro tipo de limitaciones que se presentan durante el desarrollo de este trabajo terminal:
 \begin{itemize}
-	\item Solo se tendrán 2 algoritmos de minería de datos para ejecutar dentro del ambiente de Big Data, para un estudio mas especializado seria conveniente incluir mas algoritmos.
+	\item Solo se tendrán 2 algoritmos de minería de datos para ejecutar dentro del ambiente de Big Data, para un entorno mas completo seria conveniente incluir mas algoritmos.
 	\item Las pruebas y desarrollo sobre este trabajo terminal en equipos de computo tradicionales serán ejecutadas unicamente con 3 nodos de datos/replica, por lo que, para un mejor desempeño sería conveniente agregar mas nodos de datos/replica al cluster.
 	\item El archivo de datos proveniente del caso de estudio es de 21 GB, una empresa podría manejar archivos de mayor longitud, por lo que las pruebas realizadas podrían no ser significativos para la cantidad de datos que puedan manejar determinadas empresas. 
 	\item Las tablas de datos que conformen el caso de estudio que se suban a el repositorio , tendrán que subirse por separado y el manejo de los datos que se podrá ejecutar descartará las relaciones que existan entre las tablas y procesará cada tabla por separado.
-	\item Es posible que no se puedan realizar pruebas o bien suficientes pruebas en equipos de computo especializados para realizar una comparativa del comportamiento que tiene Hadoop, bajo diferentes características computacionales.
+	\item Es posible que no se puedan realizar pruebas o bien suficientes pruebas en equipos de computo especializados para realizar una comparativa del comportamiento que tiene Hadoop, bajo diferentes características computacionales ya que este no es el objetivo del proyecto, sino lo que se busca principalmente establecer el ambiente de análisis de datos.
 	\item El instalador de Luminus tiene muchos casos de errores o casos especiales que no se considerarán y se dejarán a solución del usuario, cuando estos ocurran, ya que por cuestiones de tiempo es imposible englobarlos todos.
 \end{itemize}
-Las limitaciones mencionadas no son todas las que existen, solo se mencionan las mas importantes de las que se han encontrado y se considera que tienen relevancia alta para este proyecto.
-
+Se listan las limitaciones que se han encontrado hasta este momento, sin embargo podrían existir otras limitaciones que no se hayan encontrado y que en su caso deberían tomar su tiempo de análisis para evaluar su impacto en el proyecto.
 \subsection{Alcances}
-
-Los alcances que se tienen para los prototipos 1 y 2 que son los prototipos que se desarrollaron en Trabajo Terminal 1 se enlistan a continuación, mientras que los alcances que se tienen para el resto de los prototipos se encuentran definidos en la sección \nameref{futurolol}
+Los alcances fueron definidos al momento de elaborar el cronograma de actividades y estos están establecidos de los prototipos 1 al 5 del cronograma mencionado.\\ 
+Durante el desarrollo de este trabajo se fusionaron los prototipos 4 y 5 formando en su conjunto un solo prototipo 4, además, este prototipo cambio su definición y en lugar de realizarse el desarrollo de un sitio web para la presentación y puesta en marcha de los algoritmos para el usuario final se realizó una Interfaz de Programación de Aplicaciones que fuera capaz de presentar estos resultados. 
+A continuación, se procede a listar los alcances que se tienen para cada uno de los prototipos planteados: 
 \\
 \subsection{Prototipo 1}
 El prototipo 1 tiene como productos esperados:
 \begin{itemize}
-	\item Identificar y reconocer las características de los datos que conforman el caso de estudio así como analizar y definir las posibles agrupaciones que pueden ser generadas a partir de estos datos. Los resultados de este análisis a detalle se encuentran en la sección \nameref{datosagrupados} del capitulo 3. 
-	\item Establecer el numero de nodos y características que tendrán los nodos  que se agregarán a el cluster para realizar las pruebas del caso de estudio de manera  distribuida.
+	\item Identificar y reconocer las características de los datos que conforman el caso de estudio, así como analizar y definir las posibles agrupaciones que pueden ser generadas a partir de estos datos. Los resultados de este análisis a detalle se encuentran en la sección \nameref{datosagrupados} del capítulo 3.\\ 
+	\item Establecer el número de nodos y características que tendrán los nodos así como definir de estas cuales se agregarán a el cluster para realizar las pruebas del caso de estudio de manera  distribuida.
+	Buscando que con el número de nodos que se defina se pueda soportar dicho caso de estudio y que además no escapen de las características de computación con las que se cuenta actualmente.
+	Los resultados obtenidos se pueden consultar en las secciones \nameref{seccion1} y \nameref{seccion2}.
+	\item Poner en funcionamiento el cluster con las características que fueron definidas en este mismo Prototipo para Apache Spark. \label{punto}
 	\\
-	Buscando que con el numero de nodos que se defina se pueda soportar dicho caso de estudio y que además no escapen de las características de computación con las que se cuenta actualmente.
-	\\
-	Los resultados obtenidos se pueden consultar en las secciones \nameref{seccion1} y \nameref{seccion2} del capitulo 3.
-	\item Poner en funcionamiento el cluster con las características que fueron definidas para este en el punto anterior. \label{punto}
-	\\
-	El desarrollo que implico dicha tarea se presenta a detalle en la sección \nameref{seccion3} mientras que las pruebas que se hicieron para demostrar que este desarrolle es funcional se pueden consultar en la sección \nameref{seccion4} ambas secciones se encuentran en el capitulo 3.
+	El desarrollo que implico dicha tarea se presenta a detalle en la sección \nameref{seccion3} mientras que las pruebas que se hicieron para demostrar que este desarrollo es funcional se pueden consultar en la sección \nameref{seccion4} del capítulo \nameref{cap:Cap3}
 \end{itemize} 
-\subsection{Prototipo 2}
-El prototipo 2 tiene como productos esperados:
-\begin{itemize}
-	\item Cargar los datos que conforman el caso de estudio de prueba a el cluster en funcionamiento que se explica en la sección \ref{punto} en su tercer punto. Con lo cual los datos quedarían almacenados de forma distribuida en el cluster.
-	\\
-	Para conocer mas detalles de la carga de los datos que se realizo se puede consultar la sección \nameref{seccion5} en el capitulo 4.	
-	\item Una vez que los datos son cargados satisfactoriamente a el cluster será necesario comprobar que estos pueden funcionar de manera distribuida y son accesibles, para ello se aplica un algoritmo sencillo sobre los datos. Para conocer mas detalles acerca de esta prueba se puede consultar a partir de la sección  \nameref{seccion6} en el capitulo 4.
-	
+El prototipo 2 tiene como productos esperados: 
+\begin{itemize} 
+    \item Cargar los datos que conforman el caso de estudio de prueba a el clúster en funcionamiento que se explica en la sección \ref{punto} en su tercer producto esperado. Con lo cual los datos quedarían almacenados de forma distribuida en el clúster. 
+    \\ 
+    Para conocer más detalles de la carga de los datos que se realizó se puede consultar la sección \nameref{seccion5}.     
+    \item Una vez que los datos son cargados satisfactoriamente a el clúster será necesario comprobar que estos pueden funcionar de manera distribuida y son accesibles, para ello se aplica un algoritmo sencillo sobre los datos. Para conocer más detalles acerca de esta prueba se puede consultar a partir de la sección  \nameref{seccion6} de su correspondiente capitulo. 
+\end{itemize}   
+\subsection{Prototipo 3: Algoritmos de minería de datos} 
+
+\label{proto3} 
+
+El prototipo 3 tiene como productos esperados: 
+
+\begin{itemize} 
+
+    \item Hacer uso de un algoritmo de cada uno de los tipos de algoritmos que se enlistan a continuación: 
+
+    \begin{itemize} 
+
+        \item Reglas de asociación 
+
+        \item Arboles de decisión 
+
+    \end{itemize} 
+
+     escrito en java que se adapte al caso de estudio, así como su personalización para que pueda ser adaptado a otros casos de estudio de manera sencilla. 
+
+    \item Elaboración de las pantallas que conformarán el sitio web, diseño, estructura y contenido que se puede ver como un mapa de navegación que aún no está integrado a Luminus por lo tanto, no es funcional.   
+
+\end{itemize} 
+\subsection{Prototipo 4: Interfaz de Programación de Aplicaciones} 
+
+El prototipo 4 tiene como productos esperados: 
+
+\begin{itemize} 
+
+     \item Conjunto de clases o métodos que permitan la interacción con el Hadoop Distributed File System para el manejo de archivos y de operaciones que se tengan que ejecutar dentro del mismo. 
+
+     \item Validación de los datos para confirmar que cumplan con las condiciones para ser ejecutados por el algoritmo que el usuario desee y en caso de no cumplirlas no permitir su ejecución. 
+
+     \item Preparación de los algoritmos para que puedan ser soportados y ejecutados desde un programa escrito en JAVA, así como realizar las configuraciones que estos necesiten. 
+
+\end{itemize} 
+
+  
+
+\subsection{Prototipo Adicional: Instalador} 
+
+Un instalador suele ser un sistema bastante complejo, ya que realiza las siguientes tareas: \\ 
+
+\begin{itemize} 
+
+    \item Instalación de software 
+
+    \item Ejecuta comandos en el shell de la computadora 
+
+    \item Verifica software que ya está instalado en la computadora y generalmente es capaz de cambiar la versión 
+
+\end{itemize} 
+
+Este prototipo tiene como productos esperados: 
+
+\begin{itemize} 
+
+    \item Que sea capaz de reanudar el proceso de instalación cuando éste haya sido interrumpido. Ya sea por decisión del usuario o por un error en el proceso de instalación. El instalador, debe retomar el proceso a partir del punto en el que fue interrumpido. 
+
+    \item Que pueda agregar tantos nodos a la red como se deseen cuando se inicia la instalación inicial. 
+
+    \item Reduzca la cantidad de pasos a ejecutar por el usuario final para realizar una instalación completa. 
+
+    \item Reduzca el tiempo de instalación, en relación al tiempo que tomaria hacer la misma instalación tomando como referencia el \emph{Manual de instalación de Luminus} 
+
+    \item Incluir todos los pasos del \emph{Manual de instalación de Luminus} dentro del \emph{Instalador} 
 
 \end{itemize} 

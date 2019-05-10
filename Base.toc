@@ -1,93 +1,202 @@
 \select@language {spanish}
-\contentsline {chapter}{\numberline {1}Capitulo 1}{5}{chapter.1}
-\contentsline {section}{\numberline {1.1}Introduccion}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Planteamiento del problema}{5}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Problem\IeC {\'a}tica}{5}{subsection.1.2.1}
-\contentsline {section}{\numberline {1.3}Propuesta de soluci\IeC {\'o}n}{6}{section.1.3}
-\contentsline {section}{\numberline {1.4}Estado del arte}{7}{section.1.4}
-\contentsline {section}{\numberline {1.5}Justificaci\IeC {\'o}n}{8}{section.1.5}
-\contentsline {section}{\numberline {1.6}Objetivos}{9}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}General}{9}{subsection.1.6.1}
-\contentsline {subsection}{\numberline {1.6.2}Especificos}{9}{subsection.1.6.2}
-\contentsline {section}{\numberline {1.7}Arquitectura de la red distribuida}{9}{section.1.7}
-\contentsline {section}{\numberline {1.8}Alcances y Limitaciones}{10}{section.1.8}
-\contentsline {subsection}{\numberline {1.8.1}Limitaciones}{10}{subsection.1.8.1}
-\contentsline {subsection}{\numberline {1.8.2}Alcances}{11}{subsection.1.8.2}
-\contentsline {subsection}{\numberline {1.8.3}Prototipo 1}{11}{subsection.1.8.3}
-\contentsline {subsection}{\numberline {1.8.4}Prototipo 2}{11}{subsection.1.8.4}
-\contentsline {chapter}{\numberline {2}Marco te\IeC {\'o}rico}{13}{chapter.2}
-\contentsline {section}{\numberline {2.1}Big Data}{13}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Las 3 Vs del Big Data}{13}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Casos de uso del Big Data}{14}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Miner\IeC {\'\i }a de datos}{14}{section.2.2}
-\contentsline {section}{\numberline {2.3}\IeC {\'A}rboles de decisi\IeC {\'o}n}{14}{section.2.3}
-\contentsline {section}{\numberline {2.4}ID3 (Iterative Dichotomiser 3)}{15}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Entrop\IeC {\'\i }a}{16}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Ejemplo de ejecuci\IeC {\'o}n del algoritmo ID3}{17}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}C4.5}{21}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Ejemplo de ejecuci\IeC {\'o}n del algoritmo C4.5}{22}{subsection.2.5.1}
-\contentsline {section}{\numberline {2.6}Algoritmo KNN (K-Nearest Neighbors)}{27}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Ejemplo de ejecuci\IeC {\'o}n del algoritmo KNN}{27}{subsection.2.6.1}
-\contentsline {section}{\numberline {2.7}Algoritmo K-Means}{29}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Ejemplo de ejecuci\IeC {\'o}n del algoritmo K-Means}{29}{subsection.2.7.1}
-\contentsline {section}{\numberline {2.8}Redes Bayesianas}{30}{section.2.8}
-\contentsline {section}{\numberline {2.9}Ambiente de an\IeC {\'a}lisis de datos}{31}{section.2.9}
-\contentsline {section}{\numberline {2.10}Cl\IeC {\'u}ster}{31}{section.2.10}
-\contentsline {section}{\numberline {2.11}MapReduce}{31}{section.2.11}
-\contentsline {section}{\numberline {2.12}Hadoop}{31}{section.2.12}
-\contentsline {subsection}{\numberline {2.12.1}Caracter\IeC {\'\i }sticas principales de Hadoop}{31}{subsection.2.12.1}
-\contentsline {subsection}{\numberline {2.12.2}Arquitectura de Hadoop}{33}{subsection.2.12.2}
-\contentsline {subsection}{\numberline {2.12.3}Arquitectura de un cl\IeC {\'u}ster Hadoop}{34}{subsection.2.12.3}
-\contentsline {subsection}{\numberline {2.12.4}Distribuciones Comerciales de Hadoop}{34}{subsection.2.12.4}
-\contentsline {section}{\numberline {2.13}Apache Spark}{34}{section.2.13}
-\contentsline {subsection}{\numberline {2.13.1}Caracter\IeC {\'\i }sticas principales de Spark}{35}{subsection.2.13.1}
-\contentsline {subsection}{\numberline {2.13.2}Ventajas de usar Apache Spark}{35}{subsection.2.13.2}
-\contentsline {subsection}{\numberline {2.13.3}Componentes de Apache Spark}{36}{subsection.2.13.3}
-\contentsline {section}{\numberline {2.14}Interfaz Web}{36}{section.2.14}
-\contentsline {chapter}{\numberline {3}Evaluaci\IeC {\'o}n y definici\IeC {\'o}n de requerimientos de la red distribuida}{37}{chapter.3}
-\contentsline {section}{\numberline {3.1}Descripci\IeC {\'o}n del prototipo}{37}{section.3.1}
-\contentsline {section}{\numberline {3.2}An\IeC {\'a}lisis}{37}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}An\IeC {\'a}lisis de la red distribuida}{37}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}An\IeC {\'a}lisis de los datos}{38}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Dise\IeC {\~n}o}{39}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Dise\IeC {\~n}o de la red distribuida}{39}{subsection.3.3.1}
-\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas de la red distribuida}{39}{section*.2}
-\contentsline {subsubsection}{Red distribuida en la arquitectura del sistema}{39}{section*.3}
-\contentsline {subsection}{\numberline {3.3.2}Dise\IeC {\~n}o de propuesta de agrupaci\IeC {\'o}n de acuerdo a los nodos definidos en la red distribuida}{40}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Desarrollo}{42}{section.3.4}
-\contentsline {section}{\numberline {3.5}Pruebas}{43}{section.3.5}
-\contentsline {chapter}{\numberline {4}Integraci\IeC {\'o}n de requerimientos de la red distribuida}{47}{chapter.4}
-\contentsline {section}{\numberline {4.1}Descripci\IeC {\'o}n del prototipo}{47}{section.4.1}
-\contentsline {section}{\numberline {4.2}An\IeC {\'a}lisis}{47}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}An\IeC {\'a}lisis de la adaptaci\IeC {\'o}n de los datos a la red distribuida}{47}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Dise\IeC {\~n}o}{47}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Dise\IeC {\~n}o de la red distribuida con nodos de datos}{47}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Dise\IeC {\~n}o de pruebas de obtenci\IeC {\'o}n de informaci\IeC {\'o}n}{48}{subsection.4.3.2}
-\contentsline {subsubsection}{WordCount tradicional}{48}{section*.4}
-\contentsline {subsubsection}{WordCount con el uso de Map Reduce}{49}{section*.5}
-\contentsline {section}{\numberline {4.4}Desarrollo}{50}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Algoritmo de prueba}{51}{subsection.4.4.1}
-\contentsline {section}{\numberline {4.5}Pruebas}{52}{section.4.5}
-\contentsline {chapter}{\numberline {5}Instalador de Luminus}{59}{chapter.5}
-\contentsline {section}{\numberline {5.1}Descripci\IeC {\'o}n del prototipo}{59}{section.5.1}
-\contentsline {section}{\numberline {5.2}An\IeC {\'a}lisis}{59}{section.5.2}
-\contentsline {section}{\numberline {5.3}Dise\IeC {\~n}o}{60}{section.5.3}
-\contentsline {subsubsection}{Explicaci\IeC {\'o}n del funcionamiento del instalador}{62}{section*.6}
-\contentsline {section}{\numberline {5.4}Desarrollo}{65}{section.5.4}
-\contentsline {subsubsection}{Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de SSH}{65}{section*.7}
-\contentsline {subsubsection}{Puesta en funcionamiento}{66}{section*.8}
-\contentsline {subsubsection}{Consideraciones adicionales}{66}{section*.9}
-\contentsline {section}{\numberline {5.5}Pruebas}{67}{section.5.5}
-\contentsline {chapter}{\numberline {6}Conclusiones}{71}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclusiones}{71}{section.6.1}
-\contentsline {chapter}{\numberline {7}Trabajo a futuro}{73}{chapter.7}
-\contentsline {section}{\numberline {7.1}Trabajo a futuro}{73}{section.7.1}
-\contentsline {subsubsection}{Peque\IeC {\~n}as mejoras e implementaciones que se pueden hacer sobre lo ya propuesto}{73}{section*.10}
-\contentsline {subsubsection}{Una manera de presentarlo de forma diferente: Sitio web}{74}{section*.11}
-\contentsline {section}{\numberline {7.2}1.1 hola}{87}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Resumen}{87}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Descripci\IeC {\'o}n}{87}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}Trayectorias del Caso de Uso}{87}{subsection.7.2.3}
-\contentsline {chapter}{\numberline {8}Anexos}{89}{chapter.8}
-\contentsline {section}{\numberline {8.1}Anexo A: Codigo JAVA Map-Reduce}{89}{section.8.1}
-\contentsline {section}{\numberline {8.2}Anexo B: C\IeC {\'o}digo del instalador}{91}{section.8.2}
+\contentsline {section}{\numberline {0.1}Agradecimientos}{7}{section.0.1}
+\contentsline {subsection}{\numberline {0.1.1}Ra\IeC {\'u}l Kevin Monte\IeC {\'o}n Vald\IeC {\'e}s}{7}{subsection.0.1.1}
+\contentsline {subsection}{\numberline {0.1.2}Mayra Patricia Tovar Barba}{7}{subsection.0.1.2}
+\contentsline {chapter}{\numberline {1}Cap\IeC {\'\i }tulo 1}{9}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduccion}{9}{section.1.1}
+\contentsline {section}{\numberline {1.2}Planteamiento del problema}{9}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Problem\IeC {\'a}tica}{9}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.3}Propuesta de soluci\IeC {\'o}n}{10}{section.1.3}
+\contentsline {section}{\numberline {1.4}Estado del arte}{11}{section.1.4}
+\contentsline {section}{\numberline {1.5}Justificaci\IeC {\'o}n}{12}{section.1.5}
+\contentsline {section}{\numberline {1.6}Objetivos}{13}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}General}{13}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Especificos}{13}{subsection.1.6.2}
+\contentsline {section}{\numberline {1.7}Arquitectura de la red distribuida}{13}{section.1.7}
+\contentsline {section}{\numberline {1.8}Alcances y Limitaciones}{14}{section.1.8}
+\contentsline {subsection}{\numberline {1.8.1}Limitaciones}{14}{subsection.1.8.1}
+\contentsline {subsection}{\numberline {1.8.2}Alcances}{15}{subsection.1.8.2}
+\contentsline {subsection}{\numberline {1.8.3}Prototipo 1}{15}{subsection.1.8.3}
+\contentsline {subsection}{\numberline {1.8.4}Prototipo 3: Algoritmos de miner\IeC {\'\i }a de datos}{16}{subsection.1.8.4}
+\contentsline {subsection}{\numberline {1.8.5}Prototipo 4: Interfaz de Programaci\IeC {\'o}n de Aplicaciones}{16}{subsection.1.8.5}
+\contentsline {subsection}{\numberline {1.8.6}Prototipo Adicional: Instalador}{16}{subsection.1.8.6}
+\contentsline {chapter}{\numberline {2}Marco te\IeC {\'o}rico}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}Big Data}{17}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Las 3 Vs del Big Data}{17}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Casos de uso del Big Data}{18}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Miner\IeC {\'\i }a de datos}{18}{section.2.2}
+\contentsline {section}{\numberline {2.3}\IeC {\'A}rboles de decisi\IeC {\'o}n}{18}{section.2.3}
+\contentsline {section}{\numberline {2.4}ID3 (Iterative Dichotomiser 3)}{19}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Entrop\IeC {\'\i }a}{20}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Ejemplo de ejecuci\IeC {\'o}n del algoritmo ID3}{21}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}C4.5}{25}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Ejemplo de ejecuci\IeC {\'o}n del algoritmo C4.5}{26}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.6}Algoritmo KNN (K-Nearest Neighbors)}{31}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Ejemplo de ejecuci\IeC {\'o}n del algoritmo KNN}{31}{subsection.2.6.1}
+\contentsline {section}{\numberline {2.7}Algoritmo K-Means}{33}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Ejemplo de ejecuci\IeC {\'o}n del algoritmo K-Means}{33}{subsection.2.7.1}
+\contentsline {section}{\numberline {2.8}Redes Bayesianas}{34}{section.2.8}
+\contentsline {section}{\numberline {2.9}Ambiente de an\IeC {\'a}lisis de datos}{35}{section.2.9}
+\contentsline {section}{\numberline {2.10}Cl\IeC {\'u}ster}{35}{section.2.10}
+\contentsline {section}{\numberline {2.11}MapReduce}{35}{section.2.11}
+\contentsline {section}{\numberline {2.12}Hadoop}{35}{section.2.12}
+\contentsline {subsection}{\numberline {2.12.1}Caracter\IeC {\'\i }sticas principales de Hadoop}{35}{subsection.2.12.1}
+\contentsline {subsection}{\numberline {2.12.2}Arquitectura de Hadoop}{37}{subsection.2.12.2}
+\contentsline {subsection}{\numberline {2.12.3}Arquitectura de un cl\IeC {\'u}ster Hadoop}{38}{subsection.2.12.3}
+\contentsline {subsection}{\numberline {2.12.4}Distribuciones Comerciales de Hadoop}{38}{subsection.2.12.4}
+\contentsline {section}{\numberline {2.13}Apache Spark}{38}{section.2.13}
+\contentsline {subsection}{\numberline {2.13.1}Caracter\IeC {\'\i }sticas principales de Spark}{39}{subsection.2.13.1}
+\contentsline {subsection}{\numberline {2.13.2}Ventajas de usar Apache Spark}{39}{subsection.2.13.2}
+\contentsline {subsection}{\numberline {2.13.3}Componentes de Apache Spark}{40}{subsection.2.13.3}
+\contentsline {section}{\numberline {2.14}Interfaz Web}{40}{section.2.14}
+\contentsline {section}{\numberline {2.15}Interfaz de Programaci\IeC {\'o}n de Aplicaciones}{40}{section.2.15}
+\contentsline {section}{\numberline {2.16}Framework}{41}{section.2.16}
+\contentsline {section}{\numberline {2.17}Librer\IeC {\'\i }a}{41}{section.2.17}
+\contentsline {chapter}{\numberline {3}Evaluaci\IeC {\'o}n y definici\IeC {\'o}n de requerimientos de la red distribuida}{43}{chapter.3}
+\contentsline {section}{\numberline {3.1}Descripci\IeC {\'o}n del prototipo}{43}{section.3.1}
+\contentsline {section}{\numberline {3.2}An\IeC {\'a}lisis}{43}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}An\IeC {\'a}lisis de la red distribuida}{43}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}An\IeC {\'a}lisis de los datos}{44}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Dise\IeC {\~n}o}{45}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Dise\IeC {\~n}o de la red distribuida}{45}{subsection.3.3.1}
+\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas de la red distribuida}{45}{section*.2}
+\contentsline {subsubsection}{Red distribuida en la arquitectura del sistema}{45}{section*.3}
+\contentsline {subsection}{\numberline {3.3.2}Dise\IeC {\~n}o de propuesta de agrupaci\IeC {\'o}n de acuerdo a los nodos definidos en la red distribuida}{46}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Desarrollo}{48}{section.3.4}
+\contentsline {section}{\numberline {3.5}Pruebas}{49}{section.3.5}
+\contentsline {chapter}{\numberline {4}Integraci\IeC {\'o}n de requerimientos de la red distribuida}{53}{chapter.4}
+\contentsline {section}{\numberline {4.1}Descripci\IeC {\'o}n del prototipo}{53}{section.4.1}
+\contentsline {section}{\numberline {4.2}An\IeC {\'a}lisis}{53}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}An\IeC {\'a}lisis de la adaptaci\IeC {\'o}n de los datos a la red distribuida}{53}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Dise\IeC {\~n}o}{53}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Dise\IeC {\~n}o de la red distribuida con nodos de datos}{53}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Dise\IeC {\~n}o de pruebas de obtenci\IeC {\'o}n de informaci\IeC {\'o}n}{54}{subsection.4.3.2}
+\contentsline {subsubsection}{WordCount tradicional}{54}{section*.4}
+\contentsline {subsubsection}{WordCount con el uso de Map Reduce}{55}{section*.5}
+\contentsline {section}{\numberline {4.4}Desarrollo}{56}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Algoritmo de prueba}{57}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5}Pruebas}{58}{section.4.5}
+\contentsline {chapter}{\numberline {5}Algoritmos de Miner\IeC {\'\i }a de Datos}{65}{chapter.5}
+\contentsline {section}{\numberline {5.1}Descripci\IeC {\'o}n del prototipo}{65}{section.5.1}
+\contentsline {section}{\numberline {5.2}An\IeC {\'a}lisis}{65}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}An\IeC {\'a}lisis del flujo de datos en las pantallas del sistema}{65}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}An\IeC {\'a}lisis de los algoritmos de miner\IeC {\'\i }a de datos}{65}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Dise\IeC {\~n}o}{66}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Algoritmo KNN con el uso de MapReduce}{66}{subsection.5.3.1}
+\contentsline {subsubsection}{Diagrama de Flujo}{70}{section*.6}
+\contentsline {subsection}{\numberline {5.3.2}Algoritmo ID3}{72}{subsection.5.3.2}
+\contentsline {subsubsection}{Diagrama de Flujo}{76}{section*.7}
+\contentsline {section}{\numberline {5.4}Desarrollo}{79}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Algoritmo KNN}{79}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Algoritmo ID3}{80}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Pruebas}{81}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Algoritmo KNN}{81}{subsection.5.5.1}
+\contentsline {subsubsection}{Prueba 1}{81}{section*.8}
+\contentsline {subsubsection}{Prueba 2}{86}{section*.9}
+\contentsline {subsection}{\numberline {5.5.2}Algoritmo ID3}{89}{subsection.5.5.2}
+\contentsline {chapter}{\numberline {6}Interface de programaci\IeC {\'o}n de aplicaciones de Luminus}{101}{chapter.6}
+\contentsline {section}{\numberline {6.1}Descripci\IeC {\'o}n del prototipo}{101}{section.6.1}
+\contentsline {section}{\numberline {6.2}An\IeC {\'a}lisis}{101}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Casos de uso}{101}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}CU1 Leer archivo}{103}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Resumen}{103}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Descripci\IeC {\'o}n}{103}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Trayectorias del Caso de Uso}{103}{subsection.6.3.3}
+\contentsline {section}{\numberline {6.4}CU2 Crear directorio}{105}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Resumen}{105}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Descripci\IeC {\'o}n}{105}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Trayectorias del Caso de Uso}{105}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.4}Puntos de extensi\IeC {\'o}n}{106}{subsection.6.4.4}
+\contentsline {section}{\numberline {6.5}CU3 Subir un archivo}{107}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Resumen}{107}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Descripci\IeC {\'o}n}{107}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}Trayectorias del Caso de Uso}{107}{subsection.6.5.3}
+\contentsline {section}{\numberline {6.6}CU4 Borrar un archivo o directorio}{109}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Resumen}{109}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}Descripci\IeC {\'o}n}{109}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.6.3}Trayectorias del Caso de Uso}{109}{subsection.6.6.3}
+\contentsline {section}{\numberline {6.7}CU5 Confirmar existencia de archivo o directorio}{110}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Resumen}{110}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}Descripci\IeC {\'o}n}{110}{subsection.6.7.2}
+\contentsline {subsection}{\numberline {6.7.3}Trayectorias del Caso de Uso}{110}{subsection.6.7.3}
+\contentsline {section}{\numberline {6.8}CU6 Obtener Identificador de HDFS}{112}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}Resumen}{112}{subsection.6.8.1}
+\contentsline {subsection}{\numberline {6.8.2}Descripci\IeC {\'o}n}{112}{subsection.6.8.2}
+\contentsline {subsection}{\numberline {6.8.3}Trayectorias del Caso de Uso}{112}{subsection.6.8.3}
+\contentsline {section}{\numberline {6.9}CU7 Obtener Direcci\IeC {\'o}n IP Local}{113}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}Resumen}{113}{subsection.6.9.1}
+\contentsline {subsection}{\numberline {6.9.2}Descripci\IeC {\'o}n}{113}{subsection.6.9.2}
+\contentsline {subsection}{\numberline {6.9.3}Trayectorias del Caso de Uso}{113}{subsection.6.9.3}
+\contentsline {section}{\numberline {6.10}CU8 Crear configuraci\IeC {\'o}n}{114}{section.6.10}
+\contentsline {subsection}{\numberline {6.10.1}Resumen}{114}{subsection.6.10.1}
+\contentsline {subsection}{\numberline {6.10.2}Descripci\IeC {\'o}n}{114}{subsection.6.10.2}
+\contentsline {subsection}{\numberline {6.10.3}Trayectorias del Caso de Uso}{114}{subsection.6.10.3}
+\contentsline {section}{\numberline {6.11}CU9 Ejecutar Comando}{115}{section.6.11}
+\contentsline {subsection}{\numberline {6.11.1}Resumen}{115}{subsection.6.11.1}
+\contentsline {subsection}{\numberline {6.11.2}Descripci\IeC {\'o}n}{115}{subsection.6.11.2}
+\contentsline {subsection}{\numberline {6.11.3}Trayectorias del Caso de Uso}{115}{subsection.6.11.3}
+\contentsline {section}{\numberline {6.12}CU10 Correr KNN}{116}{section.6.12}
+\contentsline {subsection}{\numberline {6.12.1}Resumen}{116}{subsection.6.12.1}
+\contentsline {subsection}{\numberline {6.12.2}Descripci\IeC {\'o}n}{116}{subsection.6.12.2}
+\contentsline {subsection}{\numberline {6.12.3}Trayectorias del Caso de Uso}{116}{subsection.6.12.3}
+\contentsline {section}{\numberline {6.13}CU11 Correr ID3}{118}{section.6.13}
+\contentsline {subsection}{\numberline {6.13.1}Resumen}{118}{subsection.6.13.1}
+\contentsline {subsection}{\numberline {6.13.2}Descripci\IeC {\'o}n}{118}{subsection.6.13.2}
+\contentsline {subsection}{\numberline {6.13.3}Trayectorias del Caso de Uso}{118}{subsection.6.13.3}
+\contentsline {section}{\numberline {6.14}CU12 Subir Configuraci\IeC {\'o}n}{120}{section.6.14}
+\contentsline {subsection}{\numberline {6.14.1}Resumen}{120}{subsection.6.14.1}
+\contentsline {subsection}{\numberline {6.14.2}Descripci\IeC {\'o}n}{120}{subsection.6.14.2}
+\contentsline {subsection}{\numberline {6.14.3}Trayectorias del Caso de Uso}{120}{subsection.6.14.3}
+\contentsline {section}{\numberline {6.15}CU13 Verificar compatibilidad de datos con algoritmo seleccionado}{122}{section.6.15}
+\contentsline {subsection}{\numberline {6.15.1}Resumen}{122}{subsection.6.15.1}
+\contentsline {subsection}{\numberline {6.15.2}Descripci\IeC {\'o}n}{122}{subsection.6.15.2}
+\contentsline {subsection}{\numberline {6.15.3}Trayectorias del Caso de Uso}{122}{subsection.6.15.3}
+\contentsline {section}{\numberline {6.16}Dise\IeC {\~n}o}{123}{section.6.16}
+\contentsline {subsection}{\numberline {6.16.1}Diagrama de clases}{123}{subsection.6.16.1}
+\contentsline {section}{\numberline {6.17}Desarrollo}{123}{section.6.17}
+\contentsline {subsection}{\numberline {6.17.1}LuminusConfiguration}{123}{subsection.6.17.1}
+\contentsline {subsection}{\numberline {6.17.2}LuminusConfigurationKNN}{124}{subsection.6.17.2}
+\contentsline {subsection}{\numberline {6.17.3}LuminusConfigurationID3}{126}{subsection.6.17.3}
+\contentsline {subsection}{\numberline {6.17.4}HDFSAccess}{128}{subsection.6.17.4}
+\contentsline {subsection}{\numberline {6.17.5}LuminusException}{130}{subsection.6.17.5}
+\contentsline {subsubsection}{Mensajes que arroja la clase LuminusException}{130}{section*.10}
+\contentsline {subsection}{\numberline {6.17.6}MSG1~No existe el archivo o directorio}{130}{subsection.6.17.6}
+\contentsline {subsection}{\numberline {6.17.7}MSG2~El archivo ya existe}{130}{subsection.6.17.7}
+\contentsline {subsection}{\numberline {6.17.8}MSG3~El directorio ya existe}{131}{subsection.6.17.8}
+\contentsline {subsection}{\numberline {6.17.9}MSG4~Selecci\IeC {\'o}n de algoritmo inv\IeC {\'a}lida}{131}{subsection.6.17.9}
+\contentsline {subsection}{\numberline {6.17.10}MSG5~Extensi\IeC {\'o}n del archivo properties inv\IeC {\'a}lida.}{131}{subsection.6.17.10}
+\contentsline {subsection}{\numberline {6.17.11}MSG6~Ruta de archivo properties inv\IeC {\'a}lida}{131}{subsection.6.17.11}
+\contentsline {subsection}{\numberline {6.17.12}TypeManager}{131}{subsection.6.17.12}
+\contentsline {subsection}{\numberline {6.17.13}Pruebas}{132}{subsection.6.17.13}
+\contentsline {subsubsection}{Manejo de Archivos}{133}{section*.11}
+\contentsline {subsubsection}{Algoritmo KNN}{134}{section*.12}
+\contentsline {subsubsection}{Algoritmo ID3}{135}{section*.13}
+\contentsline {chapter}{\numberline {7}Instalador de Luminus}{137}{chapter.7}
+\contentsline {section}{\numberline {7.1}Descripci\IeC {\'o}n del prototipo}{137}{section.7.1}
+\contentsline {section}{\numberline {7.2}An\IeC {\'a}lisis}{137}{section.7.2}
+\contentsline {section}{\numberline {7.3}Dise\IeC {\~n}o}{138}{section.7.3}
+\contentsline {subsubsection}{Explicaci\IeC {\'o}n del funcionamiento del instalador}{140}{section*.14}
+\contentsline {section}{\numberline {7.4}Desarrollo}{143}{section.7.4}
+\contentsline {subsubsection}{Instalaci\IeC {\'o}n de la paqueter\IeC {\'\i }a de SSH}{143}{section*.15}
+\contentsline {subsubsection}{Puesta en funcionamiento}{144}{section*.16}
+\contentsline {subsubsection}{Consideraciones adicionales}{144}{section*.17}
+\contentsline {subsubsection}{Manejo de versionamiento de Software involucrado}{145}{section*.18}
+\contentsline {section}{\numberline {7.5}Pruebas}{145}{section.7.5}
+\contentsline {subsubsection}{Paso 1 y Paso 2}{145}{section*.19}
+\contentsline {subsubsection}{Paso 3}{147}{section*.20}
+\contentsline {subsubsection}{Paso 4}{147}{section*.21}
+\contentsline {subsubsection}{Paso 5}{148}{section*.22}
+\contentsline {subsubsection}{Paso 6}{148}{section*.23}
+\contentsline {subsubsection}{Paso 7}{149}{section*.24}
+\contentsline {subsubsection}{Paso 8}{150}{section*.25}
+\contentsline {subsubsection}{Paso 9}{152}{section*.26}
+\contentsline {subsubsection}{Paso 10}{153}{section*.27}
+\contentsline {chapter}{\numberline {8}Conclusiones}{157}{chapter.8}
+\contentsline {section}{\numberline {8.1}Conclusiones}{157}{section.8.1}
+\contentsline {chapter}{\numberline {9}Trabajo a futuro}{159}{chapter.9}
+\contentsline {section}{\numberline {9.1}Trabajo a futuro}{159}{section.9.1}
+\contentsline {subsubsection}{Peque\IeC {\~n}as mejoras e implementaciones que se pueden hacer sobre lo ya propuesto}{159}{section*.28}
+\contentsline {chapter}{\numberline {10}Anexos}{165}{chapter.10}
+\contentsline {section}{\numberline {10.1}Anexo A: Codigo JAVA Map-Reduce}{165}{section.10.1}
+\contentsline {section}{\numberline {10.2}Anexo B: C\IeC {\'o}digo del instalador}{167}{section.10.2}
+\contentsline {section}{\numberline {10.3}Anexo C: Una manera de presentar a luminus de forma diferente: Sitio web}{177}{section.10.3}

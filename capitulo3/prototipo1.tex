@@ -1,26 +1,23 @@
 \section{Descripción del prototipo} 
 El prototipo actual busca definir el número de nodos y las características que estos deben tener para crear un ambiente de Big Data que nos permita realizar las pruebas a nuestro caso de estudio de manera satisfactoria pero que tampoco escape de las capacidades de computación con las que contamos.
 \\
-Por otro lado busca definir como serán agrupados los datos que conforman el caso de estudio en los nodos que se establezcan. Para poder conocer con ello la distribución de los datos y el peso en memoria física que se le dará a cada nodo.
+Por otro lado, busca definir como serán agrupados los datos que conforman el caso de estudio en los nodos que se establezcan. Para poder conocer con ello la distribución de los datos y el peso en memoria física que se le dará a cada nodo.
 \\
 Se busca entonces encontrar características en común entre los datos que conforman el caso de estudio para de esta manera clasificarlos y facilitar su consulta al momento de aplicar algoritmos de minería de datos. 
 \section{Análisis}
 \subsection{Análisis de la red distribuida}\label{seccion1}
 %necesidad
-Se pretende establecer las características que tendrá el cluster que se aplicará a la red distribuida para poder con esto, generarlo. 
+Se pretende establecer las características que tendrá el clúster que se aplicará a la red distribuida para poder con esto, generarlo. 
 \\
 A continuación, se presenta el análisis de los factores que se consideran importantes para dicho objetivo: 
 \\
 \begin{itemize}
-\item Se definió que es necesario realizar una replica de los datos en los nodos ya que si la información original no esta disponible, en algún espacio en el tiempo se podrá utilizar la información de respaldo que se tiene de los mismos, con lo que se lograría que los datos sean mas persistentes.
+\item Se definió que es necesario realizar una réplica de los datos en los nodos ya que, si la información original no está disponible, en algún espacio en el tiempo se podrá utilizar la información de respaldo que se tiene de los mismos, con lo que se lograría que los datos sean más persistentes. 
 
-\item Para poder almacenar 2 copias de la misma información la original  la replica, es necesario contar con al menos 2 nodos de datos y un nodo maestro. 
-
-\item El nodo maestro no puede ser considerado nodo de datos ya que este cumple otra tarea, la cual es administrar y ordenar al resto de los nodos.
-
-\item También se definió que para manejar datos de la dimensión de 21GB (tamaño de la base de datos del caso de estudio), nodos de datos de menos de 2GB de capacidad de RAM no son eficientes e incluso llegan a tener problemas con las configuraciones de memoria que se realizan mas adelante, por lo que se considera que los nodos de datos deberán trabajar con al menos 2GB de RAM.
-
-\item Para poder comunicar el cluster dentro de una red local se utilizan 2 tecnologías Spark y Hadoop además de las dependencias de estas para funcionar como son SSH y Java. Por lo que es necesario considerar el espacio que ocupa la instalación de dichas tecnologías.
+\item Para poder almacenar 2 copias de la misma información la original la réplica, es necesario contar con al menos 2 nodos de datos y un nodo maestro.  
+\item El nodo maestro no puede ser considerado nodo de datos ya que este cumple otra tarea, la cual es administrar y ordenar al resto de los nodos. 
+\item También se definió que para manejar datos de la dimensión de 21GB (tamaño de la base de datos del caso de estudio), nodos de datos de menos de 2GB de capacidad de RAM no son eficientes e incluso llegan a tener problemas con las configuraciones de memoria que se realizan más adelante, por lo que se considera que los nodos de datos deberán trabajar con al menos 2GB de RAM. 
+\item Para poder comunicar el clúster dentro de una red local se utilizan 2 tecnologías Spark y Hadoop además de las dependencias de estas para funcionar como son SSH y Java. Por lo que es necesario considerar el espacio que ocupa la instalación de dichas tecnologías. 
 
 \end{itemize}
 \subsection{Análisis de los datos} \label{datosagrupados}
@@ -63,8 +60,8 @@ no.25 norte casi esquina allende ponien | tlaxcala | chiautempan | 19.3159 |-98.
 \end{lstlisting}
 Estos ejemplos que fueron tomados estratégicamente para ser analizados como se lista a continuación.
 \begin{itemize}
-	\item El archivo contiene información de varios productos que se venden en la misma tienda, conservando entonces la parte de datos referente a la tienda pero cambiando la parte del producto.
-	\item El archivo contiene información del mismo producto vendido en varias tiendas departamentales en diferentes lugares, en esta caso, la información del producto es la misma mientras que la información de la tienda departamental cambia.
+    \item El archivo contiene información de varios productos que se venden en la misma tienda, conservando entonces la parte de datos referente a la tienda, pero cambiando la parte del producto. 
+    \item El archivo contiene información del mismo producto vendido en varias tiendas departamentales en diferentes lugares, en este caso, la información del producto es la misma mientras que la información de la tienda departamental cambia. 
 	\item El archivo contiene productos similares que se venden en la misma tienda o bien en otras tiendas que no son precisamente iguales pero que se pueden comparar entre ellos.
 \end{itemize}
 Usando el análisis formulado anteriormente se puede proponer diferentes alternativas de agrupación de los datos. Las que se consideraron se listan a continuación.
@@ -75,12 +72,10 @@ Usando el análisis formulado anteriormente se puede proponer diferentes alterna
 	\item Zona Geográfica
 	\item Estado de la república donde se encuentra el producto 
 \end{itemize}
-
-Por otro lado se determino que el sistema de almacenamiento de datos que se va a utilizar en la red distribuida, será Hadoop, y revisando su modo de operación y de manejo de archivos en su HDFS este no permite que la forma en la que se agrupan los datos sea definida por el usuario por lo que, los datos serán distribuidos siguiendo la técnica de Hadoop.
-
-Es mas conveniente utilizar la forma en la que Hadoop distribuye los datos debido a que no es necesario controlar el acceso a los datos de manera manual indicando donde se encuentra cada uno de ellos, sino que Hadoop se encarga de esta tarea, además de ofrecer otros beneficios como la escalabilidad, la tolerancia a fallos , replicación en tiempo real, etc. 
-
-A pesar de esto, el análisis realizado para determinar los modos de agrupamiento mas favorables no será desperdiciado pues este buscaba simplificar la operación de los algoritmos de minería de datos. y aunque no se aplique directamente sobre la distribución de los repositorios en los nodos, esta será aplicada al momento de ejecutar los algoritmos de minería de datos. 
+Por otro lado, se determinó que el sistema de almacenamiento de datos que se va a utilizar en la red distribuida será Hadoop, y revisando su modo de operación y de manejo de archivos en su HDFS este no permite que la forma en la que se agrupan los datos sea definida por el usuario por lo que, los datos serán distribuidos siguiendo la técnica de Hadoop. \\
+Es más conveniente utilizar la forma en la que Hadoop distribuye los datos debido a que no es necesario controlar el acceso a los datos de manera manual indicando donde se encuentra cada uno de ellos, sino que Hadoop se encarga de esta tarea, además de ofrecer otros beneficios como la escalabilidad, la tolerancia a fallos, replicación en tiempo real, etc.  
+\\
+A pesar de esto, el análisis realizado para determinar los modos de agrupamiento más favorables no será desperdiciado pues este buscaba simplificar la operación de los algoritmos de minería de datos. y aunque no se aplique directamente sobre la distribución de los repositorios en los nodos, esta será aplicada al momento de ejecutar los algoritmos de minería de datos.  
 
 \section{Diseño}
 \subsection{Diseño de la red distribuida} \label{seccion2}
@@ -112,7 +107,7 @@ El diseño de la arquitectura del sistema y la red distribuida se muestran en la
 \\ 
 Como se puede observar en la arquitectura se tiene un nodo maestro y tres nodos de datos/replica conectados a través de Hadoop.
 \\
-Se explicará como se busca que estos trabajen en conjunto una vez que todos los prototipos se encuentren terminados y como el diseño existente hasta este momento estará afectando dicho comportamiento.
+Se explicará cómo se busca que estos trabajen en conjunto una vez que todos los prototipos se encuentren terminados y como el diseño existente hasta este momento estará afectando dicho comportamiento.
 \\
 El nodo maestro será el nodo donde el usuario experto instalará el ambiente para hacer uso de big data y configura sus nodos, una vez que la instalación sea exitosa podrá ingresar sus datos, seleccionar los algoritmos que desea aplicar a los mismos y visualizará los resultados.
 \\
@@ -133,14 +128,14 @@ Posteriormente los resultados parciales obtenidos en cada uno de los nodos será
 \subsection{Diseño de propuesta de agrupación de acuerdo a los nodos definidos en la red distribuida}
 
 Al usar una tecnología como Hadoop, este mismo es capaz de distribuir los datos sin que se diseñe una
-propuesta de agrupación por parte del programador sino que, Hadoop establece la propia.
+propuesta de agrupación por parte del programador, sino que, Hadoop establece la propia.
 \\
 Hadoop dentro de su arquitectura cuenta con un bloque conocido como HDFS en cual es un sistema de archivos distribuido y tolerante a fallos. Funciona sobre el conjunto de los nodos
-de un cluster de Hadoop, balanceando la carga de archivos entre las máquinas del cluster,
+de un clúster de Hadoop, balanceando la carga de archivos entre las máquinas del clúster,
 de forma equitativa. Gracias a su naturaleza distribuida, proporciona alta disponibilidad y
 altas prestaciones que le permiten ser capaz de manejar archivos de gran tamaño.
 \\
-Para realizar esta tarea es necesario proporcionarle el archivo de datos completo a HDFS e indicarle el número de copias que se harán de los datos,  el archivo proporcionado será segmentado en bloques de 128 MB por parte de Hadoop como se muestra en la figura \ref{fig:red2}.
+Para realizar esta tarea es necesario proporcionarle el archivo de datos completo a HDFS e indicarle el número de copias que se harán de los datos, el archivo proporcionado será segmentado en bloques de 128 MB por parte de Hadoop como se muestra en la figura \ref{fig:red2}.
 \begin{figure}[!htbp]
 	\hypertarget{fig:red2}{\hspace{1pt}}
 	\begin{center}
@@ -152,7 +147,7 @@ Para realizar esta tarea es necesario proporcionarle el archivo de datos complet
 \newpage
 El sistema de Hadoop ingresará cada bloque considerando este bloque como bloque de
 datos en algún nodo y para las réplicas ingresara nuevamente el bloque considerando este
-bloque como bloque de replica 1, bloque de réplica 2 , bloque de réplica 3 y continua de la
+bloque como bloque de réplica 1, bloque de réplica 2 , bloque de réplica 3 y continua de la
 misma forma para la cantidad de bloques de réplica que se hayan indicado. Para cada una
 de las réplicas es indispensable que no sean asignadas en el mismo nodo que el bloque de
 datos o alguna otra réplica. No tiene sentido realizar más o igual número de réplicas que de
@@ -180,7 +175,7 @@ En tiempo de ejecución, para realizar su trabajo Hadoop siempre toma en cuenta 
 y en caso de no encontrarlos procede a hacer uso de las réplicas generadas de los mismos.
 \\
 En el servidor maestro se guarda una información conocida como NameNode que permite
-conocer dónde se encuentran cada uno de los bloques y sus réplicas, lo que facilita sean encontradas dentro del cluster.
+conocer dónde se encuentran cada uno de los bloques y sus réplicas, lo que facilita sean encontradas dentro del clúster.
 \\
 Con lo que podemos concluir que si bien no diseñamos la propuesta de agrupación de los datos comprendemos cómo es que esta funciona.
 \section{Desarrollo}\label{seccion3}
@@ -207,17 +202,17 @@ Las cuales nos permitirán instalar Apache Spark para permitir la conexión entr
 \\
 Además de contener todas las configuraciones necesarias para tal objetivo.  
 \section{Pruebas}\label{seccion4}
-Para verificar que la instalación y configuración que se realizo al servidor Apache Spark es correcta será necesario aplicar un algoritmo de prueba. 
+Para verificar que la instalación y configuración que se realizó al servidor Apache Spark es correcta será necesario aplicar un algoritmo de prueba. 
 \\
 Un algoritmo de prueba muy común es sparkPi el cual calcula el valor del número pi utilizando todos los nodos de la red distribuida. 
 \\
-Esto nos permitirá comprobar que existe conectividad dentro de la red y que se pueden realizar calculos con ella.
+Esto nos permitirá comprobar que existe conectividad dentro de la red y que se pueden realizar cálculos con ella.
 \\
 El comando a ejecutar es el siguiente 
 \begin{lstlisting} 
 MASTER=spark://[IP del nodo maestro]:7077 run-example SparkPi
 \end{lstlisting}
-como se puede apreciar en la siguiente imagen \\
+cómo se puede apreciar en la siguiente imagen \\
 \begin{figure}[!htbp]
 	\hypertarget{fig:red4}{\hspace{1pt}}
 	\begin{center}
@@ -235,9 +230,9 @@ como se puede apreciar en la siguiente imagen \\
 		\label{fig:red5}
 	\end{center}
 \end{figure}
-\\ cabe destacar que debido a que el valor es calculado en tiempo real con los recursos que se tiene en el cluster el valor puede variar cada ejecución pero será muy aproximado al valor real del número.
+\\ cabe destacar que debido a que el valor es calculado en tiempo real con los recursos que se tiene en el clúster el valor puede variar cada ejecución, pero será muy aproximado al valor real del número.
 \\
-Ahora, si accedemos a la interfaz web de Spark podremos ver que un trabajo ha sido completado dentro del cluster, antes de esta ejecución no se mostraba nada dentro de esta sección. \\
+Ahora, si accedemos a la interfaz web de Spark podremos ver que un trabajo ha sido completado dentro del clúster, antes de esta ejecución no se mostraba nada dentro de esta sección. \\
 \begin{figure}[!htbp]
 	\hypertarget{fig:red6}{\hspace{1pt}}
 	\begin{center}
@@ -269,7 +264,7 @@ otro punto importante es que también se puede consultar para cada uno de los no
 
 Con lo que podemos concluir:
 \begin{itemize}
-	\item El cluster funciona correctamente
+	\item El clúster funciona correctamente
 	\item Existe comunicación entre los nodos
 	\item Los nodos de datos/replica son capaces de identificar al nodo maestro y recibir instrucciones de el
 	\item El nodo maestro es capaz de comunicar trabajos a los nodos de datos/replica y de interpretar los resultados de sus trabajos de manera satisfactoria

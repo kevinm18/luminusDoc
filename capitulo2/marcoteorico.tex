@@ -69,7 +69,7 @@ A continuación se presentan los algoritmos que usan árboles de decisión que t
 
 El algoritmo ID3 es uno de los algoritmos que utilizan árboles de decisión más populares. ID3 genera un árbol a partir de un conjunto de datos llamado \textbf{tabla de inducción}. Es útil para hacer toma de decisiones en escenarios binarios, es decir, que tienen 2 posibilidades finales.\cite{id3}\\
 
-Es importante mencionar este algoritmo, no precisamente porque vaya a ser implementado dentro de \emph{Luminus}, sino porque es el precursor de otro algoritmo conocido como \nameref{c4.5}. Que es un algoritmo que apoya a la toma de decisiones, más avanzado y completo. Sin embargo, por el momento aún no está bien definido cuál de los dos algoritmos estará implementado en Luminus.\\
+Es importante mencionar este algoritmo debido a que es el precursor de otro algoritmo conocido como \nameref{c4.5}. Que es un algoritmo que apoya a la toma de decisiones, más avanzado y completo.Por otro lado, en\emph{Luminus} se realizará la implementación de este algoritmo.\\
 
 El resultado de la ejecución de este algoritmo puede expresarse como un conjunto de reglas \textbf{\textit{si-entonces}}.\\
 
@@ -329,7 +329,7 @@ Necesitaremos de la \refIU{fig:formula-entropia}{fórmula para calcular la entro
 	\end{figure}
 \end{UClist}
 \section{C4.5} \label{c4.5}
-El algoritmo C4.5 es la evolución del algoritmo ID3. Éste genera un árbol de decisión a partir de un conjunto de datos de entrada de manera recursiva, al igual que su precursor\cite{c4.5}. Sin embargo, aunque ID3 y C4.5 son algoritmos muy semejantes, existen ciertas diferencias:\\
+El algoritmo C4.5 es la evolución del algoritmo ID3. Éste genera un árbol de decisión a partir de un conjunto de datos de entrada de manera recursiva, al igual que su precursor \cite{c4.5}. Sin embargo, aunque ID3 y C4.5 son algoritmos muy semejantes, existen ciertas diferencias:\\
 
 \begin{UClist}
 	\UCli C4.5 permite trabajar con valores continuos, mientras que ID3 solamente trabaja con valores discretos.\\
@@ -571,7 +571,7 @@ Para mostrar la forma en la que se ejecuta el algoritmo C4.5 y los pasos que se 
 \newpage
 \section{Algoritmo KNN (K-Nearest Neighbors)}\label{knnmarco}
 
-El algoritmo KNN es un algoritmo de aprendizaje no supervisado en el que se busca clasificar un punto en una categoría con la ayuda de un conjunto de entrenamiento \cite{KNN}. Las siglas \textbf{KNN} en inglés hacen alusión a \textbf{K-Nearest Neighbors}, que significa K vecinos más cercanos. Este algoritmo calcula distancias euclidianas entre valores que son tomados como puntos. \textbf{KNN} estará implementado en \emph{Luminus}, ya que para el caso de estudio que se presentará, será necesario conocer cuáles son las tiendas más cercanas a la ubicación desde donde se esté utilizando el sistema.\\
+El algoritmo KNN es un algoritmo de aprendizaje no supervisado en el que se busca clasificar un punto en una categoría con la ayuda de un conjunto de entrenamiento \cite{KNN}. Las siglas \textbf{KNN} en inglés hacen alusión a \textbf{K-Nearest Neighbors}, que significa K vecinos más cercanos. Este algoritmo calcula distancias euclidianas entre valores que son tomados como puntos. \textbf{KNN} se implemento en \emph{Luminus}, ya que para el caso de estudio que se presentará, será necesario conocer cuáles son las tiendas más cercanas a la ubicación desde donde se esté utilizando el sistema.\\
 
 Los pasos que sigue el algoritmo KNN se enumeran a continuación:\\
 
@@ -680,7 +680,7 @@ Con base en la siguiente información que relaciona el peso, la altura y la tall
 \end{UClist}
 
 \section{Algoritmo K-Means}
-El algoritmo K-Means es un algoritmo de agrupamiento que utiliza aprendizaje no supervisado, el cual es utilizado cuando se tienen datos no etiquetados, es decir sin categorías o grupos definidos. El objetivo de este algoritmo es encontrar grupos en los datos, con el número de grupos se representa la variable \emph{K}\cite{KMeans}. Es importante definir este algoritmo y su funcionamiento dentro del marco teórico, ya que es uno de los candidatos a ser implementados dentro de \emph{Luminus}.\\
+El algoritmo K-Means es un algoritmo de agrupamiento que utiliza aprendizaje no supervisado, el cual es utilizado cuando se tienen datos no etiquetados, es decir sin categorías o grupos definidos. El objetivo de este algoritmo es encontrar grupos en los datos, con el número de grupos se representa la variable \emph{K}\cite{KMeans}. Es importante definir este algoritmo y su funcionamiento dentro del marco teórico ya que nos da una visión más amplia de como funcionan los algoritmos de clasificación.\\
 
 El algoritmo arrojará como resultado final lo siguiente:\\
 
@@ -819,8 +819,6 @@ Para ilustrar el funcionamiento del algoritmo K-means, se utilizará el siguient
 \end{UClist}
 
 \section{Redes Bayesianas}
-Otro concepto que es importante definir es el de las redes Bayesianas, ya que se pretende que \emph{Luminus} pueda hacer uso de esta técnica para generar conocimiento para el usuario.\\ 
-
 Las redes Bayesianas son un tipo de modelo probabilístico gráfico que usa inferencias Bayesianas para el cómputo de probabilidades. Las redes Bayesianas pretenden modelar dependencia condicional representando esta dependencia mediante un grafo dirigido. A través de esas relaciones, se puede conducir eficientemente la inferencia de variables aleatorias.\cite{bayesianas}\\
 
 \section{Ambiente de análisis de datos}
@@ -950,3 +948,18 @@ El diagrama mostrado a continuación ilustra los principales módulos o \textbf{
 \section{Interfaz Web}
 Una \textbf{interfaz de usuario} es el medio por el cual un usuario de un sistema computacional interactúa con el sistema. Se dice que una interfaz es \textbf{web} cuando el medio que despliega y renderiza la interfaz es un navegador web. Definir este concepto es importante ya que la interfaz de usuario de \emph{Luminus} será una interfaz web.\\
 
+\section{Interfaz de Programación de Aplicaciones}
+Se trata de un módulo de software que se comunica e interactúa con otro, mediante el uso de comandos, funciones y protocolos las cuales se utilizan para diseñar e integrar software y aplicaciones.\cite{Red} 
+El uso de este tipo de implementaciones permite que se haga uso de cierto código fuente del cual se desconoce su funcionamiento por detrás, esto permite que la implementación de ciertas soluciones de software se simplifique y se logre ahorrar tiempo y dinero para la capa más alta de implementación, es decir, la que hace uso de la Interfaz de Programación de Aplicaciones.\\ 
+
+El uso de una Interfaz de Programación de Aplicaciones permite que el usuario de la misma pueda concentrarse únicamente en lo que le interesa perfeccionar o adaptar para las necesidades de su aplicación y olvidarse de ciertas funcionalidades que a pesar de que las utiliza puede prescindir de su administración.\\ 
+\section{Framework}
+Un framework se puede considerar como una aplicación genérica incompleta y configurable a la que podemos añadirle lo que le hace falta para que pueda convertirse en una aplicación completa.\cite{Framework}
+Busca que el desarrollo sea más rápido, que se haga uso del mediante el uso de patrones y además busca que el código fuente pueda ser reutilizado.\\ 
+
+Un framework es una abstracción en la que cierto código común provee una funcionalidad genérica que puede ser sobrescrita o especializada de forma selectiva por medio de código con funcionalidad específica provisto por los clientes del framework (desarrolladores de software / programadores
+ \cite{componentes}
+\section{Librería}
+Una librería representa una colección de implementaciones las cuales son utilizadas para complementar o ampliar la funcionalidad de programas de software y aplicaciones que la importan para hacer uso de ella.
+\\ \cite{compo}
+Las funcionalidades de ambos se conjuntan para proporcionar una funcionalidad más grande e integrada la cual permita que ambos códigos se puedan conjuntar para permitir realizar un conjunto más grande de operaciones y con ello la funcionalidad que tenga el programa que hace uso de ella sea más amplia.\\ 
