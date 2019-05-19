@@ -1,0 +1,46 @@
+\section{Trabajo a futuro}
+\subsubsection{Pequeñas mejoras e implementaciones que se pueden hacer sobre lo ya propuesto}
+En este trabajo a pesar de que se intentó cubrir la mayor cantidad de puntos posibles quedaron abiertos otros puntos a desarrollar. Algunos de los puntos que se sugieren para trabajar posteriormente se listan a continuación:
+\begin{itemize}
+
+	\item Llevar a cabo un análisis completo de cuales son las características mas apropiadas y que impliquen el menor costo posible en la adquisición y mantenimiento de las computadoras que trabajaran en la red distribuida.
+	\\
+	Con ello ofrecer una propuesta a las empresas, para que consigan equipos de computo con estas características y con ello obtener el mejor rendimiento optimizando su inversión
+	\item Hacer una implementación diferente del instalador de \emph{luminus} haciendo uso incluso de otra tecnología que permita hacer validaciones de errores de forma completa y contemplando una mayor cantidad de casos para que este pueda ser mas efectivo.\\ 
+	Podría tratarse de un instalador con interfaz gráfica el cual podría resultar mas atractivo para un conjunto de usuarios. 
+	\item Realizar el desarrollo y adaptación a Luminus de otros algoritmos de minería de datos ya sea de arboles de decisión o de reglas de asociación o bien crear un nuevo conjunto de algoritmos que sean soportados por la plataforma, además de los 2 ya establecidos. 
+	\\
+	Para que el análisis que se realice a los datos pueda llegar a ser mas completo y existan más opciones para el usuario experto de algoritmos a aplicar a su caso de estudio.
+	\item Hacer un tratamiento de los datos de entrada para los algoritmos con el fin de que se analicen caracteristicas como la precisión y el muestreo de los datos. para tener un análisis mas completo de los datos con los que se alimentan los algoritmos.
+	\item Crear una libreria de transformación y limpieza para que los datos de entrada sean coherentes y bien formados. 
+	\\
+	Por ejemplo: Si se tiene un campo llamado Edad el cual almacena la edad de los colaboradores de una empresa en un tipo de dato entero.\\
+	Supongamos que uno de ellos tiene almacenado el valor 3000 por mencionar algun numero.\\
+	En este caso este número no es un valor válido para un campo que almacena edades de personas y el algoritmo no seria capaz de detectarlo ya que cumple con la premisa de tratarse de un valor entero. Introducirlo con este error a la ejecución del algoritmo puede entorpecer los resultados que este arroje como salidas. Por lo que, detectar este tipo de inconsistencias es lo que se buscaria con esta libreria.\\
+	\item Graficación de los resultados de salida de los algoritmos para que se puedan ver las salidas de forma mas clara y visual para el usuario final.\\
+	El algoritmo KNN podría dibujar las distancias espaciales con respecto a los vecinos cercanos encontrados.\\
+	El algoritmo ID3 podría dibujar el árbol de salida gráfico con sus ramas y hojas.\\
+	\item Realizar una adaptación al algoritmo KNN para que sea capaz de soportar datos ponderados por el usuario. \\
+	Es decir, para datos que no son nominales pero que sin embargo no son muy cambiantes y tienen un numero finito de entradas diferentes, estas puedan ser definidas como una equivalencia antes de comenzar la ejecución del algoritmo y con ello considerar estos campos dentro de la ejecución del algoritmo.\\
+	Por ejemplo, para un dato que habla de las etapas de vida de una persona: \\
+	y este unicamente almacena los siguientes valores: 
+	Bebe,Infante,Niño,Adolescente,Adulto Joven,Adulto Maduro, Anciano\\
+	estos podrían ser ponderados de la forma en que el usuario elija para cada ejecución para el caso del ejemplo podrían ser agregados valores numéricos como se muestra a continuación.\\
+	Bebe 1,Infante 2,Niño 3,Adolescente 4,Adulto Joven 5,Adulto Maduro 6, Anciano 7.\\
+	siendo estos valores de poderación responsabilidad directa de quien los asigne, pero que permiten, tener mas opciones para elegir al momento de seleccionar los atributos que pueden ser utilizados por el algoritmo.\\
+	\item Realizar los ajustes para que se soporten tipos diferentes de entradas de datos, por ejemplo: JSON, XML , Bases de datos. \\
+	ya que al momento unicamente se permite trabajar con archivos CSV, Lo cual puede llegar a ser muy limitado al momento de escojer las fuentes de datos disponibles para alimentar el algoritmo.\\
+	\item Realizar una implementación que permita obtener automaticamente datos de una fuente externa y los actualice en tiempo real dentro del repositorio de datos. Esto para empresas que poseen datos cambiantes y requieren actualización constante de los mismos.    
+\end{itemize}   
+Cabe señalar que además de estas propuestas existen muchas otras que pueden adaptarse a este proyecto y ampliarlo para diferentes finalidades. Las posibilidades son prácticamente infinitas y dependen directamente de las necesidades especificas de cada usuario o empresa. 
+\\
+Las propuestas que aquí se señalan son ideas que se encontraron durante el desarrollo del proyecto y que se considera pueden contribuir en gran medida al mismo tomando en cuenta los objetivos que se establecieron.\\
+
+Se tiene además una propuesta general que puede ser aplicada para varios de los puntos anteriormente mencionados y además se trata de una forma diferente de visualizar el proyecto esta se puede consultar en el anexo \nameref{{anexoc}}. Se tiene un previo desarrollo de esta propuesta, por esta razón a pesar de no estar terminada no se incluye directamente dentro de la sección trabajo a futuro y en su lugar se detallan los avances logrados y la propuesta para seguir trabajando en ellos.\\
+
+
+
+
+
+
+
